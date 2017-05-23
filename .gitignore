@@ -1,0 +1,4 @@
+secrets/id_rsa.pub
+secrets/id_rsa
+secrets/secrets.yml
+secrets/user.yml

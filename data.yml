@@ -1,0 +1,23 @@
+websites:
+  opsumit.com:
+    dates:
+      20170523:
+        code: MAC-01173
+    regex: '[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9]'
+  tracleer.com:
+    dates:
+      20170523:
+        code: TRA-00382
+    regex: '[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9]'
+  uptravi.com:
+    dates:
+      20170522:
+        code: SLX-00133
+      20170523:
+        code: SLX-00318
+    regex: '[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9]'
+  veletri.com:
+    dates:
+      20170523:
+        code: VEL-00269
+    regex: '[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9]'
