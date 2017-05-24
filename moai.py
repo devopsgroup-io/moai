@@ -1,10 +1,10 @@
 #!/usr/bin/env python
-
 import urllib2
 import re
 import time
 import yaml
 
+# get our data
 with open('data.yml', 'r') as stream:
     try:
         data = yaml.load(stream)
@@ -12,6 +12,7 @@ with open('data.yml', 'r') as stream:
         print 'There was a problem loading the yml file...'
         print(exception)
 
+# find regulatory code changes
 for website in data['websites']:
     # what website?
     print website
@@ -39,3 +40,53 @@ for website in data['websites']:
     # if we dont find a match
     else:
         print '\t- Did not find any live matches, please check that the regex is current.'
+
+
+# generate images
+import matplotlib.pyplot as plt
+import pandas as pd
+
+images = ""
+
+for website in data['websites']:
+
+    dates = []
+
+    for date in data['websites'][website]['dates']:
+
+        dates.append(str(date))
+
+    X = pd.to_datetime(dates)
+    print X
+    fig, ax = plt.subplots(figsize=(6,1))
+    ax.scatter(X, [1]*len(X), marker='s', s=100)
+    fig.autofmt_xdate()
+
+    # turn off unncessary items
+    ax.yaxis.set_visible(False)
+    ax.spines['right'].set_visible(False)
+    ax.spines['left'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+    ax.xaxis.set_ticks_position('bottom')
+
+    ax.get_yaxis().set_ticklabels([])
+    day = pd.to_timedelta("1", unit='D')
+    plt.xlim(X[0] - day, X[-1] + day)
+    plt.savefig('data/' + website + '.png', bbox_inches='tight')
+
+    images += '## ' + website + '\n![{0}](data/{0}.png)\n'.format(website)
+
+
+# generate  README.md
+f = open('README.md', 'w')
+f.write('''
+# moai
+:moyai: Tracks changes to pharmaceutical product websites.
+
+![Moai](https://upload.wikimedia.org/wikipedia/commons/5/50/AhuTongariki.JPG)
+
+This project provides competitor business intelligence by tracking the unique code on pharmaceutical websites that are mandated by the FDA. This provides insight as to when, and how often, a website is updated.
+
+{0}
+'''.format(images))
+f.close()

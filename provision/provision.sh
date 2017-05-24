@@ -13,7 +13,12 @@ fi
 sudo yum install -y python
 sudo yum install -y python-devel
 sudo yum install -y python-setuptools
-sudo easy_install beautifulsoup4
+# install python matplotlib
+sudo python -m pip install -U pip setuptools
+sudo python -m pip install matplotlib
+sudo python -m pip install matplotlib --upgrade
+sudo python -m pip install pandas
+sudo python -m pip install pandas --upgrade
 
 
 echo -e "\n> configuring iptables-services"
