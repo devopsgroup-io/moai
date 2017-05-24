@@ -102,3 +102,9 @@ sudo sed --in-place --expression='/^apply_updates\s=/s|.*|apply_updates = yes|' 
 sudo sed --in-place --expression='/^emit_via\s=/s|.*|emit_via = None|' /etc/yum/yum-cron.conf
 # restart the service to re-read any new configuration
 sudo systemctl restart yum-cron.service
+
+
+echo -e "\n> configuring moai cron job"
+cat "/moai/provisioners/cron.sh" > "/etc/cron.daily/moai.cron"
+chown root:root "/etc/cron.daily/moai.cron"
+chmod 755 "/etc/cron.daily/moai.cron"
