@@ -39,7 +39,7 @@ Vagrant.configure("2") do |config|
       provider.backups_enabled = false
     end
     config.vm.synced_folder ".", "/vagrant", disabled: true
-    config.vm.provision "shell", path: "provisioners/redhat/provision.sh"
+    config.vm.provision "shell", path: "provision/provision.sh"
   end
 
 end

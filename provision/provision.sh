@@ -105,6 +105,6 @@ sudo systemctl restart yum-cron.service
 
 
 echo -e "\n> configuring moai cron job"
-cat "/moai/provisioners/cron.sh" > "/etc/cron.daily/moai.cron"
+cat "/moai/provision/cron.sh" > "/etc/cron.daily/moai.cron"
 chown root:root "/etc/cron.daily/moai.cron"
 chmod 755 "/etc/cron.daily/moai.cron"
