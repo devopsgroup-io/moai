@@ -196,7 +196,7 @@ fi
 echo -e "\n> decrypt secrets"
 # decrypt secrets
 gpg --verbose --batch --yes --passphrase ${1} --output ~/.ssh/id_rsa --decrypt /moai/secrets/id_rsa.gpg
-gpg --verbose --batch --yes --passphrase ${1} --output ~/.ssh/id_rsa.pub --decrypt /moai/secrets/id_rsa.pub.gpg
+chmod 400 ~/.ssh/id_rsa
 
 
 echo -e "\n> configuring moai cron job"
