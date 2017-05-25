@@ -161,6 +161,24 @@ sudo sed --in-place --expression='/^emit_via\s=/s|.*|emit_via = None|' /etc/yum/
 sudo systemctl restart yum-cron.service
 
 
+echo -e "\n> system known hosts configuration"
+# initialize known_hosts
+sudo mkdir -p ~/.ssh
+sudo touch ~/.ssh/known_hosts
+# ssh-keyscan github.com for a maximum of 10 tries
+i=0
+until [ $i -ge 10 ]; do
+    sudo ssh-keyscan -4 -T 10 github.com >> ~/.ssh/known_hosts
+    if grep -q "github\.com" ~/.ssh/known_hosts; then
+        echo "ssh-keyscan for github.com successful"
+        break
+    else
+        echo "ssh-keyscan for github.com failed, retrying!"
+    fi
+    i=$[$i+1]
+done
+
+
 echo -e "\n> configuring moai"
 # install git
 sudo yum install -y git
@@ -168,10 +186,17 @@ git config --global user.email "blackhole@devopsgroup.io"
 git config --global user.name "moaiBOT"
 # clone the moai project
 if ! [ -d "/moai/.git" ]; then
-    sudo git clone "git@github.com:devopsgroup-io/moai.git" "/moai"
+    sudo git clone "https://github.com/devopsgroup-io/moai.git" "/moai"
+    cd "/moai" && git remote set-url origin "git@github.com:devopsgroup-io/moai.git"
 else
     cd "/moai" && git pull
 fi
+
+
+echo -e "\n> decrypt secrets"
+# decrypt secrets
+gpg --verbose --batch --yes --passphrase ${1} --output ~/.ssh/id_rsa --decrypt /moai/secrets/id_rsa.gpg
+gpg --verbose --batch --yes --passphrase ${1} --output ~/.ssh/id_rsa.pub --decrypt /moai/secrets/id_rsa.pub.gpg
 
 
 echo -e "\n> configuring moai cron job"

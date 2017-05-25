@@ -39,7 +39,7 @@ Vagrant.configure("2") do |config|
       provider.backups_enabled = false
     end
     config.vm.synced_folder ".", "/vagrant", disabled: true
-    config.vm.provision "shell", path: "provision/provision.sh"
+    config.vm.provision "shell", path: "provision/provision.sh", args: ["#{@user["gpg_key"]}"]
   end
 
 end
