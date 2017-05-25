@@ -14,6 +14,17 @@ sudo systemctl enable ntpd.service
 sudo systemctl start ntpd.service
 
 
+echo -e "\n> system email configuration"
+# install postfix
+sudo yum install -y postfix
+sudo systemctl enable postfix.service
+sudo systemctl start postfix.service
+sudo cat > "/root/.forward" << EOF
+blackhole@devopsgroup.io
+EOF
+sudo systemctl reload postfix.service
+
+
 echo -e "\n> configuring iptables-services"
 # disable the baked in firewalld
 sudo systemctl stop firewalld

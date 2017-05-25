@@ -1,8 +1,21 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import collections
 import urllib2
 import re
 import time
 import yaml
+
+# fun hack to order yaml by key
+# @todo - master plan is to move from yaml to mongodb
+_mapping_tag = yaml.resolver.BaseResolver.DEFAULT_MAPPING_TAG
+def dict_representer(dumper, data):
+    return dumper.represent_dict(data.iteritems())
+def dict_constructor(loader, node):
+    return collections.OrderedDict(loader.construct_pairs(node))
+yaml.add_representer(collections.OrderedDict, dict_representer)
+yaml.add_constructor(_mapping_tag, dict_constructor)
 
 # get our data
 with open('data.yml', 'r') as stream:
@@ -44,10 +57,12 @@ for website in data['websites']:
 
 # generate images
 import matplotlib
-# Force matplotlib to not use any Xwindows backend.
+# force matplotlib to not use any Xwindows backend
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import pandas as pd
+# set global styles
+matplotlib.rcParams.update({'font.size': 6})
 
 images = ""
 
@@ -61,8 +76,8 @@ for website in data['websites']:
 
     X = pd.to_datetime(dates)
     print X
-    fig, ax = plt.subplots(figsize=(6,1))
-    ax.scatter(X, [1]*len(X), marker='s', s=100)
+    fig, ax = plt.subplots(figsize=(10,0.4))
+    ax.scatter(X, [1]*len(X), marker='v', s=50, color='#306caa')
     fig.autofmt_xdate()
 
     # turn off unncessary items
@@ -77,7 +92,7 @@ for website in data['websites']:
     plt.xlim(X[0] - day, X[-1] + day)
     plt.savefig('data/' + website + '.png', bbox_inches='tight')
 
-    images += '## ' + website + '\n![{0}](data/{0}.png)\n'.format(website)
+    images += '### ' + website + '\n![{0}](data/{0}.png)\n'.format(website)
 
 
 # generate  README.md
@@ -86,9 +101,9 @@ f.write('''
 # moai
 :moyai: Tracks changes to pharmaceutical product websites.
 
-![Moai](https://upload.wikimedia.org/wikipedia/commons/5/50/AhuTongariki.JPG)
+![Moai](moai.jpg)
 
-This project provides competitor business intelligence by tracking the unique code on pharmaceutical websites that are mandated by the FDA. This provides insight as to when, and how often, a website is updated.
+Moai /ˈmoʊ.aɪ/ provides competitive intelligence by tracking the unique regulatory code on pharmaceutical websites that are mandated by the FDA. This provides insight as to when, and how often, a website is updated.
 
 {0}
 '''.format(images))
