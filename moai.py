@@ -64,7 +64,7 @@ import pandas as pd
 # set global styles
 matplotlib.rcParams.update({'font.size': 6})
 
-content = ""
+content = "| Product | Indication | Drug | Update frequency |"
 
 for website in data['websites']:
 
@@ -92,19 +92,20 @@ for website in data['websites']:
     plt.xlim(X[0] - day, X[-1] + day)
     plt.savefig('data/' + website + '.png', bbox_inches='tight')
 
-    content += '\n\n### [{0}](http://{0}) {1} ({2})'.format(website, data['websites'][website]['drug']['indications'], data['websites'][website]['drug']['name'])
-    content += '\n![{0}](data/{0}.png)'.format(website)
+    content += '\n| [{0}](http://{0}) | {1} | {2} | ![{0}](data/{0}.png) |'.format(website, data['websites'][website]['drug']['indications'], data['websites'][website]['drug']['name'])
 
 
 # generate  README.md
 f = open('README.md', 'w')
 f.write('''
 # moai
-:moyai: Tracks changes to pharmaceutical product websites.
+:moyai: Pharmaceutical competitive intelligence through product website FDA OPDP update frequency.
 
 ![Moai](moai.jpg)
 
 Moai /ˈmoʊ.aɪ/ provides competitive intelligence by tracking the unique regulatory code on pharmaceutical websites that are mandated by the FDA. This provides insight as to when, and how often, a website is updated.
+
+The below data is free, looking for a complete picture with valuable insights? Please contact us at info@devopsgroup.io to learn more.
 
 {0}
 '''.format(content))
