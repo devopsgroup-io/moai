@@ -65,6 +65,7 @@ import pandas as pd
 matplotlib.rcParams.update({'font.size': 6})
 
 content = "| Product | Indication | Drug | Update frequency |"
+content = "| ------- | ---------- | ---- | ---------------- |"
 
 for website in data['websites']:
 
