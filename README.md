@@ -8,6 +8,7 @@ Moai /ˈmoʊ.aɪ/ provides competitive intelligence by tracking the unique regul
 
 The below data is free, looking for a complete picture with valuable insights? Please contact us at info@devopsgroup.io to learn more.
 
+| Product | Indication | Drug | Update frequency |
 | ------- | ---------- | ---- | ---------------- |
 | [4ventavis.com](http://4ventavis.com) | ['pulmonary arterial hypertension'] | Iloprost | ![4ventavis.com](data/4ventavis.com.png) |
 | [adcirca.com](http://adcirca.com) | ['pulmonary arterial hypertension'] | Tadalafil | ![adcirca.com](data/adcirca.com.png) |
