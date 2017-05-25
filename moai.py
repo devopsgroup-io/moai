@@ -64,7 +64,7 @@ import pandas as pd
 # set global styles
 matplotlib.rcParams.update({'font.size': 6})
 
-images = ""
+content = ""
 
 for website in data['websites']:
 
@@ -76,7 +76,7 @@ for website in data['websites']:
 
     X = pd.to_datetime(dates)
     print X
-    fig, ax = plt.subplots(figsize=(10,0.4))
+    fig, ax = plt.subplots(figsize=(6,0.4))
     ax.scatter(X, [1]*len(X), marker='v', s=50, color='#306caa')
     fig.autofmt_xdate()
 
@@ -92,7 +92,10 @@ for website in data['websites']:
     plt.xlim(X[0] - day, X[-1] + day)
     plt.savefig('data/' + website + '.png', bbox_inches='tight')
 
-    images += '### ' + website + '\n![{0}](data/{0}.png)\n'.format(website)
+    content += '\n\n### [{0}]({0})'.format(website)
+    content += '\n| Name | Class | Indication(s) | |'
+    content += '\n| -- | -- | -- | -- |'
+    content += '\n| {0} | {1} | {2} | ![{3}](data/{3}.png) |'.format(data['websites'][website]['drug']['name'], data['websites'][website]['drug']['class'], data['websites'][website]['drug']['indications'], website)
 
 
 # generate  README.md
@@ -106,5 +109,5 @@ f.write('''
 Moai /ˈmoʊ.aɪ/ provides competitive intelligence by tracking the unique regulatory code on pharmaceutical websites that are mandated by the FDA. This provides insight as to when, and how often, a website is updated.
 
 {0}
-'''.format(images))
+'''.format(content))
 f.close()
