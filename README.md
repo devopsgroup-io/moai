@@ -8,37 +8,38 @@ Moai /ˈmoʊ.aɪ/ provides competitive intelligence by tracking the unique regul
 
 
 
-### [4ventavis.com](4ventavis.com)
-| Name | Class | Indication(s) | |
-| -- | -- | -- | -- |
-| Iloprost | prostacyclin analog | ['pulmonary arterial hypertension'] | ![4ventavis.com](data/4ventavis.com.png) |
+### [4ventavis.com](http://4ventavis.com) ['pulmonary arterial hypertension'] (Iloprost)
+![4ventavis.com](data/4ventavis.com.png)
 
-### [opsumit.com](opsumit.com)
-| Name | Class | Indication(s) | |
-| -- | -- | -- | -- |
-| Macitentan | endothelin receptor antagonist | ['pulmonary arterial hypertension'] | ![opsumit.com](data/opsumit.com.png) |
+### [adcirca.com](http://adcirca.com) ['pulmonary arterial hypertension'] (Tadalafil)
+![adcirca.com](data/adcirca.com.png)
 
-### [tracleer.com](tracleer.com)
-| Name | Class | Indication(s) | |
-| -- | -- | -- | -- |
-| Bosentan | dual endothelin receptor antagonist | ['pulmonary arterial hypertension'] | ![tracleer.com](data/tracleer.com.png) |
+### [opsumit.com](http://opsumit.com) ['pulmonary arterial hypertension'] (Macitentan)
+![opsumit.com](data/opsumit.com.png)
 
-### [uptravi.com](uptravi.com)
-| Name | Class | Indication(s) | |
-| -- | -- | -- | -- |
-| Selexipag | None | ['pulmonary arterial hypertension'] | ![uptravi.com](data/uptravi.com.png) |
+### [orenitram.com](http://orenitram.com) ['pulmonary arterial hypertension'] (Treprostinil)
+![orenitram.com](data/orenitram.com.png)
 
-### [valchlor.com](valchlor.com)
-| Name | Class | Indication(s) | |
-| -- | -- | -- | -- |
-| Mechlorethamine | alkylating antineoplastic agent | ['cutaneous T-cell lymphoma'] | ![valchlor.com](data/valchlor.com.png) |
+### [remodulin.com](http://remodulin.com) ['pulmonary arterial hypertension'] (Treprostinil)
+![remodulin.com](data/remodulin.com.png)
 
-### [veletri.com](veletri.com)
-| Name | Class | Indication(s) | |
-| -- | -- | -- | -- |
-| Epoprostenol | prostaglandin | ['pulmonary arterial hypertension'] | ![veletri.com](data/veletri.com.png) |
+### [tracleer.com](http://tracleer.com) ['pulmonary arterial hypertension'] (Bosentan)
+![tracleer.com](data/tracleer.com.png)
 
-### [zavesca.com](zavesca.com)
-| Name | Class | Indication(s) | |
-| -- | -- | -- | -- |
-| Miglustat | enzyme inhibitors | ['type I Gaucher disease'] | ![zavesca.com](data/zavesca.com.png) |
+### [tyvaso.com](http://tyvaso.com) ['pulmonary arterial hypertension'] (Treprostinil)
+![tyvaso.com](data/tyvaso.com.png)
+
+### [unituxin.com](http://unituxin.com) ['neuroblastoma'] (Dinutuximab)
+![unituxin.com](data/unituxin.com.png)
+
+### [uptravi.com](http://uptravi.com) ['pulmonary arterial hypertension'] (Selexipag)
+![uptravi.com](data/uptravi.com.png)
+
+### [valchlor.com](http://valchlor.com) ['cutaneous T-cell lymphoma'] (Mechlorethamine)
+![valchlor.com](data/valchlor.com.png)
+
+### [veletri.com](http://veletri.com) ['pulmonary arterial hypertension'] (Epoprostenol)
+![veletri.com](data/veletri.com.png)
+
+### [zavesca.com](http://zavesca.com) ['type I Gaucher disease'] (Miglustat)
+![zavesca.com](data/zavesca.com.png)

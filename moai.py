@@ -92,10 +92,8 @@ for website in data['websites']:
     plt.xlim(X[0] - day, X[-1] + day)
     plt.savefig('data/' + website + '.png', bbox_inches='tight')
 
-    content += '\n\n### [{0}]({0})'.format(website)
-    content += '\n| Name | Class | Indication(s) | |'
-    content += '\n| -- | -- | -- | -- |'
-    content += '\n| {0} | {1} | {2} | ![{3}](data/{3}.png) |'.format(data['websites'][website]['drug']['name'], data['websites'][website]['drug']['class'], data['websites'][website]['drug']['indications'], website)
+    content += '\n\n### [{0}](http://{0}) {1} ({2})'.format(website, data['websites'][website]['drug']['indications'], data['websites'][website]['drug']['name'])
+    content += '\n![{0}](data/{0}.png)'.format(website)
 
 
 # generate  README.md

@@ -6,9 +6,19 @@ websites:
     drug:
       class: prostacyclin analog
       indications:
-        - pulmonary arterial hypertension
+      - pulmonary arterial hypertension
       name: Iloprost
     regex: '[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9]'
+  adcirca.com:
+    dates:
+      20170525:
+        code: US/ADC/SEP11/066
+    drug:
+      class: selective inhibitor of cyclic guanosine monophosphate (cGMP)
+      indications:
+      - pulmonary arterial hypertension
+      name: Tadalafil
+    regex: '[A-Z][A-Z]/[A-Z][A-Z][A-Z]/[A-Z][A-Z][A-Z][0-9][0-9]/[0-9][0-9][0-9]'
   opsumit.com:
     dates:
       20170523:
@@ -16,9 +26,29 @@ websites:
     drug:
       class: endothelin receptor antagonist
       indications:
-        - pulmonary arterial hypertension
+      - pulmonary arterial hypertension
       name: Macitentan
     regex: '[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9]'
+  orenitram.com:
+    dates:
+      20170525:
+        code: US/ORE/0005
+    drug:
+      class: prostacyclin analog
+      indications:
+      - pulmonary arterial hypertension
+      name: Treprostinil
+    regex: '[A-Z][A-Z]/[A-Z][A-Z][A-Z]/[0-9][0-9][0-9][0-9]'
+  remodulin.com:
+    dates:
+      20170525:
+        code: US/REM/OCT15/262
+    drug:
+      class: prostacyclin analog
+      indications:
+      - pulmonary arterial hypertension
+      name: Treprostinil
+    regex: '[A-Z][A-Z]/[A-Z][A-Z][A-Z]/[A-Z][A-Z][A-Z][0-9][0-9]/[0-9][0-9][0-9]'
   tracleer.com:
     dates:
       20170523:
@@ -26,9 +56,29 @@ websites:
     drug:
       class: dual endothelin receptor antagonist
       indications:
-        - pulmonary arterial hypertension
+      - pulmonary arterial hypertension
       name: Bosentan
     regex: '[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9]'
+  tyvaso.com:
+    dates:
+      20170525:
+        code: US/TYV/AUG15/354
+    drug:
+      class: prostacyclin analog
+      indications:
+      - pulmonary arterial hypertension
+      name: Treprostinil
+    regex: '[A-Z][A-Z]/[A-Z][A-Z][A-Z]/[A-Z][A-Z][A-Z][0-9][0-9]/[0-9][0-9][0-9]'
+  unituxin.com:
+    dates:
+      20170525:
+        code: US/UTX/0004
+    drug:
+      class: antineoplastic monoclonal antibodies
+      indications:
+      - neuroblastoma
+      name: Dinutuximab
+    regex: '[A-Z][A-Z]/[A-Z][A-Z][A-Z]/[0-9][0-9][0-9][0-9]'
   uptravi.com:
     dates:
       20170522:
@@ -36,9 +86,9 @@ websites:
       20170523:
         code: SLX-00318
     drug:
-      class:
+      class: null
       indications:
-        - pulmonary arterial hypertension
+      - pulmonary arterial hypertension
       name: Selexipag
     regex: '[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9]'
   valchlor.com:
@@ -48,7 +98,7 @@ websites:
     drug:
       class: alkylating antineoplastic agent
       indications:
-        - cutaneous T-cell lymphoma
+      - cutaneous T-cell lymphoma
       name: Mechlorethamine
     regex: '[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9]'
   veletri.com:
@@ -58,7 +108,7 @@ websites:
     drug:
       class: prostaglandin
       indications:
-        - pulmonary arterial hypertension
+      - pulmonary arterial hypertension
       name: Epoprostenol
     regex: '[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9]'
   zavesca.com:
@@ -68,6 +118,6 @@ websites:
     drug:
       class: enzyme inhibitors
       indications:
-        - type I Gaucher disease
+      - type I Gaucher disease
       name: Miglustat
     regex: '[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9]'
