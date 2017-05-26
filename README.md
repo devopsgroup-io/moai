@@ -12,7 +12,12 @@ Moai /ˈmoʊ.aɪ/ provides competitive intelligence by tracking the unique regul
 The below data is free, looking for a complete picture with valuable insights? Please contact us at info@devopsgroup.io to learn more.
 
 
-### Gastric Cancer
+### Cancer - Brain Tumor
+| Drug | Company | Generic | Update frequency |
+| ---- | ------- | ------- | ---------------- |
+| [us.afinitor.com/sega-tuberous-sclerosis](http://us.afinitor.com/sega-tuberous-sclerosis) | Novartis | everolimus systemic | ![us.afinitor.com-sega-tuberous-sclerosis](data/us.afinitor.com-sega-tuberous-sclerosis.png) |
+
+### Cancer - Gastric Cancer
 | Drug | Company | Generic | Update frequency |
 | ---- | ------- | ------- | ---------------- |
 | [cyramza.com](http://cyramza.com) | Lilly | ramucirumab systemic | ![cyramza.com](data/cyramza.com.png) |
