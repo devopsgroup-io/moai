@@ -8,8 +8,8 @@ Moai /ˈmoʊ.aɪ/ provides competitive intelligence by tracking the unique regul
 
 The below data is free, looking for a complete picture with valuable insights? Please contact us at info@devopsgroup.io to learn more.
 
-### Pulmonary Arterial Hypertension
 
+### Pulmonary Arterial Hypertension
 | Drug | Company | Generic | Update frequency |
 | ---- | ------- | ------- | ---------------- |
 | [4ventavis.com](http://4ventavis.com) | Actelion | iloprost systemic | ![4ventavis.com](data/4ventavis.com.png) |
@@ -23,3 +23,13 @@ The below data is free, looking for a complete picture with valuable insights? P
 | [tyvaso.com](http://tyvaso.com) | United Therapeutics | treprostinil systemic | ![tyvaso.com](data/tyvaso.com.png) |
 | [uptravi.com](http://uptravi.com) | Actelion | selexipag systemic | ![uptravi.com](data/uptravi.com.png) |
 | [veletri.com](http://veletri.com) | Actelion | epoprostenol systemic | ![veletri.com](data/veletri.com.png) |
+
+### Rheumatoid Arthritis
+| Drug | Company | Generic | Update frequency |
+| ---- | ------- | ------- | ---------------- |
+| [arava.com](http://arava.com) | Sanofi | leflunomide systemic | ![arava.com](data/arava.com.png) |
+| [celebrex.com](http://celebrex.com) | Pfizer | celecoxib systemic | ![celebrex.com](data/celebrex.com.png) |
+| [enbrel.com](http://enbrel.com) | Amgen | etanercept systemic | ![enbrel.com](data/enbrel.com.png) |
+| [humira.com](http://humira.com) | AbbVie | adalimumab systemic | ![humira.com](data/humira.com.png) |
+| [orencia.bmscustomerconnect.com](http://orencia.bmscustomerconnect.com) | Bristol-Myers Squibb | adalimumab systemic | ![orencia.bmscustomerconnect.com](data/orencia.bmscustomerconnect.com.png) |
+| [remicade.com/rheumatoid-arthritis](http://remicade.com/rheumatoid-arthritis) | Janssen | infliximab systemic | ![remicade.com-rheumatoid-arthritis](data/remicade.com-rheumatoid-arthritis.png) |

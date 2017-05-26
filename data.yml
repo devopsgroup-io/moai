@@ -89,3 +89,52 @@ Pulmonary Arterial Hypertension:
       company: Actelion
       generic: epoprostenol systemic
     regex: '[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9]'
+Rheumatoid Arthritis:
+  arava.com:
+    dates:
+      20170526:
+        code: US.LEF.15.11.001
+    drug:
+      company: Sanofi
+      generic: leflunomide systemic
+    regex: '[A-Z][A-Z]\.[A-Z][A-Z][A-Z]\.[0-9][0-9]\.[0-9][0-9]\.[0-9][0-9][0-9]'
+  celebrex.com:
+    dates:
+      20170526:
+        code: PP-CEL-USA-0295
+    drug:
+      company: Pfizer
+      generic: celecoxib systemic
+    regex: '[A-Z][A-Z]-[A-Z][A-Z][A-Z]-[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9]'
+  enbrel.com:
+    dates:
+      20170526:
+        code: USA-ECF-111018
+    drug:
+      company: Amgen
+      generic: etanercept systemic
+    regex: '[A-Z][A-Z][A-Z]-[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9][0-9]'
+  humira.com:
+    dates:
+      20170526:
+        code: 64H-1880706
+    drug:
+      company: AbbVie
+      generic: adalimumab systemic
+    regex: '[0-9][0-9][A-Z]-[0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
+  orencia.bmscustomerconnect.com:
+    dates:
+      20170526:
+        code: 427US1701271
+    drug:
+      company: Bristol-Myers Squibb
+      generic: adalimumab systemic
+    regex: '[0-9][0-9][0-9][A-Z][A-Z][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
+  remicade.com/rheumatoid-arthritis:
+    dates:
+      20170526:
+        code: 035714-150617
+    drug:
+      company: Janssen
+      generic: infliximab systemic
+    regex: '[0-9][0-9][0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9][0-9][0-9]'

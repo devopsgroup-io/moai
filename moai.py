@@ -29,8 +29,12 @@ with open('data.yml', 'r') as stream:
 
 # find regulatory code changes
 for indication in data:
+        
+    # what indication?
+    print indication
 
     for website in data[indication]:
+
         # what website?
         print website
 
@@ -68,10 +72,12 @@ import pandas as pd
 # set global styles
 matplotlib.rcParams.update({'font.size': 6})
 
+content = ''
+
 for indication in data:
 
-    content = '\n### ' + str(indication)
     content += '\n'
+    content += '\n### ' + str(indication)
     content += '\n| Drug | Company | Generic | Update frequency |'
     content += '\n| ---- | ------- | ------- | ---------------- |'
 
@@ -99,9 +105,9 @@ for indication in data:
         ax.get_yaxis().set_ticklabels([])
         day = pd.to_timedelta("1", unit='D')
         plt.xlim(X[0] - day, X[-1] + day)
-        plt.savefig('data/' + website + '.png', bbox_inches='tight')
+        plt.savefig('data/' + website.replace("/","-") + '.png', bbox_inches='tight')
 
-        content += '\n| [{0}](http://{0}) | {1} | {2} | ![{0}](data/{0}.png) |'.format(website, data[indication][website]['drug']['company'], data[indication][website]['drug']['generic'])
+        content += '\n| [{0}](http://{0}) | {1} | {2} | ![{3}](data/{3}.png) |'.format(website, data[indication][website]['drug']['company'], data[indication][website]['drug']['generic'], website.replace("/","-"))
 
 
 # generate  README.md
