@@ -1,4 +1,12 @@
 Cancer - Brain Tumor:
+  gliadel.com/patient:
+    dates:
+      20170526:
+        code: GL076.001
+    drug:
+      company: Arbor
+      generic: carmustine systemic
+    regex: '[A-Z][A-Z][0-9][0-9][0-9]\.[[0-9][0-9][0-9]'
   us.afinitor.com/sega-tuberous-sclerosis:
     dates:
       20170526:
