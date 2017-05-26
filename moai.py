@@ -120,7 +120,8 @@ f.write('''
 
 Moai /ˈmoʊ.aɪ/ provides competitive intelligence by tracking the unique regulatory code on United States pharmaceutical websites that are mandated by the FDA. This provides insight as to when, and how often, a website is updated.
 
-![Charles](moai-charles.jpg) Meet Charles, the moaiBOT. He scours websites daily, looking for changes. Charles likes fishing and long walks on the beach.
+| ![Charles](moai-charles.jpg) | Meet Charles, the moaiBOT. He scours websites daily, looking for changes.<br>Charles likes fishing and long walks on the beach. |
+| -- | -- |
 
 The below data is free, looking for a complete picture with valuable insights? Please contact us at info@devopsgroup.io to learn more.
 {0}
