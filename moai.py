@@ -45,7 +45,7 @@ for website in data['websites']:
         if str(most_recent_date_code) == str(live_matches[0]):
             print '\t- The most recent code that we have ' + str(most_recent_date) + ':' + str(most_recent_date_code) + ' matches what we just found ' + str(live_matches[0])
         else:
-            print '\t- Found a different code than the one we have, writing to data.yml'
+            print '\t- Found a different code than the one we have, writing ' + str(live_matches[0]) + ' to data.yml'
             data['websites'][website]['dates'][int(time.strftime("%Y%m%d"))] = { 'code' : str(live_matches[0]) }
             with open('data.yml', 'w') as outfile:
                 yaml.dump(data, outfile, default_flow_style=False)
@@ -64,8 +64,8 @@ import pandas as pd
 # set global styles
 matplotlib.rcParams.update({'font.size': 6})
 
-content = "| Product | Indication | Drug | Update frequency |"
-content += "\n| ------- | ---------- | ---- | ---------------- |"
+content = "| Drug | Indication | Generic | Update frequency |"
+content += "\n| ---- | ---------- | ------ | ---------------- |"
 
 for website in data['websites']:
 
@@ -93,7 +93,7 @@ for website in data['websites']:
     plt.xlim(X[0] - day, X[-1] + day)
     plt.savefig('data/' + website + '.png', bbox_inches='tight')
 
-    content += '\n| [{0}](http://{0}) | {1} | {2} | ![{0}](data/{0}.png) |'.format(website, data['websites'][website]['drug']['indications'], data['websites'][website]['drug']['name'])
+    content += '\n| [{0}](http://{0})<br>{1} | {2} | {3} | ![{0}](data/{0}.png) |'.format(website, data['websites'][website]['drug']['company'], data['websites'][website]['drug']['indication'], data['websites'][website]['drug']['generic'])
 
 
 # generate  README.md
@@ -104,7 +104,7 @@ f.write('''
 
 ![Moai](moai.jpg)
 
-Moai /ˈmoʊ.aɪ/ provides competitive intelligence by tracking the unique regulatory code on pharmaceutical websites that are mandated by the FDA. This provides insight as to when, and how often, a website is updated.
+Moai /ˈmoʊ.aɪ/ provides competitive intelligence by tracking the unique regulatory code on United States pharmaceutical websites that are mandated by the FDA. This provides insight as to when, and how often, a website is updated.
 
 The below data is free, looking for a complete picture with valuable insights? Please contact us at info@devopsgroup.io to learn more.
 

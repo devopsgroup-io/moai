@@ -4,81 +4,82 @@ websites:
       20170524:
         code: VEN-00213
     drug:
-      class: prostacyclin analog
-      indications:
-      - pulmonary arterial hypertension
-      name: Iloprost
+      company: Actelion
+      indication: pulmonary arterial hypertension
+      generic: iloprost systemic
     regex: '[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9]'
   adcirca.com:
     dates:
       20170525:
         code: US/ADC/SEP11/066
     drug:
-      class: selective inhibitor of cyclic guanosine monophosphate (cGMP)
-      indications:
-      - pulmonary arterial hypertension
-      name: Tadalafil
+      company: United Therapeutics
+      indication: pulmonary arterial hypertension
+      generic: tadalafil systemic
     regex: '[A-Z][A-Z]/[A-Z][A-Z][A-Z]/[A-Z][A-Z][A-Z][0-9][0-9]/[0-9][0-9][0-9]'
+  letairis.com:
+    dates:
+      20170526:
+        code: LETC0283
+    drug:
+      company: Gilead
+      indication: pulmonary arterial hypertension
+      generic: ambrisentan systemic
+    regex: '[A-Z][A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9]'
   opsumit.com:
     dates:
       20170523:
         code: MAC-01173
     drug:
-      class: endothelin receptor antagonist
-      indications:
-      - pulmonary arterial hypertension
-      name: Macitentan
+      company: Actelion
+      indication: pulmonary arterial hypertension
+      generic: macitentan systemic
     regex: '[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9]'
   orenitram.com:
     dates:
       20170525:
         code: US/ORE/0005
     drug:
-      class: prostacyclin analog
-      indications:
-      - pulmonary arterial hypertension
-      name: Treprostinil
+      company: United Therapeutics
+      indication: pulmonary arterial hypertension
+      generic: treprostinil systemic
     regex: '[A-Z][A-Z]/[A-Z][A-Z][A-Z]/[0-9][0-9][0-9][0-9]'
   remodulin.com:
     dates:
       20170525:
         code: US/REM/OCT15/262
     drug:
-      class: prostacyclin analog
-      indications:
-      - pulmonary arterial hypertension
-      name: Treprostinil
+      company: United Therapeutics
+      indication: pulmonary arterial hypertension
+      generic: treprostinil systemic
     regex: '[A-Z][A-Z]/[A-Z][A-Z][A-Z]/[A-Z][A-Z][A-Z][0-9][0-9]/[0-9][0-9][0-9]'
+  revatio.com:
+    dates:
+      20170526:
+        code: RVU787202
+    drug:
+      company: Pfizer
+      indication: pulmonary arterial hypertension
+      generic: sildenafil systemic
+    regex: '[A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9][0-9][0-9]'
   tracleer.com:
     dates:
       20170523:
         code: TRA-00382
     drug:
-      class: dual endothelin receptor antagonist
-      indications:
-      - pulmonary arterial hypertension
-      name: Bosentan
+      company: Actelion
+      indication: pulmonary arterial hypertension
+      generic: bosentan systemic
     regex: '[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9]'
   tyvaso.com:
     dates:
       20170525:
         code: US/TYV/AUG15/354
     drug:
-      class: prostacyclin analog
-      indications:
-      - pulmonary arterial hypertension
-      name: Treprostinil
+      company: United Therapeutics
+      indication: pulmonary arterial hypertension
+      generic: treprostinil systemic
     regex: '[A-Z][A-Z]/[A-Z][A-Z][A-Z]/[A-Z][A-Z][A-Z][0-9][0-9]/[0-9][0-9][0-9]'
-  unituxin.com:
-    dates:
-      20170525:
-        code: US/UTX/0004
-    drug:
-      class: antineoplastic monoclonal antibodies
-      indications:
-      - neuroblastoma
-      name: Dinutuximab
-    regex: '[A-Z][A-Z]/[A-Z][A-Z][A-Z]/[0-9][0-9][0-9][0-9]'
   uptravi.com:
     dates:
       20170522:
@@ -86,38 +87,16 @@ websites:
       20170523:
         code: SLX-00318
     drug:
-      class: null
-      indications:
-      - pulmonary arterial hypertension
-      name: Selexipag
-    regex: '[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9]'
-  valchlor.com:
-    dates:
-      20170524:
-        code: "VAL\u201100286"
-    drug:
-      class: alkylating antineoplastic agent
-      indications:
-      - cutaneous T-cell lymphoma
-      name: Mechlorethamine
+      company: Actelion
+      indication: pulmonary arterial hypertension
+      generic: selexipag systemic
     regex: '[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9]'
   veletri.com:
     dates:
       20170523:
         code: VEL-00269
     drug:
-      class: prostaglandin
-      indications:
-      - pulmonary arterial hypertension
-      name: Epoprostenol
-    regex: '[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9]'
-  zavesca.com:
-    dates:
-      20170524:
-        code: ZAV-00190
-    drug:
-      class: enzyme inhibitors
-      indications:
-      - type I Gaucher disease
-      name: Miglustat
+      company: Actelion
+      indication: pulmonary arterial hypertension
+      generic: epoprostenol systemic
     regex: '[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9]'
