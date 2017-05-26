@@ -1,3 +1,12 @@
+Gastric Cancer:
+  cyramza.com:
+    dates:
+      20170526:
+        code: RB-P CON ISI 02NOV2015
+    drug:
+      company: Lilly
+      generic: ramucirumab systemic
+    regex: '[A-Z][A-Z]-[A-Z]\s[A-Z][A-Z][A-Z]\s[A-Z][A-Z][A-Z]\s[0-9][0-9][A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9]'
 Pulmonary Arterial Hypertension:
   4ventavis.com:
     dates:

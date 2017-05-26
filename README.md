@@ -12,6 +12,11 @@ Moai /ˈmoʊ.aɪ/ provides competitive intelligence by tracking the unique regul
 The below data is free, looking for a complete picture with valuable insights? Please contact us at info@devopsgroup.io to learn more.
 
 
+### Gastric Cancer
+| Drug | Company | Generic | Update frequency |
+| ---- | ------- | ------- | ---------------- |
+| [cyramza.com](http://cyramza.com) | Lilly | ramucirumab systemic | ![cyramza.com](data/cyramza.com.png) |
+
 ### Pulmonary Arterial Hypertension
 | Drug | Company | Generic | Update frequency |
 | ---- | ------- | ------- | ---------------- |
