@@ -189,3 +189,11 @@ Rheumatoid Arthritis:
       company: Janssen
       generic: infliximab systemic
     regex: '[0-9][0-9][0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9][0-9][0-9]'
+  vimovo.com:
+    dates:
+      20170528:
+        code: 0026VMV02
+    drug:
+      company: Horizon
+      generic: esomeprazole / naproxen systemic
+    regex: '[0-9][0-9][0-9][0-9][A-Z][A-Z][A-Z][0-9][0-9]'

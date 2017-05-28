@@ -54,3 +54,4 @@ The below data is free, looking for a complete picture with valuable insights? P
 | [humira.com](http://humira.com) | AbbVie | adalimumab systemic | ![humira.com](data/humira.com.png) |
 | [orencia.bmscustomerconnect.com](http://orencia.bmscustomerconnect.com) | Bristol-Myers Squibb | adalimumab systemic | ![orencia.bmscustomerconnect.com](data/orencia.bmscustomerconnect.com.png) |
 | [remicade.com/rheumatoid-arthritis](http://remicade.com/rheumatoid-arthritis) | Janssen | infliximab systemic | ![remicade.com-rheumatoid-arthritis](data/remicade.com-rheumatoid-arthritis.png) |
+| [vimovo.com](http://vimovo.com) | Horizon | esomeprazole / naproxen systemic | ![vimovo.com](data/vimovo.com.png) |
