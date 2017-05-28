@@ -9,12 +9,37 @@ Cancer - Brain Tumor:
     regex: '[A-Z][A-Z][0-9][0-9][0-9]\.[[0-9][0-9][0-9]'
   us.afinitor.com/sega-tuberous-sclerosis:
     dates:
-      20170526:
-        code: RB-P CON ISI 02NOV2015
+      20170528:
+        code: AFT-1142638
     drug:
       company: Novartis
       generic: everolimus systemic
-    regex: '[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
+    regex: '[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
+Cancer - Colorectal Cancer:
+  erbitux.com:
+    dates:
+      20170528:
+        code: PP-CE-US-0335
+    drug:
+      company: Lilly
+      generic: cetuximab systemic
+    regex: '[A-Z][A-Z]-[A-Z][A-Z]-[A-Z][A-Z]-[0-9][0-9][0-9][0-9]'
+  stivarga-us.com:
+    dates:
+      20170528:
+        code: 08/2016
+    drug:
+      company: Bayer
+      generic: regorafenib systemic
+    regex: '[0-9][0-9]/[0-9][0-9][0-9][0-9]'
+  zaltrap.com:
+    dates:
+      20170528:
+        code: US.AFL.16.06.001
+    drug:
+      company: Sanofi
+      generic: ziv-aflibercept systemic
+    regex: '[A-Z][A-Z]\.[A-Z][A-Z][A-Z]\.[0-9][0-9]\.[0-9][0-9]\.[0-9][0-9][0-9]'
 Cancer - Gastric Cancer:
   cyramza.com:
     dates:

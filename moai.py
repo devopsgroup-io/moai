@@ -39,7 +39,8 @@ for indication in data:
         print website
 
         # get the html
-        html_content = urllib2.urlopen('http://' + website).read()
+        request = urllib2.Request('http://' + website, headers={'User-Agent' : "Moai"})
+        html_content = urllib2.urlopen(request).read()
         # search for the code using the regex defined per website
         live_matches = re.findall(data[indication][website]['regex'], html_content);
 
