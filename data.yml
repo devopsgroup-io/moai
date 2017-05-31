@@ -1,3 +1,28 @@
+Alzheimer's Disease:
+  exelonpatch.com:
+    dates:
+      20170530:
+        code: T-EXP-1318386
+    drug:
+      company: Novartis
+      generic: rivastigmine systemic
+    regex: '[A-Z]-[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
+  namenda.com:
+    dates:
+      20170530:
+        code: NAM51044
+    drug:
+      company: Allergan
+      generic: memantine systemic
+    regex: '[A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9][0-9]'
+  namzaric.com:
+    dates:
+      20170530:
+        code: NMZ10684
+    drug:
+      company: Allergan
+      generic: donepezil / memantine systemic
+    regex: '[A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9][0-9]'
 Cancer - Brain Tumor:
   gliadel.com/patient:
     dates:
@@ -49,6 +74,39 @@ Cancer - Gastric Cancer:
       company: Lilly
       generic: ramucirumab systemic
     regex: '[A-Z][A-Z]-[A-Z]\s[A-Z][A-Z][A-Z]\s[A-Z][A-Z][A-Z]\s[0-9][0-9][A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9]'
+High Cholesterol:
+  crestor.com:
+    dates:
+      20170530:
+        code: 1929508-3158916
+    drug:
+      company: AstraZeneca
+      generic: rosuvastatin systemic
+    regex: '[0-9][0-9][0-9][0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
+  lipitor.com:
+    dates:
+      20170530:
+        code: PP-LIP-USA-0252
+    drug:
+      company: Pfizer
+      generic: atorvastatin systemic
+    regex: '[A-Z][A-Z]-[A-Z][A-Z][A-Z]-[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9]'
+  livalorx.com:
+    dates:
+      20170530:
+        code: LIV-MT-2338
+    drug:
+      company: Kowa
+      generic: pitavastatin systemic
+    regex: '[A-Z][A-Z][A-Z]-[A-Z][A-Z]-[0-9][0-9][0-9][0-9]'
+  repatha.com:
+    dates:
+      20170530:
+        code: USA-145-107362
+    drug:
+      company: Amgen
+      generic: evolocumab systemic
+    regex: '[A-Z][A-Z][A-Z]-[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9][0-9][0-9]'
 Pulmonary Arterial Hypertension:
   4ventavis.com:
     dates:

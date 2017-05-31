@@ -12,6 +12,13 @@ Moai /ˈmoʊ.aɪ/ provides competitive intelligence by tracking the unique regul
 The below data is free, looking for a complete picture with valuable insights? Please contact us at info@devopsgroup.io to learn more.
 
 
+### Alzheimer's Disease
+| Drug | Company | Generic | Update frequency |
+| ---- | ------- | ------- | ---------------- |
+| [exelonpatch.com](http://exelonpatch.com) | Novartis | rivastigmine systemic | ![exelonpatch.com](data/exelonpatch.com.png) |
+| [namenda.com](http://namenda.com) | Allergan | memantine systemic | ![namenda.com](data/namenda.com.png) |
+| [namzaric.com](http://namzaric.com) | Allergan | donepezil / memantine systemic | ![namzaric.com](data/namzaric.com.png) |
+
 ### Cancer - Brain Tumor
 | Drug | Company | Generic | Update frequency |
 | ---- | ------- | ------- | ---------------- |
@@ -29,6 +36,14 @@ The below data is free, looking for a complete picture with valuable insights? P
 | Drug | Company | Generic | Update frequency |
 | ---- | ------- | ------- | ---------------- |
 | [cyramza.com](http://cyramza.com) | Lilly | ramucirumab systemic | ![cyramza.com](data/cyramza.com.png) |
+
+### High Cholesterol
+| Drug | Company | Generic | Update frequency |
+| ---- | ------- | ------- | ---------------- |
+| [crestor.com](http://crestor.com) | AstraZeneca | rosuvastatin systemic | ![crestor.com](data/crestor.com.png) |
+| [lipitor.com](http://lipitor.com) | Pfizer | atorvastatin systemic | ![lipitor.com](data/lipitor.com.png) |
+| [livalorx.com](http://livalorx.com) | Kowa | pitavastatin systemic | ![livalorx.com](data/livalorx.com.png) |
+| [repatha.com](http://repatha.com) | Amgen | evolocumab systemic | ![repatha.com](data/repatha.com.png) |
 
 ### Pulmonary Arterial Hypertension
 | Drug | Company | Generic | Update frequency |
