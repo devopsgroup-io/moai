@@ -108,6 +108,8 @@ for indication in data:
         plt.xlim(X[0] - day, X[-1] + day)
         plt.savefig('data/' + website.replace("/","-") + '.png', bbox_inches='tight')
 
+        plt.close('all')
+        
         content += '\n| [{0}](http://{0}) | {1} | {2} | ![{3}](data/{3}.png) |'.format(website, data[indication][website]['drug']['company'], data[indication][website]['drug']['generic'], website.replace("/","-"))
 
 
