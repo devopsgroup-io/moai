@@ -198,6 +198,31 @@ Pulmonary Arterial Hypertension:
       company: Actelion
       generic: epoprostenol systemic
     regex: '[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9]'
+Respiratory - Chronic Obstructive Pulmonary Disease:
+  bevespi.com:
+    dates:
+      20170430:
+        code: 2047004-3340900
+    drug:
+      company: AstraZeneca
+      generic: formoterol and glycopyrrolate
+    regex: '[0-9][0-9][0-9][0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
+  mysymbicort.com:
+    dates:
+      20170228:
+        code: 1945203-3326734
+    drug:
+      company: AstraZeneca
+      generic: budesonide and formoterol
+    regex: '[0-9][0-9][0-9][0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
+  startwithanoro.com:
+    dates:
+      20170228:
+        code: 783658R0
+    drug:
+      company: GSK
+      generic: umeclidinium and vilanterol
+    regex: '[0-9][0-9][0-9][0-9][0-9][0-9][A-Z][0-9]'
 Rheumatoid Arthritis:
   arava.com:
     dates:
@@ -252,6 +277,6 @@ Rheumatoid Arthritis:
       20170528:
         code: 0026VMV02
     drug:
-      company: Horizon
+      company: Horizon Pharma
       generic: esomeprazole / naproxen systemic
     regex: '[0-9][0-9][0-9][0-9][A-Z][A-Z][A-Z][0-9][0-9]'

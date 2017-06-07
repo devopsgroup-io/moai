@@ -29,7 +29,7 @@ with open('data.yml', 'r') as stream:
 
 # find regulatory code changes
 for indication in data:
-        
+
     # what indication?
     print indication
 
@@ -41,8 +41,9 @@ for indication in data:
         # get the html
         request = urllib2.Request('http://' + website, headers={'User-Agent' : "Moai"})
         html_content = urllib2.urlopen(request).read()
+
         # search for the code using the regex defined per website
-        live_matches = re.findall(data[indication][website]['regex'], html_content);
+        live_matches = re.findall(data[indication][website]['regex'], re.sub('<[^<]+?>', '', html_content));
 
         # get the most recent date
         most_recent_date = data[indication][website]['dates'].keys()[-1]
@@ -109,7 +110,7 @@ for indication in data:
         plt.savefig('data/' + website.replace("/","-") + '.png', bbox_inches='tight')
 
         plt.close('all')
-        
+
         content += '\n| [{0}](http://{0}) | {1} | {2} | ![{3}](data/{3}.png) |'.format(website, data[indication][website]['drug']['company'], data[indication][website]['drug']['generic'], website.replace("/","-"))
 
 
