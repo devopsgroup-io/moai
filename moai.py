@@ -222,7 +222,7 @@ f.write('''
 
 Moai /ˈmoʊ.aɪ/ provides competitive intelligence by tracking the unique regulatory code on United States pharmaceutical websites that are mandated by the FDA. This provides insight as to when, and how often, a website is updated.
 
-HTTPS is also tracked. Sadly, many website infrastructures do not provide HTTPS and subsequently [provides no data security](https://www.chromium.org/Home/chromium-security/marking-http-as-non-secure) to its vistors. Here's a shameless plug for our website and workflow management platorm [Catapult](https://github.com/devopsgroup-io/catapult), which enforces best practice security.
+HTTPS is also tracked. Sadly, many website infrastructures do not provide HTTPS and subsequently [provides no data security](https://www.chromium.org/Home/chromium-security/marking-http-as-non-secure) to its visitors. Here's a shameless plug for our website and workflow management platform [Catapult](https://github.com/devopsgroup-io/catapult), which enforces best practice security.
 
 | ![Charles](moai-charles.jpg) | Meet Charles, the moaiBOT. He scours websites daily, looking for changes.<br>Charles likes fishing and long walks on the beach. |
 | -- | -- |
