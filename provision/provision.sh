@@ -149,12 +149,14 @@ sudo yum install -y python
 sudo yum install -y python-devel
 sudo yum install -y python-setuptools
 sudo easy_install pip
-# install python matplotlib
+# install python packages
 sudo python -m pip install -U pip setuptools
 sudo python -m pip install matplotlib
 sudo python -m pip install matplotlib --upgrade
 sudo python -m pip install pandas
 sudo python -m pip install pandas --upgrade
+sudo python -m pip install requests
+sudo python -m pip install requests --upgrade
 
 
 echo -e "\n> configuring yum-cron"
