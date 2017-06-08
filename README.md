@@ -59,7 +59,7 @@ The below data is free, looking for a complete picture with valuable insights? P
 | [revatio.com](http://revatio.com) | Pfizer | sildenafil systemic | [:x:](https://revatio.com) | ![revatio.com](data/revatio.com.png) |
 | [tracleer.com](http://tracleer.com) | Actelion | bosentan systemic | [:x:](https://tracleer.com) | ![tracleer.com](data/tracleer.com.png) |
 | [tyvaso.com](http://tyvaso.com) | United Therapeutics | treprostinil systemic | [:white_check_mark:](https://tyvaso.com) | ![tyvaso.com](data/tyvaso.com.png) |
-| [uptravi.com](http://uptravi.com) | Actelion | selexipag systemic | [:white_check_mark:](https://uptravi.com) | ![uptravi.com](data/uptravi.com.png) |
+| [uptravi.com](http://uptravi.com) | Actelion | selexipag systemic | [:x:](https://uptravi.com) | ![uptravi.com](data/uptravi.com.png) |
 | [veletri.com](http://veletri.com) | Actelion | epoprostenol systemic | [:white_check_mark:](https://veletri.com) | ![veletri.com](data/veletri.com.png) |
 
 ### Respiratory - Chronic Obstructive Pulmonary Disease
@@ -74,10 +74,10 @@ The below data is free, looking for a complete picture with valuable insights? P
 | Drug | Company | Generic | HTTPS | Update frequency |
 | ---- | ------- | ------- | ----- | ---------------- |
 | [arava.com](http://arava.com) | Sanofi | leflunomide systemic | [:x:](https://arava.com) | ![arava.com](data/arava.com.png) |
-| [celebrex.com](http://celebrex.com) | Pfizer | celecoxib systemic | [:x:](https://celebrex.com) | ![celebrex.com](data/celebrex.com.png) |
+| [celebrex.com](http://celebrex.com) | Pfizer | celecoxib systemic | [:white_check_mark:](https://celebrex.com) | ![celebrex.com](data/celebrex.com.png) |
 | [enbrel.com](http://enbrel.com) | Amgen | etanercept systemic | [:white_check_mark:](https://enbrel.com) | ![enbrel.com](data/enbrel.com.png) |
 | [humira.com](http://humira.com) | AbbVie | adalimumab systemic | [:white_check_mark:](https://humira.com) | ![humira.com](data/humira.com.png) |
-| [kevzara.com](http://kevzara.com) | Sanofi and Regeneron | sarilumab | [:x:](https://kevzara.com) | ![kevzara.com](data/kevzara.com.png) |
+| [kevzara.com](http://kevzara.com) | Sanofi and Regeneron | sarilumab | [:white_check_mark:](https://kevzara.com) | ![kevzara.com](data/kevzara.com.png) |
 | [orencia.bmscustomerconnect.com](http://orencia.bmscustomerconnect.com) | Bristol-Myers Squibb | adalimumab systemic | [:x:](https://orencia.bmscustomerconnect.com) | ![orencia.bmscustomerconnect.com](data/orencia.bmscustomerconnect.com.png) |
 | [remicade.com/rheumatoid-arthritis](http://remicade.com/rheumatoid-arthritis) | Janssen | infliximab systemic | [:white_check_mark:](https://remicade.com/rheumatoid-arthritis) | ![remicade.com-rheumatoid-arthritis](data/remicade.com-rheumatoid-arthritis.png) |
-| [vimovo.com](http://vimovo.com) | Horizon Pharma | esomeprazole / naproxen systemic | [:x:](https://vimovo.com) | ![vimovo.com](data/vimovo.com.png) |
+| [vimovo.com](http://vimovo.com) | Horizon Pharma | esomeprazole / naproxen systemic | [:white_check_mark:](https://vimovo.com) | ![vimovo.com](data/vimovo.com.png) |

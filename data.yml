@@ -231,7 +231,7 @@ Pulmonary Arterial Hypertension:
       20170523:
         code: SLX-00318
       20170607:
-        https: 'True'
+        https: 'False'
     drug:
       company: Actelion
       generic: selexipag systemic
@@ -299,7 +299,7 @@ Rheumatoid Arthritis:
       20170526:
         code: PP-CEL-USA-0295
       20170607:
-        https: 'False'
+        https: 'True'
     drug:
       company: Pfizer
       generic: celecoxib systemic
@@ -328,7 +328,7 @@ Rheumatoid Arthritis:
     dates:
       20170607:
         code: SAUS.SARI.17.04.1651
-        https: 'False'
+        https: 'True'
     drug:
       company: Sanofi and Regeneron
       generic: sarilumab
@@ -358,7 +358,7 @@ Rheumatoid Arthritis:
       20170528:
         code: 0026VMV02
       20170607:
-        https: 'False'
+        https: 'True'
     drug:
       company: Horizon Pharma
       generic: esomeprazole / naproxen systemic
