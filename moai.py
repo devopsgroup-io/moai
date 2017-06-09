@@ -1,12 +1,21 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+"""
+DEVELOPMENT NOTES
+-----------------
+* Ideally use pyenv to ensure to not break your Python installion https://github.com/pyenv/pyenv#homebrew-on-mac-os-x
+* Python v2 is supported - v3 not yet
+* Install the missing libraries as defined in provision.sh
+"""
+
 import collections
 import re
 import requests
 import sys
 import time
 import yaml
+
 
 # fun hack to order yaml by key
 # @todo - master plan is to move from yaml to mongodb
@@ -24,21 +33,21 @@ with open('data.yml', 'r') as stream:
     try:
         data = yaml.load(stream)
     except yaml.YAMLError as exception:
-        print 'There was a problem loading the yml file...'
+        print('There was a problem loading the yml file...')
         print(exception)
 
-
+"""
 # find regulatory code changes
-print '\nLOOKING FOR CODE CHANGES'
+print('\nLOOKING FOR CODE CHANGES')
 for indication in data:
 
     # what indication?
-    print '\n' + indication
+    print('\n' + indication)
 
     for website in data[indication]:
 
         # what website?
-        print website
+        print(website)
 
         # try and get the html
         trys = 0
@@ -48,7 +57,7 @@ for indication in data:
                 # make the request
                 url = 'http://' + website
                 headers = {'user-agent': 'Moai'}
-                html_content = requests.get(url, headers=headers, timeout=3).text
+                html_content = requests.get(url, headers=headers, timeout=5).text
 
                 # search for the code using the regex defined per website
                 live_matches = re.findall(data[indication][website]['regex'], re.sub('<[^<]+?>', '', html_content));
@@ -69,16 +78,16 @@ for indication in data:
                 # if we find a match
                 if len(live_matches) > 0:
                     if str(most_recent_date_code) == str(live_matches[0]):
-                        print '\t- The most recent code that we have [' + str(most_recent_date) + '][' + str(most_recent_date_code) + '] matches what we just found [' + str(live_matches[0]) + ']'
+                        print('\t- The most recent code that we have [' + str(most_recent_date) + '][' + str(most_recent_date_code) + '] matches what we just found [' + str(live_matches[0]) + ']')
                     else:
-                        print '\t- Found a different code than the one we have, writing [' + str(live_matches[0]) + '] to data.yml'
+                        print('\t- Found a different code than the one we have, writing [' + str(live_matches[0]) + '] to data.yml')
                         data[indication][website]['dates'][int(time.strftime("%Y%m%d"))] = { 'code' : str(live_matches[0]) }
                         with open('data.yml', 'w') as outfile:
                             yaml.dump(data, outfile, default_flow_style=False)
 
                 # if we dont find a match
                 else:
-                    print '\t- Did not find any live matches, please check that the regex is current.'
+                    print('\t- Did not find any live matches, please check that the regex is current.')
 
                 break
 
@@ -89,21 +98,21 @@ for indication in data:
                 trys = trys + 1
                 time.sleep(3)
                 if trys == 2:
-                    print '\t- Tried getting the content ' + str(trys) + ' times, skipping...'
+                    print('\t- Tried getting the content ' + str(trys) + ' times, skipping...')
                     break
-
+"""
 
 # determine if there is a 443 listener
-print '\nLOOKING FOR HTTPS SUPPORT'
+print('\nLOOKING FOR HTTPS SUPPORT')
 for indication in data:
 
     # what indication?
-    print '\n' + indication
+    print('\n' + indication)
 
     for website in data[indication]:
 
         # what website?
-        print website
+        print(website)
 
         # try and get the html
         trys = 0
@@ -114,7 +123,7 @@ for indication in data:
                 # make the request
                 url = 'https://' + website
                 headers = {'user-agent': 'Moai'}
-                requests.get(url, headers=headers, timeout=3)
+                requests.get(url, headers=headers, timeout=5)
                 https = True
                 break
 
@@ -126,7 +135,7 @@ for indication in data:
                 trys = trys + 1
                 time.sleep(3)
                 if trys == 2:
-                    print '\t- Tried validating HTTPS support ' + str(trys) + ' times, skipping...'
+                    print('\t- Tried validating HTTPS support ' + str(trys) + ' times, skipping...')
                     break
 
         # get the most recent date
@@ -138,9 +147,9 @@ for indication in data:
             most_recent_date_https = ''
 
         if str(most_recent_date_https) == str(https):
-            print '\t- The most recent https status that we have [' + str(most_recent_date) + '][' + str(most_recent_date_https) + '] matches what we just found [' + str(https) + ']'
+            print('\t- The most recent https status that we have [' + str(most_recent_date) + '][' + str(most_recent_date_https) + '] matches what we just found [' + str(https) + ']')
         else:
-            print '\t- Found a different https status than the one we have, writing [' + str(https) + '] to data.yml'
+            print('\t- Found a different https status than the one we have, writing [' + str(https) + '] to data.yml')
             if data[indication][website]['dates'].has_key(int(time.strftime("%Y%m%d"))) and data[indication][website]['dates'][int(time.strftime("%Y%m%d"))].has_key('code'):
                 data[indication][website]['dates'][int(time.strftime("%Y%m%d"))] = { 'code' : data[indication][website]['dates'][int(time.strftime("%Y%m%d"))]['code'], 'https' : str(https) }
             else:
@@ -150,7 +159,7 @@ for indication in data:
 
 
 # generate images and README content
-print '\nGENERATING IMAGES'
+print('\nGENERATING IMAGES')
 import matplotlib
 # force matplotlib to not use any Xwindows backend
 matplotlib.use('Agg')
@@ -171,7 +180,7 @@ for indication in data:
     for website in data[indication]:
 
         # what website?
-        print website
+        print(website)
 
         dates = []
 
@@ -180,7 +189,7 @@ for indication in data:
                 dates.append(str(date))
 
         X = pd.to_datetime(dates)
-        print X
+        print(X)
         fig, ax = plt.subplots(figsize=(6,0.4))
         ax.scatter(X, [1]*len(X), marker='v', s=50, color='#306caa')
         fig.autofmt_xdate()

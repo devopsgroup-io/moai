@@ -92,7 +92,7 @@ Cancer - Gastric Cancer:
       company: Lilly
       generic: ramucirumab systemic
     regex: '[A-Z][A-Z]-[A-Z]\s[A-Z][A-Z][A-Z]\s[A-Z][A-Z][A-Z]\s[0-9][0-9][A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9]'
-High Cholesterol:
+Cardiovascular Conditions and Disorders - High Cholesterol:
   crestor.com:
     dates:
       20170530:
@@ -133,7 +133,132 @@ High Cholesterol:
       company: Amgen
       generic: evolocumab systemic
     regex: '[A-Z][A-Z][A-Z]-[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9][0-9][0-9]'
-Pulmonary Arterial Hypertension:
+Connective Tissue Disorders - Rheumatoid Arthritis; RA:
+  arava.com:
+    dates:
+      20170526:
+        code: US.LEF.15.11.001
+      20170607:
+        https: 'False'
+    drug:
+      company: Sanofi
+      generic: leflunomide systemic
+    regex: '[A-Z][A-Z]\.[A-Z][A-Z][A-Z]\.[0-9][0-9]\.[0-9][0-9]\.[0-9][0-9][0-9]'
+  celebrex.com:
+    dates:
+      20170526:
+        code: PP-CEL-USA-0295
+      20170607:
+        https: 'True'
+      20170608:
+        https: 'False'
+      20170609:
+        https: 'True'
+    drug:
+      company: Pfizer
+      generic: celecoxib systemic
+    regex: '[A-Z][A-Z]-[A-Z][A-Z][A-Z]-[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9]'
+  enbrel.com:
+    dates:
+      20170526:
+        code: USA-ECF-111018
+      20170607:
+        https: 'True'
+    drug:
+      company: Amgen
+      generic: etanercept systemic
+    regex: '[A-Z][A-Z][A-Z]-[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9][0-9]'
+  humira.com:
+    dates:
+      20170526:
+        code: 64H-1880706
+      20170607:
+        https: 'True'
+    drug:
+      company: AbbVie
+      generic: adalimumab systemic
+    regex: '[0-9][0-9][A-Z]-[0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
+  kevzara.com:
+    dates:
+      20170607:
+        code: SAUS.SARI.17.04.1651
+        https: 'True'
+      20170608:
+        https: 'False'
+      20170609:
+        https: 'True'
+    drug:
+      company: Sanofi and Regeneron
+      generic: sarilumab
+    regex: '[A-Z]A-Z]A-Z]A-Z]\.A-Z]A-Z]A-Z]A-Z]\.[0-9][0-9]\.[0-9][0-9]\.[0-9][0-9][0-9][0-9]'
+  orencia.bmscustomerconnect.com:
+    dates:
+      20170526:
+        code: 427US1701271
+      20170607:
+        https: 'False'
+    drug:
+      company: Bristol-Myers Squibb
+      generic: adalimumab systemic
+    regex: '[0-9][0-9][0-9][A-Z][A-Z][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
+  remicade.com/rheumatoid-arthritis:
+    dates:
+      20170526:
+        code: 035714-150617
+      20170607:
+        https: 'True'
+    drug:
+      company: Janssen
+      generic: infliximab systemic
+    regex: '[0-9][0-9][0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9][0-9][0-9]'
+  vimovo.com:
+    dates:
+      20170528:
+        code: 0026VMV02
+      20170607:
+        https: 'True'
+    drug:
+      company: Horizon Pharma
+      generic: esomeprazole / naproxen systemic
+    regex: '[0-9][0-9][0-9][0-9][A-Z][A-Z][A-Z][0-9][0-9]'
+Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
+  bevespi.com:
+    dates:
+      20170607:
+        code: 2047004-3340900
+        https: 'True'
+    drug:
+      company: AstraZeneca
+      generic: formoterol / glycopyrrolate
+    regex: '[0-9][0-9][0-9][0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
+  daliresp.com:
+    dates:
+      20170607:
+        code: 1954809-3190628
+        https: 'True'
+    drug:
+      company: AstraZeneca
+      generic: roflumilast systemic
+    regex: '[0-9][0-9][0-9][0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
+  mysymbicort.com:
+    dates:
+      20170607:
+        code: 1945203-3326734
+        https: 'True'
+    drug:
+      company: AstraZeneca
+      generic: budesonide / formoterol
+    regex: '[0-9][0-9][0-9][0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
+  startwithanoro.com:
+    dates:
+      20170607:
+        code: 783658R0
+        https: 'False'
+    drug:
+      company: GSK
+      generic: umeclidinium / vilanterol
+    regex: '[0-9][0-9][0-9][0-9][0-9][0-9][A-Z][0-9]'
+Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
   4ventavis.com:
     dates:
       20170524:
@@ -231,7 +356,7 @@ Pulmonary Arterial Hypertension:
       20170523:
         code: SLX-00318
       20170607:
-        https: 'False'
+        https: 'True'
     drug:
       company: Actelion
       generic: selexipag systemic
@@ -246,120 +371,3 @@ Pulmonary Arterial Hypertension:
       company: Actelion
       generic: epoprostenol systemic
     regex: '[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9]'
-Respiratory - Chronic Obstructive Pulmonary Disease:
-  bevespi.com:
-    dates:
-      20170607:
-        code: 2047004-3340900
-        https: 'True'
-    drug:
-      company: AstraZeneca
-      generic: formoterol / glycopyrrolate
-    regex: '[0-9][0-9][0-9][0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
-  daliresp.com:
-    dates:
-      20170607:
-        code: 1954809-3190628
-        https: 'True'
-    drug:
-      company: AstraZeneca
-      generic: roflumilast systemic
-    regex: '[0-9][0-9][0-9][0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
-  mysymbicort.com:
-    dates:
-      20170607:
-        code: 1945203-3326734
-        https: 'True'
-    drug:
-      company: AstraZeneca
-      generic: budesonide / formoterol
-    regex: '[0-9][0-9][0-9][0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
-  startwithanoro.com:
-    dates:
-      20170607:
-        code: 783658R0
-        https: 'False'
-    drug:
-      company: GSK
-      generic: umeclidinium / vilanterol
-    regex: '[0-9][0-9][0-9][0-9][0-9][0-9][A-Z][0-9]'
-Rheumatoid Arthritis:
-  arava.com:
-    dates:
-      20170526:
-        code: US.LEF.15.11.001
-      20170607:
-        https: 'False'
-    drug:
-      company: Sanofi
-      generic: leflunomide systemic
-    regex: '[A-Z][A-Z]\.[A-Z][A-Z][A-Z]\.[0-9][0-9]\.[0-9][0-9]\.[0-9][0-9][0-9]'
-  celebrex.com:
-    dates:
-      20170526:
-        code: PP-CEL-USA-0295
-      20170607:
-        https: 'True'
-    drug:
-      company: Pfizer
-      generic: celecoxib systemic
-    regex: '[A-Z][A-Z]-[A-Z][A-Z][A-Z]-[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9]'
-  enbrel.com:
-    dates:
-      20170526:
-        code: USA-ECF-111018
-      20170607:
-        https: 'True'
-    drug:
-      company: Amgen
-      generic: etanercept systemic
-    regex: '[A-Z][A-Z][A-Z]-[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9][0-9]'
-  humira.com:
-    dates:
-      20170526:
-        code: 64H-1880706
-      20170607:
-        https: 'True'
-    drug:
-      company: AbbVie
-      generic: adalimumab systemic
-    regex: '[0-9][0-9][A-Z]-[0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
-  kevzara.com:
-    dates:
-      20170607:
-        code: SAUS.SARI.17.04.1651
-        https: 'True'
-    drug:
-      company: Sanofi and Regeneron
-      generic: sarilumab
-    regex: '[A-Z]A-Z]A-Z]A-Z]\.A-Z]A-Z]A-Z]A-Z]\.[0-9][0-9]\.[0-9][0-9]\.[0-9][0-9][0-9][0-9]'
-  orencia.bmscustomerconnect.com:
-    dates:
-      20170526:
-        code: 427US1701271
-      20170607:
-        https: 'False'
-    drug:
-      company: Bristol-Myers Squibb
-      generic: adalimumab systemic
-    regex: '[0-9][0-9][0-9][A-Z][A-Z][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
-  remicade.com/rheumatoid-arthritis:
-    dates:
-      20170526:
-        code: 035714-150617
-      20170607:
-        https: 'True'
-    drug:
-      company: Janssen
-      generic: infliximab systemic
-    regex: '[0-9][0-9][0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9][0-9][0-9]'
-  vimovo.com:
-    dates:
-      20170528:
-        code: 0026VMV02
-      20170607:
-        https: 'True'
-    drug:
-      company: Horizon Pharma
-      generic: esomeprazole / naproxen systemic
-    regex: '[0-9][0-9][0-9][0-9][A-Z][A-Z][A-Z][0-9][0-9]'
