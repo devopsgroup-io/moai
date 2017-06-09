@@ -1,34 +1,3 @@
-Alzheimer's Disease:
-  exelonpatch.com:
-    dates:
-      20170530:
-        code: T-EXP-1318386
-      20170607:
-        https: 'True'
-    drug:
-      company: Novartis
-      generic: rivastigmine systemic
-    regex: '[A-Z]-[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
-  namenda.com:
-    dates:
-      20170530:
-        code: NAM51044
-      20170607:
-        https: 'False'
-    drug:
-      company: Allergan
-      generic: memantine systemic
-    regex: '[A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9][0-9]'
-  namzaric.com:
-    dates:
-      20170530:
-        code: NMZ10684
-      20170607:
-        https: 'False'
-    drug:
-      company: Allergan
-      generic: donepezil / memantine systemic
-    regex: '[A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9][0-9]'
 Cancer - Brain Tumor:
   gliadel.com/patient:
     dates:
@@ -133,6 +102,37 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
       company: Amgen
       generic: evolocumab systemic
     regex: '[A-Z][A-Z][A-Z]-[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9][0-9][0-9]'
+Central Nervous System Disorders - Alzheimer's Disease:
+  exelonpatch.com:
+    dates:
+      20170530:
+        code: T-EXP-1318386
+      20170607:
+        https: 'True'
+    drug:
+      company: Novartis
+      generic: rivastigmine systemic
+    regex: '[A-Z]-[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
+  namenda.com:
+    dates:
+      20170530:
+        code: NAM51044
+      20170607:
+        https: 'False'
+    drug:
+      company: Allergan
+      generic: memantine systemic
+    regex: '[A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9][0-9]'
+  namzaric.com:
+    dates:
+      20170530:
+        code: NMZ10684
+      20170607:
+        https: 'False'
+    drug:
+      company: Allergan
+      generic: donepezil / memantine systemic
+    regex: '[A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9][0-9]'
 Connective Tissue Disorders - Rheumatoid Arthritis; RA:
   arava.com:
     dates:
@@ -149,10 +149,6 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
       20170526:
         code: PP-CEL-USA-0295
       20170607:
-        https: 'True'
-      20170608:
-        https: 'False'
-      20170609:
         https: 'True'
     drug:
       company: Pfizer
@@ -182,10 +178,6 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
     dates:
       20170607:
         code: SAUS.SARI.17.04.1651
-        https: 'True'
-      20170608:
-        https: 'False'
-      20170609:
         https: 'True'
     drug:
       company: Sanofi and Regeneron

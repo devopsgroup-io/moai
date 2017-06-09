@@ -14,13 +14,6 @@ HTTPS is also tracked. Sadly, many website infrastructures do not provide HTTPS 
 The below data is free, looking for a complete picture with valuable insights? Please contact us at info@devopsgroup.io to learn more.
 
 
-### Alzheimer's Disease
-| Drug | Company | Generic | HTTPS | Update frequency |
-| ---- | ------- | ------- | ----- | ---------------- |
-| [exelonpatch.com](http://exelonpatch.com) | Novartis | rivastigmine systemic | [:white_check_mark:](https://exelonpatch.com) | ![exelonpatch.com](data/exelonpatch.com.png) |
-| [namenda.com](http://namenda.com) | Allergan | memantine systemic | [:x:](https://namenda.com) | ![namenda.com](data/namenda.com.png) |
-| [namzaric.com](http://namzaric.com) | Allergan | donepezil / memantine systemic | [:x:](https://namzaric.com) | ![namzaric.com](data/namzaric.com.png) |
-
 ### Cancer - Brain Tumor
 | Drug | Company | Generic | HTTPS | Update frequency |
 | ---- | ------- | ------- | ----- | ---------------- |
@@ -46,6 +39,13 @@ The below data is free, looking for a complete picture with valuable insights? P
 | [lipitor.com](http://lipitor.com) | Pfizer | atorvastatin systemic | [:x:](https://lipitor.com) | ![lipitor.com](data/lipitor.com.png) |
 | [livalorx.com](http://livalorx.com) | Kowa | pitavastatin systemic | [:white_check_mark:](https://livalorx.com) | ![livalorx.com](data/livalorx.com.png) |
 | [repatha.com](http://repatha.com) | Amgen | evolocumab systemic | [:white_check_mark:](https://repatha.com) | ![repatha.com](data/repatha.com.png) |
+
+### Central Nervous System Disorders - Alzheimer's Disease
+| Drug | Company | Generic | HTTPS | Update frequency |
+| ---- | ------- | ------- | ----- | ---------------- |
+| [exelonpatch.com](http://exelonpatch.com) | Novartis | rivastigmine systemic | [:white_check_mark:](https://exelonpatch.com) | ![exelonpatch.com](data/exelonpatch.com.png) |
+| [namenda.com](http://namenda.com) | Allergan | memantine systemic | [:x:](https://namenda.com) | ![namenda.com](data/namenda.com.png) |
+| [namzaric.com](http://namzaric.com) | Allergan | donepezil / memantine systemic | [:x:](https://namzaric.com) | ![namzaric.com](data/namzaric.com.png) |
 
 ### Connective Tissue Disorders - Rheumatoid Arthritis; RA
 | Drug | Company | Generic | HTTPS | Update frequency |

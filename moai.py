@@ -36,7 +36,7 @@ with open('data.yml', 'r') as stream:
         print('There was a problem loading the yml file...')
         print(exception)
 
-"""
+
 # find regulatory code changes
 print('\nLOOKING FOR CODE CHANGES')
 for indication in data:
@@ -100,7 +100,7 @@ for indication in data:
                 if trys == 2:
                     print('\t- Tried getting the content ' + str(trys) + ' times, skipping...')
                     break
-"""
+
 
 # determine if there is a 443 listener
 print('\nLOOKING FOR HTTPS SUPPORT')
