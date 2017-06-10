@@ -155,8 +155,14 @@ sudo python -m pip install matplotlib
 sudo python -m pip install matplotlib --upgrade
 sudo python -m pip install pandas
 sudo python -m pip install pandas --upgrade
+sudo python -m pip install pyopenssl
+sudo python -m pip install pyopenssl --upgrade
+sudo python -m pip install pyyaml
+sudo python -m pip install pyyaml --upgrade
 sudo python -m pip install requests
 sudo python -m pip install requests --upgrade
+sudo python -m pip install requests[security]
+sudo python -m pip install requests[security] --upgrade
 
 
 echo -e "\n> configuring yum-cron"
