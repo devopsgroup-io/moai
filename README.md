@@ -79,5 +79,5 @@ The below data is free, looking for a complete picture with valuable insights? P
 | [revatio.com](http://revatio.com) | Pfizer | sildenafil systemic | [:x:](https://revatio.com) | ![revatio.com](data/revatio.com.png) |
 | [tracleer.com](http://tracleer.com) | Actelion | bosentan systemic | [:x:](https://tracleer.com) | ![tracleer.com](data/tracleer.com.png) |
 | [tyvaso.com](http://tyvaso.com) | United Therapeutics | treprostinil systemic | [:white_check_mark:](https://tyvaso.com) | ![tyvaso.com](data/tyvaso.com.png) |
-| [uptravi.com](http://uptravi.com) | Actelion | selexipag systemic | [:white_check_mark:](https://uptravi.com) | ![uptravi.com](data/uptravi.com.png) |
+| [uptravi.com](http://uptravi.com) | Actelion | selexipag systemic | [:x:](https://uptravi.com) | ![uptravi.com](data/uptravi.com.png) |
 | [veletri.com](http://veletri.com) | Actelion | epoprostenol systemic | [:white_check_mark:](https://veletri.com) | ![veletri.com](data/veletri.com.png) |
