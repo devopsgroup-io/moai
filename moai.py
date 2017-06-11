@@ -169,14 +169,14 @@ import pandas as pd
 matplotlib.rcParams.update({'font.size': 6})
 
 content = '<table>'
-content += '\n<tr>'
-content += '<td>Drug</td><td>HTTPS</td><td>Update frequency</td>'
-content += '</tr>'
 
 for indication in data:
 
     content += '\n<tr>'
     content += '<td colspan="3"><strong>' + str(indication) + '</strong></td>'
+    content += '</tr>'
+    content += '\n<tr>'
+    content += '<td>Drug \ generic \ company</td><td>HTTPS</td><td>Update frequency</td>'
     content += '</tr>'
 
     for website in data[indication]:
@@ -221,7 +221,7 @@ for indication in data:
                 break
 
         content += '\n<tr>'
-        content += '<td><a href="http://{0}" target="_blank"><br/>{1}<br/>{2}</td>'.format( website , data[indication][website]['drug']['generic'] , data[indication][website]['drug']['company'] )
+        content += '<td><a href="http://{0}" target="_blank">{0}</a><br/>{1}<br/>{2}</td>'.format( website , data[indication][website]['drug']['generic'] , data[indication][website]['drug']['company'] )
         content += '<td><a href="https://www.ssllabs.com/ssltest/analyze.html?d={0}" target="_blank">{1}</a></td>'.format( website , https )
         content += '<td><img src="data/{0}.png"/></td>'.format( website.replace("/","-") )
         content += '</tr>'
