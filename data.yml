@@ -19,6 +19,8 @@ Cancer - Brain Tumor:
         https: 'True'
       20170611:
         server: ECAcc (phl/9D70)
+      20170612:
+        server: ECAcc (lga/13CC)
     drug:
       company: Novartis
       generic: everolimus systemic

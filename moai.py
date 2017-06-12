@@ -87,7 +87,10 @@ for indication in data:
                         print('* NO CHANGE')
                     else:
                         print('* CHANGE')
-                        data[indication][website]['dates'][todays_date].update( { 'code' : str(code_match[0]) } )
+                        if todays_date in data[indication][website]['dates']:
+                            data[indication][website]['dates'][todays_date].update( { 'code' : str(code_match[0]) } )
+                        else:
+                            data[indication][website]['dates'].update( { todays_date : { 'code' : str(code_match[0]) } } )
                 else:
                     print('* NO MATCH (please confirm correct regex)')
 
@@ -116,7 +119,10 @@ for indication in data:
                     print('* NO CHANGE')
                 else:
                     print('* CHANGE')
-                    data[indication][website]['dates'][todays_date].update( { 'server' : str(server_match) } )
+                    if todays_date in data[indication][website]['dates']:
+                        data[indication][website]['dates'][todays_date].update( { 'server' : str(server_match) } )
+                    else:
+                        data[indication][website]['dates'].update( { todays_date : { 'server' : str(server_match) } } )
 
 
                 break
@@ -185,7 +191,10 @@ for indication in data:
             print('* NO CHANGE')
         else:
             print('* CHANGE')
-            data[indication][website]['dates'][todays_date].update( { 'https' : str(https) } )
+            if todays_date in data[indication][website]['dates']:
+                data[indication][website]['dates'][todays_date].update( { 'https' : str(https) } )
+            else:
+                data[indication][website]['dates'].update( { todays_date : { 'https' : str(https) } } )
 
 
 # write changes to data.yml
