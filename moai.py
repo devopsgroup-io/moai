@@ -278,16 +278,26 @@ for indication in data:
         # what website?
         print('\n' + website + '\n------------------------------').upper()
 
+        # generate date plots for code changes
         dates = []
-
         for date in data[indication][website]['dates']:
-            if data[indication][website]['dates'][date].has_key('code'):
+            if 'code' in data[indication][website]['dates'][date]:
                 dates.append(str(date))
-
         X = pd.to_datetime(dates)
         print(X)
         fig, ax = plt.subplots(figsize=(6,0.4))
         ax.scatter(X, [1]*len(X), marker='v', s=50, color='#306caa')
+        fig.autofmt_xdate()
+
+        # generate date plots for https changes
+        dates = []
+        for date in data[indication][website]['dates']:
+            if 'https' in data[indication][website]['dates'][date]:
+                dates.append(str(date))
+        X = pd.to_datetime(dates)
+        print(X)
+        fig, ax = plt.subplots(figsize=(6,0.4))
+        ax.scatter(X, [1]*len(X), marker='v', s=50, color='#FF0000')
         fig.autofmt_xdate()
 
         # turn off unncessary items
@@ -305,6 +315,7 @@ for indication in data:
         plt.close('all')
 
         # get the most recent https
+        https = ''
         for date in reversed(data[indication][website]['dates']):
             if 'https' in data[indication][website]['dates'][date]:
                 https = data[indication][website]['dates'][date]['https']
@@ -315,20 +326,22 @@ for indication in data:
                 break
 
         # get the most recent server
+        server = ''
         for date in reversed(data[indication][website]['dates']):
             if 'server' in data[indication][website]['dates'][date]:
                 server = data[indication][website]['dates'][date]['server']
                 break
 
         # get the most recent asn
+        asn = ''
         for date in reversed(data[indication][website]['dates']):
             if 'asn' in data[indication][website]['dates'][date]:
                 asn = data[indication][website]['dates'][date]['asn']
                 break
 
         content += '\n<tr>'
-        content += '<td><a href="http://{0}" target="_blank">{0}</a><br/>{1}<br/>{2}</td>'.format( website , data[indication][website]['drug']['generic'] , data[indication][website]['drug']['company'] )
-        content += '<td><a href="https://www.ssllabs.com/ssltest/analyze.html?d={0}" target="_blank">{1}</a><br/>{2}<br/>{3}</td>'.format( website , https, server, asn )
+        content += '<td><a href="http://{0}" target="_blank">{0}</a><br/><sub>{1}</sub><br/><sub>{2}</sub></td>'.format( website , data[indication][website]['drug']['generic'] , data[indication][website]['drug']['company'] )
+        content += '<td><a href="https://www.ssllabs.com/ssltest/analyze.html?d={0}" target="_blank">{1}</a><br/><sub>{2}</sub><br/><sub>{3}</sub></td>'.format( website , https, server, asn )
         content += '<td><img src="data/{0}.png"/></td>'.format( website.replace("/","-") )
         content += '</tr>'
 
