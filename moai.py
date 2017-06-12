@@ -10,6 +10,8 @@ DEVELOPMENT NOTES
 """
 
 import collections
+import gzip
+import pygeoip
 import re
 import requests
 import sys
@@ -39,6 +41,22 @@ with open('data.yml', 'r') as stream:
     except yaml.YAMLError as exception:
         print('There was a problem loading the yml file...')
         print(exception)
+
+
+# download the most recent GeoIPISP.dat file
+url = 'http://download.maxmind.com/download/geoip/database/asnum/GeoIPASNum.dat.gz'
+response = requests.get(url)
+if response.status_code == 200:
+    with open('provision/GeoIPASNum.dat.gz', 'wb') as f:
+        f.write(response.content)
+        f.close()
+inF = gzip.GzipFile('provision/GeoIPASNum.dat.gz', 'rb')
+s = inF.read()
+inF.close()
+outF = file('provision/GeoIPASNum.dat', 'wb')
+outF.write(s)
+outF.close()
+geoip = pygeoip.GeoIP('provision/GeoIPASNum.dat')
 
 
 # find regulatory code changes
@@ -123,6 +141,34 @@ for indication in data:
                         data[indication][website]['dates'][todays_date].update( { 'server' : str(server_match) } )
                     else:
                         data[indication][website]['dates'].update( { todays_date : { 'server' : str(server_match) } } )
+
+                ##################################
+                # ASN (Autonomous System Number) #
+                ##################################
+
+                # try and find the most recent asn
+                asn_most_recent =''
+                asn_most_recent_date = ''
+                for date in reversed(data[indication][website]['dates']):
+                    if data[indication][website]['dates'][date].has_key('asn'):
+                        asn_most_recent = data[indication][website]['dates'][date]['asn']
+                        asn_most_recent_date = date
+                        break
+
+                # define the match
+                domain = website.split("//")[-1].split("/")[0]
+                asn_match = geoip.asn_by_name(domain)
+
+                # handle the match
+                print('[ASN]\nOLD [' + str(asn_most_recent_date) + '][' + str(asn_most_recent) + ']\nNEW [' + str(todays_date) + '][' + asn_match + ']')
+                if str(asn_most_recent) == asn_match:
+                    print('* NO CHANGE')
+                else:
+                    print('* CHANGE')
+                    if todays_date in data[indication][website]['dates']:
+                        data[indication][website]['dates'][todays_date].update( { 'asn' : str(asn_match) } )
+                    else:
+                        data[indication][website]['dates'].update( { todays_date : { 'asn' : str(asn_match) } } )
 
 
                 break
@@ -224,7 +270,7 @@ for indication in data:
     content += '<td colspan="3"><strong>' + str(indication) + '</strong></td>'
     content += '</tr>'
     content += '\n<tr>'
-    content += '<td>Drug \ generic \ company</td><td>HTTPS</td><td>Update frequency</td>'
+    content += '<td>Drug \ generic \ company</td><td>HTTPS \ server \ ASN</td><td>Update frequency</td>'
     content += '</tr>'
 
     for website in data[indication]:
@@ -274,9 +320,15 @@ for indication in data:
                 server = data[indication][website]['dates'][date]['server']
                 break
 
+        # get the most recent asn
+        for date in reversed(data[indication][website]['dates']):
+            if 'asn' in data[indication][website]['dates'][date]:
+                asn = data[indication][website]['dates'][date]['asn']
+                break
+
         content += '\n<tr>'
         content += '<td><a href="http://{0}" target="_blank">{0}</a><br/>{1}<br/>{2}</td>'.format( website , data[indication][website]['drug']['generic'] , data[indication][website]['drug']['company'] )
-        content += '<td><a href="https://www.ssllabs.com/ssltest/analyze.html?d={0}" target="_blank">{1}</a><br/>{2}</td>'.format( website , https, server )
+        content += '<td><a href="https://www.ssllabs.com/ssltest/analyze.html?d={0}" target="_blank">{1}</a><br/>{2}<br/>{3}</td>'.format( website , https, server, asn )
         content += '<td><img src="data/{0}.png"/></td>'.format( website.replace("/","-") )
         content += '</tr>'
 

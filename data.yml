@@ -7,6 +7,8 @@ Cancer - Brain Tumor:
         https: 'False'
       20170611:
         server: Apache
+      20170612:
+        asn: AS22915 FutureQuest, Inc.
     drug:
       company: Arbor
       generic: carmustine systemic
@@ -21,6 +23,7 @@ Cancer - Brain Tumor:
         server: ECAcc (phl/9D70)
       20170612:
         server: ECAcc (lga/13CC)
+        asn: AS30811 EPiServer AB
     drug:
       company: Novartis
       generic: everolimus systemic
@@ -34,6 +37,8 @@ Cancer - Colorectal Cancer:
         https: 'False'
       20170611:
         server: Microsoft-IIS/7.5
+      20170612:
+        asn: AS14618 Amazon.com, Inc.
     drug:
       company: Lilly
       generic: cetuximab systemic
@@ -46,6 +51,8 @@ Cancer - Colorectal Cancer:
         https: 'False'
       20170611:
         server: Apache
+      20170612:
+        asn: AS19574 Corporation Service Company
     drug:
       company: Bayer
       generic: regorafenib systemic
@@ -58,6 +65,8 @@ Cancer - Colorectal Cancer:
         https: 'False'
       20170611:
         server: Microsoft-IIS/7.5
+      20170612:
+        asn: AS17338 AOScloud, LLC.
     drug:
       company: Sanofi
       generic: ziv-aflibercept systemic
@@ -71,6 +80,8 @@ Cancer - Gastric Cancer:
         https: 'False'
       20170611:
         server: Microsoft-IIS/7.5
+      20170612:
+        asn: AS14618 Amazon.com, Inc.
     drug:
       company: Lilly
       generic: ramucirumab systemic
@@ -84,6 +95,8 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
         https: 'True'
       20170611:
         server: Apache
+      20170612:
+        asn: AS16509 Amazon.com, Inc.
     drug:
       company: AstraZeneca
       generic: rosuvastatin systemic
@@ -96,6 +109,8 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
         https: 'False'
       20170611:
         server: nginx
+      20170612:
+        asn: AS14618 Amazon.com, Inc.
     drug:
       company: Pfizer
       generic: atorvastatin systemic
@@ -108,6 +123,8 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
         https: 'True'
       20170611:
         server: Microsoft-IIS/8.0
+      20170612:
+        asn: AS32244 Liquid Web, L.L.C
     drug:
       company: Kowa
       generic: pitavastatin systemic
@@ -120,6 +137,8 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
         https: 'True'
       20170611:
         server: Microsoft-IIS/7.5
+      20170612:
+        asn: AS3561 Savvis
     drug:
       company: Amgen
       generic: evolocumab systemic
@@ -133,6 +152,8 @@ Central Nervous System Disorders - Alzheimer's Disease:
         https: 'True'
       20170611:
         server: WS
+      20170612:
+        asn: AS3707 MCI Communications Services, Inc. d/b/a Verizon Business
     drug:
       company: Novartis
       generic: rivastigmine systemic
@@ -145,6 +166,8 @@ Central Nervous System Disorders - Alzheimer's Disease:
         https: 'False'
       20170611:
         server: Microsoft-IIS/8.5
+      20170612:
+        asn: AS16509 Amazon.com, Inc.
     drug:
       company: Allergan
       generic: memantine systemic
@@ -157,6 +180,8 @@ Central Nervous System Disorders - Alzheimer's Disease:
         https: 'False'
       20170611:
         server: Microsoft-IIS/8.5
+      20170612:
+        asn: AS16509 Amazon.com, Inc.
     drug:
       company: Allergan
       generic: donepezil / memantine systemic
@@ -170,6 +195,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         https: 'False'
       20170611:
         server: Microsoft-IIS/8.5
+      20170612:
+        asn: AS36291 Aventis Pharmaceuticals Inc.
     drug:
       company: Sanofi
       generic: leflunomide systemic
@@ -182,6 +209,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         https: 'True'
       20170611:
         server: nginx
+      20170612:
+        asn: AS14618 Amazon.com, Inc.
     drug:
       company: Pfizer
       generic: celecoxib systemic
@@ -194,6 +223,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         https: 'True'
       20170611:
         server: Microsoft-IIS/7.5
+      20170612:
+        asn: AS3561 Savvis
     drug:
       company: Amgen
       generic: etanercept systemic
@@ -206,6 +237,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         https: 'True'
       20170611:
         server: Microsoft-IIS/8.0
+      20170612:
+        asn: AS27357 Rackspace Ltd.
     drug:
       company: AbbVie
       generic: adalimumab systemic
@@ -217,6 +250,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         https: 'True'
       20170611:
         server: Microsoft-IIS/8.5
+      20170612:
+        asn: AS8075 Microsoft Corporation
     drug:
       company: Sanofi and Regeneron
       generic: sarilumab
@@ -227,6 +262,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         code: 427US1701271
       20170607:
         https: 'False'
+      20170612:
+        asn: AS7246 Bristol-Myers Squibb Company
     drug:
       company: Bristol-Myers Squibb
       generic: adalimumab systemic
@@ -239,6 +276,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         https: 'True'
       20170611:
         server: nginx
+      20170612:
+        asn: AS14618 Amazon.com, Inc.
     drug:
       company: Janssen
       generic: infliximab systemic
@@ -251,6 +290,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         https: 'True'
       20170611:
         server: cloudflare-nginx
+      20170612:
+        asn: AS13335 CloudFlare
     drug:
       company: Horizon Pharma
       generic: esomeprazole / naproxen systemic
@@ -263,6 +304,8 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         https: 'True'
       20170611:
         server: Apache
+      20170612:
+        asn: AS16509 Amazon.com, Inc.
     drug:
       company: AstraZeneca
       generic: formoterol / glycopyrrolate
@@ -274,6 +317,8 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         https: 'True'
       20170611:
         server: Apache
+      20170612:
+        asn: AS16509 Amazon.com, Inc.
     drug:
       company: AstraZeneca
       generic: roflumilast systemic
@@ -285,6 +330,8 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         https: 'True'
       20170611:
         server: Apache
+      20170612:
+        asn: AS16509 Amazon.com, Inc.
     drug:
       company: AstraZeneca
       generic: budesonide / formoterol
@@ -296,6 +343,8 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         https: 'False'
       20170611:
         server: Apache
+      20170612:
+        asn: AS14618 Amazon.com, Inc.
     drug:
       company: GSK
       generic: umeclidinium / vilanterol
@@ -309,6 +358,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         https: 'True'
       20170611:
         server: Microsoft-IIS/8.5
+      20170612:
+        asn: AS19551 Incapsula Inc
     drug:
       company: Actelion
       generic: iloprost systemic
@@ -321,6 +372,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         https: 'True'
       20170611:
         server: Microsoft-IIS/8.0
+      20170612:
+        asn: AS8075 Microsoft Corporation
     drug:
       company: United Therapeutics
       generic: tadalafil systemic
@@ -333,6 +386,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         https: 'True'
       20170611:
         server: Microsoft-IIS/8.5
+      20170612:
+        asn: AS27357 Rackspace Ltd.
     drug:
       company: Gilead
       generic: ambrisentan systemic
@@ -345,6 +400,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         https: 'True'
       20170611:
         server: Microsoft-IIS/8.5
+      20170612:
+        asn: AS16509 Amazon.com, Inc.
     drug:
       company: Actelion
       generic: macitentan systemic
@@ -357,6 +414,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         https: 'True'
       20170611:
         server: Microsoft-IIS/8.0
+      20170612:
+        asn: AS8075 Microsoft Corporation
     drug:
       company: United Therapeutics
       generic: treprostinil systemic
@@ -369,6 +428,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         https: 'True'
       20170611:
         server: Microsoft-IIS/8.0
+      20170612:
+        asn: AS8075 Microsoft Corporation
     drug:
       company: United Therapeutics
       generic: treprostinil systemic
@@ -381,6 +442,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         https: 'False'
       20170611:
         server: nginx
+      20170612:
+        asn: AS16509 Amazon.com, Inc.
     drug:
       company: Pfizer
       generic: sildenafil systemic
@@ -393,6 +456,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         https: 'False'
       20170611:
         server: Microsoft-IIS/8.5
+      20170612:
+        asn: AS16509 Amazon.com, Inc.
     drug:
       company: Actelion
       generic: bosentan systemic
@@ -405,6 +470,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         https: 'True'
       20170611:
         server: Microsoft-IIS/8.0
+      20170612:
+        asn: AS8075 Microsoft Corporation
     drug:
       company: United Therapeutics
       generic: treprostinil systemic
@@ -431,6 +498,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         https: 'True'
       20170611:
         server: Microsoft-IIS/8.5
+      20170612:
+        asn: AS19551 Incapsula Inc
     drug:
       company: Actelion
       generic: epoprostenol systemic

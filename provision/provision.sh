@@ -98,20 +98,20 @@ echo -e "\n> system swap configuration"
 # get current swaps
 swaps=$(swapon --noheadings --show=NAME)
 swap_volumes=$(cat /etc/fstab | grep "swap" | awk '{print $1}')
-# create a 512MB swap at /swapfile512 if it does not exist
-if [[ ! ${swaps[*]} =~ "/swapfile512" ]]; then
-    echo -e "the swap /swapfile512 does not exist, creating..."
-    sudo dd if=/dev/zero of=/swapfile512 count=512 bs=1MiB
-    sudo chmod 0600 /swapfile512
-    sudo mkswap /swapfile512
+# create a 1024MB swap at /swapfile1024 if it does not exist
+if [[ ! ${swaps[*]} =~ "/swapfile1024" ]]; then
+    echo -e "the swap /swapfile1024 does not exist, creating..."
+    sudo dd if=/dev/zero of=/swapfile1024 count=1024 bs=1MiB
+    sudo chmod 0600 /swapfile1024
+    sudo mkswap /swapfile1024
 fi
-sudo swapon /swapfile512
-# add the swap /swapfile512 to startup if it does not exist
-if [[ ! ${swap_volumes[*]} =~ "/swapfile512" ]]; then
-    sudo bash -c 'echo -e "\n/swapfile512 swap    swap    defaults    0   0" >> /etc/fstab'
+sudo swapon /swapfile1024
+# add the swap /swapfile1024 to startup if it does not exist
+if [[ ! ${swap_volumes[*]} =~ "/swapfile1024" ]]; then
+    sudo bash -c 'echo -e "\n/swapfile1024 swap    swap    defaults    0   0" >> /etc/fstab'
 fi
 # define the swaps
-defined_swaps=("/swapfile512")
+defined_swaps=("/swapfile1024")
 # remove all swaps except the defined swaps
 while read -r swap; do
     if [[ ! ${defined_swaps[*]} =~ "${swap}" ]]; then
@@ -145,6 +145,7 @@ EOF
 echo -e "\n> configuring required packages"
 # install python
 sudo yum install -y gcc
+sudo yum install -y openssl-devel
 sudo yum install -y python
 sudo yum install -y python-devel
 sudo yum install -y python-setuptools
@@ -155,6 +156,8 @@ sudo python -m pip install matplotlib
 sudo python -m pip install matplotlib --upgrade
 sudo python -m pip install pandas
 sudo python -m pip install pandas --upgrade
+sudo python -m pip install pygeoip
+sudo python -m pip install pygeoip --upgrade
 sudo python -m pip install pyopenssl
 sudo python -m pip install pyopenssl --upgrade
 sudo python -m pip install pyyaml
