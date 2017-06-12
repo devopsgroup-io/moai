@@ -28,6 +28,10 @@ yaml.add_representer(collections.OrderedDict, dict_representer)
 yaml.add_constructor(_mapping_tag, dict_constructor)
 
 
+# define globals
+todays_date = int(time.strftime("%Y%m%d"))
+
+
 # get our data
 with open('data.yml', 'r') as stream:
     try:
@@ -42,12 +46,12 @@ print('\nLOOKING FOR CODE CHANGES')
 for indication in data:
 
     # what indication?
-    print('\n' + indication)
+    print('\n' + indication + '\n==============================').upper()
 
     for website in data[indication]:
 
         # what website?
-        print(website)
+        print('\n' + website + '\n------------------------------').upper()
 
         # try and get the html
         trys = 0
@@ -57,49 +61,77 @@ for indication in data:
                 # make the request
                 url = 'http://' + website
                 headers = {'user-agent': 'Moai'}
-                html_content = requests.get(url, headers=headers, timeout=5).text
+                request = requests.get(url, headers=headers, timeout=5)
+                html_content = request.text
 
-                # search for the code using the regex defined per website
-                live_matches = re.findall(data[indication][website]['regex'], re.sub('<[^<]+?>', '', html_content));
+                ############
+                # FDA CODE #
+                ############
 
-                # get the most recent date with a code
+                # try and find the most recent code
+                code_most_recent =''
+                code_most_recent_date = ''
                 for date in reversed(data[indication][website]['dates']):
                     if data[indication][website]['dates'][date].has_key('code'):
-                        most_recent_date = date
+                        code_most_recent = data[indication][website]['dates'][date]['code']
+                        code_most_recent_date = date
                         break
-                    else:
-                        most_recent_date =''
-                # get the most recent data code
-                if data[indication][website]['dates'][most_recent_date].has_key('code'):
-                    most_recent_date_code = data[indication][website]['dates'][most_recent_date]['code']
-                else:
-                    most_recent_date_code = ''
 
-                # if we find a match
-                if len(live_matches) > 0:
-                    if str(most_recent_date_code) == str(live_matches[0]):
-                        print('\t- The most recent code that we have [' + str(most_recent_date) + '][' + str(most_recent_date_code) + '] matches what we just found [' + str(live_matches[0]) + ']')
-                    else:
-                        print('\t- Found a different code than the one we have, writing [' + str(live_matches[0]) + '] to data.yml')
-                        data[indication][website]['dates'][int(time.strftime("%Y%m%d"))] = { 'code' : str(live_matches[0]) }
-                        with open('data.yml', 'w') as outfile:
-                            yaml.dump(data, outfile, default_flow_style=False)
+                # define the match
+                code_match = re.findall(data[indication][website]['regex'], re.sub('<[^<]+?>', '', html_content));
 
-                # if we dont find a match
+                # handle the match
+                if len(code_match) > 0:
+                    print('[CODE]\nOLD [' + str(code_most_recent_date) + '][' + str(code_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(code_match[0]) + ']')
+                    if str(code_most_recent) == str(code_match[0]):
+                        print('* NO CHANGE')
+                    else:
+                        print('* CHANGE')
+                        data[indication][website]['dates'][todays_date].update( { 'code' : str(code_match[0]) } )
                 else:
-                    print('\t- Did not find any live matches, please check that the regex is current.')
+                    print('* NO MATCH (please confirm correct regex)')
+
+                ###############
+                # HTTP SERVER #
+                ###############
+
+                # try and find the most recent server
+                server_most_recent =''
+                server_most_recent_date = ''
+                for date in reversed(data[indication][website]['dates']):
+                    if data[indication][website]['dates'][date].has_key('server'):
+                        server_most_recent = data[indication][website]['dates'][date]['server']
+                        server_most_recent_date = date
+                        break
+
+                # define the match
+                if 'server' in request.headers:
+                    server_match = str(request.headers['Server'])
+                else:
+                    server_match = ''
+
+                # handle the match
+                print('[SERVER]\nOLD [' + str(server_most_recent_date) + '][' + str(server_most_recent) + ']\nNEW [' + str(todays_date) + '][' + server_match + ']')
+                if str(server_most_recent) == server_match:
+                    print('* NO CHANGE')
+                else:
+                    print('* CHANGE')
+                    data[indication][website]['dates'][todays_date].update( { 'server' : str(server_match) } )
+
 
                 break
 
             # catch any exceptions
             except requests.exceptions.RequestException as e:
-                print('\t- Exception: ' + str(e))
+                print('Exception: ' + str(e))
             finally:
                 trys = trys + 1
                 time.sleep(3)
                 if trys == 2:
-                    print('\t- Tried getting the content ' + str(trys) + ' times, skipping...')
+                    print('Tried getting the content ' + str(trys) + ' times, skipping...')
                     break
+
+exit
 
 
 # determine if there is a 443 listener
@@ -107,14 +139,14 @@ print('\nLOOKING FOR HTTPS SUPPORT')
 for indication in data:
 
     # what indication?
-    print('\n' + indication)
+    print('\n' + indication + '\n==============================').upper()
 
     for website in data[indication]:
 
         # what website?
-        print(website)
+        print('\n' + website + '\n------------------------------').upper()
 
-        # try and get the html
+        # try and request https
         trys = 0
         https = False
         while True:
@@ -129,37 +161,41 @@ for indication in data:
 
             # catch any exceptions
             except requests.exceptions.RequestException as e:
-                print('\t- Exception: ' + str(e))
+                print('Exception: ' + str(e))
                 https = False
             finally:
                 trys = trys + 1
                 time.sleep(3)
                 if trys == 2:
-                    print('\t- Tried validating HTTPS support ' + str(trys) + ' times, skipping...')
+                    print('Tried validating HTTPS support ' + str(trys) + ' times, skipping...')
                     break
 
-        # get the most recent date
-        most_recent_date = data[indication][website]['dates'].keys()[-1]
-        # get the most recent https status
-        if data[indication][website]['dates'][most_recent_date].has_key('https'):
-            most_recent_date_https = data[indication][website]['dates'][most_recent_date]['https']
-        else:
-            most_recent_date_https = ''
+        # try and find the most recent https
+        https_most_recent =''
+        https_most_recent_date = ''
+        for date in reversed(data[indication][website]['dates']):
+            if data[indication][website]['dates'][date].has_key('https'):
+                https_most_recent = data[indication][website]['dates'][date]['https']
+                https_most_recent_date = date
+                break
 
-        if str(most_recent_date_https) == str(https):
-            print('\t- The most recent https status that we have [' + str(most_recent_date) + '][' + str(most_recent_date_https) + '] matches what we just found [' + str(https) + ']')
+        # handle the match
+        print('[HTTPS]\nOLD [' + str(https_most_recent_date) + '][' + str(https_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(https) + ']')
+        if str(https_most_recent) == str(https):
+            print('* NO CHANGE')
         else:
-            print('\t- Found a different https status than the one we have, writing [' + str(https) + '] to data.yml')
-            if data[indication][website]['dates'].has_key(int(time.strftime("%Y%m%d"))) and data[indication][website]['dates'][int(time.strftime("%Y%m%d"))].has_key('code'):
-                data[indication][website]['dates'][int(time.strftime("%Y%m%d"))] = { 'code' : data[indication][website]['dates'][int(time.strftime("%Y%m%d"))]['code'], 'https' : str(https) }
-            else:
-                data[indication][website]['dates'][int(time.strftime("%Y%m%d"))] = { 'https' : str(https) }
-            with open('data.yml', 'w') as outfile:
-                yaml.dump(data, outfile, default_flow_style=False)
+            print('* CHANGE')
+            data[indication][website]['dates'][todays_date].update( { 'https' : str(https) } )
+
+
+# write changes to data.yml
+print('\nWRITING CHANGES TO THE DATA.YML FILE')
+with open('data.yml', 'w') as outfile:
+    yaml.dump(data, outfile, default_flow_style=False)
 
 
 # generate images and README content
-print('\nGENERATING IMAGES')
+print('\nGENERATING CONTENT')
 import matplotlib
 # force matplotlib to not use any Xwindows backend
 matplotlib.use('Agg')
@@ -172,6 +208,9 @@ content = '<table>'
 
 for indication in data:
 
+    # what indication?
+    print('\n' + indication + '\n==============================').upper()
+
     content += '\n<tr>'
     content += '<td colspan="3"><strong>' + str(indication) + '</strong></td>'
     content += '</tr>'
@@ -182,7 +221,7 @@ for indication in data:
     for website in data[indication]:
 
         # what website?
-        print(website)
+        print('\n' + website + '\n------------------------------').upper()
 
         dates = []
 
@@ -210,9 +249,9 @@ for indication in data:
 
         plt.close('all')
 
-        # get the most recent date with https status
+        # get the most recent https
         for date in reversed(data[indication][website]['dates']):
-            if data[indication][website]['dates'][date].has_key('https'):
+            if 'https' in data[indication][website]['dates'][date]:
                 https = data[indication][website]['dates'][date]['https']
                 if https == 'True':
                     https = ':white_check_mark:'
@@ -220,9 +259,15 @@ for indication in data:
                     https = ':x:'
                 break
 
+        # get the most recent server
+        for date in reversed(data[indication][website]['dates']):
+            if 'server' in data[indication][website]['dates'][date]:
+                server = data[indication][website]['dates'][date]['server']
+                break
+
         content += '\n<tr>'
         content += '<td><a href="http://{0}" target="_blank">{0}</a><br/>{1}<br/>{2}</td>'.format( website , data[indication][website]['drug']['generic'] , data[indication][website]['drug']['company'] )
-        content += '<td><a href="https://www.ssllabs.com/ssltest/analyze.html?d={0}" target="_blank">{1}</a></td>'.format( website , https )
+        content += '<td><a href="https://www.ssllabs.com/ssltest/analyze.html?d={0}" target="_blank">{1}</a><br/>{2}</td>'.format( website , https, server )
         content += '<td><img src="data/{0}.png"/></td>'.format( website.replace("/","-") )
         content += '</tr>'
 
