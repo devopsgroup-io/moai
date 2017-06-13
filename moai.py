@@ -71,7 +71,13 @@ for indication in data:
         # what website?
         print('\n' + website + '\n------------------------------').upper()
 
-        # try and get the html
+        ###########
+        # 80 HTTP #
+        ###########
+        ###########
+        ###########
+
+        print('[HTTP]')
         trys = 0
         while True:
             try:
@@ -183,22 +189,14 @@ for indication in data:
                     print('Tried getting the content ' + str(trys) + ' times, skipping...')
                     break
 
-exit
 
+        #############
+        # 443 HTTPS #
+        #############
+        #############
+        #############
 
-# determine if there is a 443 listener
-print('\nLOOKING FOR HTTPS SUPPORT')
-for indication in data:
-
-    # what indication?
-    print('\n' + indication + '\n==============================').upper()
-
-    for website in data[indication]:
-
-        # what website?
-        print('\n' + website + '\n------------------------------').upper()
-
-        # try and request https
+        print('[HTTPS]')
         trys = 0
         https = False
         while True:
@@ -214,13 +212,17 @@ for indication in data:
             # catch any exceptions
             except requests.exceptions.RequestException as e:
                 print('Exception: ' + str(e))
-                https = False
             finally:
                 trys = trys + 1
                 time.sleep(3)
                 if trys == 2:
                     print('Tried validating HTTPS support ' + str(trys) + ' times, skipping...')
                     break
+
+
+        #########
+        # HTTPS #
+        #########
 
         # try and find the most recent https
         https_most_recent =''
@@ -232,7 +234,7 @@ for indication in data:
                 break
 
         # handle the match
-        print('[HTTPS]\nOLD [' + str(https_most_recent_date) + '][' + str(https_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(https) + ']')
+        print('OLD [' + str(https_most_recent_date) + '][' + str(https_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(https) + ']')
         if str(https_most_recent) == str(https):
             print('* NO CHANGE')
         else:
@@ -241,6 +243,63 @@ for indication in data:
                 data[indication][website]['dates'][todays_date].update( { 'https' : str(https) } )
             else:
                 data[indication][website]['dates'].update( { todays_date : { 'https' : str(https) } } )
+
+
+        #############################
+        # GOOGLE PAGESPEED INSIGHTS #
+        #############################
+        #############################
+        #############################
+
+        print('[GOOGLE PAGESPEED INSIGHTS]')
+        trys = 0
+        google_psi = ''
+        while True:
+            try:
+
+                # make the request
+                url = 'https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=http://' + website + '&strategy=desktop'
+                headers = {'user-agent': 'Moai'}
+                request = requests.get(url, headers=headers, timeout=30)
+                response = request.json()
+                google_psi = response['ruleGroups']['SPEED']['score']
+                break
+
+            # catch any exceptions
+            except requests.exceptions.RequestException as e:
+                print('Exception: ' + str(e))
+            finally:
+                trys = trys + 1
+                time.sleep(3)
+                if trys == 2:
+                    print('Tried validating HTTPS support ' + str(trys) + ' times, skipping...')
+                    break
+
+
+        ##############
+        # GOOGLE_PSI #
+        ##############
+
+        # try and find the most recent https
+        google_psi_most_recent =''
+        google_psi_most_recent_date = ''
+        for date in reversed(data[indication][website]['dates']):
+            if data[indication][website]['dates'][date].has_key('google_psi'):
+                google_psi_most_recent = data[indication][website]['dates'][date]['google_psi']
+                google_psi_most_recent_date = date
+                break
+
+        # handle the match
+        print('OLD [' + str(google_psi_most_recent_date) + '][' + str(google_psi_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(google_psi) + ']')
+        if str(google_psi_most_recent) == str(google_psi):
+            print('* NO CHANGE')
+        else:
+            print('* CHANGE')
+            if todays_date in data[indication][website]['dates']:
+                data[indication][website]['dates'][todays_date].update( { 'google_psi' : str(google_psi) } )
+            else:
+                data[indication][website]['dates'].update( { todays_date : { 'google_psi' : str(google_psi) } } )
+
 
 
 # write changes to data.yml
@@ -270,7 +329,7 @@ for indication in data:
     content += '<td colspan="3"><strong>' + str(indication) + '</strong></td>'
     content += '</tr>'
     content += '\n<tr>'
-    content += '<td>Drug \ generic \ company</td><td>HTTPS \ server \ ASN</td><td>Update frequency</td>'
+    content += '<td>Drug \ generic \ company</td><td>HTTPS \ server \ ASN</td><td>:100:</td><td>Regulatory code update frequency</td>'
     content += '</tr>'
 
     for website in data[indication]:
@@ -339,9 +398,17 @@ for indication in data:
                 asn = data[indication][website]['dates'][date]['asn']
                 break
 
+        # get the most recent asn
+        google_psi = ''
+        for date in reversed(data[indication][website]['dates']):
+            if 'google_psi' in data[indication][website]['dates'][date]:
+                google_psi = data[indication][website]['dates'][date]['google_psi']
+                break
+
         content += '\n<tr>'
         content += '<td><a href="http://{0}" target="_blank">{0}</a><br/><sub>{1}</sub><br/><sub>{2}</sub></td>'.format( website , data[indication][website]['drug']['generic'] , data[indication][website]['drug']['company'] )
         content += '<td><a href="https://www.ssllabs.com/ssltest/analyze.html?d={0}" target="_blank">{1}</a><br/><sub>{2}</sub><br/><sub>{3}</sub></td>'.format( website , https, server, asn )
+        content += '<td>{0}</td>'.format(google_psi)
         content += '<td><img src="data/{0}.png"/></td>'.format( website.replace("/","-") )
         content += '</tr>'
 
