@@ -326,7 +326,7 @@ for indication in data:
     print('\n' + indication + '\n==============================').upper()
 
     content += '\n<tr>'
-    content += '<td colspan="3"><strong>' + str(indication) + '</strong></td>'
+    content += '<td colspan="4"><strong>' + str(indication) + '</strong></td>'
     content += '</tr>'
     content += '\n<tr>'
     content += '<td>Drug \ generic \ company</td><td>HTTPS \ server \ ASN</td><td>:100:</td><td>Regulatory code update frequency</td>'
@@ -408,7 +408,7 @@ for indication in data:
         content += '\n<tr>'
         content += '<td><a href="http://{0}" target="_blank">{0}</a><br/><sub>{1}</sub><br/><sub>{2}</sub></td>'.format( website , data[indication][website]['drug']['generic'] , data[indication][website]['drug']['company'] )
         content += '<td><a href="https://www.ssllabs.com/ssltest/analyze.html?d={0}" target="_blank">{1}</a><br/><sub>{2}</sub><br/><sub>{3}</sub></td>'.format( website , https, server, asn )
-        content += '<td>{0}</td>'.format(google_psi)
+        content += '<td><a href="https://developers.google.com/speed/pagespeed/insights/?url={0}&tab=desktop" target="_blank">{1}</a></td>'.format( website , google_psi )
         content += '<td><img src="data/{0}.png"/></td>'.format( website.replace("/","-") )
         content += '</tr>'
 

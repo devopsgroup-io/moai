@@ -166,6 +166,11 @@ sudo python -m pip install requests
 sudo python -m pip install requests --upgrade
 sudo python -m pip install requests[security]
 sudo python -m pip install requests[security] --upgrade
+# fixes SSL3_GET_SERVER_CERTIFICATE
+# per https://stackoverflow.com/questions/34646942/ssl3-get-server-certificate-certificate-verify-failed-on-python-when-requesting#answers-header
+# per https://github.com/certifi/python-certifi/issues/26#issuecomment-138336586
+sudo python -m pip uninstall -y certifi
+sudo python -m pip install certifi==2015.04.28
 
 
 echo -e "\n> configuring yum-cron"
