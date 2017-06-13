@@ -26,6 +26,9 @@ Cancer - Brain Tumor:
         server: ECAcc (phl/9D70)
         asn: AS30811 EPiServer AB
         google_psi: '67'
+      20170613:
+        google_psi: '64'
+        server: ECAcc (lga/13CC)
     drug:
       company: Novartis
       generic: everolimus systemic
@@ -256,6 +259,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
       20170612:
         asn: AS27357 Rackspace Ltd.
         google_psi: '43'
+      20170613:
+        google_psi: '49'
     drug:
       company: AbbVie
       generic: adalimumab systemic
@@ -537,6 +542,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20170612:
         asn: AS19551 Incapsula Inc
         google_psi: '77'
+      20170613:
+        google_psi: '76'
     drug:
       company: Actelion
       generic: epoprostenol systemic
