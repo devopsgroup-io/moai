@@ -27,7 +27,7 @@ Cancer - Brain Tumor:
         asn: AS30811 EPiServer AB
         google_psi: '67'
       20170613:
-        google_psi: '64'
+        google_psi: '67'
         server: ECAcc (lga/13CC)
     drug:
       company: Novartis
@@ -543,7 +543,7 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         asn: AS19551 Incapsula Inc
         google_psi: '77'
       20170613:
-        google_psi: '76'
+        google_psi: '77'
     drug:
       company: Actelion
       generic: epoprostenol systemic
