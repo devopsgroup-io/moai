@@ -38,8 +38,9 @@ Cancer - Brain Tumor:
         google_psi_mobile_usability: '99'
       20170614:
         google_psi_desktop: '66'
-        google_psi_mobile: '57'
+        google_psi_mobile: '55'
         moz_links: '0'
+        server: ECAcc (lga/13CC)
     drug:
       company: Novartis
       generic: everolimus systemic
@@ -102,6 +103,7 @@ Cancer - Colorectal Cancer:
         google_psi_mobile_usability: '100'
       20170614:
         moz_links: '74'
+        google_psi_desktop: '61'
     drug:
       company: Sanofi
       generic: ziv-aflibercept systemic
@@ -144,6 +146,7 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
         google_psi_mobile_usability: '93'
       20170614:
         moz_links: '293'
+        google_psi_desktop: '86'
     drug:
       company: AstraZeneca
       generic: rosuvastatin systemic
@@ -306,6 +309,7 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         google_psi_mobile_usability: '96'
       20170614:
         moz_links: '418'
+        google_psi_mobile: '51'
     drug:
       company: Pfizer
       generic: celecoxib systemic
@@ -347,6 +351,7 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         google_psi_mobile_usability: '99'
       20170614:
         moz_links: '697'
+        google_psi_desktop: '43'
     drug:
       company: AbbVie
       generic: adalimumab systemic
@@ -366,6 +371,9 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         google_psi_mobile_usability: '99'
       20170614:
         moz_links: '0'
+        google_psi_mobile: '77'
+        google_psi_mobile_usability: '90'
+        google_psi_desktop: '91'
     drug:
       company: Sanofi and Regeneron
       generic: sarilumab
@@ -386,6 +394,7 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
       20170614:
         google_psi_desktop: '63'
         moz_links: '73'
+        google_psi_mobile: '50'
     drug:
       company: Bristol-Myers Squibb
       generic: adalimumab systemic
@@ -484,7 +493,7 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         google_psi_mobile: '55'
         google_psi_mobile_usability: '98'
       20170614:
-        google_psi_mobile: '54'
+        google_psi_mobile: '55'
         moz_links: '217'
     drug:
       company: AstraZeneca
@@ -505,6 +514,7 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         google_psi_mobile_usability: '98'
       20170614:
         moz_links: '10'
+        google_psi_mobile: '55'
     drug:
       company: GSK
       generic: umeclidinium / vilanterol
