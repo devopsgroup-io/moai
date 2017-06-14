@@ -9,13 +9,17 @@ DEVELOPMENT NOTES
 * Install the missing libraries as defined in provision.sh
 """
 
+import base64
 import collections
 import gzip
+import hashlib
+import hmac
 import pygeoip
 import re
 import requests
 import sys
 import time
+from urllib import quote
 import yaml
 
 
@@ -85,8 +89,8 @@ for indication in data:
                 # make the request
                 url = 'http://' + website
                 headers = {'user-agent': 'Moai'}
-                request = requests.get(url, headers=headers, timeout=5)
-                html_content = request.text
+                request_80 = requests.get(url, headers=headers, timeout=5)
+                html_content = request_80.text
 
                 ############
                 # FDA CODE #
@@ -132,8 +136,8 @@ for indication in data:
                         break
 
                 # define the match
-                if 'server' in request.headers:
-                    server_match = str(request.headers['Server'])
+                if 'server' in request_80.headers:
+                    server_match = str(request_80.headers['Server'])
                 else:
                     server_match = ''
 
@@ -185,8 +189,8 @@ for indication in data:
             finally:
                 trys = trys + 1
                 time.sleep(3)
-                if trys == 2:
-                    print('Tried getting the content ' + str(trys) + ' times, skipping...')
+                if trys > 2:
+                    print('Tried making the request ' + str(trys) + ' times, skipping...')
                     break
 
 
@@ -215,8 +219,8 @@ for indication in data:
             finally:
                 trys = trys + 1
                 time.sleep(3)
-                if trys == 2:
-                    print('Tried validating HTTPS support ' + str(trys) + ' times, skipping...')
+                if trys > 2:
+                    print('Tried making the request ' + str(trys) + ' times, skipping...')
                     break
 
         #########
@@ -271,8 +275,8 @@ for indication in data:
             finally:
                 trys = trys + 1
                 time.sleep(3)
-                if trys == 2:
-                    print('Tried validating HTTPS support ' + str(trys) + ' times, skipping...')
+                if trys > 2:
+                    print('Tried making the request ' + str(trys) + ' times, skipping...')
                     break
 
         ######################
@@ -350,8 +354,8 @@ for indication in data:
             finally:
                 trys = trys + 1
                 time.sleep(3)
-                if trys == 2:
-                    print('Tried validating HTTPS support ' + str(trys) + ' times, skipping...')
+                if trys > 2:
+                    print('Tried making the request ' + str(trys) + ' times, skipping...')
                     break
 
         ######################
@@ -379,6 +383,82 @@ for indication in data:
                 data[indication][website]['dates'].update( { todays_date : { 'google_psi_desktop' : str(google_psi_desktop) } } )
 
 
+        #######
+        # MOZ #
+        #######
+        #######
+        #######
+
+        print('[MOZ]')
+        trys = 0
+        moz_links = ''
+        while True:
+            try:
+                # https://github.com/seomoz/SEOmozAPISamples/blob/master/python/mozscape.py
+                # whaaaa? secret key exposed? yes, i know, we'll fix this later. i don't think there are hackers scouring the internet for moz secret keys (no offense)
+                access_key = 'mozscape-b8fab3b953'
+                secret_key = '1e7aa77ad3797e6637c7097f42e4b7aa'
+                expires = int(time.time() + 300)
+                to_sign = '%s\n%i' % (access_key, expires)
+                signature = base64.b64encode(
+                    hmac.new(
+                        secret_key.encode('utf-8'),
+                        to_sign.encode('utf-8'),
+                        hashlib.sha1
+                    ).digest()
+                )
+                # request_80.url is the final redirected url
+                domain = quote(request_80.url)
+                # make the request
+                url = 'http://lsapi.seomoz.com/linkscape/url-metrics/' + domain + '?Cols=2048&AccessID=' + access_key + '&Expires=' + str(expires) + '&Signature=' + signature
+                headers = {'user-agent': 'Moai'}
+                request = requests.get(url, headers=headers, timeout=30)
+                response = request.json()
+                if 'uid' in response:
+                    moz_links = response['uid']
+                else:
+                    # moz free tier only allows 1 request every 10 seconds
+                    # 5 seconds for good luck as our trusty advisement of 10 seconds is not 100% accurate
+                    time.sleep(15)
+                    raise requests.exceptions.RequestException(request.text)
+                break
+
+            # catch any exceptions
+            except requests.exceptions.RequestException as e:
+                print('Exception: ' + str(e))
+            finally:
+                trys = trys + 1
+                time.sleep(3)
+                if trys > 2:
+                    print('Tried making the request ' + str(trys) + ' times, skipping...')
+                    break
+
+        #############
+        # MOZ LINKS #
+        #############
+
+        # try and find the most recent moz_links
+        moz_links_most_recent =''
+        moz_links_most_recent_date = ''
+        for date in reversed(data[indication][website]['dates']):
+            if data[indication][website]['dates'][date].has_key('moz_links'):
+                moz_links_most_recent = data[indication][website]['dates'][date]['moz_links']
+                moz_links_most_recent_date = date
+                break
+
+        # handle the match
+        if str(moz_links) != '':
+            print('OLD [' + str(moz_links_most_recent_date) + '][' + str(moz_links_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(moz_links) + ']')
+            if str(moz_links_most_recent) == str(moz_links):
+                print('* NO CHANGE')
+            else:
+                print('* CHANGE')
+                if todays_date in data[indication][website]['dates']:
+                    data[indication][website]['dates'][todays_date].update( { 'moz_links' : str(moz_links) } )
+                else:
+                    data[indication][website]['dates'].update( { todays_date : { 'moz_links' : str(moz_links) } } )
+
+
 # write changes to data.yml
 print('\nWRITING CHANGES TO THE DATA.YML FILE')
 with open('data.yml', 'w') as outfile:
@@ -403,10 +483,16 @@ for indication in data:
     print('\n' + indication + '\n==============================').upper()
 
     content += '\n<tr>'
-    content += '<td colspan="6"><strong>' + str(indication) + '</strong></td>'
+    content += '<td colspan="7"><strong>' + str(indication) + '</strong></td>'
     content += '</tr>'
     content += '\n<tr>'
-    content += '<td>Drug \ generic \ company</td><td>HTTPS \ server \ ASN</td><td>:iphone:</td><td>:wheelchair:</td><td>:computer:</td><td>Regulatory code update frequency</td>'
+    content += '<td>Drug \ generic \ company</td>'
+    content += '<td>HTTPS \ server \ ASN</td>'
+    content += '<td>:iphone:</td>'
+    content += '<td>:wheelchair:</td>'
+    content += '<td>:computer:</td>'
+    content += '<td>:link:</td>'
+    content += '<td>Regulatory code update frequency</td>'
     content += '</tr>'
 
     for website in data[indication]:
@@ -502,6 +588,7 @@ for indication in data:
         content += '<td><a href="https://developers.google.com/speed/pagespeed/insights/?url={0}&tab=mobile" target="_blank">{1}</a></td>'.format( website , google_psi_mobile )
         content += '<td><a href="https://developers.google.com/speed/pagespeed/insights/?url={0}&tab=mobile" target="_blank">{1}</a></td>'.format( website , google_psi_mobile_usability )
         content += '<td><a href="https://developers.google.com/speed/pagespeed/insights/?url={0}&tab=desktop" target="_blank">{1}</a></td>'.format( website , google_psi_desktop )
+        content += '<td>{0}</td>'.format( moz_links )
         content += '<td><img src="data/{0}.png"/></td>'.format( website.replace("/","-") )
         content += '</tr>'
 
@@ -528,6 +615,7 @@ Additionally, the following the metrics are captured:
 * :iphone:: Google PageSpeed Insights mobile speed score
 * :wheelchair: Google PageSpeed Insights mobile usability score
 * :computer: Google PageSpeed Insights desktop speed score
+* :link: Moz total number of links (juice-passing or not, internal or external) of the final redirected url (http://drug.com > https://www.drug.com)
 
 Looking for a website and workflow management platform that delivers a competitive edge? Give [Catapult](https://github.com/devopsgroup-io/catapult) a *shot*.
 
