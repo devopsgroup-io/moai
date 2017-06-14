@@ -582,6 +582,13 @@ for indication in data:
                 google_psi_desktop = data[indication][website]['dates'][date]['google_psi_desktop']
                 break
 
+        # get the most recent moz_links
+        moz_links = ''
+        for date in reversed(data[indication][website]['dates']):
+            if 'moz_links' in data[indication][website]['dates'][date]:
+                moz_links = data[indication][website]['dates'][date]['moz_links']
+                break
+
         content += '\n<tr>'
         content += '<td><a href="http://{0}" target="_blank">{0}</a><br/><sub>{1}</sub><br/><sub>{2}</sub></td>'.format( website , data[indication][website]['drug']['generic'] , data[indication][website]['drug']['company'] )
         content += '<td><a href="https://www.ssllabs.com/ssltest/analyze.html?d={0}" target="_blank">{1}</a><br/><sub>{2}</sub><br/><sub>{3}</sub></td>'.format( website , https, server, asn )
