@@ -219,7 +219,6 @@ for indication in data:
                     print('Tried validating HTTPS support ' + str(trys) + ' times, skipping...')
                     break
 
-
         #########
         # HTTPS #
         #########
@@ -245,24 +244,25 @@ for indication in data:
                 data[indication][website]['dates'].update( { todays_date : { 'https' : str(https) } } )
 
 
-        #############################
-        # GOOGLE PAGESPEED INSIGHTS #
-        #############################
-        #############################
-        #############################
+        #####################################
+        # GOOGLE PAGESPEED INSIGHTS MOBILE #
+        #####################################
+        #####################################
+        #####################################
 
-        print('[GOOGLE PAGESPEED INSIGHTS]')
+        print('[GOOGLE PAGESPEED INSIGHTS MOBILE]')
         trys = 0
-        google_psi = ''
+        google_psi_mobile = ''
         while True:
             try:
 
                 # make the request
-                url = 'https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=http://' + website + '&strategy=desktop'
+                url = 'https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=http://' + website + '&strategy=mobile'
                 headers = {'user-agent': 'Moai'}
                 request = requests.get(url, headers=headers, timeout=30)
                 response = request.json()
-                google_psi = response['ruleGroups']['SPEED']['score']
+                google_psi_mobile = response['ruleGroups']['SPEED']['score']
+                google_psi_mobile_usability = response['ruleGroups']['USABILITY']['score']
                 break
 
             # catch any exceptions
@@ -275,31 +275,108 @@ for indication in data:
                     print('Tried validating HTTPS support ' + str(trys) + ' times, skipping...')
                     break
 
+        ######################
+        # GOOGLE PSI MOBILE  #
+        ######################
 
-        ##############
-        # GOOGLE_PSI #
-        ##############
-
-        # try and find the most recent https
-        google_psi_most_recent =''
-        google_psi_most_recent_date = ''
+        # try and find the most recent google_psi_mobile
+        google_psi_mobile_most_recent =''
+        google_psi_mobile_most_recent_date = ''
         for date in reversed(data[indication][website]['dates']):
-            if data[indication][website]['dates'][date].has_key('google_psi'):
-                google_psi_most_recent = data[indication][website]['dates'][date]['google_psi']
-                google_psi_most_recent_date = date
+            if data[indication][website]['dates'][date].has_key('google_psi_mobile'):
+                google_psi_mobile_most_recent = data[indication][website]['dates'][date]['google_psi_mobile']
+                google_psi_mobile_most_recent_date = date
                 break
 
         # handle the match
-        print('OLD [' + str(google_psi_most_recent_date) + '][' + str(google_psi_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(google_psi) + ']')
-        if str(google_psi_most_recent) == str(google_psi):
+        print('OLD [' + str(google_psi_mobile_most_recent_date) + '][' + str(google_psi_mobile_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(google_psi_mobile) + ']')
+        if str(google_psi_mobile_most_recent) == str(google_psi_mobile):
             print('* NO CHANGE')
         else:
             print('* CHANGE')
             if todays_date in data[indication][website]['dates']:
-                data[indication][website]['dates'][todays_date].update( { 'google_psi' : str(google_psi) } )
+                data[indication][website]['dates'][todays_date].update( { 'google_psi_mobile' : str(google_psi_mobile) } )
             else:
-                data[indication][website]['dates'].update( { todays_date : { 'google_psi' : str(google_psi) } } )
+                data[indication][website]['dates'].update( { todays_date : { 'google_psi_mobile' : str(google_psi_mobile) } } )
 
+        ################################
+        # GOOGLE PSI MOBILE USABILITY  #
+        ################################
+
+        # try and find the most recent google_psi_mobile_usability
+        google_psi_mobile_usability_most_recent =''
+        google_psi_mobile_usability_most_recent_date = ''
+        for date in reversed(data[indication][website]['dates']):
+            if data[indication][website]['dates'][date].has_key('google_psi_mobile_usability'):
+                google_psi_mobile_usability_most_recent = data[indication][website]['dates'][date]['google_psi_mobile_usability']
+                google_psi_mobile_usability_most_recent_date = date
+                break
+
+        # handle the match
+        print('OLD [' + str(google_psi_mobile_usability_most_recent_date) + '][' + str(google_psi_mobile_usability_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(google_psi_mobile_usability) + ']')
+        if str(google_psi_mobile_usability_most_recent) == str(google_psi_mobile_usability):
+            print('* NO CHANGE')
+        else:
+            print('* CHANGE')
+            if todays_date in data[indication][website]['dates']:
+                data[indication][website]['dates'][todays_date].update( { 'google_psi_mobile_usability' : str(google_psi_mobile_usability) } )
+            else:
+                data[indication][website]['dates'].update( { todays_date : { 'google_psi_mobile_usability' : str(google_psi_mobile_usability) } } )
+
+
+        #####################################
+        # GOOGLE PAGESPEED INSIGHTS DESKTOP #
+        #####################################
+        #####################################
+        #####################################
+
+        print('[GOOGLE PAGESPEED INSIGHTS DESKTOP]')
+        trys = 0
+        google_psi_desktop = ''
+        while True:
+            try:
+
+                # make the request
+                url = 'https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=http://' + website + '&strategy=desktop'
+                headers = {'user-agent': 'Moai'}
+                request = requests.get(url, headers=headers, timeout=30)
+                response = request.json()
+                google_psi_desktop = response['ruleGroups']['SPEED']['score']
+                break
+
+            # catch any exceptions
+            except requests.exceptions.RequestException as e:
+                print('Exception: ' + str(e))
+            finally:
+                trys = trys + 1
+                time.sleep(3)
+                if trys == 2:
+                    print('Tried validating HTTPS support ' + str(trys) + ' times, skipping...')
+                    break
+
+        ######################
+        # GOOGLE PSI DESKTOP #
+        ######################
+
+        # try and find the most recent google_psi_desktop
+        google_psi_desktop_most_recent =''
+        google_psi_desktop_most_recent_date = ''
+        for date in reversed(data[indication][website]['dates']):
+            if data[indication][website]['dates'][date].has_key('google_psi_desktop'):
+                google_psi_desktop_most_recent = data[indication][website]['dates'][date]['google_psi_desktop']
+                google_psi_desktop_most_recent_date = date
+                break
+
+        # handle the match
+        print('OLD [' + str(google_psi_desktop_most_recent_date) + '][' + str(google_psi_desktop_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(google_psi_desktop) + ']')
+        if str(google_psi_desktop_most_recent) == str(google_psi_desktop):
+            print('* NO CHANGE')
+        else:
+            print('* CHANGE')
+            if todays_date in data[indication][website]['dates']:
+                data[indication][website]['dates'][todays_date].update( { 'google_psi_desktop' : str(google_psi_desktop) } )
+            else:
+                data[indication][website]['dates'].update( { todays_date : { 'google_psi_desktop' : str(google_psi_desktop) } } )
 
 
 # write changes to data.yml
@@ -329,7 +406,7 @@ for indication in data:
     content += '<td colspan="4"><strong>' + str(indication) + '</strong></td>'
     content += '</tr>'
     content += '\n<tr>'
-    content += '<td>Drug \ generic \ company</td><td>HTTPS \ server \ ASN</td><td>:100:</td><td>Regulatory code update frequency</td>'
+    content += '<td>Drug \ generic \ company</td><td>HTTPS \ server \ ASN</td><td>:iphone:</td><td>:wheelchair:</td><td>:computer:</td><td>Regulatory code update frequency</td>'
     content += '</tr>'
 
     for website in data[indication]:
@@ -398,17 +475,33 @@ for indication in data:
                 asn = data[indication][website]['dates'][date]['asn']
                 break
 
-        # get the most recent asn
-        google_psi = ''
+        # get the most recent google_psi_mobile
+        google_psi_mobile = ''
         for date in reversed(data[indication][website]['dates']):
-            if 'google_psi' in data[indication][website]['dates'][date]:
-                google_psi = data[indication][website]['dates'][date]['google_psi']
+            if 'google_psi_mobile' in data[indication][website]['dates'][date]:
+                google_psi_mobile = data[indication][website]['dates'][date]['google_psi_mobile']
+                break
+
+        # get the most recent google_psi_mobile_usability
+        google_psi_mobile_usability = ''
+        for date in reversed(data[indication][website]['dates']):
+            if 'google_psi_mobile_usability' in data[indication][website]['dates'][date]:
+                google_psi_mobile_usability = data[indication][website]['dates'][date]['google_psi_mobile_usability']
+                break
+
+        # get the most recent google_psi_desktop
+        google_psi_desktop = ''
+        for date in reversed(data[indication][website]['dates']):
+            if 'google_psi_desktop' in data[indication][website]['dates'][date]:
+                google_psi_desktop = data[indication][website]['dates'][date]['google_psi_desktop']
                 break
 
         content += '\n<tr>'
         content += '<td><a href="http://{0}" target="_blank">{0}</a><br/><sub>{1}</sub><br/><sub>{2}</sub></td>'.format( website , data[indication][website]['drug']['generic'] , data[indication][website]['drug']['company'] )
         content += '<td><a href="https://www.ssllabs.com/ssltest/analyze.html?d={0}" target="_blank">{1}</a><br/><sub>{2}</sub><br/><sub>{3}</sub></td>'.format( website , https, server, asn )
-        content += '<td><a href="https://developers.google.com/speed/pagespeed/insights/?url={0}&tab=desktop" target="_blank">{1}</a></td>'.format( website , google_psi )
+        content += '<td><a href="https://developers.google.com/speed/pagespeed/insights/?url={0}&tab=mobile" target="_blank">{1}</a></td>'.format( website , google_psi_mobile )
+        content += '<td><a href="https://developers.google.com/speed/pagespeed/insights/?url={0}&tab=mobile" target="_blank">{1}</a></td>'.format( website , google_psi_mobile_usability )
+        content += '<td><a href="https://developers.google.com/speed/pagespeed/insights/?url={0}&tab=desktop" target="_blank">{1}</a></td>'.format( website , google_psi_desktop )
         content += '<td><img src="data/{0}.png"/></td>'.format( website.replace("/","-") )
         content += '</tr>'
 
@@ -424,10 +517,19 @@ f.write('''
 
 Moai /ˈmoʊ.aɪ/ provides competitive intelligence by tracking the unique regulatory code on United States pharmaceutical websites that are mandated by the FDA. This provides insight as to when, and how often, a website is updated.
 
-HTTPS is also tracked. Sadly, many website infrastructures do not provide HTTPS and subsequently [provides no data security](https://www.chromium.org/Home/chromium-security/marking-http-as-non-secure) to its visitors. Here's a shameless plug for our website and workflow management platform [Catapult](https://github.com/devopsgroup-io/catapult), which enforces best practice security.
-
 | ![Charles](moai-charles.jpg) | Meet Charles, the moaiBOT. He scours websites daily, looking for changes.<br>Charles likes fishing and long walks on the beach. |
 | -- | -- |
+
+Additionally, the following the metrics are captured:
+
+* **HTTPS**: Sadly, many website infrastructures do not provide HTTPS which [provides no data security](https://www.chromium.org/Home/chromium-security/marking-http-as-non-secure) to its visitors
+* **server**: The HTTP server header provides insight into infrastructure changes
+* **ASN**: Autonomous System Number provides insight into data center moves
+* :iphone:: Google PageSpeed Insights mobile speed score
+* :wheelchair: Google PageSpeed Insights mobile usability score
+* :computer: Google PageSpeed Insights desktop speed score
+
+Looking for a website and workflow management platform that delivers a competative edge? Give [Catapult](https://github.com/devopsgroup-io/catapult) a test drive.
 
 The below data is free, looking for a complete picture with valuable insights? Please contact us at info@devopsgroup.io to learn more.
 {0}

@@ -9,7 +9,10 @@ Cancer - Brain Tumor:
         server: Apache
       20170612:
         asn: AS22915 FutureQuest, Inc.
-        google_psi: '83'
+        google_psi_desktop: '83'
+      20170613:
+        google_psi_mobile: '72'
+        google_psi_mobile_usability: '99'
     drug:
       company: Arbor
       generic: carmustine systemic
@@ -25,10 +28,12 @@ Cancer - Brain Tumor:
       20170612:
         server: ECAcc (phl/9D70)
         asn: AS30811 EPiServer AB
-        google_psi: '67'
+        google_psi_desktop: '67'
       20170613:
         server: ECAcc (phl/9D70)
-        google_psi: '64'
+        google_psi_desktop: '65'
+        google_psi_mobile: '55'
+        google_psi_mobile_usability: '99'
     drug:
       company: Novartis
       generic: everolimus systemic
@@ -44,7 +49,10 @@ Cancer - Colorectal Cancer:
         server: Microsoft-IIS/7.5
       20170612:
         asn: AS14618 Amazon.com, Inc.
-        google_psi: '74'
+        google_psi_desktop: '74'
+      20170613:
+        google_psi_mobile: '65'
+        google_psi_mobile_usability: '95'
     drug:
       company: Lilly
       generic: cetuximab systemic
@@ -59,7 +67,10 @@ Cancer - Colorectal Cancer:
         server: Apache
       20170612:
         asn: AS19574 Corporation Service Company
-        google_psi: '72'
+        google_psi_desktop: '72'
+      20170613:
+        google_psi_mobile: '60'
+        google_psi_mobile_usability: '99'
     drug:
       company: Bayer
       generic: regorafenib systemic
@@ -74,7 +85,11 @@ Cancer - Colorectal Cancer:
         server: Microsoft-IIS/7.5
       20170612:
         asn: AS17338 AOScloud, LLC.
-        google_psi: '55'
+        google_psi_desktop: '55'
+      20170613:
+        google_psi_desktop: '60'
+        google_psi_mobile: '47'
+        google_psi_mobile_usability: '100'
     drug:
       company: Sanofi
       generic: ziv-aflibercept systemic
@@ -90,7 +105,10 @@ Cancer - Gastric Cancer:
         server: Microsoft-IIS/7.5
       20170612:
         asn: AS14618 Amazon.com, Inc.
-        google_psi: '75'
+        google_psi_desktop: '75'
+      20170613:
+        google_psi_mobile: '64'
+        google_psi_mobile_usability: '90'
     drug:
       company: Lilly
       generic: ramucirumab systemic
@@ -106,7 +124,10 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
         server: Apache
       20170612:
         asn: AS16509 Amazon.com, Inc.
-        google_psi: '85'
+        google_psi_desktop: '85'
+      20170613:
+        google_psi_mobile: '68'
+        google_psi_mobile_usability: '93'
     drug:
       company: AstraZeneca
       generic: rosuvastatin systemic
@@ -121,7 +142,10 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
         server: nginx
       20170612:
         asn: AS14618 Amazon.com, Inc.
-        google_psi: '77'
+        google_psi_desktop: '77'
+      20170613:
+        google_psi_mobile: '58'
+        google_psi_mobile_usability: '100'
     drug:
       company: Pfizer
       generic: atorvastatin systemic
@@ -136,7 +160,10 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
         server: Microsoft-IIS/8.0
       20170612:
         asn: AS32244 Liquid Web, L.L.C
-        google_psi: '74'
+        google_psi_desktop: '74'
+      20170613:
+        google_psi_mobile: '56'
+        google_psi_mobile_usability: '98'
     drug:
       company: Kowa
       generic: pitavastatin systemic
@@ -151,7 +178,10 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
         server: Microsoft-IIS/7.5
       20170612:
         asn: AS3561 Savvis
-        google_psi: '70'
+        google_psi_desktop: '70'
+      20170613:
+        google_psi_mobile: '50'
+        google_psi_mobile_usability: '99'
     drug:
       company: Amgen
       generic: evolocumab systemic
@@ -167,7 +197,10 @@ Central Nervous System Disorders - Alzheimer's Disease:
         server: WS
       20170612:
         asn: AS3707 MCI Communications Services, Inc. d/b/a Verizon Business
-        google_psi: '58'
+        google_psi_desktop: '58'
+      20170613:
+        google_psi_mobile: '41'
+        google_psi_mobile_usability: '95'
     drug:
       company: Novartis
       generic: rivastigmine systemic
@@ -182,7 +215,10 @@ Central Nervous System Disorders - Alzheimer's Disease:
         server: Microsoft-IIS/8.5
       20170612:
         asn: AS16509 Amazon.com, Inc.
-        google_psi: '62'
+        google_psi_desktop: '62'
+      20170613:
+        google_psi_mobile: '55'
+        google_psi_mobile_usability: '79'
     drug:
       company: Allergan
       generic: memantine systemic
@@ -197,7 +233,10 @@ Central Nervous System Disorders - Alzheimer's Disease:
         server: Microsoft-IIS/8.5
       20170612:
         asn: AS16509 Amazon.com, Inc.
-        google_psi: '55'
+        google_psi_desktop: '55'
+      20170613:
+        google_psi_mobile: '51'
+        google_psi_mobile_usability: '100'
     drug:
       company: Allergan
       generic: donepezil / memantine systemic
@@ -213,7 +252,10 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         server: Microsoft-IIS/8.5
       20170612:
         asn: AS36291 Aventis Pharmaceuticals Inc.
-        google_psi: '80'
+        google_psi_desktop: '80'
+      20170613:
+        google_psi_mobile: '69'
+        google_psi_mobile_usability: '66'
     drug:
       company: Sanofi
       generic: leflunomide systemic
@@ -228,7 +270,10 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         server: nginx
       20170612:
         asn: AS14618 Amazon.com, Inc.
-        google_psi: '76'
+        google_psi_desktop: '76'
+      20170613:
+        google_psi_mobile: '57'
+        google_psi_mobile_usability: '96'
     drug:
       company: Pfizer
       generic: celecoxib systemic
@@ -243,7 +288,10 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         server: Microsoft-IIS/7.5
       20170612:
         asn: AS3561 Savvis
-        google_psi: '71'
+        google_psi_desktop: '71'
+      20170613:
+        google_psi_mobile: '55'
+        google_psi_mobile_usability: '98'
     drug:
       company: Amgen
       generic: etanercept systemic
@@ -258,9 +306,11 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         server: Microsoft-IIS/8.0
       20170612:
         asn: AS27357 Rackspace Ltd.
-        google_psi: '43'
+        google_psi_desktop: '43'
       20170613:
-        google_psi: '49'
+        google_psi_desktop: '49'
+        google_psi_mobile: '33'
+        google_psi_mobile_usability: '99'
     drug:
       company: AbbVie
       generic: adalimumab systemic
@@ -274,7 +324,10 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         server: Microsoft-IIS/8.5
       20170612:
         asn: AS8075 Microsoft Corporation
-        google_psi: '87'
+        google_psi_desktop: '87'
+      20170613:
+        google_psi_mobile: '69'
+        google_psi_mobile_usability: '99'
     drug:
       company: Sanofi and Regeneron
       generic: sarilumab
@@ -287,9 +340,11 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         https: 'False'
       20170612:
         asn: AS7246 Bristol-Myers Squibb Company
-        google_psi: '64'
+        google_psi_desktop: '64'
       20170613:
-        google_psi: '63'
+        google_psi_desktop: '64'
+        google_psi_mobile: '49'
+        google_psi_mobile_usability: '96'
     drug:
       company: Bristol-Myers Squibb
       generic: adalimumab systemic
@@ -304,7 +359,10 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         server: nginx
       20170612:
         asn: AS14618 Amazon.com, Inc.
-        google_psi: '76'
+        google_psi_desktop: '76'
+      20170613:
+        google_psi_mobile: '60'
+        google_psi_mobile_usability: '100'
     drug:
       company: Janssen
       generic: infliximab systemic
@@ -319,7 +377,10 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         server: cloudflare-nginx
       20170612:
         asn: AS13335 CloudFlare
-        google_psi: '78'
+        google_psi_desktop: '78'
+      20170613:
+        google_psi_mobile: '67'
+        google_psi_mobile_usability: '98'
     drug:
       company: Horizon Pharma
       generic: esomeprazole / naproxen systemic
@@ -334,7 +395,10 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         server: Apache
       20170612:
         asn: AS16509 Amazon.com, Inc.
-        google_psi: '58'
+        google_psi_desktop: '58'
+      20170613:
+        google_psi_mobile: '45'
+        google_psi_mobile_usability: '97'
     drug:
       company: AstraZeneca
       generic: formoterol / glycopyrrolate
@@ -348,7 +412,10 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         server: Apache
       20170612:
         asn: AS16509 Amazon.com, Inc.
-        google_psi: '79'
+        google_psi_desktop: '79'
+      20170613:
+        google_psi_mobile: '55'
+        google_psi_mobile_usability: '84'
     drug:
       company: AstraZeneca
       generic: roflumilast systemic
@@ -362,7 +429,10 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         server: Apache
       20170612:
         asn: AS16509 Amazon.com, Inc.
-        google_psi: '77'
+        google_psi_desktop: '77'
+      20170613:
+        google_psi_mobile: '55'
+        google_psi_mobile_usability: '98'
     drug:
       company: AstraZeneca
       generic: budesonide / formoterol
@@ -376,7 +446,10 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         server: Apache
       20170612:
         asn: AS14618 Amazon.com, Inc.
-        google_psi: '67'
+        google_psi_desktop: '67'
+      20170613:
+        google_psi_mobile: '54'
+        google_psi_mobile_usability: '98'
     drug:
       company: GSK
       generic: umeclidinium / vilanterol
@@ -392,7 +465,10 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         server: Microsoft-IIS/8.5
       20170612:
         asn: AS19551 Incapsula Inc
-        google_psi: '74'
+        google_psi_desktop: '74'
+      20170613:
+        google_psi_mobile: '58'
+        google_psi_mobile_usability: '70'
     drug:
       company: Actelion
       generic: iloprost systemic
@@ -407,7 +483,10 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         server: Microsoft-IIS/8.0
       20170612:
         asn: AS8075 Microsoft Corporation
-        google_psi: '67'
+        google_psi_desktop: '67'
+      20170613:
+        google_psi_mobile: '57'
+        google_psi_mobile_usability: '65'
     drug:
       company: United Therapeutics
       generic: tadalafil systemic
@@ -422,7 +501,10 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         server: Microsoft-IIS/8.5
       20170612:
         asn: AS27357 Rackspace Ltd.
-        google_psi: '73'
+        google_psi_desktop: '73'
+      20170613:
+        google_psi_mobile: '54'
+        google_psi_mobile_usability: '100'
     drug:
       company: Gilead
       generic: ambrisentan systemic
@@ -437,7 +519,11 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         server: Microsoft-IIS/8.5
       20170612:
         asn: AS16509 Amazon.com, Inc.
-        google_psi: '49'
+        google_psi_desktop: '49'
+      20170613:
+        google_psi_desktop: '68'
+        google_psi_mobile: '45'
+        google_psi_mobile_usability: '99'
     drug:
       company: Actelion
       generic: macitentan systemic
@@ -452,7 +538,10 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         server: Microsoft-IIS/8.0
       20170612:
         asn: AS8075 Microsoft Corporation
-        google_psi: '62'
+        google_psi_desktop: '62'
+      20170613:
+        google_psi_mobile: '54'
+        google_psi_mobile_usability: '95'
     drug:
       company: United Therapeutics
       generic: treprostinil systemic
@@ -467,7 +556,10 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         server: Microsoft-IIS/8.0
       20170612:
         asn: AS8075 Microsoft Corporation
-        google_psi: '74'
+        google_psi_desktop: '74'
+      20170613:
+        google_psi_mobile: '70'
+        google_psi_mobile_usability: '96'
     drug:
       company: United Therapeutics
       generic: treprostinil systemic
@@ -482,7 +574,10 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         server: nginx
       20170612:
         asn: AS16509 Amazon.com, Inc.
-        google_psi: '82'
+        google_psi_desktop: '82'
+      20170613:
+        google_psi_mobile: '68'
+        google_psi_mobile_usability: '95'
     drug:
       company: Pfizer
       generic: sildenafil systemic
@@ -497,7 +592,10 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         server: Microsoft-IIS/8.5
       20170612:
         asn: AS16509 Amazon.com, Inc.
-        google_psi: '82'
+        google_psi_desktop: '82'
+      20170613:
+        google_psi_mobile: '62'
+        google_psi_mobile_usability: '67'
     drug:
       company: Actelion
       generic: bosentan systemic
@@ -512,7 +610,10 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         server: Microsoft-IIS/8.0
       20170612:
         asn: AS8075 Microsoft Corporation
-        google_psi: '71'
+        google_psi_desktop: '71'
+      20170613:
+        google_psi_mobile: '59'
+        google_psi_mobile_usability: '90'
     drug:
       company: United Therapeutics
       generic: treprostinil systemic
@@ -528,7 +629,10 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20170610:
         https: 'False'
       20170612:
-        google_psi: '37'
+        google_psi_desktop: '37'
+      20170613:
+        google_psi_mobile: '32'
+        google_psi_mobile_usability: '86'
     drug:
       company: Actelion
       generic: selexipag systemic
@@ -543,9 +647,11 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         server: Microsoft-IIS/8.5
       20170612:
         asn: AS19551 Incapsula Inc
-        google_psi: '77'
+        google_psi_desktop: '77'
       20170613:
-        google_psi: '76'
+        google_psi_desktop: '76'
+        google_psi_mobile: '61'
+        google_psi_mobile_usability: '61'
     drug:
       company: Actelion
       generic: epoprostenol systemic
