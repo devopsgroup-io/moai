@@ -529,7 +529,7 @@ Additionally, the following the metrics are captured:
 * :wheelchair: Google PageSpeed Insights mobile usability score
 * :computer: Google PageSpeed Insights desktop speed score
 
-Looking for a website and workflow management platform that delivers a competative edge? Give [Catapult](https://github.com/devopsgroup-io/catapult) a test drive.
+Looking for a website and workflow management platform that delivers a competitive edge? Give [Catapult](https://github.com/devopsgroup-io/catapult) a *shot*.
 
 The below data is free, looking for a complete picture with valuable insights? Please contact us at info@devopsgroup.io to learn more.
 {0}
