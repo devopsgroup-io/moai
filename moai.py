@@ -392,6 +392,7 @@ for indication in data:
         print('[MOZ]')
         trys = 0
         moz_links = ''
+        moz_rank = ''
         while True:
             try:
                 # https://github.com/seomoz/SEOmozAPISamples/blob/master/python/mozscape.py
@@ -409,13 +410,17 @@ for indication in data:
                 )
                 # request_80.url is the final redirected url
                 domain = quote(request_80.url)
+                # columns links = 2048 and mozRank = 16384
+                columns = 2048 + 16384
                 # make the request
-                url = 'http://lsapi.seomoz.com/linkscape/url-metrics/' + domain + '?Cols=2048&AccessID=' + access_key + '&Expires=' + str(expires) + '&Signature=' + signature
+                url = 'http://lsapi.seomoz.com/linkscape/url-metrics/' + domain + '?Cols=' + str(columns) + '&AccessID=' + access_key + '&Expires=' + str(expires) + '&Signature=' + signature
                 headers = {'user-agent': 'Moai'}
                 request = requests.get(url, headers=headers, timeout=30)
                 response = request.json()
                 if 'uid' in response:
                     moz_links = response['uid']
+                    moz_rank = response['umrp']
+                    moz_rank = str(moz_rank)[:3]
                 else:
                     # moz free tier only allows 1 request every 10 seconds
                     # 5 seconds for good luck as our trusty advisement of 10 seconds is not 100% accurate
@@ -447,6 +452,7 @@ for indication in data:
                 break
 
         # handle the match
+        print('[MOZ LINKS]')
         if str(moz_links) != '':
             print('OLD [' + str(moz_links_most_recent_date) + '][' + str(moz_links_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(moz_links) + ']')
             if str(moz_links_most_recent) == str(moz_links):
@@ -457,6 +463,32 @@ for indication in data:
                     data[indication][website]['dates'][todays_date].update( { 'moz_links' : str(moz_links) } )
                 else:
                     data[indication][website]['dates'].update( { todays_date : { 'moz_links' : str(moz_links) } } )
+
+        ############
+        # MOZ RANK #
+        ############
+
+        # try and find the most recent moz_rank
+        moz_rank_most_recent =''
+        moz_rank_most_recent_date = ''
+        for date in reversed(data[indication][website]['dates']):
+            if data[indication][website]['dates'][date].has_key('moz_rank'):
+                moz_rank_most_recent = data[indication][website]['dates'][date]['moz_rank']
+                moz_rank_most_recent_date = date
+                break
+
+        # handle the match
+        print('[MOZ RANK]')
+        if str(moz_rank) != '':
+            print('OLD [' + str(moz_rank_most_recent_date) + '][' + str(moz_rank_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(moz_rank) + ']')
+            if str(moz_rank_most_recent) == str(moz_rank):
+                print('* NO CHANGE')
+            else:
+                print('* CHANGE')
+                if todays_date in data[indication][website]['dates']:
+                    data[indication][website]['dates'][todays_date].update( { 'moz_rank' : str(moz_rank) } )
+                else:
+                    data[indication][website]['dates'].update( { todays_date : { 'moz_rank' : str(moz_rank) } } )
 
 
 # write changes to data.yml
@@ -483,7 +515,7 @@ for indication in data:
     print('\n' + indication + '\n==============================').upper()
 
     content += '\n<tr>'
-    content += '<td colspan="7"><strong>' + str(indication) + '</strong></td>'
+    content += '<td colspan="8"><strong>' + str(indication) + '</strong></td>'
     content += '</tr>'
     content += '\n<tr>'
     content += '<td>Drug \ generic \ company</td>'
@@ -492,6 +524,7 @@ for indication in data:
     content += '<td>:wheelchair:</td>'
     content += '<td>:computer:</td>'
     content += '<td>:link:</td>'
+    content += '<td>:trophy:</td>'
     content += '<td>Regulatory code update frequency</td>'
     content += '</tr>'
 
@@ -589,13 +622,21 @@ for indication in data:
                 moz_links = data[indication][website]['dates'][date]['moz_links']
                 break
 
+        # get the most recent moz_rank
+        moz_rank = ''
+        for date in reversed(data[indication][website]['dates']):
+            if 'moz_rank' in data[indication][website]['dates'][date]:
+                moz_rank = data[indication][website]['dates'][date]['moz_rank']
+                break
+
         content += '\n<tr>'
         content += '<td><a href="http://{0}" target="_blank">{0}</a><br/><sub>{1}</sub><br/><sub>{2}</sub></td>'.format( website , data[indication][website]['drug']['generic'] , data[indication][website]['drug']['company'] )
         content += '<td><a href="https://www.ssllabs.com/ssltest/analyze.html?d={0}" target="_blank">{1}</a><br/><sub>{2}</sub><br/><sub>{3}</sub></td>'.format( website , https, server, asn )
-        content += '<td><a href="https://developers.google.com/speed/pagespeed/insights/?url={0}&tab=mobile" target="_blank">{1}</a></td>'.format( website , google_psi_mobile )
-        content += '<td><a href="https://developers.google.com/speed/pagespeed/insights/?url={0}&tab=mobile" target="_blank">{1}</a></td>'.format( website , google_psi_mobile_usability )
-        content += '<td><a href="https://developers.google.com/speed/pagespeed/insights/?url={0}&tab=desktop" target="_blank">{1}</a></td>'.format( website , google_psi_desktop )
-        content += '<td>{0}</td>'.format( moz_links )
+        content += '<td><a href="https://developers.google.com/speed/pagespeed/insights/?url={0}&tab=mobile" target="_blank"><sub>{1}</sub></a></td>'.format( website , google_psi_mobile )
+        content += '<td><a href="https://developers.google.com/speed/pagespeed/insights/?url={0}&tab=mobile" target="_blank"><sub>{1}</sub></a></td>'.format( website , google_psi_mobile_usability )
+        content += '<td><a href="https://developers.google.com/speed/pagespeed/insights/?url={0}&tab=desktop" target="_blank"><sub>{1}</sub></a></td>'.format( website , google_psi_desktop )
+        content += '<td><sub>{0}</sub></td>'.format( moz_links )
+        content += '<td><sub>{0}</sub></td>'.format( moz_rank )
         content += '<td><img src="data/{0}.png"/></td>'.format( website.replace("/","-") )
         content += '</tr>'
 
@@ -623,6 +664,7 @@ Additionally, the following the metrics are captured:
 * :wheelchair: Google PageSpeed Insights mobile usability score
 * :computer: Google PageSpeed Insights desktop speed score
 * :link: Moz total number of links (juice-passing or not, internal or external) of the final redirected url (http://drug.com > https://www.drug.com)
+* :trophy: [MozRank](https://moz.com/learn/seo/mozrank) quantifies link popularity and is Moz’s version of Google’s classic PageRank algorithm
 
 Looking for a website and workflow management platform that delivers a competitive edge? Give [Catapult](https://github.com/devopsgroup-io/catapult) a *shot*.
 
