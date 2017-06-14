@@ -403,7 +403,7 @@ for indication in data:
     print('\n' + indication + '\n==============================').upper()
 
     content += '\n<tr>'
-    content += '<td colspan="4"><strong>' + str(indication) + '</strong></td>'
+    content += '<td colspan="6"><strong>' + str(indication) + '</strong></td>'
     content += '</tr>'
     content += '\n<tr>'
     content += '<td>Drug \ generic \ company</td><td>HTTPS \ server \ ASN</td><td>:iphone:</td><td>:wheelchair:</td><td>:computer:</td><td>Regulatory code update frequency</td>'
