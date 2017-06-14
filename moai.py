@@ -619,7 +619,7 @@ Additionally, the following the metrics are captured:
 * **HTTPS**: Sadly, many website infrastructures do not provide HTTPS which [provides no data security](https://www.chromium.org/Home/chromium-security/marking-http-as-non-secure) to its visitors
 * **server**: The HTTP server header provides insight into infrastructure changes
 * **ASN**: Autonomous System Number provides insight into data center moves
-* :iphone:: Google PageSpeed Insights mobile speed score
+* :iphone: Google PageSpeed Insights mobile speed score
 * :wheelchair: Google PageSpeed Insights mobile usability score
 * :computer: Google PageSpeed Insights desktop speed score
 * :link: Moz total number of links (juice-passing or not, internal or external) of the final redirected url (http://drug.com > https://www.drug.com)
