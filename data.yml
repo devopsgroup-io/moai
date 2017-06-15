@@ -43,6 +43,9 @@ Cancer - Brain Tumor:
         moz_links: '0'
         server: ECAcc (lga/13CC)
         moz_rank: '0'
+      20170615:
+        google_psi_desktop: '67'
+        google_psi_mobile: '56'
     drug:
       company: Novartis
       generic: everolimus systemic
@@ -87,6 +90,8 @@ Cancer - Colorectal Cancer:
         moz_links: '85'
         google_psi_mobile: '59'
         moz_rank: '5.2'
+      20170615:
+        moz_links: '90'
     drug:
       company: Bayer
       generic: regorafenib systemic
@@ -110,6 +115,8 @@ Cancer - Colorectal Cancer:
         moz_links: '74'
         google_psi_desktop: '61'
         moz_rank: '4.7'
+      20170615:
+        moz_links: '76'
     drug:
       company: Sanofi
       generic: ziv-aflibercept systemic
@@ -132,6 +139,9 @@ Cancer - Gastric Cancer:
       20170614:
         moz_links: '335'
         moz_rank: '5.4'
+      20170615:
+        moz_links: '337'
+        moz_rank: '5.3'
     drug:
       company: Lilly
       generic: ramucirumab systemic
@@ -157,6 +167,11 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
         google_psi_mobile: '65'
         google_psi_mobile_usability: '68'
         moz_rank: '6.9'
+      20170615:
+        google_psi_desktop: '86'
+        google_psi_mobile: '68'
+        google_psi_mobile_usability: '93'
+        moz_links: '314'
     drug:
       company: AstraZeneca
       generic: rosuvastatin systemic
@@ -178,6 +193,8 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
       20170614:
         moz_links: '445'
         moz_rank: '5.4'
+      20170615:
+        moz_links: '466'
     drug:
       company: Pfizer
       generic: atorvastatin systemic
@@ -220,6 +237,8 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
       20170614:
         moz_links: '513'
         moz_rank: '4.6'
+      20170615:
+        moz_links: '542'
     drug:
       company: Amgen
       generic: evolocumab systemic
@@ -242,6 +261,8 @@ Central Nervous System Disorders - Alzheimer's Disease:
       20170614:
         moz_links: '499'
         moz_rank: '5.7'
+      20170615:
+        moz_links: '511'
     drug:
       company: Novartis
       generic: rivastigmine systemic
@@ -284,6 +305,9 @@ Central Nervous System Disorders - Alzheimer's Disease:
       20170614:
         moz_links: '124'
         moz_rank: '5.0'
+      20170615:
+        moz_links: '132'
+        moz_rank: '5.2'
     drug:
       company: Allergan
       generic: donepezil / memantine systemic
@@ -328,6 +352,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         moz_links: '442'
         google_psi_mobile: '51'
         moz_rank: '5.5'
+      20170615:
+        google_psi_mobile: '57'
     drug:
       company: Pfizer
       generic: celecoxib systemic
@@ -349,6 +375,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
       20170614:
         moz_links: '462'
         moz_rank: '5.5'
+      20170615:
+        moz_links: '504'
     drug:
       company: Amgen
       generic: etanercept systemic
@@ -372,6 +400,9 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         moz_links: '697'
         google_psi_desktop: '49'
         moz_rank: '5.5'
+      20170615:
+        moz_links: '742'
+        moz_rank: '5.6'
     drug:
       company: AbbVie
       generic: adalimumab systemic
@@ -417,6 +448,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         moz_links: '73'
         google_psi_mobile: '49'
         moz_rank: '5.2'
+      20170615:
+        google_psi_desktop: '63'
     drug:
       company: Bristol-Myers Squibb
       generic: adalimumab systemic
@@ -438,6 +471,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
       20170614:
         moz_links: '28'
         moz_rank: '4.3'
+      20170615:
+        moz_links: '32'
     drug:
       company: Janssen
       generic: infliximab systemic
@@ -459,6 +494,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
       20170614:
         moz_links: '158'
         moz_rank: '5.5'
+      20170615:
+        moz_links: '161'
     drug:
       company: Horizon Pharma
       generic: esomeprazole / naproxen systemic
@@ -501,6 +538,9 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         google_psi_mobile: '55'
         moz_links: '36'
         moz_rank: '4.4'
+      20170615:
+        moz_links: '37'
+        moz_rank: '4.3'
     drug:
       company: AstraZeneca
       generic: roflumilast systemic
@@ -567,6 +607,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         moz_links: '78'
         google_psi_mobile: '59'
         moz_rank: '4.9'
+      20170615:
+        moz_links: '82'
     drug:
       company: Actelion
       generic: iloprost systemic
@@ -609,6 +651,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20170614:
         moz_links: '8'
         moz_rank: '4.1'
+      20170615:
+        moz_links: '9'
     drug:
       company: Gilead
       generic: ambrisentan systemic
@@ -633,6 +677,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_mobile: '40'
         moz_links: '3'
         moz_rank: '0'
+      20170615:
+        google_psi_desktop: '49'
     drug:
       company: Actelion
       generic: macitentan systemic
@@ -654,6 +700,9 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20170614:
         moz_links: '25'
         moz_rank: '5.0'
+      20170615:
+        moz_links: '32'
+        moz_rank: '4.9'
     drug:
       company: United Therapeutics
       generic: treprostinil systemic
@@ -675,6 +724,9 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20170614:
         moz_links: '116'
         moz_rank: '5.2'
+      20170615:
+        moz_links: '121'
+        moz_rank: '5.1'
     drug:
       company: United Therapeutics
       generic: treprostinil systemic
@@ -696,6 +748,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20170614:
         moz_links: '40'
         moz_rank: '4.6'
+      20170615:
+        moz_links: '42'
     drug:
       company: Pfizer
       generic: sildenafil systemic
@@ -717,6 +771,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20170614:
         moz_links: '1'
         moz_rank: '4.0'
+      20170615:
+        moz_rank: '3.9'
     drug:
       company: Actelion
       generic: bosentan systemic
@@ -738,6 +794,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20170614:
         moz_links: '11'
         moz_rank: '4.9'
+      20170615:
+        moz_rank: '4.8'
     drug:
       company: United Therapeutics
       generic: treprostinil systemic
@@ -762,6 +820,11 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_mobile: '29'
         google_psi_mobile_usability: '88'
         moz_rank: '4.9'
+      20170615:
+        google_psi_desktop: '38'
+        google_psi_mobile: '32'
+        google_psi_mobile_usability: '86'
+        moz_rank: '4.8'
     drug:
       company: Actelion
       generic: selexipag systemic
@@ -786,6 +849,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_mobile: '62'
         moz_links: '2'
         moz_rank: '0'
+      20170615:
+        google_psi_mobile: '60'
     drug:
       company: Actelion
       generic: epoprostenol systemic
