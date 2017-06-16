@@ -46,6 +46,8 @@ Cancer - Brain Tumor:
       20170615:
         google_psi_desktop: '67'
         google_psi_mobile: '56'
+      20170616:
+        google_psi_mobile: '57'
     drug:
       company: Novartis
       generic: everolimus systemic
@@ -92,6 +94,8 @@ Cancer - Colorectal Cancer:
         moz_rank: '5.2'
       20170615:
         moz_links: '90'
+      20170616:
+        google_psi_mobile: '60'
     drug:
       company: Bayer
       generic: regorafenib systemic
@@ -117,6 +121,8 @@ Cancer - Colorectal Cancer:
         moz_rank: '4.7'
       20170615:
         moz_links: '76'
+      20170616:
+        google_psi_desktop: '60'
     drug:
       company: Sanofi
       generic: ziv-aflibercept systemic
@@ -354,6 +360,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         moz_rank: '5.5'
       20170615:
         google_psi_mobile: '57'
+      20170616:
+        google_psi_mobile: '51'
     drug:
       company: Pfizer
       generic: celecoxib systemic
@@ -450,6 +458,9 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         moz_rank: '5.2'
       20170615:
         google_psi_desktop: '63'
+      20170616:
+        google_psi_desktop: '64'
+        moz_links: '78'
     drug:
       company: Bristol-Myers Squibb
       generic: adalimumab systemic
@@ -609,6 +620,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         moz_rank: '4.9'
       20170615:
         moz_links: '82'
+      20170616:
+        google_psi_mobile: '58'
     drug:
       company: Actelion
       generic: iloprost systemic
@@ -825,6 +838,10 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_mobile: '32'
         google_psi_mobile_usability: '86'
         moz_rank: '4.8'
+      20170616:
+        google_psi_desktop: '51'
+        google_psi_mobile: '29'
+        google_psi_mobile_usability: '88'
     drug:
       company: Actelion
       generic: selexipag systemic
@@ -851,6 +868,9 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         moz_rank: '0'
       20170615:
         google_psi_mobile: '60'
+      20170616:
+        google_psi_desktop: '78'
+        google_psi_mobile: '62'
     drug:
       company: Actelion
       generic: epoprostenol systemic
