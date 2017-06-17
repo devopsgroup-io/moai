@@ -48,6 +48,9 @@ Cancer - Brain Tumor:
         google_psi_mobile: '56'
       20170616:
         google_psi_mobile: '57'
+      20170617:
+        google_psi_desktop: '66'
+        google_psi_mobile: '55'
     drug:
       company: Novartis
       generic: everolimus systemic
@@ -123,6 +126,8 @@ Cancer - Colorectal Cancer:
         moz_links: '76'
       20170616:
         google_psi_desktop: '60'
+      20170617:
+        google_psi_desktop: '61'
     drug:
       company: Sanofi
       generic: ziv-aflibercept systemic
@@ -201,6 +206,8 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
         moz_rank: '5.4'
       20170615:
         moz_links: '466'
+      20170617:
+        google_psi_mobile: '59'
     drug:
       company: Pfizer
       generic: atorvastatin systemic
@@ -411,6 +418,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
       20170615:
         moz_links: '742'
         moz_rank: '5.6'
+      20170617:
+        google_psi_desktop: '40'
     drug:
       company: AbbVie
       generic: adalimumab systemic
@@ -461,6 +470,9 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
       20170616:
         google_psi_desktop: '64'
         moz_links: '78'
+      20170617:
+        google_psi_desktop: '63'
+        google_psi_mobile: '50'
     drug:
       company: Bristol-Myers Squibb
       generic: adalimumab systemic
@@ -552,6 +564,8 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
       20170615:
         moz_links: '37'
         moz_rank: '4.3'
+      20170617:
+        google_psi_mobile: '56'
     drug:
       company: AstraZeneca
       generic: roflumilast systemic
@@ -842,6 +856,10 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_desktop: '51'
         google_psi_mobile: '29'
         google_psi_mobile_usability: '88'
+      20170617:
+        google_psi_desktop: '37'
+        google_psi_mobile: '32'
+        google_psi_mobile_usability: '86'
     drug:
       company: Actelion
       generic: selexipag systemic
