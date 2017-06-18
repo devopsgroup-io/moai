@@ -128,6 +128,8 @@ Cancer - Colorectal Cancer:
         google_psi_desktop: '60'
       20170617:
         google_psi_desktop: '61'
+      20170618:
+        google_psi_desktop: '60'
     drug:
       company: Sanofi
       generic: ziv-aflibercept systemic
@@ -183,6 +185,8 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
         google_psi_mobile: '68'
         google_psi_mobile_usability: '93'
         moz_links: '314'
+      20170618:
+        google_psi_desktop: '84'
     drug:
       company: AstraZeneca
       generic: rosuvastatin systemic
@@ -420,6 +424,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         moz_rank: '5.6'
       20170617:
         google_psi_desktop: '40'
+      20170618:
+        google_psi_desktop: '34'
     drug:
       company: AbbVie
       generic: adalimumab systemic
@@ -473,6 +479,9 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
       20170617:
         google_psi_desktop: '63'
         google_psi_mobile: '50'
+      20170618:
+        google_psi_desktop: '64'
+        google_psi_mobile: '49'
     drug:
       company: Bristol-Myers Squibb
       generic: adalimumab systemic
@@ -566,6 +575,8 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         moz_rank: '4.3'
       20170617:
         google_psi_mobile: '56'
+      20170618:
+        google_psi_desktop: '80'
     drug:
       company: AstraZeneca
       generic: roflumilast systemic
@@ -587,6 +598,8 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         google_psi_mobile: '54'
         moz_links: '267'
         moz_rank: '5.0'
+      20170618:
+        google_psi_mobile: '55'
     drug:
       company: AstraZeneca
       generic: budesonide / formoterol
@@ -636,6 +649,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         moz_links: '82'
       20170616:
         google_psi_mobile: '58'
+      20170618:
+        google_psi_desktop: '73'
     drug:
       company: Actelion
       generic: iloprost systemic
@@ -860,6 +875,9 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_desktop: '37'
         google_psi_mobile: '32'
         google_psi_mobile_usability: '86'
+      20170618:
+        google_psi_mobile: '29'
+        google_psi_mobile_usability: '88'
     drug:
       company: Actelion
       generic: selexipag systemic
