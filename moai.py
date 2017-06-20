@@ -518,8 +518,8 @@ for indication in data:
     content += '</tr>'
     content += '\n<tr>'
     content += '<td>Drug<br/>generic<br/>company</td>'
-    content += '<td><img src="https://placehold.it/15/cc4c02?text=+">Regulatory code</td>'
-    content += '<td><img src="https://placehold.it/15/fe9929?text=+">HTTPS<br/><img src="https://placehold.it/15/fee391?text=+">server<br/><img src="https://placehold.it/15/ffffe5?text=+">ASN</td>'
+    content += '<td><img src="https://placehold.it/15/cc4c02?text=+"> Regulatory code</td>'
+    content += '<td><img src="https://placehold.it/15/fe9929?text=+"> HTTPS<br/><img src="https://placehold.it/15/fee391?text=+"> server<br/><img src="https://placehold.it/15/ffffe5?text=+"> ASN</td>'
     content += '<td>:iphone:<br/><img src="https://placehold.it/15/014636?text=+"></td>'
     content += '<td>:wheelchair:<br/><img src="https://placehold.it/15/016c59?text=+"></td>'
     content += '<td>:computer:<br/><img src="https://placehold.it/15/02818a?text=+"></td>'
@@ -533,7 +533,7 @@ for indication in data:
         print('\n' + website + '\n------------------------------').upper()
 
         # set the figure size
-        ax = plt.figure(figsize=(12,1.5), dpi=60)
+        ax = plt.figure(figsize=(18,1), dpi=60)
         # set the font size
         matplotlib.rcParams.update({'font.size': 8})
         # qualitative color palette picker
@@ -683,8 +683,8 @@ for indication in data:
 
         content += '\n<tr>'
         content += '<td><a href="http://{0}" target="_blank">{0}</a><br/><sub>{1}</sub><br/><sub>{2}</sub></td>'.format( website , data[indication][website]['drug']['generic'] , data[indication][website]['drug']['company'] )
-        content += '<td><a href="https://www.ssllabs.com/ssltest/analyze.html?d={0}" target="_blank">{1}</a><br/><sub>{2}</sub><br/><sub>{3}</sub></td>'.format( website , https, server, asn )
         content += '<td><sub>{0}</sub></td>'.format( code )
+        content += '<td><a href="https://www.ssllabs.com/ssltest/analyze.html?d={0}" target="_blank">{1}</a><br/><sub>{2}</sub><br/><sub>{3}</sub></td>'.format( website , https, server, asn )
         content += '<td><a href="https://developers.google.com/speed/pagespeed/insights/?url={0}&tab=mobile" target="_blank"><sub>{1}</sub></a></td>'.format( website , google_psi_mobile )
         content += '<td><a href="https://developers.google.com/speed/pagespeed/insights/?url={0}&tab=mobile" target="_blank"><sub>{1}</sub></a></td>'.format( website , google_psi_mobile_usability )
         content += '<td><a href="https://developers.google.com/speed/pagespeed/insights/?url={0}&tab=desktop" target="_blank"><sub>{1}</sub></a></td>'.format( website , google_psi_desktop )
