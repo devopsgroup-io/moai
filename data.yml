@@ -101,6 +101,9 @@ Cancer - Colorectal Cancer:
         moz_links: '90'
       20170616:
         google_psi_mobile: '60'
+      20170621:
+        google_psi_mobile: '62'
+        google_psi_mobile_usability: '87'
     drug:
       company: Bayer
       generic: regorafenib systemic
@@ -195,6 +198,8 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
         google_psi_desktop: '84'
       20170619:
         google_psi_desktop: '86'
+      20170621:
+        google_psi_mobile: '69'
     drug:
       company: AstraZeneca
       generic: rosuvastatin systemic
@@ -450,6 +455,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         google_psi_desktop: '44'
       20170620:
         google_psi_desktop: '48'
+      20170621:
+        google_psi_desktop: '49'
     drug:
       company: AbbVie
       generic: adalimumab systemic
@@ -691,6 +698,9 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20170620:
         google_psi_desktop: '74'
         google_psi_mobile: '59'
+      20170621:
+        google_psi_desktop: '73'
+        google_psi_mobile: '58'
     drug:
       company: Actelion
       generic: iloprost systemic
@@ -925,6 +935,9 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20170620:
         google_psi_mobile: '32'
         google_psi_mobile_usability: '86'
+      20170621:
+        google_psi_desktop: '51'
+        google_psi_mobile_usability: '88'
     drug:
       company: Actelion
       generic: selexipag systemic
