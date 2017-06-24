@@ -144,6 +144,8 @@ Cancer - Colorectal Cancer:
         google_psi_desktop: '60'
       20170622:
         google_psi_desktop: '61'
+      20170624:
+        code: US.AFL.17.05.334
     drug:
       company: Sanofi
       generic: ziv-aflibercept systemic
@@ -208,6 +210,8 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
       20170622:
         google_psi_desktop: '85'
         google_psi_mobile: '68'
+      20170624:
+        google_psi_desktop: '86'
     drug:
       company: AstraZeneca
       generic: rosuvastatin systemic
@@ -277,6 +281,9 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
         moz_rank: '4.6'
       20170615:
         moz_links: '542'
+      20170624:
+        google_psi_desktop: '63'
+        google_psi_mobile: '59'
     drug:
       company: Amgen
       generic: evolocumab systemic
@@ -404,6 +411,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         google_psi_mobile: '51'
       20170622:
         google_psi_mobile: '58'
+      20170624:
+        google_psi_mobile: '51'
     drug:
       company: Pfizer
       generic: celecoxib systemic
@@ -469,6 +478,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         google_psi_desktop: '49'
       20170622:
         google_psi_desktop: '34'
+      20170624:
+        google_psi_desktop: '41'
     drug:
       company: AbbVie
       generic: adalimumab systemic
@@ -719,6 +730,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_mobile: '58'
       20170622:
         google_psi_desktop: '74'
+      20170624:
+        google_psi_desktop: '73'
     drug:
       company: Actelion
       generic: iloprost systemic
@@ -961,6 +974,9 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20170622:
         google_psi_desktop: '37'
         google_psi_mobile_usability: '86'
+      20170624:
+        google_psi_mobile: '29'
+        google_psi_mobile_usability: '88'
     drug:
       company: Actelion
       generic: selexipag systemic
