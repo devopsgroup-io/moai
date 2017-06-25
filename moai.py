@@ -517,13 +517,13 @@ for indication in data:
     content += '<td colspan="7"><strong>' + str(indication) + '</strong></td>'
     content += '</tr>'
     content += '\n<tr>'
-    content += '<td><sub>Drug (Generic)<br/>Company<br/><img src="https://placehold.it/3x15/cc4c02?text=+"> Regulatory code</sub></td>'
-    content += '<td><sub><img src="https://placehold.it/3x15/fe9929?text=+"> HTTPS <img src="https://placehold.it/3x15/fee391?text=+"> Server (<img src="https://placehold.it/3x15/ffffe5?text=+"> ASN)</sub></td>'
-    content += '<td><img src="https://placehold.it/3x15/014636?text=+"> :iphone:</td>'
-    content += '<td><img src="https://placehold.it/3x15/016c59?text=+"> :wheelchair:</td>'
-    content += '<td><img src="https://placehold.it/3x15/02818a?text=+"> :computer:</td>'
-    content += '<td><img src="https://placehold.it/3x15/C0C0C0?text=+"> :link:</td>'
-    content += '<td><img src="https://placehold.it/3x15/FFDF00?text=+"> :trophy:</td>'
+    content += '<td><sub>Drug<br/>Generic<br/>Company<br/><img src="https://placehold.it/3x10/cc4c02?text=+"> Regulatory code</sub></td>'
+    content += '<td><sub><img src="https://placehold.it/3x10/fe9929?text=+"> HTTPS<br/><img src="https://placehold.it/3x10/fee391?text=+"> Server<br/><img src="https://placehold.it/3x10/ffffe5?text=+"> ASN</sub></td>'
+    content += '<td>:iphone:<br/><img src="https://placehold.it/10x10/014636?text=+"></td>'
+    content += '<td>:wheelchair:<br/><img src="https://placehold.it/10x10/016c59?text=+"></td>'
+    content += '<td>:computer:<br/><img src="https://placehold.it/10x10/02818a?text=+"></td>'
+    content += '<td>:link:<br/><img src="https://placehold.it/10x10/C0C0C0?text=+"></td>'
+    content += '<td>:trophy:<br/><img src="https://placehold.it/10x10/FFDF00?text=+"></td>'
     content += '</tr>'
 
     for website in data[indication]:
@@ -682,7 +682,7 @@ for indication in data:
 
         content += '\n<tr>'
         content += '<td><sub><a href="http://{0}" target="_blank">{0}</a> ({1})<br/>{2}<br/>{3}</sub></td>'.format( website , data[indication][website]['drug']['generic'] , data[indication][website]['drug']['company'] , code )
-        content += '<td><sub><a href="https://www.ssllabs.com/ssltest/analyze.html?d={0}" target="_blank">{1}</a> {2} ({3})</sub></td>'.format( website , https, server, asn )
+        content += '<td><sub><a href="https://www.ssllabs.com/ssltest/analyze.html?d={0}" target="_blank">{1}</a><br/>{2}<br/>{3}</sub></td>'.format( website , https, server, asn )
         content += '<td><sub><a href="https://developers.google.com/speed/pagespeed/insights/?url={0}&tab=mobile" target="_blank">{1}</a></sub></td>'.format( website , google_psi_mobile )
         content += '<td><sub><a href="https://developers.google.com/speed/pagespeed/insights/?url={0}&tab=mobile" target="_blank">{1}</a></sub></td>'.format( website , google_psi_mobile_usability )
         content += '<td><sub><a href="https://developers.google.com/speed/pagespeed/insights/?url={0}&tab=desktop" target="_blank">{1}</a></sub></td>'.format( website , google_psi_desktop )
