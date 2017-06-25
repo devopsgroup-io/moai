@@ -520,15 +520,15 @@ for indication in data:
     content += '<td><sub>Drug</sub></td>'
     content += '<td><sub>Generic</sub></td>'
     content += '<td><sub>Company</sub></td>'
-    content += '<td><sub><img src="https://placehold.it/3x10/cc4c02?text=+">Regulatory code</sub></td>'
-    content += '<td><sub><img src="https://placehold.it/3x10/fe9929?text=+">HTTPS</sub></td>'
-    content += '<td><sub><img src="https://placehold.it/3x10/fee391?text=+">Server</sub></td>'
-    content += '<td><sub><img src="https://placehold.it/3x10/ffffe5?text=+">ASN</sub></td>'
-    content += '<td>:iphone:<br/><img src="https://placehold.it/10x10/014636?text=+"></td>'
-    content += '<td>:wheelchair:<br/><img src="https://placehold.it/10x10/016c59?text=+"></td>'
-    content += '<td>:computer:<br/><img src="https://placehold.it/10x10/02818a?text=+"></td>'
-    content += '<td>:link:<br/><img src="https://placehold.it/10x10/C0C0C0?text=+"></td>'
-    content += '<td>:trophy:<br/><img src="https://placehold.it/10x10/FFDF00?text=+"></td>'
+    content += '<td><sub>Regulatory code<img src="https://placehold.it/30x5/cc4c02?text=+"></sub></td>'
+    content += '<td><sub>HTTPS<img src="https://placehold.it/30x5/fe9929?text=+"></sub></td>'
+    content += '<td><sub>Server<img src="https://placehold.it/30x5/fee391?text=+"></sub></td>'
+    content += '<td><sub>ASN<img src="https://placehold.it/30x5/ffffe5?text=+"></sub></td>'
+    content += '<td>:iphone:<br/><img src="https://placehold.it/30x5/014636?text=+"></td>'
+    content += '<td>:wheelchair:<br/><img src="https://placehold.it/30x5/016c59?text=+"></td>'
+    content += '<td>:computer:<br/><img src="https://placehold.it/30x5/02818a?text=+"></td>'
+    content += '<td>:link:<br/><img src="https://placehold.it/30x5/C0C0C0?text=+"></td>'
+    content += '<td>:trophy:<br/><img src="https://placehold.it/30x5/FFDF00?text=+"></td>'
     content += '<td width="300"></td>'
     content += '</tr>'
 
@@ -692,8 +692,8 @@ for indication in data:
         content += '<td><sub>{0}</sub></td>'.format( data[indication][website]['drug']['company'] )
         content += '<td><sub>{0}</sub></td>'.format( code )
         content += '<td><sub><a href="https://www.ssllabs.com/ssltest/analyze.html?d={0}" target="_blank">{1}</a></sub></td>'.format( website , https )
-        content += '<td><sub>{0}</sub></td>'.format( server.replace(" ","&nbsp;") )
-        content += '<td><sub>{0}</sub></td>'.format( asn.replace(" ","&nbsp;") )
+        content += '<td><sub>{0}</sub></td>'.format( server )
+        content += '<td><sub>{0}</sub></td>'.format( asn )
         content += '<td><sub><a href="https://developers.google.com/speed/pagespeed/insights/?url={0}&tab=mobile" target="_blank">{1}</a></sub></td>'.format( website , google_psi_mobile )
         content += '<td><sub><a href="https://developers.google.com/speed/pagespeed/insights/?url={0}&tab=mobile" target="_blank">{1}</a></sub></td>'.format( website , google_psi_mobile_usability )
         content += '<td><sub><a href="https://developers.google.com/speed/pagespeed/insights/?url={0}&tab=desktop" target="_blank">{1}</a></sub></td>'.format( website , google_psi_desktop )
