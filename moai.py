@@ -515,6 +515,7 @@ for indication in data:
 
     content += '\n<tr>'
     content += '<td colspan="12"><strong>' + str(indication) + '</strong></td>'
+    content += '<td width="300"></td>'
     content += '</tr>'
     content += '\n<tr>'
     content += '<td><sub>Drug</sub></td>'
