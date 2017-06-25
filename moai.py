@@ -514,7 +514,7 @@ for indication in data:
     print('\n' + indication + '\n==============================').upper()
 
     content += '\n<tr>'
-    content += '<td colspan="7"><strong>' + str(indication) + '</strong></td>'
+    content += '<td colspan="8"><strong>' + str(indication) + '</strong></td>'
     content += '</tr>'
     content += '\n<tr>'
     content += '<td><sub>Drug<br/>Generic<br/>Company<br/><img src="https://placehold.it/3x10/cc4c02?text=+"> Regulatory code</sub></td>'
@@ -681,16 +681,14 @@ for indication in data:
                 break
 
         content += '\n<tr>'
-        content += '<td><sub><a href="http://{0}" target="_blank">{0}</a> ({1})<br/>{2}<br/>{3}</sub></td>'.format( website , data[indication][website]['drug']['generic'] , data[indication][website]['drug']['company'] , code )
+        content += '<td><sub><a href="http://{0}" target="_blank">{0}</a><br/>{1}<br/>{2}<br/>{3}</sub></td>'.format( website , data[indication][website]['drug']['generic'] , data[indication][website]['drug']['company'] , code )
         content += '<td><sub><a href="https://www.ssllabs.com/ssltest/analyze.html?d={0}" target="_blank">{1}</a><br/>{2}<br/>{3}</sub></td>'.format( website , https, server, asn )
         content += '<td><sub><a href="https://developers.google.com/speed/pagespeed/insights/?url={0}&tab=mobile" target="_blank">{1}</a></sub></td>'.format( website , google_psi_mobile )
         content += '<td><sub><a href="https://developers.google.com/speed/pagespeed/insights/?url={0}&tab=mobile" target="_blank">{1}</a></sub></td>'.format( website , google_psi_mobile_usability )
         content += '<td><sub><a href="https://developers.google.com/speed/pagespeed/insights/?url={0}&tab=desktop" target="_blank">{1}</a></sub></td>'.format( website , google_psi_desktop )
         content += '<td><sub>{0}</sub></td>'.format( moz_links )
         content += '<td><sub>{0}</sub></td>'.format( moz_rank )
-        content += '</tr>'
-        content += '\n<tr>'
-        content += '<td colspan="7"><img src="data/{0}.png"/></td>'.format( website.replace("/","-") )
+        content += '<td><img src="data/{0}.png"/></td>'.format( website.replace("/","-") )
         content += '</tr>'
 
 content += '\n</table>'
