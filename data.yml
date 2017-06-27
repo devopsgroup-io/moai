@@ -152,6 +152,8 @@ Cancer - Colorectal Cancer:
         code: US.AFL.17.05.334
       20170625:
         google_psi_desktop: '60'
+      20170627:
+        google_psi_desktop: '61'
     drug:
       company: Sanofi
       generic: ziv-aflibercept systemic
@@ -220,6 +222,8 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
         google_psi_desktop: '86'
       20170626:
         google_psi_desktop: '85'
+      20170627:
+        google_psi_desktop: '86'
     drug:
       company: AstraZeneca
       generic: rosuvastatin systemic
@@ -454,6 +458,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         google_psi_desktop: '67'
         google_psi_mobile: '51'
         google_psi_mobile_usability: '96'
+      20170627:
+        google_psi_desktop: '66'
     drug:
       company: Amgen
       generic: etanercept systemic
@@ -611,6 +617,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         moz_rank: '5.5'
       20170615:
         moz_links: '161'
+      20170627:
+        google_psi_desktop: '79'
     drug:
       company: Horizon Pharma
       generic: esomeprazole / naproxen systemic
@@ -691,6 +699,8 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         google_psi_mobile: '55'
       20170622:
         google_psi_mobile: '54'
+      20170627:
+        google_psi_mobile: '55'
     drug:
       company: AstraZeneca
       generic: budesonide / formoterol
@@ -1004,6 +1014,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20170626:
         google_psi_mobile: '32'
         google_psi_mobile_usability: '86'
+      20170627:
+        google_psi_desktop: '51'
     drug:
       company: Actelion
       generic: selexipag systemic
@@ -1036,6 +1048,9 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20170626:
         google_psi_desktop: '77'
         google_psi_mobile: '61'
+      20170627:
+        google_psi_desktop: '78'
+        google_psi_mobile: '62'
     drug:
       company: Actelion
       generic: epoprostenol systemic
