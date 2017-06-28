@@ -224,6 +224,8 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
         google_psi_desktop: '85'
       20170627:
         google_psi_desktop: '86'
+      20170628:
+        google_psi_mobile: '69'
     drug:
       company: AstraZeneca
       generic: rosuvastatin systemic
@@ -300,6 +302,8 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
         google_psi_desktop: '62'
       20170626:
         google_psi_desktop: '63'
+      20170628:
+        google_psi_mobile: '62'
     drug:
       company: Amgen
       generic: evolocumab systemic
@@ -460,6 +464,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         google_psi_mobile_usability: '96'
       20170627:
         google_psi_desktop: '66'
+      20170628:
+        google_psi_desktop: '67'
     drug:
       company: Amgen
       generic: etanercept systemic
@@ -528,6 +534,10 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
       20170619:
         google_psi_desktop: '84'
         google_psi_mobile: '68'
+      20170628:
+        google_psi_desktop: '77'
+        google_psi_mobile: '74'
+        google_psi_mobile_usability: '78'
     drug:
       company: Sanofi and Regeneron
       generic: sarilumab
@@ -701,6 +711,8 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         google_psi_mobile: '54'
       20170627:
         google_psi_mobile: '55'
+      20170628:
+        google_psi_mobile: '54'
     drug:
       company: AstraZeneca
       generic: budesonide / formoterol
@@ -1016,6 +1028,10 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_mobile_usability: '86'
       20170627:
         google_psi_desktop: '51'
+      20170628:
+        google_psi_desktop: '49'
+        google_psi_mobile: '29'
+        google_psi_mobile_usability: '88'
     drug:
       company: Actelion
       generic: selexipag systemic
