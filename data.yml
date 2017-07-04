@@ -58,6 +58,8 @@ Cancer - Brain Tumor:
         google_psi_mobile: '56'
       20170703:
         google_psi_mobile: '55'
+      20170704:
+        google_psi_mobile: '56'
     drug:
       company: Novartis
       generic: everolimus systemic
@@ -116,6 +118,8 @@ Cancer - Colorectal Cancer:
         google_psi_mobile: '57'
       20170626:
         google_psi_mobile: '60'
+      20170704:
+        google_psi_mobile: '59'
     drug:
       company: Bayer
       generic: regorafenib systemic
@@ -159,6 +163,8 @@ Cancer - Colorectal Cancer:
         google_psi_desktop: '60'
       20170627:
         google_psi_desktop: '61'
+      20170704:
+        google_psi_desktop: '60'
     drug:
       company: Sanofi
       generic: ziv-aflibercept systemic
@@ -235,6 +241,8 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
         google_psi_mobile: '68'
       20170703:
         google_psi_desktop: '85'
+      20170704:
+        google_psi_desktop: '86'
     drug:
       company: AstraZeneca
       generic: rosuvastatin systemic
@@ -315,6 +323,8 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
         google_psi_mobile: '62'
       20170703:
         google_psi_desktop: '62'
+      20170704:
+        google_psi_desktop: '63'
     drug:
       company: Amgen
       generic: evolocumab systemic
@@ -414,6 +424,9 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         moz_rank: '3.7'
       20170703:
         google_psi_mobile: '66'
+      20170704:
+        google_psi_desktop: '79'
+        google_psi_mobile: '68'
     drug:
       company: Sanofi
       generic: leflunomide systemic
@@ -452,6 +465,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         google_psi_mobile: '58'
       20170701:
         google_psi_mobile: '51'
+      20170704:
+        google_psi_mobile: '58'
     drug:
       company: Pfizer
       generic: celecoxib systemic
@@ -485,6 +500,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         google_psi_desktop: '67'
       20170703:
         google_psi_desktop: '66'
+      20170704:
+        google_psi_desktop: '67'
     drug:
       company: Amgen
       generic: etanercept systemic
@@ -615,6 +632,9 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         google_psi_mobile_usability: '97'
       20170703:
         google_psi_mobile: '47'
+      20170704:
+        google_psi_desktop: '61'
+        google_psi_mobile: '48'
     drug:
       company: Bristol-Myers Squibb
       generic: adalimumab systemic
@@ -667,6 +687,9 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         asn: AS13335 Cloudflare Inc
         google_psi_desktop: '76'
         google_psi_mobile: '66'
+      20170704:
+        google_psi_desktop: '78'
+        google_psi_mobile: '67'
     drug:
       company: Horizon Pharma
       generic: esomeprazole / naproxen systemic
@@ -817,6 +840,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_mobile: '57'
       20170703:
         google_psi_desktop: '71'
+      20170704:
+        google_psi_desktop: '72'
     drug:
       company: Actelion
       generic: iloprost systemic
@@ -1127,6 +1152,9 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_mobile: '62'
       20170703:
         google_psi_mobile: '61'
+      20170704:
+        google_psi_desktop: '74'
+        google_psi_mobile: '62'
     drug:
       company: Actelion
       generic: epoprostenol systemic
