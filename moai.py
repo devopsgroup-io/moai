@@ -515,24 +515,13 @@ for indication in data:
     print('\n' + indication + '\n==============================').upper()
 
     content += '\n<tr>'
-    content += '<td colspan="15"><strong>' + str(indication) + '</strong></td>'
+    content += '<td colspan="10"><strong>' + str(indication) + '</strong></td>'
     content += '</tr>'
-
     content += '\n<tr>'
     content += '<td><sub>Drug \ generic \ company</sub></td>'
-
-    content += '<td><img src="https://placehold.it/3x15/cc4c02?text=+"></td>'
-    content += '<td><sub>Regulatory code</sub></td>'
-
-    content += '<td><img src="https://placehold.it/3x15/fe9929?text=+"></td>'
-    content += '<td><sub>HTTPS</sub></td>'
-
-    content += '<td><img src="https://placehold.it/3x15/fee391?text=+"></td>'
-    content += '<td><sub>Server</sub></td>'
-
-    content += '<td><img src="https://placehold.it/3x15/ffffe5?text=+"></td>'
-    content += '<td><sub>ASN</sub></td>'
-
+    content += '<td><sub>Regulatory code<br/><img src="https://placehold.it/30x5/cc4c02?text=+"></sub></td>'
+    content += '<td><sub>HTTPS<br/><img src="https://placehold.it/30x5/fe9929?text=+"></sub></td>'
+    content += '<td><sub>Server<br/><img src="https://placehold.it/30x5/fee391?text=+"><br/><sub>ASN<br/><img src="https://placehold.it/30x5/ffffe5?text=+"></sub></td>'
     content += '<td>:iphone:<br/><img src="https://placehold.it/30x5/014636?text=+"></td>'
     content += '<td>:wheelchair:<br/><img src="https://placehold.it/30x5/016c59?text=+"></td>'
     content += '<td>:computer:<br/><img src="https://placehold.it/30x5/02818a?text=+"></td>'
@@ -697,10 +686,9 @@ for indication in data:
 
         content += '\n<tr>'
         content += '<td><sub><a href="http://{0}" target="_blank">{0}</a></sub> <br/> <sub>{1}</sub> <br/> <sub>{2}</sub></td>'.format( website , data[indication][website]['drug']['generic'] , data[indication][website]['drug']['company'])
-        content += '<td colspan="2"><sub>{0}</sub></td>'.format( code )
-        content += '<td colspan="2"><sub><a href="https://www.ssllabs.com/ssltest/analyze.html?d={0}" target="_blank">{1}</a></sub></td>'.format( website , https )
-        content += '<td colspan="2"><sub>{0}</sub></td>'.format( server )
-        content += '<td colspan="2"><sub>{0}</sub></td>'.format( asn )
+        content += '<td><sub>{0}</sub></td>'.format( code )
+        content += '<td><sub><a href="https://www.ssllabs.com/ssltest/analyze.html?d={0}" target="_blank">{1}</a></sub></td>'.format( website , https )
+        content += '<td><sub>{0}</sub><br/><sub>{1}</sub></td>'.format( server , asn )
         content += '<td><sub><a href="https://developers.google.com/speed/pagespeed/insights/?url={0}&tab=mobile" target="_blank">{1}</a></sub></td>'.format( website , google_psi_mobile )
         content += '<td><sub><a href="https://developers.google.com/speed/pagespeed/insights/?url={0}&tab=mobile" target="_blank">{1}</a></sub></td>'.format( website , google_psi_mobile_usability )
         content += '<td><sub><a href="https://developers.google.com/speed/pagespeed/insights/?url={0}&tab=desktop" target="_blank">{1}</a></sub></td>'.format( website , google_psi_desktop )
