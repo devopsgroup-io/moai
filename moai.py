@@ -515,22 +515,22 @@ for indication in data:
     print('\n' + indication + '\n==============================').upper()
 
     content += '\n<tr>'
-    content += '<td colspan="11"><strong>' + str(indication) + '</strong></td>'
+    content += '<td colspan="15"><strong>' + str(indication) + '</strong></td>'
     content += '</tr>'
 
     content += '\n<tr>'
     content += '<td><sub>Drug \ generic \ company</sub></td>'
 
-    content += '<td><img src="https://placehold.it/5x30/cc4c02?text=+"></td>'
+    content += '<td><img src="https://placehold.it/3x15/cc4c02?text=+"></td>'
     content += '<td><sub>Regulatory code</sub></td>'
 
-    content += '<td><img src="https://placehold.it/5x30/fe9929?text=+"></td>'
+    content += '<td><img src="https://placehold.it/3x15/fe9929?text=+"></td>'
     content += '<td><sub>HTTPS</sub></td>'
 
-    content += '<td><img src="https://placehold.it/5x30/fee391?text=+"></td>'
+    content += '<td><img src="https://placehold.it/3x15/fee391?text=+"></td>'
     content += '<td><sub>Server</sub></td>'
 
-    content += '<td><img src="https://placehold.it/5x30/ffffe5?text=+"></td>'
+    content += '<td><img src="https://placehold.it/3x15/ffffe5?text=+"></td>'
     content += '<td><sub>ASN</sub></td>'
 
     content += '<td>:iphone:<br/><img src="https://placehold.it/30x5/014636?text=+"></td>'
