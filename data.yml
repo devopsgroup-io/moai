@@ -216,6 +216,87 @@ Cancer - Gastric Cancer:
       company: Lilly
       generic: ramucirumab systemic
     regex: '[A-Z][A-Z]-[A-Z]\s[A-Z][A-Z][A-Z]\s[A-Z][A-Z][A-Z]\s[0-9][0-9][A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9]'
+Cancer - Ovarian Cancer:
+  www.doxil.com/ovarian-cancer:
+    dates:
+      20170706:
+        code: 030068-150417
+        server: nginx
+        asn: AS14618 Amazon.com, Inc.
+        https: 'True'
+        google_psi_mobile: '75'
+        google_psi_mobile_usability: '68'
+        google_psi_desktop: '83'
+        moz_links: '14'
+        moz_rank: '5.0'
+    drug:
+      company: Janssen
+      generic: doxorubicin liposomal systemic
+    regex: '[0-9][0-9][0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9][0-9][0-9]'
+  ethyol.com/usa:
+    dates:
+      20170706:
+        code: WWW1210317
+        server: Apache/2.4
+        asn: AS19994 Rackspace Ltd.
+        https: 'False'
+        google_psi_mobile: '43'
+        google_psi_mobile_usability: '96'
+        google_psi_desktop: '53'
+        moz_links: '1'
+        moz_rank: '3.4'
+    drug:
+      company: Cumberland Pharmaceuticals
+      generic: amifostine systemic
+    regex: '[A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
+  lynparza.com:
+    dates:
+      20170706:
+        code: DA-1088
+        server: Apache
+        asn: AS16509 Amazon.com, Inc.
+        https: 'True'
+        google_psi_mobile: '54'
+        google_psi_mobile_usability: '100'
+        google_psi_desktop: '80'
+        moz_links: '26'
+        moz_rank: '4.3'
+    drug:
+      company: AstraZeneca
+      generic: olaparib systemic
+    regex: '[A-Z][A-Z]-[0-9][0-9][0-9][0-9]'
+  rubraca.com:
+    dates:
+      20170706:
+        code: PP-RUCA-US-0350
+        server: Apache/2.2.15 (Red Hat) DAV/2 mod_ssl/2.2.15 OpenSSL/1.0.1e-fips
+        asn: AS33070 Rackspace Ltd.
+        https: 'False'
+        google_psi_mobile: '27'
+        google_psi_mobile_usability: '99'
+        google_psi_desktop: '32'
+        moz_links: '0'
+        moz_rank: '0'
+    drug:
+      company: Clovis Oncology
+      generic: rucaparib systemic
+    regex: '[A-Z][A-Z]-[A-Z][A-Z][A-Z][A-Z]-[A-Z][A-Z]-[0-9][0-9][0-9][0-9]'
+  zejula.com:
+    dates:
+      20170706:
+        code: PP-ZEJ-US-0086
+        server: Apache
+        asn: AS26347 New Dream Network, LLC
+        https: 'False'
+        google_psi_mobile: '66'
+        google_psi_mobile_usability: '100'
+        google_psi_desktop: '76'
+        moz_links: '49'
+        moz_rank: '4.6'
+    drug:
+      company: Tesaro
+      generic: niraparib systemic
+    regex: '[A-Z][A-Z]-[A-Z][A-Z][A-Z]-[A-Z][A-Z]-[0-9][0-9][0-9][0-9]'
 Cardiovascular Conditions and Disorders - High Cholesterol:
   crestor.com:
     dates:

@@ -47,449 +47,450 @@ with open('data.yml', 'r') as stream:
         print('There was a problem loading the yml file...')
         print(exception)
 
+if '--skip-changes' not in sys.argv[1:]:
 
-# download the most recent GeoIPISP.dat file
-url = 'http://download.maxmind.com/download/geoip/database/asnum/GeoIPASNum.dat.gz'
-response = requests.get(url)
-if response.status_code == 200:
-    with open('provision/GeoIPASNum.dat.gz', 'wb') as f:
-        f.write(response.content)
-        f.close()
-inF = gzip.GzipFile('provision/GeoIPASNum.dat.gz', 'rb')
-s = inF.read()
-inF.close()
-outF = file('provision/GeoIPASNum.dat', 'wb')
-outF.write(s)
-outF.close()
-geoip = pygeoip.GeoIP('provision/GeoIPASNum.dat')
+    # download the most recent GeoIPISP.dat file
+    url = 'http://download.maxmind.com/download/geoip/database/asnum/GeoIPASNum.dat.gz'
+    response = requests.get(url)
+    if response.status_code == 200:
+        with open('provision/GeoIPASNum.dat.gz', 'wb') as f:
+            f.write(response.content)
+            f.close()
+    inF = gzip.GzipFile('provision/GeoIPASNum.dat.gz', 'rb')
+    s = inF.read()
+    inF.close()
+    outF = file('provision/GeoIPASNum.dat', 'wb')
+    outF.write(s)
+    outF.close()
+    geoip = pygeoip.GeoIP('provision/GeoIPASNum.dat')
 
 
-# find regulatory code changes
-print('\nLOOKING FOR CODE CHANGES')
-for indication in data:
+    # find regulatory code changes
+    print('\nLOOKING FOR CODE CHANGES')
+    for indication in data:
 
-    # what indication?
-    print('\n' + indication + '\n==============================').upper()
+        # what indication?
+        print('\n' + indication + '\n==============================').upper()
 
-    for website in data[indication]:
+        for website in data[indication]:
 
-        # what website?
-        print('\n' + website + '\n------------------------------').upper()
+            # what website?
+            print('\n' + website + '\n------------------------------').upper()
 
-        ###########
-        # 80 HTTP #
-        ###########
-        ###########
-        ###########
+            ###########
+            # 80 HTTP #
+            ###########
+            ###########
+            ###########
 
-        print('[HTTP]')
-        trys = 0
-        while True:
-            try:
+            print('[HTTP]')
+            trys = 0
+            while True:
+                try:
 
-                # make the request
-                url = 'http://' + website
-                headers = {'user-agent': 'Moai'}
-                request_80 = requests.get(url, headers=headers, timeout=5)
-                html_content = request_80.text
+                    # make the request
+                    url = 'http://' + website
+                    headers = {'user-agent': 'Moai'}
+                    request_80 = requests.get(url, headers=headers, timeout=5)
+                    html_content = request_80.text
 
-                ############
-                # FDA CODE #
-                ############
+                    ############
+                    # FDA CODE #
+                    ############
 
-                # try and find the most recent code
-                code_most_recent =''
-                code_most_recent_date = ''
-                for date in reversed(data[indication][website]['dates']):
-                    if data[indication][website]['dates'][date].has_key('code'):
-                        code_most_recent = data[indication][website]['dates'][date]['code']
-                        code_most_recent_date = date
-                        break
+                    # try and find the most recent code
+                    code_most_recent =''
+                    code_most_recent_date = ''
+                    for date in reversed(data[indication][website]['dates']):
+                        if data[indication][website]['dates'][date].has_key('code'):
+                            code_most_recent = data[indication][website]['dates'][date]['code']
+                            code_most_recent_date = date
+                            break
 
-                # define the match
-                code_match = re.findall(data[indication][website]['regex'], re.sub('<[^<]+?>', '', html_content));
+                    # define the match
+                    code_match = re.findall(data[indication][website]['regex'], re.sub('<[^<]+?>', '', html_content));
 
-                # handle the match
-                if len(code_match) > 0:
-                    print('[CODE]\nOLD [' + str(code_most_recent_date) + '][' + str(code_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(code_match[0]) + ']')
-                    if str(code_most_recent) == str(code_match[0]):
+                    # handle the match
+                    if len(code_match) > 0:
+                        print('[CODE]\nOLD [' + str(code_most_recent_date) + '][' + str(code_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(code_match[0]) + ']')
+                        if str(code_most_recent) == str(code_match[0]):
+                            print('* NO CHANGE')
+                        else:
+                            print('* CHANGE')
+                            if todays_date in data[indication][website]['dates']:
+                                data[indication][website]['dates'][todays_date].update( { 'code' : str(code_match[0]) } )
+                            else:
+                                data[indication][website]['dates'].update( { todays_date : { 'code' : str(code_match[0]) } } )
+                    else:
+                        print('* NO MATCH (please confirm correct regex)')
+
+                    ###############
+                    # HTTP SERVER #
+                    ###############
+
+                    # try and find the most recent server
+                    server_most_recent =''
+                    server_most_recent_date = ''
+                    for date in reversed(data[indication][website]['dates']):
+                        if data[indication][website]['dates'][date].has_key('server'):
+                            server_most_recent = data[indication][website]['dates'][date]['server']
+                            server_most_recent_date = date
+                            break
+
+                    # define the match
+                    if 'server' in request_80.headers:
+                        server_match = str(request_80.headers['Server'])
+                    else:
+                        server_match = ''
+
+                    # handle the match
+                    print('[SERVER]\nOLD [' + str(server_most_recent_date) + '][' + str(server_most_recent) + ']\nNEW [' + str(todays_date) + '][' + server_match + ']')
+                    if str(server_most_recent) == server_match:
                         print('* NO CHANGE')
                     else:
                         print('* CHANGE')
                         if todays_date in data[indication][website]['dates']:
-                            data[indication][website]['dates'][todays_date].update( { 'code' : str(code_match[0]) } )
+                            data[indication][website]['dates'][todays_date].update( { 'server' : str(server_match) } )
                         else:
-                            data[indication][website]['dates'].update( { todays_date : { 'code' : str(code_match[0]) } } )
-                else:
-                    print('* NO MATCH (please confirm correct regex)')
+                            data[indication][website]['dates'].update( { todays_date : { 'server' : str(server_match) } } )
 
-                ###############
-                # HTTP SERVER #
-                ###############
+                    ##################################
+                    # ASN (Autonomous System Number) #
+                    ##################################
 
-                # try and find the most recent server
-                server_most_recent =''
-                server_most_recent_date = ''
-                for date in reversed(data[indication][website]['dates']):
-                    if data[indication][website]['dates'][date].has_key('server'):
-                        server_most_recent = data[indication][website]['dates'][date]['server']
-                        server_most_recent_date = date
+                    # try and find the most recent asn
+                    asn_most_recent =''
+                    asn_most_recent_date = ''
+                    for date in reversed(data[indication][website]['dates']):
+                        if data[indication][website]['dates'][date].has_key('asn'):
+                            asn_most_recent = data[indication][website]['dates'][date]['asn']
+                            asn_most_recent_date = date
+                            break
+
+                    # define the match
+                    domain = website.split("//")[-1].split("/")[0]
+                    asn_match = geoip.asn_by_name(domain)
+
+                    # handle the match
+                    print('[ASN]\nOLD [' + str(asn_most_recent_date) + '][' + str(asn_most_recent) + ']\nNEW [' + str(todays_date) + '][' + asn_match + ']')
+                    if str(asn_most_recent) == asn_match:
+                        print('* NO CHANGE')
+                    else:
+                        print('* CHANGE')
+                        if todays_date in data[indication][website]['dates']:
+                            data[indication][website]['dates'][todays_date].update( { 'asn' : str(asn_match) } )
+                        else:
+                            data[indication][website]['dates'].update( { todays_date : { 'asn' : str(asn_match) } } )
+
+
+                    break
+
+                # catch any exceptions
+                except requests.exceptions.RequestException as e:
+                    print('Exception: ' + str(e))
+                finally:
+                    trys = trys + 1
+                    time.sleep(3)
+                    if trys > 2:
+                        print('Tried making the request ' + str(trys) + ' times, skipping...')
                         break
 
-                # define the match
-                if 'server' in request_80.headers:
-                    server_match = str(request_80.headers['Server'])
-                else:
-                    server_match = ''
 
-                # handle the match
-                print('[SERVER]\nOLD [' + str(server_most_recent_date) + '][' + str(server_most_recent) + ']\nNEW [' + str(todays_date) + '][' + server_match + ']')
-                if str(server_most_recent) == server_match:
-                    print('* NO CHANGE')
-                else:
-                    print('* CHANGE')
-                    if todays_date in data[indication][website]['dates']:
-                        data[indication][website]['dates'][todays_date].update( { 'server' : str(server_match) } )
-                    else:
-                        data[indication][website]['dates'].update( { todays_date : { 'server' : str(server_match) } } )
+            #############
+            # 443 HTTPS #
+            #############
+            #############
+            #############
 
-                ##################################
-                # ASN (Autonomous System Number) #
-                ##################################
+            print('[HTTPS]')
+            trys = 0
+            https = False
+            while True:
+                try:
 
-                # try and find the most recent asn
-                asn_most_recent =''
-                asn_most_recent_date = ''
-                for date in reversed(data[indication][website]['dates']):
-                    if data[indication][website]['dates'][date].has_key('asn'):
-                        asn_most_recent = data[indication][website]['dates'][date]['asn']
-                        asn_most_recent_date = date
+                    # make the request
+                    url = 'https://' + website
+                    headers = {'user-agent': 'Moai'}
+                    requests.get(url, headers=headers, timeout=5)
+                    https = True
+                    break
+
+                # catch any exceptions
+                except requests.exceptions.RequestException as e:
+                    print('Exception: ' + str(e))
+                finally:
+                    trys = trys + 1
+                    time.sleep(3)
+                    if trys > 2:
+                        print('Tried making the request ' + str(trys) + ' times, skipping...')
                         break
 
-                # define the match
-                domain = website.split("//")[-1].split("/")[0]
-                asn_match = geoip.asn_by_name(domain)
+            #########
+            # HTTPS #
+            #########
 
-                # handle the match
-                print('[ASN]\nOLD [' + str(asn_most_recent_date) + '][' + str(asn_most_recent) + ']\nNEW [' + str(todays_date) + '][' + asn_match + ']')
-                if str(asn_most_recent) == asn_match:
-                    print('* NO CHANGE')
-                else:
-                    print('* CHANGE')
-                    if todays_date in data[indication][website]['dates']:
-                        data[indication][website]['dates'][todays_date].update( { 'asn' : str(asn_match) } )
-                    else:
-                        data[indication][website]['dates'].update( { todays_date : { 'asn' : str(asn_match) } } )
-
-
-                break
-
-            # catch any exceptions
-            except requests.exceptions.RequestException as e:
-                print('Exception: ' + str(e))
-            finally:
-                trys = trys + 1
-                time.sleep(3)
-                if trys > 2:
-                    print('Tried making the request ' + str(trys) + ' times, skipping...')
+            # try and find the most recent https
+            https_most_recent =''
+            https_most_recent_date = ''
+            for date in reversed(data[indication][website]['dates']):
+                if data[indication][website]['dates'][date].has_key('https'):
+                    https_most_recent = data[indication][website]['dates'][date]['https']
+                    https_most_recent_date = date
                     break
 
-
-        #############
-        # 443 HTTPS #
-        #############
-        #############
-        #############
-
-        print('[HTTPS]')
-        trys = 0
-        https = False
-        while True:
-            try:
-
-                # make the request
-                url = 'https://' + website
-                headers = {'user-agent': 'Moai'}
-                requests.get(url, headers=headers, timeout=5)
-                https = True
-                break
-
-            # catch any exceptions
-            except requests.exceptions.RequestException as e:
-                print('Exception: ' + str(e))
-            finally:
-                trys = trys + 1
-                time.sleep(3)
-                if trys > 2:
-                    print('Tried making the request ' + str(trys) + ' times, skipping...')
-                    break
-
-        #########
-        # HTTPS #
-        #########
-
-        # try and find the most recent https
-        https_most_recent =''
-        https_most_recent_date = ''
-        for date in reversed(data[indication][website]['dates']):
-            if data[indication][website]['dates'][date].has_key('https'):
-                https_most_recent = data[indication][website]['dates'][date]['https']
-                https_most_recent_date = date
-                break
-
-        # handle the match
-        print('OLD [' + str(https_most_recent_date) + '][' + str(https_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(https) + ']')
-        if str(https_most_recent) == str(https):
-            print('* NO CHANGE')
-        else:
-            print('* CHANGE')
-            if todays_date in data[indication][website]['dates']:
-                data[indication][website]['dates'][todays_date].update( { 'https' : str(https) } )
-            else:
-                data[indication][website]['dates'].update( { todays_date : { 'https' : str(https) } } )
-
-
-        #####################################
-        # GOOGLE PAGESPEED INSIGHTS MOBILE #
-        #####################################
-        #####################################
-        #####################################
-
-        print('[GOOGLE PAGESPEED INSIGHTS MOBILE]')
-        trys = 0
-        google_psi_mobile = ''
-        while True:
-            try:
-
-                # make the request
-                url = 'https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=http://' + website + '&strategy=mobile'
-                headers = {'user-agent': 'Moai'}
-                request = requests.get(url, headers=headers, timeout=30)
-                response = request.json()
-                google_psi_mobile = response['ruleGroups']['SPEED']['score']
-                google_psi_mobile_usability = response['ruleGroups']['USABILITY']['score']
-                break
-
-            # catch any exceptions
-            except requests.exceptions.RequestException as e:
-                print('Exception: ' + str(e))
-            finally:
-                trys = trys + 1
-                time.sleep(3)
-                if trys > 2:
-                    print('Tried making the request ' + str(trys) + ' times, skipping...')
-                    break
-
-        ######################
-        # GOOGLE PSI MOBILE  #
-        ######################
-
-        # try and find the most recent google_psi_mobile
-        google_psi_mobile_most_recent =''
-        google_psi_mobile_most_recent_date = ''
-        for date in reversed(data[indication][website]['dates']):
-            if data[indication][website]['dates'][date].has_key('google_psi_mobile'):
-                google_psi_mobile_most_recent = data[indication][website]['dates'][date]['google_psi_mobile']
-                google_psi_mobile_most_recent_date = date
-                break
-
-        # handle the match
-        print('OLD [' + str(google_psi_mobile_most_recent_date) + '][' + str(google_psi_mobile_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(google_psi_mobile) + ']')
-        if str(google_psi_mobile_most_recent) == str(google_psi_mobile):
-            print('* NO CHANGE')
-        else:
-            print('* CHANGE')
-            if todays_date in data[indication][website]['dates']:
-                data[indication][website]['dates'][todays_date].update( { 'google_psi_mobile' : str(google_psi_mobile) } )
-            else:
-                data[indication][website]['dates'].update( { todays_date : { 'google_psi_mobile' : str(google_psi_mobile) } } )
-
-        ################################
-        # GOOGLE PSI MOBILE USABILITY  #
-        ################################
-
-        # try and find the most recent google_psi_mobile_usability
-        google_psi_mobile_usability_most_recent =''
-        google_psi_mobile_usability_most_recent_date = ''
-        for date in reversed(data[indication][website]['dates']):
-            if data[indication][website]['dates'][date].has_key('google_psi_mobile_usability'):
-                google_psi_mobile_usability_most_recent = data[indication][website]['dates'][date]['google_psi_mobile_usability']
-                google_psi_mobile_usability_most_recent_date = date
-                break
-
-        # handle the match
-        print('OLD [' + str(google_psi_mobile_usability_most_recent_date) + '][' + str(google_psi_mobile_usability_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(google_psi_mobile_usability) + ']')
-        if str(google_psi_mobile_usability_most_recent) == str(google_psi_mobile_usability):
-            print('* NO CHANGE')
-        else:
-            print('* CHANGE')
-            if todays_date in data[indication][website]['dates']:
-                data[indication][website]['dates'][todays_date].update( { 'google_psi_mobile_usability' : str(google_psi_mobile_usability) } )
-            else:
-                data[indication][website]['dates'].update( { todays_date : { 'google_psi_mobile_usability' : str(google_psi_mobile_usability) } } )
-
-
-        #####################################
-        # GOOGLE PAGESPEED INSIGHTS DESKTOP #
-        #####################################
-        #####################################
-        #####################################
-
-        print('[GOOGLE PAGESPEED INSIGHTS DESKTOP]')
-        trys = 0
-        google_psi_desktop = ''
-        while True:
-            try:
-
-                # make the request
-                url = 'https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=http://' + website + '&strategy=desktop'
-                headers = {'user-agent': 'Moai'}
-                request = requests.get(url, headers=headers, timeout=30)
-                response = request.json()
-                google_psi_desktop = response['ruleGroups']['SPEED']['score']
-                break
-
-            # catch any exceptions
-            except requests.exceptions.RequestException as e:
-                print('Exception: ' + str(e))
-            finally:
-                trys = trys + 1
-                time.sleep(3)
-                if trys > 2:
-                    print('Tried making the request ' + str(trys) + ' times, skipping...')
-                    break
-
-        ######################
-        # GOOGLE PSI DESKTOP #
-        ######################
-
-        # try and find the most recent google_psi_desktop
-        google_psi_desktop_most_recent =''
-        google_psi_desktop_most_recent_date = ''
-        for date in reversed(data[indication][website]['dates']):
-            if data[indication][website]['dates'][date].has_key('google_psi_desktop'):
-                google_psi_desktop_most_recent = data[indication][website]['dates'][date]['google_psi_desktop']
-                google_psi_desktop_most_recent_date = date
-                break
-
-        # handle the match
-        print('OLD [' + str(google_psi_desktop_most_recent_date) + '][' + str(google_psi_desktop_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(google_psi_desktop) + ']')
-        if str(google_psi_desktop_most_recent) == str(google_psi_desktop):
-            print('* NO CHANGE')
-        else:
-            print('* CHANGE')
-            if todays_date in data[indication][website]['dates']:
-                data[indication][website]['dates'][todays_date].update( { 'google_psi_desktop' : str(google_psi_desktop) } )
-            else:
-                data[indication][website]['dates'].update( { todays_date : { 'google_psi_desktop' : str(google_psi_desktop) } } )
-
-
-        #######
-        # MOZ #
-        #######
-        #######
-        #######
-
-        print('[MOZ]')
-        trys = 0
-        moz_links = ''
-        moz_rank = ''
-        while True:
-            try:
-                # https://github.com/seomoz/SEOmozAPISamples/blob/master/python/mozscape.py
-                # whaaaa? secret key exposed? yes, i know, we'll fix this later. i don't think there are hackers scouring the internet for moz secret keys (no offense)
-                access_key = 'mozscape-b8fab3b953'
-                secret_key = '1e7aa77ad3797e6637c7097f42e4b7aa'
-                expires = int(time.time() + 300)
-                to_sign = '%s\n%i' % (access_key, expires)
-                signature = base64.b64encode(
-                    hmac.new(
-                        secret_key.encode('utf-8'),
-                        to_sign.encode('utf-8'),
-                        hashlib.sha1
-                    ).digest()
-                )
-                # request_80.url is the final redirected url
-                domain = quote(request_80.url)
-                # columns links = 2048 and mozRank = 16384
-                columns = 2048 + 16384
-                # make the request
-                url = 'http://lsapi.seomoz.com/linkscape/url-metrics/' + domain + '?Cols=' + str(columns) + '&AccessID=' + access_key + '&Expires=' + str(expires) + '&Signature=' + signature
-                headers = {'user-agent': 'Moai'}
-                request = requests.get(url, headers=headers, timeout=30)
-                response = request.json()
-                if 'uid' in response:
-                    moz_links = response['uid']
-                    moz_rank = response['umrp']
-                    moz_rank = str(moz_rank)[:3]
-                else:
-                    # moz free tier only allows 1 request every 10 seconds
-                    # 5 seconds for good luck as our trusty advisement of 10 seconds is not 100% accurate
-                    time.sleep(15)
-                    raise requests.exceptions.RequestException(request.text)
-                break
-
-            # catch any exceptions
-            except requests.exceptions.RequestException as e:
-                print('Exception: ' + str(e))
-            finally:
-                trys = trys + 1
-                time.sleep(3)
-                if trys > 2:
-                    print('Tried making the request ' + str(trys) + ' times, skipping...')
-                    break
-
-        #############
-        # MOZ LINKS #
-        #############
-
-        # try and find the most recent moz_links
-        moz_links_most_recent =''
-        moz_links_most_recent_date = ''
-        for date in reversed(data[indication][website]['dates']):
-            if data[indication][website]['dates'][date].has_key('moz_links'):
-                moz_links_most_recent = data[indication][website]['dates'][date]['moz_links']
-                moz_links_most_recent_date = date
-                break
-
-        # handle the match
-        print('[MOZ LINKS]')
-        if str(moz_links) != '':
-            print('OLD [' + str(moz_links_most_recent_date) + '][' + str(moz_links_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(moz_links) + ']')
-            if str(moz_links_most_recent) == str(moz_links):
+            # handle the match
+            print('OLD [' + str(https_most_recent_date) + '][' + str(https_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(https) + ']')
+            if str(https_most_recent) == str(https):
                 print('* NO CHANGE')
             else:
                 print('* CHANGE')
                 if todays_date in data[indication][website]['dates']:
-                    data[indication][website]['dates'][todays_date].update( { 'moz_links' : str(moz_links) } )
+                    data[indication][website]['dates'][todays_date].update( { 'https' : str(https) } )
                 else:
-                    data[indication][website]['dates'].update( { todays_date : { 'moz_links' : str(moz_links) } } )
+                    data[indication][website]['dates'].update( { todays_date : { 'https' : str(https) } } )
 
-        ############
-        # MOZ RANK #
-        ############
 
-        # try and find the most recent moz_rank
-        moz_rank_most_recent =''
-        moz_rank_most_recent_date = ''
-        for date in reversed(data[indication][website]['dates']):
-            if data[indication][website]['dates'][date].has_key('moz_rank'):
-                moz_rank_most_recent = data[indication][website]['dates'][date]['moz_rank']
-                moz_rank_most_recent_date = date
-                break
+            #####################################
+            # GOOGLE PAGESPEED INSIGHTS MOBILE #
+            #####################################
+            #####################################
+            #####################################
 
-        # handle the match
-        print('[MOZ RANK]')
-        if str(moz_rank) != '':
-            print('OLD [' + str(moz_rank_most_recent_date) + '][' + str(moz_rank_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(moz_rank) + ']')
-            if str(moz_rank_most_recent) == str(moz_rank):
+            print('[GOOGLE PAGESPEED INSIGHTS MOBILE]')
+            trys = 0
+            google_psi_mobile = ''
+            while True:
+                try:
+
+                    # make the request
+                    url = 'https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=http://' + website + '&strategy=mobile'
+                    headers = {'user-agent': 'Moai'}
+                    request = requests.get(url, headers=headers, timeout=30)
+                    response = request.json()
+                    google_psi_mobile = response['ruleGroups']['SPEED']['score']
+                    google_psi_mobile_usability = response['ruleGroups']['USABILITY']['score']
+                    break
+
+                # catch any exceptions
+                except requests.exceptions.RequestException as e:
+                    print('Exception: ' + str(e))
+                finally:
+                    trys = trys + 1
+                    time.sleep(3)
+                    if trys > 2:
+                        print('Tried making the request ' + str(trys) + ' times, skipping...')
+                        break
+
+            ######################
+            # GOOGLE PSI MOBILE  #
+            ######################
+
+            # try and find the most recent google_psi_mobile
+            google_psi_mobile_most_recent =''
+            google_psi_mobile_most_recent_date = ''
+            for date in reversed(data[indication][website]['dates']):
+                if data[indication][website]['dates'][date].has_key('google_psi_mobile'):
+                    google_psi_mobile_most_recent = data[indication][website]['dates'][date]['google_psi_mobile']
+                    google_psi_mobile_most_recent_date = date
+                    break
+
+            # handle the match
+            print('OLD [' + str(google_psi_mobile_most_recent_date) + '][' + str(google_psi_mobile_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(google_psi_mobile) + ']')
+            if str(google_psi_mobile_most_recent) == str(google_psi_mobile):
                 print('* NO CHANGE')
             else:
                 print('* CHANGE')
                 if todays_date in data[indication][website]['dates']:
-                    data[indication][website]['dates'][todays_date].update( { 'moz_rank' : str(moz_rank) } )
+                    data[indication][website]['dates'][todays_date].update( { 'google_psi_mobile' : str(google_psi_mobile) } )
                 else:
-                    data[indication][website]['dates'].update( { todays_date : { 'moz_rank' : str(moz_rank) } } )
+                    data[indication][website]['dates'].update( { todays_date : { 'google_psi_mobile' : str(google_psi_mobile) } } )
+
+            ################################
+            # GOOGLE PSI MOBILE USABILITY  #
+            ################################
+
+            # try and find the most recent google_psi_mobile_usability
+            google_psi_mobile_usability_most_recent =''
+            google_psi_mobile_usability_most_recent_date = ''
+            for date in reversed(data[indication][website]['dates']):
+                if data[indication][website]['dates'][date].has_key('google_psi_mobile_usability'):
+                    google_psi_mobile_usability_most_recent = data[indication][website]['dates'][date]['google_psi_mobile_usability']
+                    google_psi_mobile_usability_most_recent_date = date
+                    break
+
+            # handle the match
+            print('OLD [' + str(google_psi_mobile_usability_most_recent_date) + '][' + str(google_psi_mobile_usability_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(google_psi_mobile_usability) + ']')
+            if str(google_psi_mobile_usability_most_recent) == str(google_psi_mobile_usability):
+                print('* NO CHANGE')
+            else:
+                print('* CHANGE')
+                if todays_date in data[indication][website]['dates']:
+                    data[indication][website]['dates'][todays_date].update( { 'google_psi_mobile_usability' : str(google_psi_mobile_usability) } )
+                else:
+                    data[indication][website]['dates'].update( { todays_date : { 'google_psi_mobile_usability' : str(google_psi_mobile_usability) } } )
+
+
+            #####################################
+            # GOOGLE PAGESPEED INSIGHTS DESKTOP #
+            #####################################
+            #####################################
+            #####################################
+
+            print('[GOOGLE PAGESPEED INSIGHTS DESKTOP]')
+            trys = 0
+            google_psi_desktop = ''
+            while True:
+                try:
+
+                    # make the request
+                    url = 'https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=http://' + website + '&strategy=desktop'
+                    headers = {'user-agent': 'Moai'}
+                    request = requests.get(url, headers=headers, timeout=30)
+                    response = request.json()
+                    google_psi_desktop = response['ruleGroups']['SPEED']['score']
+                    break
+
+                # catch any exceptions
+                except requests.exceptions.RequestException as e:
+                    print('Exception: ' + str(e))
+                finally:
+                    trys = trys + 1
+                    time.sleep(3)
+                    if trys > 2:
+                        print('Tried making the request ' + str(trys) + ' times, skipping...')
+                        break
+
+            ######################
+            # GOOGLE PSI DESKTOP #
+            ######################
+
+            # try and find the most recent google_psi_desktop
+            google_psi_desktop_most_recent =''
+            google_psi_desktop_most_recent_date = ''
+            for date in reversed(data[indication][website]['dates']):
+                if data[indication][website]['dates'][date].has_key('google_psi_desktop'):
+                    google_psi_desktop_most_recent = data[indication][website]['dates'][date]['google_psi_desktop']
+                    google_psi_desktop_most_recent_date = date
+                    break
+
+            # handle the match
+            print('OLD [' + str(google_psi_desktop_most_recent_date) + '][' + str(google_psi_desktop_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(google_psi_desktop) + ']')
+            if str(google_psi_desktop_most_recent) == str(google_psi_desktop):
+                print('* NO CHANGE')
+            else:
+                print('* CHANGE')
+                if todays_date in data[indication][website]['dates']:
+                    data[indication][website]['dates'][todays_date].update( { 'google_psi_desktop' : str(google_psi_desktop) } )
+                else:
+                    data[indication][website]['dates'].update( { todays_date : { 'google_psi_desktop' : str(google_psi_desktop) } } )
+
+
+            #######
+            # MOZ #
+            #######
+            #######
+            #######
+
+            print('[MOZ]')
+            trys = 0
+            moz_links = ''
+            moz_rank = ''
+            while True:
+                try:
+                    # https://github.com/seomoz/SEOmozAPISamples/blob/master/python/mozscape.py
+                    # whaaaa? secret key exposed? yes, i know, we'll fix this later. i don't think there are hackers scouring the internet for moz secret keys (no offense)
+                    access_key = 'mozscape-b8fab3b953'
+                    secret_key = '1e7aa77ad3797e6637c7097f42e4b7aa'
+                    expires = int(time.time() + 300)
+                    to_sign = '%s\n%i' % (access_key, expires)
+                    signature = base64.b64encode(
+                        hmac.new(
+                            secret_key.encode('utf-8'),
+                            to_sign.encode('utf-8'),
+                            hashlib.sha1
+                        ).digest()
+                    )
+                    # request_80.url is the final redirected url
+                    domain = quote(request_80.url)
+                    # columns links = 2048 and mozRank = 16384
+                    columns = 2048 + 16384
+                    # make the request
+                    url = 'http://lsapi.seomoz.com/linkscape/url-metrics/' + domain + '?Cols=' + str(columns) + '&AccessID=' + access_key + '&Expires=' + str(expires) + '&Signature=' + signature
+                    headers = {'user-agent': 'Moai'}
+                    request = requests.get(url, headers=headers, timeout=30)
+                    response = request.json()
+                    if 'uid' in response:
+                        moz_links = response['uid']
+                        moz_rank = response['umrp']
+                        moz_rank = str(moz_rank)[:3]
+                    else:
+                        # moz free tier only allows 1 request every 10 seconds
+                        # 5 seconds for good luck as our trusty advisement of 10 seconds is not 100% accurate
+                        time.sleep(15)
+                        raise requests.exceptions.RequestException(request.text)
+                    break
+
+                # catch any exceptions
+                except requests.exceptions.RequestException as e:
+                    print('Exception: ' + str(e))
+                finally:
+                    trys = trys + 1
+                    time.sleep(3)
+                    if trys > 2:
+                        print('Tried making the request ' + str(trys) + ' times, skipping...')
+                        break
+
+            #############
+            # MOZ LINKS #
+            #############
+
+            # try and find the most recent moz_links
+            moz_links_most_recent =''
+            moz_links_most_recent_date = ''
+            for date in reversed(data[indication][website]['dates']):
+                if data[indication][website]['dates'][date].has_key('moz_links'):
+                    moz_links_most_recent = data[indication][website]['dates'][date]['moz_links']
+                    moz_links_most_recent_date = date
+                    break
+
+            # handle the match
+            print('[MOZ LINKS]')
+            if str(moz_links) != '':
+                print('OLD [' + str(moz_links_most_recent_date) + '][' + str(moz_links_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(moz_links) + ']')
+                if str(moz_links_most_recent) == str(moz_links):
+                    print('* NO CHANGE')
+                else:
+                    print('* CHANGE')
+                    if todays_date in data[indication][website]['dates']:
+                        data[indication][website]['dates'][todays_date].update( { 'moz_links' : str(moz_links) } )
+                    else:
+                        data[indication][website]['dates'].update( { todays_date : { 'moz_links' : str(moz_links) } } )
+
+            ############
+            # MOZ RANK #
+            ############
+
+            # try and find the most recent moz_rank
+            moz_rank_most_recent =''
+            moz_rank_most_recent_date = ''
+            for date in reversed(data[indication][website]['dates']):
+                if data[indication][website]['dates'][date].has_key('moz_rank'):
+                    moz_rank_most_recent = data[indication][website]['dates'][date]['moz_rank']
+                    moz_rank_most_recent_date = date
+                    break
+
+            # handle the match
+            print('[MOZ RANK]')
+            if str(moz_rank) != '':
+                print('OLD [' + str(moz_rank_most_recent_date) + '][' + str(moz_rank_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(moz_rank) + ']')
+                if str(moz_rank_most_recent) == str(moz_rank):
+                    print('* NO CHANGE')
+                else:
+                    print('* CHANGE')
+                    if todays_date in data[indication][website]['dates']:
+                        data[indication][website]['dates'][todays_date].update( { 'moz_rank' : str(moz_rank) } )
+                    else:
+                        data[indication][website]['dates'].update( { todays_date : { 'moz_rank' : str(moz_rank) } } )
 
 
 # write changes to data.yml
