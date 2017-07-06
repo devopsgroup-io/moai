@@ -63,7 +63,7 @@ Cancer - Brain Tumor:
       20170705:
         google_psi_mobile: '54'
       20170706:
-        google_psi_desktop: '65'
+        google_psi_desktop: '66'
         google_psi_mobile: '55'
     drug:
       company: Novartis
@@ -87,6 +87,13 @@ Cancer - Colorectal Cancer:
       20170614:
         moz_links: '32'
         moz_rank: '4.3'
+      20170706:
+        code: PP-CE-US-0346
+        google_psi_desktop: '48'
+        google_psi_mobile: '46'
+        google_psi_mobile_usability: '99'
+        moz_links: '328'
+        moz_rank: '5.0'
     drug:
       company: Lilly
       generic: cetuximab systemic
@@ -127,6 +134,7 @@ Cancer - Colorectal Cancer:
         google_psi_mobile: '59'
       20170706:
         google_psi_mobile: '60'
+        google_psi_desktop: '71'
     drug:
       company: Bayer
       generic: regorafenib systemic
@@ -174,6 +182,8 @@ Cancer - Colorectal Cancer:
         google_psi_desktop: '60'
       20170705:
         google_psi_desktop: '61'
+      20170706:
+        google_psi_desktop: '60'
     drug:
       company: Sanofi
       generic: ziv-aflibercept systemic
@@ -199,6 +209,9 @@ Cancer - Gastric Cancer:
       20170615:
         moz_links: '337'
         moz_rank: '5.3'
+      20170706:
+        google_psi_desktop: '69'
+        google_psi_mobile: '63'
     drug:
       company: Lilly
       generic: ramucirumab systemic
@@ -339,7 +352,7 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
       20170704:
         google_psi_desktop: '63'
       20170706:
-        google_psi_desktop: '62'
+        google_psi_desktop: '63'
     drug:
       company: Amgen
       generic: evolocumab systemic
@@ -417,6 +430,9 @@ Central Nervous System Disorders - Alzheimer's Disease:
         google_psi_mobile: '52'
       20170705:
         google_psi_mobile: '51'
+      20170706:
+        google_psi_desktop: '54'
+        google_psi_mobile: '50'
     drug:
       company: Allergan
       generic: donepezil / memantine systemic
@@ -448,8 +464,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         google_psi_desktop: '80'
         google_psi_mobile: '67'
       20170706:
-        google_psi_desktop: '77'
-        google_psi_mobile: '69'
+        google_psi_desktop: '80'
+        google_psi_mobile: '68'
     drug:
       company: Sanofi
       generic: leflunomide systemic
@@ -490,6 +506,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         google_psi_mobile: '51'
       20170704:
         google_psi_mobile: '58'
+      20170706:
+        google_psi_mobile: '51'
     drug:
       company: Pfizer
       generic: celecoxib systemic
@@ -574,7 +592,7 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
       20170703:
         google_psi_desktop: '49'
       20170706:
-        google_psi_desktop: '48'
+        google_psi_desktop: '49'
     drug:
       company: AbbVie
       generic: adalimumab systemic
@@ -613,6 +631,7 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         google_psi_desktop: '83'
       20170706:
         google_psi_desktop: '84'
+        google_psi_mobile: '67'
     drug:
       company: Sanofi and Regeneron
       generic: sarilumab
@@ -669,7 +688,7 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
       20170705:
         google_psi_desktop: '62'
       20170706:
-        google_psi_mobile: '47'
+        google_psi_mobile: '48'
     drug:
       company: Bristol-Myers Squibb
       generic: adalimumab systemic
@@ -726,7 +745,7 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         google_psi_desktop: '78'
         google_psi_mobile: '67'
       20170706:
-        google_psi_desktop: '79'
+        google_psi_desktop: '75'
     drug:
       company: Horizon Pharma
       generic: esomeprazole / naproxen systemic
@@ -748,6 +767,9 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
       20170614:
         moz_links: '6'
         moz_rank: '3.5'
+      20170706:
+        google_psi_desktop: '50'
+        google_psi_mobile: '44'
     drug:
       company: AstraZeneca
       generic: formoterol / glycopyrrolate
@@ -778,6 +800,8 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         google_psi_desktop: '80'
       20170619:
         google_psi_desktop: '79'
+      20170706:
+        google_psi_mobile: '55'
     drug:
       company: AstraZeneca
       generic: roflumilast systemic
@@ -882,7 +906,7 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20170705:
         google_psi_desktop: '73'
       20170706:
-        google_psi_mobile: '58'
+        google_psi_mobile: '56'
     drug:
       company: Actelion
       generic: iloprost systemic
@@ -963,6 +987,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_desktop: '49'
       20170701:
         google_psi_desktop: '68'
+      20170706:
+        google_psi_mobile: '49'
     drug:
       company: Actelion
       generic: macitentan systemic
@@ -1157,9 +1183,9 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_mobile: '29'
         google_psi_mobile_usability: '88'
       20170706:
-        google_psi_desktop: '38'
-        google_psi_mobile: '32'
-        google_psi_mobile_usability: '86'
+        google_psi_desktop: '37'
+        google_psi_mobile: '29'
+        google_psi_mobile_usability: '88'
     drug:
       company: Actelion
       generic: selexipag systemic
@@ -1203,7 +1229,90 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20170705:
         google_psi_desktop: '78'
         google_psi_mobile: '61'
+      20170706:
+        google_psi_desktop: '74'
+        google_psi_mobile: '60'
     drug:
       company: Actelion
       generic: epoprostenol systemic
     regex: '[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9]'
+Viral Infection - Human Immunodeficiency Virus Infection; HIV:
+  atripla.com:
+    dates:
+      20170706:
+        code: 697US1500118
+        asn: AS7246 Bristol-Myers Squibb Company
+        https: 'False'
+        google_psi_mobile: '51'
+        google_psi_mobile_usability: '100'
+        google_psi_desktop: '59'
+        moz_links: '316'
+        moz_rank: '5.5'
+    drug:
+      company: Bristol-Myers Squibb
+      generic: favirenz / emtricitabine / tenofovir systemic
+    regex: '[0-9][0-9][0-9][A-Z][A-Z][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
+  isentress.com:
+    dates:
+      20170706:
+        code: INFC-1066246-0010
+        server: Apache/2.2.22 (Ubuntu)
+        asn: AS14618 Amazon.com, Inc.
+        https: 'True'
+        google_psi_mobile: '59'
+        google_psi_mobile_usability: '60'
+        google_psi_desktop: '63'
+        moz_links: '59'
+        moz_rank: '4.8'
+    drug:
+      company: Merck
+      generic: raltegravir systemic
+    regex: '[A-Z][A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]'
+  norvir.com:
+    dates:
+      20170706:
+        code: 1750685-1881419
+        server: Microsoft-IIS/8.5
+        asn: AS62763 AbbVie, Inc.
+        https: 'False'
+        google_psi_mobile: '50'
+        google_psi_mobile_usability: '100'
+        google_psi_desktop: '73'
+        moz_links: '9'
+        moz_rank: '4.0'
+    drug:
+      company: AbbVie
+      generic: ritonavir systemic
+    regex: '[0-9][0-9][0-9][0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
+  prezcobix.com:
+    dates:
+      20170706:
+        code: 060627-161017
+        server: nginx
+        asn: AS14618 Amazon.com, Inc.
+        https: 'True'
+        google_psi_mobile: '44'
+        google_psi_mobile_usability: '94'
+        google_psi_desktop: '61'
+        moz_links: '69'
+        moz_rank: '5.1'
+    drug:
+      company: Janssen
+      generic: darunavir systemic
+    regex: '[0-9][0-9][0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9][0-9][0-9]'
+  start.truvada.com:
+    dates:
+      20170706:
+        code: TVDC0090
+        server: Microsoft-IIS/8.5
+        asn: AS19994 Rackspace Ltd.
+        https: 'True'
+        google_psi_mobile: '54'
+        google_psi_mobile_usability: '99'
+        moz_links: '149'
+        moz_rank: '5.5'
+        google_psi_desktop: '64'
+    drug:
+      company: Gilead
+      generic: emtricitabine / tenofovir systemic
+    regex: '[A-Z][A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9]'
