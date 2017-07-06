@@ -521,11 +521,11 @@ for indication in data:
     content += '<td><sub>Drug \ generic \ company</sub></td>'
     content += '<td><sub>Regulatory code<br/><img src="https://placehold.it/30x5/cc4c02?text=+"></sub></td>'
     content += '<td><sub>HTTPS<br/><img src="https://placehold.it/30x5/fe9929?text=+"></sub></td>'
+    content += '<td>:trophy:<br/><img src="https://placehold.it/30x5/FFDF00?text=+"></td>'
+    content += '<td>:link:<br/><img src="https://placehold.it/30x5/C0C0C0?text=+"></td>'
     content += '<td>:iphone:<br/><img src="https://placehold.it/30x5/014636?text=+"></td>'
     content += '<td>:wheelchair:<br/><img src="https://placehold.it/30x5/016c59?text=+"></td>'
     content += '<td>:computer:<br/><img src="https://placehold.it/30x5/02818a?text=+"></td>'
-    content += '<td>:link:<br/><img src="https://placehold.it/30x5/C0C0C0?text=+"></td>'
-    content += '<td>:trophy:<br/><img src="https://placehold.it/30x5/FFDF00?text=+"></td>'
     content += '<td><sub>Server<br/><img src="https://placehold.it/30x5/fee391?text=+"></sub></td>'
     content += '<td><sub>ASN<br/><img src="https://placehold.it/30x5/ffffe5?text=+"></sub></td>'
     content += '<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>'
@@ -689,11 +689,11 @@ for indication in data:
         content += '<td><sub><a href="http://{0}" target="_blank">{0}</a></sub> <br/> <sub>{1}</sub> <br/> <sub>{2}</sub></td>'.format( website , data[indication][website]['drug']['generic'] , data[indication][website]['drug']['company'])
         content += '<td><sub>{0}</sub></td>'.format( code )
         content += '<td><sub><a href="https://www.ssllabs.com/ssltest/analyze.html?d={0}" target="_blank">{1}</a></sub></td>'.format( website , https )
+        content += '<td><sub>{0}</sub></td>'.format( moz_rank )
+        content += '<td><sub>{0}</sub></td>'.format( moz_links )
         content += '<td><sub><a href="https://developers.google.com/speed/pagespeed/insights/?url={0}&tab=mobile" target="_blank">{1}</a></sub></td>'.format( website , google_psi_mobile )
         content += '<td><sub><a href="https://developers.google.com/speed/pagespeed/insights/?url={0}&tab=mobile" target="_blank">{1}</a></sub></td>'.format( website , google_psi_mobile_usability )
         content += '<td><sub><a href="https://developers.google.com/speed/pagespeed/insights/?url={0}&tab=desktop" target="_blank">{1}</a></sub></td>'.format( website , google_psi_desktop )
-        content += '<td><sub>{0}</sub></td>'.format( moz_links )
-        content += '<td><sub>{0}</sub></td>'.format( moz_rank )
         content += '<td><sub>{0}</sub></td>'.format( server )
         content += '<td><sub>{0}</sub></td>'.format( asn )
         content += '<td><img src="data/{0}.png"/></td>'.format( website.replace("/","-") )
@@ -718,13 +718,13 @@ Additionally, the following the metrics are captured:
 
 * **Regulatory code**: Gain insight into how often a website is updated
 * **HTTPS**: Sadly, many website infrastructures do not provide HTTPS which [provides no data security](https://www.chromium.org/Home/chromium-security/marking-http-as-non-secure) to its visitors
-* **server**: The HTTP server header provides insight into infrastructure changes
-* **ASN**: Autonomous System Number provides insight into data center moves
+* :trophy: [MozRank](https://moz.com/learn/seo/mozrank) quantifies link popularity and is Moz’s version of Google’s classic PageRank algorithm
+* :link: Moz total number of links (juice-passing or not, internal or external) of the final redirected url (http://drug.com > https://www.drug.com)
 * :iphone: Google PageSpeed Insights mobile speed score
 * :wheelchair: Google PageSpeed Insights mobile usability score
 * :computer: Google PageSpeed Insights desktop speed score
-* :link: Moz total number of links (juice-passing or not, internal or external) of the final redirected url (http://drug.com > https://www.drug.com)
-* :trophy: [MozRank](https://moz.com/learn/seo/mozrank) quantifies link popularity and is Moz’s version of Google’s classic PageRank algorithm
+* **server**: The HTTP server header provides insight into infrastructure changes
+* **ASN**: Autonomous System Number provides insight into data center moves
 
 Looking for a website and workflow management platform that delivers a competitive edge? Give [Catapult](https://github.com/devopsgroup-io/catapult) a *shot*.
 
