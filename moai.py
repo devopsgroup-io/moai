@@ -518,7 +518,7 @@ for indication in data:
     content += '<td colspan="11"><strong>' + str(indication) + '</strong></td>'
     content += '</tr>'
     content += '\n<tr>'
-    content += '<td><sub>Drug \ generic \ company</sub></td>'
+    content += '<td><sub>Drug \ generic \ company \ FDA approval</sub></td>'
     content += '<td><sub>Regulatory code<br/><img src="https://placehold.it/30x5/cc4c02?text=+"></sub></td>'
     content += '<td><sub>HTTPS<br/><img src="https://placehold.it/30x5/fe9929?text=+"></sub></td>'
     content += '<td>:trophy:<br/><img src="https://placehold.it/30x5/FFDF00?text=+"></td>'
@@ -618,6 +618,11 @@ for indication in data:
         plt.close('all')
 
 
+        # get the approval
+        approval = datetime.datetime.strptime(str(data[indication][website]['drug']['approval']), '%Y%m%d')
+        approval = datetime.datetime.strftime(approval, '%m/%d/%Y')
+
+
         # get the most recent server
         code = ''
         for date in reversed(data[indication][website]['dates']):
@@ -686,7 +691,7 @@ for indication in data:
                 break
 
         content += '\n<tr>'
-        content += '<td><sub><a href="http://{0}" target="_blank">{0}</a></sub> <br/> <sub>{1}</sub> <br/> <sub>{2}</sub></td>'.format( website , data[indication][website]['drug']['generic'] , data[indication][website]['drug']['company'])
+        content += '<td><sub><a href="http://{0}" target="_blank">{0}</a></sub> <br/> <sub>{1}</sub> <br/> <sub>{2}</sub> <br/> <sub>{3}</sub></td>'.format( website , data[indication][website]['drug']['generic'] , data[indication][website]['drug']['company'] , approval )
         content += '<td><sub>{0}</sub></td>'.format( code )
         content += '<td><sub><a href="https://www.ssllabs.com/ssltest/analyze.html?d={0}" target="_blank">{1}</a></sub></td>'.format( website , https )
         content += '<td><sub>{0}</sub></td>'.format( moz_rank )
@@ -719,7 +724,7 @@ Additionally, the following the metrics are captured:
 * **Regulatory code**: Gain insight into how often a website is updated
 * **HTTPS**: Sadly, many website infrastructures do not provide HTTPS which [provides no data security](https://www.chromium.org/Home/chromium-security/marking-http-as-non-secure) to its visitors
 * :trophy: [MozRank](https://moz.com/learn/seo/mozrank) quantifies link popularity and is Moz’s version of Google’s classic PageRank algorithm
-* :link: Moz total number of links (juice-passing or not, internal or external) of the final redirected url (http://drug.com > https://www.drug.com)
+* :link: Moz total number of links (juice-passing or not, internal or external) of the final redirected url (http://drug.com&nbsp;>&nbsp;https://www.drug.com)
 * :iphone: Google PageSpeed Insights mobile speed score
 * :wheelchair: Google PageSpeed Insights mobile usability score
 * :computer: Google PageSpeed Insights desktop speed score
