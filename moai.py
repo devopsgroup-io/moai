@@ -343,11 +343,15 @@ if '--skip-changes' not in sys.argv[1:]:
                 try:
 
                     # make the request
-                    url = 'https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=http://' + website + '&strategy=desktop'
+                    url = 'https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=http://' + website + '&strategy=desktop&screenshot=true'
                     headers = {'user-agent': 'Moai'}
                     request = requests.get(url, headers=headers, timeout=30)
                     response = request.json()
                     google_psi_desktop = response['ruleGroups']['SPEED']['score']
+                    # get desktop screenshot and write to /data
+                    f = open('data/' + website.replace("/","-") + '.jpg', 'wb')
+                    f.write(base64.b64decode( str(response['screenshot']['data']).replace("_","/").replace("-","+") ))
+                    f.close()
                     break
 
                 # catch any exceptions
@@ -692,7 +696,7 @@ for indication in data:
 
         content += '\n<tr>'
         content += '<td><sub><a href="http://{0}" target="_blank">{0}</a></sub> <br/> <sub>{1}</sub> <br/> <sub>{2}</sub> <br/> <sub>{3}</sub></td>'.format( website , data[indication][website]['drug']['generic'] , data[indication][website]['drug']['company'] , approval )
-        content += '<td><sub>{0}</sub></td>'.format( code )
+        content += '<td><sub>{0}</sub><br/><img src="data/{1}.jpg" width="200"/></td>'.format( code , website.replace("/","-") )
         content += '<td><sub><a href="https://www.ssllabs.com/ssltest/analyze.html?d={0}" target="_blank">{1}</a></sub></td>'.format( website , https )
         content += '<td><sub>{0}</sub></td>'.format( moz_rank )
         content += '<td><sub>{0}</sub></td>'.format( moz_links )
@@ -724,7 +728,7 @@ Additionally, the following the metrics are captured:
 * **Regulatory code**: Gain insight into how often a website is updated
 * **HTTPS**: Sadly, many website infrastructures do not provide HTTPS which [provides no data security](https://www.chromium.org/Home/chromium-security/marking-http-as-non-secure) to its visitors
 * :trophy: [MozRank](https://moz.com/learn/seo/mozrank) quantifies link popularity and is Moz’s version of Google’s classic PageRank algorithm
-* :link: Moz total number of links (juice-passing or not, internal or external) of the final redirected url (http://drug.com&nbsp;>&nbsp;https://www.drug.com)
+* :link: Moz total number of links (juice-passing or not, internal or external) of the final redirected url (http://drug.com > https://www.drug.com)
 * :iphone: Google PageSpeed Insights mobile speed score
 * :wheelchair: Google PageSpeed Insights mobile usability score
 * :computer: Google PageSpeed Insights desktop speed score
