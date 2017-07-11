@@ -1634,14 +1634,11 @@ Viral Infection - Human Immunodeficiency Virus Infection; HIV:
         moz_rank: '5.5'
         google_psi_desktop: '64'
       20170708:
-        google_psi_mobile: ''
         google_psi_mobile_usability: '94'
       20170709:
-        google_psi_desktop: ''
         google_psi_mobile: '54'
         google_psi_mobile_usability: '99'
       20170710:
-        google_psi_mobile: ''
         google_psi_mobile_usability: '94'
       20170711:
         google_psi_desktop: '64'

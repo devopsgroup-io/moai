@@ -175,6 +175,8 @@ if '--skip-changes' not in sys.argv[1:]:
                     print('[ASN]\nOLD [' + str(asn_most_recent_date) + '][' + str(asn_most_recent) + ']\nNEW [' + str(todays_date) + '][' + asn_match + ']')
                     if str(asn_most_recent) == asn_match:
                         print('* NO CHANGE')
+                    elif str(asn_match) == '':
+                        print('* EMPTY RESPONSE')
                     else:
                         print('* CHANGE')
                         if todays_date in data[indication][website]['dates']:
@@ -298,6 +300,8 @@ if '--skip-changes' not in sys.argv[1:]:
             print('OLD [' + str(google_psi_mobile_most_recent_date) + '][' + str(google_psi_mobile_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(google_psi_mobile) + ']')
             if str(google_psi_mobile_most_recent) == str(google_psi_mobile):
                 print('* NO CHANGE')
+            elif str(google_psi_mobile) == '':
+                print('* EMPTY RESPONSE')
             else:
                 print('* CHANGE')
                 if todays_date in data[indication][website]['dates']:
@@ -322,6 +326,8 @@ if '--skip-changes' not in sys.argv[1:]:
             print('OLD [' + str(google_psi_mobile_usability_most_recent_date) + '][' + str(google_psi_mobile_usability_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(google_psi_mobile_usability) + ']')
             if str(google_psi_mobile_usability_most_recent) == str(google_psi_mobile_usability):
                 print('* NO CHANGE')
+            elif str(google_psi_mobile_usability) == '':
+                print('* EMPTY RESPONSE')
             else:
                 print('* CHANGE')
                 if todays_date in data[indication][website]['dates']:
@@ -381,6 +387,8 @@ if '--skip-changes' not in sys.argv[1:]:
             print('OLD [' + str(google_psi_desktop_most_recent_date) + '][' + str(google_psi_desktop_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(google_psi_desktop) + ']')
             if str(google_psi_desktop_most_recent) == str(google_psi_desktop):
                 print('* NO CHANGE')
+            elif str(google_psi_desktop) == '':
+                print('* EMPTY RESPONSE')
             else:
                 print('* CHANGE')
                 if todays_date in data[indication][website]['dates']:
@@ -459,16 +467,17 @@ if '--skip-changes' not in sys.argv[1:]:
 
             # handle the match
             print('[MOZ LINKS]')
-            if str(moz_links) != '':
-                print('OLD [' + str(moz_links_most_recent_date) + '][' + str(moz_links_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(moz_links) + ']')
-                if str(moz_links_most_recent) == str(moz_links):
-                    print('* NO CHANGE')
+            print('OLD [' + str(moz_links_most_recent_date) + '][' + str(moz_links_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(moz_links) + ']')
+            if str(moz_links_most_recent) == str(moz_links):
+                print('* NO CHANGE')
+            elif str(moz_links) == '':
+                print('* EMPTY RESPONSE')
+            else:
+                print('* CHANGE')
+                if todays_date in data[indication][website]['dates']:
+                    data[indication][website]['dates'][todays_date].update( { 'moz_links' : str(moz_links) } )
                 else:
-                    print('* CHANGE')
-                    if todays_date in data[indication][website]['dates']:
-                        data[indication][website]['dates'][todays_date].update( { 'moz_links' : str(moz_links) } )
-                    else:
-                        data[indication][website]['dates'].update( { todays_date : { 'moz_links' : str(moz_links) } } )
+                    data[indication][website]['dates'].update( { todays_date : { 'moz_links' : str(moz_links) } } )
 
             ############
             # MOZ RANK #
@@ -485,16 +494,17 @@ if '--skip-changes' not in sys.argv[1:]:
 
             # handle the match
             print('[MOZ RANK]')
-            if str(moz_rank) != '':
-                print('OLD [' + str(moz_rank_most_recent_date) + '][' + str(moz_rank_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(moz_rank) + ']')
-                if str(moz_rank_most_recent) == str(moz_rank):
-                    print('* NO CHANGE')
+            print('OLD [' + str(moz_rank_most_recent_date) + '][' + str(moz_rank_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(moz_rank) + ']')
+            if str(moz_rank_most_recent) == str(moz_rank):
+                print('* NO CHANGE')
+            elif str(moz_rank) == '':
+                print('* EMPTY RESPONSE')
+            else:
+                print('* CHANGE')
+                if todays_date in data[indication][website]['dates']:
+                    data[indication][website]['dates'][todays_date].update( { 'moz_rank' : str(moz_rank) } )
                 else:
-                    print('* CHANGE')
-                    if todays_date in data[indication][website]['dates']:
-                        data[indication][website]['dates'][todays_date].update( { 'moz_rank' : str(moz_rank) } )
-                    else:
-                        data[indication][website]['dates'].update( { todays_date : { 'moz_rank' : str(moz_rank) } } )
+                    data[indication][website]['dates'].update( { todays_date : { 'moz_rank' : str(moz_rank) } } )
 
 
     # write changes to data.yml
@@ -627,7 +637,7 @@ for indication in data:
         approval = datetime.datetime.strftime(approval, '%m/%d/%Y')
 
 
-        # get the most recent server
+        # get the most recent code
         code = ''
         for date in reversed(data[indication][website]['dates']):
             if 'code' in data[indication][website]['dates'][date]:
