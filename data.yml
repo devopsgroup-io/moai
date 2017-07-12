@@ -159,6 +159,8 @@ Cancer - Colorectal Cancer:
       20170711:
         code: 06/2017
         google_psi_mobile: '31'
+      20170712:
+        google_psi_mobile: '60'
     drug:
       approval: 20120927
       company: Bayer
@@ -211,6 +213,8 @@ Cancer - Colorectal Cancer:
         google_psi_desktop: '60'
       20170707:
         google_psi_desktop: '61'
+      20170712:
+        google_psi_desktop: '60'
     drug:
       approval: 20120803
       company: Sanofi
@@ -291,6 +295,9 @@ Cancer - Ovarian Cancer:
         google_psi_mobile: '42'
       20170711:
         google_psi_desktop: '51'
+      20170712:
+        google_psi_desktop: '56'
+        google_psi_mobile: '44'
     drug:
       approval: 19951208
       company: Cumberland Pharmaceuticals
@@ -318,6 +325,8 @@ Cancer - Ovarian Cancer:
         google_psi_desktop: '81'
       20170711:
         google_psi_desktop: '80'
+      20170712:
+        google_psi_desktop: '81'
     drug:
       approval: 20141219
       company: AstraZeneca
@@ -418,6 +427,8 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
         google_psi_desktop: '85'
       20170711:
         google_psi_desktop: '86'
+      20170712:
+        google_psi_desktop: '85'
     drug:
       approval: 20030812
       company: AstraZeneca
@@ -511,6 +522,8 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
         google_psi_desktop: '63'
       20170710:
         google_psi_desktop: '62'
+      20170712:
+        google_psi_desktop: '63'
     drug:
       approval: 20150827
       company: Amgen
@@ -647,6 +660,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
       20170711:
         google_psi_desktop: '75'
         google_psi_mobile: '65'
+      20170712:
+        google_psi_mobile: '64'
     drug:
       approval: 19980910
       company: Sanofi
@@ -698,6 +713,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         google_psi_mobile: '52'
       20170711:
         google_psi_mobile: '58'
+      20170712:
+        google_psi_mobile: '51'
     drug:
       approval: 19981231
       company: Pfizer
@@ -744,6 +761,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
       20170711:
         google_psi_desktop: '67'
         google_psi_mobile: '51'
+      20170712:
+        google_psi_desktop: '66'
     drug:
       approval: 19981102
       company: Amgen
@@ -916,6 +935,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         google_psi_desktop: '61'
       20170708:
         google_psi_desktop: '62'
+      20170712:
+        google_psi_desktop: '61'
     drug:
       approval: 20051223
       company: Bristol-Myers Squibb
@@ -1166,6 +1187,9 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_mobile: '57'
       20170711:
         google_psi_mobile: '58'
+      20170712:
+        google_psi_desktop: '73'
+        google_psi_mobile: '57'
     drug:
       approval: 20041229
       company: Actelion
@@ -1464,6 +1488,9 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20170711:
         google_psi_mobile: '32'
         google_psi_mobile_usability: '86'
+      20170712:
+        google_psi_mobile: '29'
+        google_psi_mobile_usability: '88'
     drug:
       approval: 20151221
       company: Actelion
@@ -1525,6 +1552,9 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20170711:
         google_psi_desktop: '78'
         google_psi_mobile: '62'
+      20170712:
+        google_psi_desktop: '75'
+        google_psi_mobile: '61'
     drug:
       approval: 20080627
       company: Actelion
@@ -1548,6 +1578,8 @@ Viral Infection - Human Immunodeficiency Virus Infection; HIV:
       20170708:
         google_psi_desktop: '59'
         google_psi_mobile: '51'
+      20170712:
+        google_psi_desktop: '58'
     drug:
       approval: 20060712
       company: Bristol-Myers Squibb
@@ -1582,6 +1614,9 @@ Viral Infection - Human Immunodeficiency Virus Infection; HIV:
         moz_links: '59'
         moz_rank: '4.8'
         server: Apache/2.2.22 (Ubuntu)
+      20170712:
+        google_psi_desktop: '63'
+        google_psi_mobile: '58'
     drug:
       approval: 20071012
       company: Merck
@@ -1642,6 +1677,8 @@ Viral Infection - Human Immunodeficiency Virus Infection; HIV:
         google_psi_mobile_usability: '94'
       20170711:
         google_psi_desktop: '64'
+      20170712:
+        google_psi_mobile_usability: '99'
     drug:
       approval: 20040802
       company: Gilead
