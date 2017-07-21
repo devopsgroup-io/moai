@@ -1469,6 +1469,15 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       company: United Therapeutics
       generic: tadalafil systemic
     regex: '[A-Z][A-Z]/[A-Z][A-Z][A-Z]/[A-Z][A-Z][A-Z][0-9][0-9]/[0-9][0-9][0-9]'
+  adempas-us.com:
+    dates:
+      20170721:
+        code: ''
+    drug:
+      approval: 20131008
+      company: Bayer
+      generic: riociguat
+    regex: '[0-9][0-9]/[0-9][0-9][0-9][0-9]'
   letairis.com:
     dates:
       20170526:
