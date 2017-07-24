@@ -785,6 +785,58 @@ Central Nervous System Disorders - Alzheimer's Disease:
       company: Allergan
       generic: donepezil / memantine systemic
     regex: '[A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9][0-9]'
+Central Nervous System Disorders - Parkinson's Disease:
+  azilect.com:
+    dates:
+      20170724:
+        code: AZI-41439
+        server: Microsoft-IIS/8.5
+        asn: AS17338 AOScloud, LLC.
+        https: 'True'
+        google_psi_mobile: '56'
+        google_psi_mobile_usability: '99'
+        google_psi_desktop: '65'
+        moz_links: '55'
+        moz_rank: '5.2'
+    drug:
+      approval: 20060516
+      company: Teva
+      generic: rasagiline systemic
+    regex: '[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9]'
+  mirapexer.com:
+    dates:
+      20170724:
+        code: PC-MXP-0004
+        server: Apache/2.2.3 (Red Hat)
+        asn: AS14492 DataPipe, Inc.
+        https: 'True'
+        google_psi_mobile: '59'
+        google_psi_mobile_usability: '64'
+        google_psi_desktop: '74'
+        moz_links: '20'
+        moz_rank: '4.3'
+    drug:
+      approval: 20060516
+      company: Boehringer Ingelheim
+      generic: pramipexole systemic
+    regex: '[A-Z][A-Z]-[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9]'
+  rytary.com:
+    dates:
+      20170724:
+        code: PP-RYT-US-0051
+        server: Apache/2.4
+        asn: AS53824 Liquid Web, L.L.C
+        https: 'True'
+        google_psi_mobile: '57'
+        google_psi_mobile_usability: '100'
+        google_psi_desktop: '79'
+        moz_links: '54'
+        moz_rank: '6.0'
+    drug:
+      approval: 20150701
+      company: Impax
+      generic: carbidopa / levodopa systemic
+    regex: '[A-Z][A-Z]-[A-Z][A-Z][A-Z]-[A-Z][A-Z]-[0-9][0-9][0-9][0-9]'
 Connective Tissue Disorders - Rheumatoid Arthritis; RA:
   arava.com:
     dates:
