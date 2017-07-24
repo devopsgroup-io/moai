@@ -1297,6 +1297,75 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
       company: Horizon Pharma
       generic: esomeprazole / naproxen systemic
     regex: '[0-9][0-9][0-9][0-9][A-Z][A-Z][A-Z][0-9][0-9]'
+Metabolic Disorders - Obesity:
+  belviq.com:
+    dates:
+      20170724:
+        code: BVXR-US0052
+        server: Microsoft-IIS/8.5
+        asn: AS46203 ProNet Solutions, Inc.
+        https: 'True'
+        google_psi_mobile: '62'
+        google_psi_mobile_usability: '95'
+        google_psi_desktop: '78'
+        moz_links: '801'
+        moz_rank: '5.9'
+    drug:
+      approval: 20120627
+      company: Eisai
+      generic: lorcaserin systemic
+    regex: '[A-Z][A-Z][A-Z][A-Z]-[A-Z][A-Z][0-9][0-9][0-9][0-9]'
+  contrave.com:
+    dates:
+      20170724:
+        code: FDA-1088
+        server: nginx/1.10.1
+        asn: AS14618 Amazon.com, Inc.
+        https: 'True'
+        google_psi_mobile: '50'
+        google_psi_mobile_usability: '99'
+        google_psi_desktop: '60'
+        moz_links: '1500'
+        moz_rank: '5.7'
+    drug:
+      approval: 20140910
+      company: Orexigen
+      generic: lbupropion / naltrexone systemic
+    regex: '[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9]'
+  saxenda.com:
+    dates:
+      20170724:
+        code: USA17SAM01099
+        server: Apache/2.4.25 (Red Hat) OpenSSL/1.0.1e-fips Communique/4.1.9
+        asn: AS33070 Rackspace Ltd.
+        https: 'False'
+        google_psi_mobile: '34'
+        google_psi_mobile_usability: '99'
+        google_psi_desktop: '42'
+        moz_links: '52'
+        moz_rank: '4.9'
+    drug:
+      approval: 20141223
+      company: Novo Nordisk
+      generic: liraglutide systemic
+    regex: '[A-Z][A-Z][A-Z][0-9][0-9][A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9][0-9]'
+  qsymia.com:
+    dates:
+      20170724:
+        code: '100028.36'
+        server: nginx/1.0.15
+        asn: AS19994 Rackspace Ltd.
+        https: 'True'
+        google_psi_mobile: '72'
+        google_psi_mobile_usability: '97'
+        google_psi_desktop: '86'
+        moz_links: '260'
+        moz_rank: '5.8'
+    drug:
+      approval: 20120717
+      company: Vivus
+      generic: phentermine / topiramate systemic
+    regex: '[0-9][0-9][0-9][0-9][0-9][0-9]\.[0-9][0-9]'
 Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
   bevespi.com:
     dates:
