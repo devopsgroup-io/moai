@@ -258,6 +258,8 @@ Cancer - Colorectal Cancer:
         moz_links: '108'
       20170806:
         google_psi_desktop: '71'
+      20170807:
+        google_psi_desktop: '72'
     drug:
       approval: 20120927
       company: Bayer
@@ -334,6 +336,8 @@ Cancer - Colorectal Cancer:
       20170805:
         google_psi_desktop: '60'
         moz_links: '98'
+      20170807:
+        google_psi_desktop: '61'
     drug:
       approval: 20120803
       company: Sanofi
@@ -399,6 +403,8 @@ Cancer - Ovarian Cancer:
         moz_rank: '5.0'
       20170805:
         moz_rank: '4.9'
+      20170807:
+        google_psi_mobile: '69'
     drug:
       approval: 19951117
       company: Janssen
@@ -490,6 +496,9 @@ Cancer - Ovarian Cancer:
       20170806:
         google_psi_desktop: '56'
         google_psi_mobile: '43'
+      20170807:
+        google_psi_desktop: '49'
+        google_psi_mobile: '46'
     drug:
       approval: 19951208
       company: Cumberland Pharmaceuticals
@@ -551,6 +560,9 @@ Cancer - Ovarian Cancer:
         google_psi_desktop: '80'
         moz_links: '42'
         moz_rank: '6.1'
+      20170807:
+        google_psi_desktop: '81'
+        google_psi_mobile: '55'
     drug:
       approval: 20141219
       company: AstraZeneca
@@ -703,6 +715,9 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
         moz_links: '338'
       20170806:
         google_psi_mobile: '67'
+      20170807:
+        google_psi_desktop: '86'
+        google_psi_mobile: '68'
     drug:
       approval: 20030812
       company: AstraZeneca
@@ -774,6 +789,8 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
       20170805:
         moz_links: '53'
         moz_rank: '4.9'
+      20170807:
+        google_psi_desktop: '73'
     drug:
       approval: 20090803
       company: Kowa
@@ -1207,6 +1224,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         moz_rank: '5.2'
       20170806:
         google_psi_mobile: '58'
+      20170807:
+        google_psi_mobile: '49'
     drug:
       approval: 19981231
       company: Pfizer
@@ -1487,6 +1506,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         moz_rank: '4.7'
       20170806:
         google_psi_desktop: '83'
+      20170807:
+        google_psi_mobile: '65'
     drug:
       approval: 20170522
       company: Sanofi and Regeneron
@@ -1720,6 +1741,9 @@ Metabolic Disorders - Obesity:
         moz_rank: '5.8'
       20170806:
         google_psi_mobile: '44'
+      20170807:
+        google_psi_desktop: '78'
+        google_psi_mobile: '36'
     drug:
       approval: 20120627
       company: Eisai
@@ -2121,6 +2145,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20170806:
         google_psi_desktop: '69'
         google_psi_mobile: '58'
+      20170807:
+        google_psi_desktop: '72'
     drug:
       approval: 20041229
       company: Actelion
@@ -2195,6 +2221,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         moz_rank: '4.7'
       20170806:
         google_psi_desktop: '78'
+      20170807:
+        google_psi_desktop: '79'
     drug:
       approval: 20131008
       company: Bayer
@@ -2279,6 +2307,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_desktop: '68'
       20170725:
         google_psi_desktop: '49'
+      20170807:
+        google_psi_desktop: '68'
     drug:
       approval: 20131018
       company: Actelion
@@ -2682,6 +2712,9 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_mobile: '62'
       20170801:
         google_psi_desktop: '78'
+      20170807:
+        google_psi_desktop: '77'
+        google_psi_mobile: '59'
     drug:
       approval: 20080627
       company: Actelion
@@ -2829,6 +2862,9 @@ Viral Infection - Human Immunodeficiency Virus Infection; HIV:
         moz_rank: '3.7'
       20170806:
         google_psi_desktop: '67'
+      20170807:
+        google_psi_desktop: '64'
+        google_psi_mobile: '58'
     drug:
       approval: 20071012
       company: Merck
