@@ -261,6 +261,7 @@ if '--skip-changes' not in sys.argv[1:]:
             print('[GOOGLE PAGESPEED INSIGHTS MOBILE]')
             trys = 0
             google_psi_mobile = ''
+            google_psi_mobile_usability = ''
             while True:
                 try:
 
@@ -269,8 +270,9 @@ if '--skip-changes' not in sys.argv[1:]:
                     headers = {'user-agent': 'Moai'}
                     request = requests.get(url, headers=headers, timeout=30)
                     response = request.json()
-                    google_psi_mobile = response['ruleGroups']['SPEED']['score']
-                    google_psi_mobile_usability = response['ruleGroups']['USABILITY']['score']
+                    if response.has_key('ruleGroups'):
+                        google_psi_mobile = response['ruleGroups']['SPEED']['score']
+                        google_psi_mobile_usability = response['ruleGroups']['USABILITY']['score']
                     break
 
                 # catch any exceptions
@@ -353,11 +355,13 @@ if '--skip-changes' not in sys.argv[1:]:
                     headers = {'user-agent': 'Moai'}
                     request = requests.get(url, headers=headers, timeout=30)
                     response = request.json()
-                    google_psi_desktop = response['ruleGroups']['SPEED']['score']
-                    # get desktop screenshot and write to /data
-                    f = open('data/' + website.replace("/","-") + '.jpg', 'wb')
-                    f.write(base64.b64decode( str(response['screenshot']['data']).replace("_","/").replace("-","+") ))
-                    f.close()
+                    if response.has_key('ruleGroups'):
+                        google_psi_desktop = response['ruleGroups']['SPEED']['score']
+                    if response.has_key('screenshot'):
+                        # get desktop screenshot and write to /data
+                        f = open('data/' + website.replace("/","-") + '.jpg', 'wb')
+                        f.write(base64.b64decode( str(response['screenshot']['data']).replace("_","/").replace("-","+") ))
+                        f.close()
                     break
 
                 # catch any exceptions
