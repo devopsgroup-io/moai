@@ -228,6 +228,9 @@ Cancer - Brain Tumor:
       20171002:
         google_psi_desktop: '66'
         google_psi_mobile: '54'
+      20171003:
+        google_psi_desktop: '63'
+        google_psi_mobile: '55'
     drug:
       approval: 20090330
       company: Novartis
@@ -431,6 +434,8 @@ Cancer - Colorectal Cancer:
         google_psi_mobile: '69'
       20171002:
         google_psi_desktop: '80'
+      20171003:
+        google_psi_desktop: '81'
     drug:
       approval: 20120927
       company: Bayer
@@ -814,6 +819,9 @@ Cancer - Ovarian Cancer:
         google_psi_desktop: '56'
       20171002:
         google_psi_desktop: '55'
+      20171003:
+        google_psi_desktop: '57'
+        google_psi_mobile: '46'
     drug:
       approval: 19951208
       company: Cumberland Pharmaceuticals
@@ -971,6 +979,8 @@ Cancer - Ovarian Cancer:
         google_psi_mobile: '56'
       20170930:
         google_psi_desktop: '78'
+      20171003:
+        google_psi_desktop: '77'
     drug:
       approval: 20141219
       company: AstraZeneca
@@ -1038,6 +1048,9 @@ Cancer - Ovarian Cancer:
         google_psi_mobile: '60'
       20170930:
         google_psi_mobile: '61'
+      20171003:
+        google_psi_desktop: '74'
+        google_psi_mobile: '60'
     drug:
       approval: 20170327
       company: Tesaro
@@ -1225,6 +1238,8 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
         server: astrazeneca.com
       20170929:
         google_psi_mobile: '68'
+      20171003:
+        google_psi_desktop: '84'
     drug:
       approval: 20030812
       company: AstraZeneca
@@ -1444,6 +1459,8 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
         google_psi_desktop: '62'
       20171002:
         google_psi_desktop: '65'
+      20171003:
+        google_psi_desktop: '62'
     drug:
       approval: 20150827
       company: Amgen
@@ -1641,6 +1658,8 @@ Central Nervous System Disorders - Alzheimer's Disease:
         google_psi_mobile: '52'
       20171002:
         google_psi_desktop: '54'
+      20171003:
+        google_psi_mobile: '50'
     drug:
       approval: 20141223
       company: Allergan
@@ -1978,6 +1997,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
       20170926:
         moz_links: '593'
         moz_rank: '5.3'
+      20171003:
+        google_psi_mobile: '51'
     drug:
       approval: 19981231
       company: Pfizer
@@ -2110,6 +2131,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
       20170928:
         google_psi_desktop: '68'
         google_psi_mobile: '50'
+      20171003:
+        google_psi_mobile: '49'
     drug:
       approval: 19981102
       company: Amgen
@@ -2263,6 +2286,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         google_psi_desktop: '34'
       20171002:
         google_psi_desktop: '32'
+      20171003:
+        google_psi_desktop: '46'
     drug:
       approval: 20021231
       company: AbbVie
@@ -2483,6 +2508,9 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
       20171002:
         google_psi_desktop: '81'
         google_psi_mobile: '67'
+      20171003:
+        google_psi_desktop: '78'
+        google_psi_mobile: '65'
     drug:
       approval: 20170522
       company: Sanofi and Regeneron
@@ -2688,6 +2716,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         google_psi_desktop: '60'
       20171002:
         google_psi_desktop: '61'
+      20171003:
+        google_psi_desktop: '60'
     drug:
       approval: 20051223
       company: Bristol-Myers Squibb
@@ -3058,6 +3088,8 @@ Metabolic Disorders - Obesity:
         google_psi_mobile_usability: '98'
       20171001:
         google_psi_mobile_usability: '97'
+      20171003:
+        google_psi_mobile_usability: '98'
     drug:
       approval: 20120717
       company: Vivus
@@ -3280,6 +3312,8 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         server: astrazeneca.com
       20170929:
         google_psi_mobile: '56'
+      20171003:
+        google_psi_mobile: '55'
     drug:
       approval: 20110228
       company: AstraZeneca
@@ -3427,6 +3461,9 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         google_psi_mobile: '54'
       20171002:
         google_psi_desktop: '70'
+      20171003:
+        google_psi_desktop: '77'
+        google_psi_mobile: '43'
     drug:
       approval: 20060721
       company: AstraZeneca
@@ -3678,6 +3715,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_mobile: '58'
       20171002:
         google_psi_mobile: '57'
+      20171003:
+        google_psi_mobile: '56'
     drug:
       approval: 20041229
       company: Actelion
@@ -3805,6 +3844,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_mobile: '64'
       20170929:
         google_psi_mobile: '66'
+      20171003:
+        google_psi_mobile: '65'
     drug:
       approval: 20131008
       company: Bayer
@@ -3943,6 +3984,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_desktop: '67'
       20171002:
         google_psi_desktop: '49'
+      20171003:
+        google_psi_desktop: '67'
     drug:
       approval: 20131018
       company: Actelion
@@ -4393,6 +4436,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         server: Microsoft-IIS/8.5
       20171002:
         google_psi_desktop: '47'
+      20171003:
+        google_psi_desktop: '48'
     drug:
       approval: 20151221
       company: Actelion
@@ -4562,6 +4607,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20171002:
         google_psi_desktop: '78'
         google_psi_mobile: '62'
+      20171003:
+        google_psi_desktop: '74'
     drug:
       approval: 20080627
       company: Actelion
@@ -4905,6 +4952,8 @@ Viral Infection - Human Immunodeficiency Virus Infection; HIV:
         google_psi_mobile_usability: '100'
       20171002:
         google_psi_mobile: '49'
+      20171003:
+        google_psi_mobile: '43'
     drug:
       approval: 19960301
       company: AbbVie
