@@ -533,7 +533,7 @@ for indication in data:
     print('\n' + indication + '\n==============================').upper()
 
     content += '\n<tr>'
-    content += '<td colspan="11"><strong>' + str(indication) + '</strong></td>'
+    content += '<td colspan="10"><strong>' + str(indication) + '</strong></td>'
     content += '</tr>'
     content += '\n<tr>'
     content += '<td><sub>Drug \ generic \ company \ FDA approval</sub></td>'
@@ -719,7 +719,9 @@ for indication in data:
         content += '<td><sub><a href="https://developers.google.com/speed/pagespeed/insights/?url={0}&tab=desktop" target="_blank">{1}</a></sub></td>'.format( website , google_psi_desktop )
         content += '<td><sub>{0}</sub></td>'.format( server )
         content += '<td><sub>{0}</sub></td>'.format( asn )
-        content += '<td><img src="data/{0}.png"/></td>'.format( website.replace("/","-") )
+        content += '</tr>'
+        content += '\n<tr>'
+        content += '<td colspan="10"><img src="data/{0}.png"/></td>'.format( website.replace("/","-") )
         content += '</tr>'
 
 content += '\n</table>'
