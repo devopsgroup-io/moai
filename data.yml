@@ -266,6 +266,9 @@ Cancer - Brain Tumor:
       20171022:
         google_psi_desktop: '66'
         google_psi_mobile: '56'
+      20171024:
+        google_psi_desktop: '65'
+        google_psi_mobile: '55'
     drug:
       approval: 20090330
       company: Novartis
@@ -502,6 +505,8 @@ Cancer - Colorectal Cancer:
         google_psi_desktop: '80'
       20171022:
         google_psi_mobile: '69'
+      20171024:
+        google_psi_mobile: '68'
     drug:
       approval: 20120927
       company: Bayer
@@ -957,6 +962,9 @@ Cancer - Ovarian Cancer:
         google_psi_mobile: '47'
       20171022:
         google_psi_desktop: '57'
+      20171024:
+        google_psi_desktop: '56'
+        google_psi_mobile: '49'
     drug:
       approval: 19951208
       company: Cumberland Pharmaceuticals
@@ -1154,6 +1162,8 @@ Cancer - Ovarian Cancer:
       20171022:
         google_psi_desktop: '77'
         google_psi_mobile: '55'
+      20171024:
+        google_psi_mobile: '56'
     drug:
       approval: 20141219
       company: AstraZeneca
@@ -1476,6 +1486,8 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
         google_psi_desktop: '86'
       20171022:
         google_psi_desktop: '84'
+      20171024:
+        google_psi_desktop: '83'
     drug:
       approval: 20030812
       company: AstraZeneca
@@ -1789,6 +1801,9 @@ Central Nervous System Disorders - Alzheimer's Disease:
         moz_rank: '5.5'
       20171017:
         moz_links: '508'
+      20171024:
+        google_psi_desktop: '59'
+        google_psi_mobile: '42'
     drug:
       approval: 20000421
       company: Novartis
@@ -2340,6 +2355,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         moz_links: '741'
       20171022:
         google_psi_mobile: '48'
+      20171024:
+        google_psi_mobile: '58'
     drug:
       approval: 19981231
       company: Pfizer
@@ -2940,6 +2957,9 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
       20171022:
         google_psi_desktop: '80'
         google_psi_mobile: '63'
+      20171024:
+        google_psi_desktop: '82'
+        google_psi_mobile: '67'
     drug:
       approval: 20170522
       company: Sanofi and Regeneron
@@ -3347,6 +3367,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         google_psi_desktop: '89'
         google_psi_mobile: '77'
         google_psi_mobile_usability: '98'
+      20171024:
+        google_psi_desktop: '90'
     drug:
       approval: 20100430
       company: Horizon Pharma
@@ -3451,6 +3473,8 @@ Metabolic Disorders - Obesity:
         google_psi_mobile: '65'
       20171021:
         google_psi_mobile: '64'
+      20171024:
+        google_psi_mobile: '65'
     drug:
       approval: 20120627
       company: Eisai
@@ -3632,6 +3656,8 @@ Metabolic Disorders - Obesity:
         code: '100028.37'
       20171022:
         code: '100028.36'
+      20171024:
+        code: '100028.37'
     drug:
       approval: 20120717
       company: Vivus
@@ -3904,6 +3930,8 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         google_psi_mobile: '56'
       20171021:
         google_psi_desktop: '79'
+      20171024:
+        google_psi_mobile: '55'
     drug:
       approval: 20110228
       company: AstraZeneca
@@ -4088,6 +4116,9 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         google_psi_desktop: '78'
       20171022:
         google_psi_desktop: '77'
+      20171024:
+        google_psi_desktop: '75'
+        google_psi_mobile: '54'
     drug:
       approval: 20060721
       company: AstraZeneca
@@ -4548,6 +4579,9 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_desktop: '83'
       20171020:
         google_psi_desktop: '84'
+      20171024:
+        code: 10/2017
+        google_psi_mobile: '68'
     drug:
       approval: 20131008
       company: Bayer
@@ -4928,6 +4962,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20171017:
         moz_links: '1'
         moz_rank: '3.8'
+      20171024:
+        google_psi_mobile: '61'
     drug:
       approval: 20011120
       company: Actelion
@@ -5223,6 +5259,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20171022:
         google_psi_mobile: '41'
         google_psi_mobile_usability: '86'
+      20171024:
+        google_psi_desktop: '47'
     drug:
       approval: 20151221
       company: Actelion
@@ -5572,6 +5610,8 @@ Viral Infection - Human Immunodeficiency Virus Infection; HIV:
         google_psi_mobile: '50'
       20171022:
         google_psi_mobile: '51'
+      20171024:
+        google_psi_mobile: '50'
     drug:
       approval: 20060712
       company: Bristol-Myers Squibb
@@ -5823,6 +5863,9 @@ Viral Infection - Human Immunodeficiency Virus Infection; HIV:
       20171017:
         moz_links: '11'
         moz_rank: '4.3'
+      20171024:
+        google_psi_desktop: '67'
+        google_psi_mobile: '49'
     drug:
       approval: 19960301
       company: AbbVie
