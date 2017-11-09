@@ -708,7 +708,7 @@ for indication in data:
                 break
 
         content += '\n<tr>'
-        content += '<td><sub><a href="http://{0}" target="_blank">{0}</a></sub> <br/> <sub>{1}</sub> <br/> <sub>{2}</sub> <br/> <sub>{3}</sub></td>'.format( website , data[indication][website]['drug']['generic'] , data[indication][website]['drug']['company'] , approval )
+        content += '<td><sub><a href="http://{0}" target="_blank">{0}</a></sub> <br/> <sub>{1}</sub> <br/> <sub>{2}</sub> <br/> <sub>{3}</sub> <br/> <img src="dhttp://{0}/favicon.ico"/></td>'.format( website , data[indication][website]['drug']['generic'] , data[indication][website]['drug']['company'] , approval )
         content += '<td><sub>{0}</sub><br/><img src="data/{1}.jpg" width="200"/></td>'.format( code , website.replace("/","-") )
         content += '<td><sub><a href="https://www.ssllabs.com/ssltest/analyze.html?d={0}" target="_blank">{1}</a></sub></td>'.format( website , https )
         content += '<td><sub>{0}</sub></td>'.format( moz_rank )
