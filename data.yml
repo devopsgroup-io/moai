@@ -2244,6 +2244,58 @@ Central Nervous System Disorders - Alzheimer's Disease:
       company: Allergan
       generic: donepezil / memantine systemic
     regex: '[A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9][0-9]'
+Central Nervous System Disorders - Epilepsy:
+  depakote.com:
+    dates:
+      20171109:
+        code: 2047789-1921852
+        server: Microsoft-IIS/8.5
+        asn: AS15395 Rackspace Ltd.
+        https: 'True'
+        google_psi_mobile: '52'
+        google_psi_mobile_usability: '97'
+        google_psi_desktop: '68'
+        moz_links: '55'
+        moz_rank: '4.8'
+    drug:
+      approval: 19830310
+      company: AbbVie
+      generic: divalproex sodium systemic
+    regex: '[0-9][0-9][0-9][0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
+  dilantin.com:
+    dates:
+      20171109:
+        code: PP-DIL-USA-0062-01
+        server: nginx
+        asn: AS14618 Amazon.com, Inc.
+        https: 'False'
+        google_psi_mobile: '70'
+        google_psi_mobile_usability: '67'
+        google_psi_desktop: '82'
+        moz_links: '28'
+        moz_rank: '4.6'
+    drug:
+      approval: 19560301
+      company: Pfizer
+      generic: phenytoin systemic
+    regex: '[A-Z][A-Z]-[A-Z][A-Z][A-Z]-[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9]-[0-9][0-9]'
+  keppraxr.com:
+    dates:
+      20171109:
+        code: USP-LEV-0215-00001
+        server: Microsoft-IIS/7.5
+        asn: AS20021 HostMySite
+        https: 'False'
+        google_psi_mobile: '59'
+        google_psi_mobile_usability: '67'
+        google_psi_desktop: '70'
+        moz_links: '2'
+        moz_rank: '0'
+    drug:
+      approval: 19991130
+      company: UCB
+      generic: levetiracetam systemic
+    regex: '[A-Z][A-Z][A-Z]-[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9][0-9]'
 Central Nervous System Disorders - Parkinson's Disease:
   azilect.com:
     dates:
