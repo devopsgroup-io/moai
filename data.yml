@@ -2252,7 +2252,7 @@ Central Nervous System Disorders - Epilepsy:
         server: Microsoft-IIS/8.5
         asn: AS15395 Rackspace Ltd.
         https: 'True'
-        google_psi_mobile: '52'
+        google_psi_mobile: '38'
         google_psi_mobile_usability: '97'
         google_psi_desktop: '68'
         moz_links: '55'
@@ -2279,23 +2279,6 @@ Central Nervous System Disorders - Epilepsy:
       company: Pfizer
       generic: phenytoin systemic
     regex: '[A-Z][A-Z]-[A-Z][A-Z][A-Z]-[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9]-[0-9][0-9]'
-  felbatol.com:
-    dates:
-      20171109:
-        code: FEL6002
-        server: Microsoft-IIS/7.0
-        asn: AS33070 Rackspace Ltd.
-        https: 'False'
-        google_psi_mobile: '81'
-        google_psi_mobile_usability: '66'
-        google_psi_desktop: '88'
-        moz_links: '1'
-        moz_rank: '3.9'
-    drug:
-      approval: 19930729
-      company: Meda
-      generic: phenytoin systemic
-    regex: '[A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9]'
   keppraxr.com:
     dates:
       20171109:
@@ -2313,6 +2296,75 @@ Central Nervous System Disorders - Epilepsy:
       company: UCB
       generic: levetiracetam systemic
     regex: '[A-Z][A-Z][A-Z]-[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9][0-9]'
+  oxtellarxr.com:
+    dates:
+      20171109:
+        code: SPN.OXT.2017-0032
+        server: Apache/2.4.10 (Debian)
+        asn: AS54098 LIONLINK NETWORKS
+        https: 'True'
+        google_psi_mobile: '66'
+        google_psi_mobile_usability: '97'
+        google_psi_desktop: '81'
+        moz_links: '7'
+        moz_rank: '4.0'
+    drug:
+      approval: 20121019
+      company: Supernus
+      generic: oxcarbazepine systemic
+    regex: '[A-Z][A-Z][A-Z]\.[A-Z][A-Z][A-Z]\.[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]'
+Central Nervous System Disorders - Epilepsy - Lennox-Gastaut Syndrome:
+  banzel.com:
+    dates:
+      20171109:
+        code: BANZ-US0228(1)
+        server: Microsoft-IIS/8.5
+        asn: AS46203 ProNet Solutions, Inc.
+        https: 'True'
+        google_psi_mobile: '54'
+        google_psi_mobile_usability: '85'
+        google_psi_desktop: '69'
+        moz_links: '404'
+        moz_rank: '5.2'
+    drug:
+      approval: 20121019
+      company: Eisai
+      generic: rufinamide systemic
+    regex: '[A-Z][A-Z][A-Z][A-Z]-[A-Z][A-Z][0-9][0-9][0-9][0-9]\([0-9]\)'
+  felbatol.com:
+    dates:
+      20171109:
+        code: FEL6002
+        server: Microsoft-IIS/7.0
+        asn: AS33070 Rackspace Ltd.
+        https: 'False'
+        google_psi_mobile: '81'
+        google_psi_mobile_usability: '66'
+        google_psi_desktop: '88'
+        moz_links: '1'
+        moz_rank: '3.9'
+    drug:
+      approval: 19930729
+      company: Meda
+      generic: phenytoin systemic
+    regex: '[A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9]'
+  onfi.com:
+    dates:
+      20171109:
+        code: CLB-B-00206(3)
+        server: Apache
+        asn: AS15533 SunGard Availability Services (UK) Ltd
+        https: 'False'
+        google_psi_mobile: '63'
+        google_psi_mobile_usability: '91'
+        google_psi_desktop: '82'
+        moz_links: '78'
+        moz_rank: '4.9'
+    drug:
+      approval: 20121019
+      company: Lundbeck
+      generic: clobazam systemic
+    regex: '[A-Z][A-Z][A-Z]-[A-Z]-[0-9][0-9][0-9][0-9][0-9]\([0-9]\)'
 Central Nervous System Disorders - Parkinson's Disease:
   azilect.com:
     dates:
