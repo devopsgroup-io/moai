@@ -2279,6 +2279,23 @@ Central Nervous System Disorders - Epilepsy:
       company: Pfizer
       generic: phenytoin systemic
     regex: '[A-Z][A-Z]-[A-Z][A-Z][A-Z]-[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9]-[0-9][0-9]'
+  felbatol.com:
+    dates:
+      20171109:
+        code: FEL6002
+        server: Microsoft-IIS/7.0
+        asn: AS33070 Rackspace Ltd.
+        https: 'False'
+        google_psi_mobile: '81'
+        google_psi_mobile_usability: '66'
+        google_psi_desktop: '88'
+        moz_links: '1'
+        moz_rank: '3.9'
+    drug:
+      approval: 19930729
+      company: Meda
+      generic: phenytoin systemic
+    regex: '[A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9]'
   keppraxr.com:
     dates:
       20171109:
