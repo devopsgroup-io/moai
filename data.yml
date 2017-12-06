@@ -6643,6 +6643,7 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20171129:
         google_psi_mobile: '70'
       20171130:
+        code: US/REM/0078
         google_psi_desktop: '85'
         google_psi_mobile: '72'
         google_psi_mobile_usability: '95'
@@ -6660,7 +6661,7 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       approval: 20010705
       company: United Therapeutics
       generic: treprostinil systemic
-    regex: '[A-Z][A-Z]/[A-Z][A-Z][A-Z]/[A-Z][A-Z][A-Z][0-9][0-9]/[0-9][0-9][0-9]'
+    regex: '[A-Z][A-Z]/[A-Z][A-Z][A-Z]/[0-9][0-9][0-9][0-9]'
   revatio.com:
     dates:
       20170526:
