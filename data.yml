@@ -475,6 +475,8 @@ Cancer - Colorectal Cancer:
         google_psi_mobile: '63'
       20171217:
         google_psi_mobile: '74'
+      20171219:
+        google_psi_desktop: '68'
     drug:
       approval: 20040212
       company: Lilly
@@ -1062,6 +1064,9 @@ Cancer - Gastric Cancer:
       20171218:
         google_psi_desktop: '73'
         google_psi_mobile: '65'
+      20171219:
+        google_psi_desktop: '75'
+        google_psi_mobile: '63'
     drug:
       approval: 20140421
       company: Lilly
@@ -1456,6 +1461,8 @@ Cancer - Ovarian Cancer:
         google_psi_mobile: '57'
       20171218:
         google_psi_desktop: '67'
+      20171219:
+        google_psi_desktop: '69'
     drug:
       approval: 19951208
       company: Cumberland Pharmaceuticals
@@ -1716,6 +1723,8 @@ Cancer - Ovarian Cancer:
         google_psi_desktop: '76'
       20171217:
         google_psi_desktop: '77'
+      20171219:
+        google_psi_desktop: '75'
     drug:
       approval: 20141219
       company: AstraZeneca
@@ -1907,6 +1916,8 @@ Cancer - Ovarian Cancer:
         google_psi_desktop: '57'
       20171217:
         google_psi_desktop: '56'
+      20171219:
+        google_psi_desktop: '57'
     drug:
       approval: 20170327
       company: Tesaro
@@ -2232,6 +2243,8 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
       20171218:
         google_psi_desktop: '86'
         google_psi_mobile: '67'
+      20171219:
+        google_psi_mobile: '68'
     drug:
       approval: 20030812
       company: AstraZeneca
@@ -2942,6 +2955,8 @@ Central Nervous System Disorders - Epilepsy:
         moz_links: '35'
       20171218:
         google_psi_mobile: '54'
+      20171219:
+        google_psi_mobile: '58'
     drug:
       approval: 19560301
       company: Pfizer
@@ -3394,6 +3409,9 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         moz_links: '6'
       20171218:
         google_psi_desktop: '79'
+      20171219:
+        google_psi_desktop: '78'
+        google_psi_mobile: '67'
     drug:
       approval: 19980910
       company: Sanofi
@@ -4054,6 +4072,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         google_psi_desktop: '38'
       20171217:
         google_psi_desktop: '49'
+      20171219:
+        google_psi_desktop: '39'
     drug:
       approval: 20021231
       company: AbbVie
@@ -4462,6 +4482,9 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
       20171218:
         google_psi_desktop: '81'
         google_psi_mobile: '66'
+      20171219:
+        google_psi_desktop: '80'
+        google_psi_mobile: '64'
     drug:
       approval: 20170522
       company: Sanofi and Regeneron
@@ -5461,6 +5484,9 @@ Metabolic Disorders - Obesity:
         code: '100028.36'
       20171218:
         google_psi_desktop: '83'
+      20171219:
+        code: '100028.37'
+        google_psi_desktop: '82'
     drug:
       approval: 20120717
       company: Vivus
@@ -6989,6 +7015,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_desktop: '49'
       20171217:
         google_psi_desktop: '67'
+      20171219:
+        google_psi_desktop: '49'
     drug:
       approval: 20131018
       company: Actelion
@@ -7182,6 +7210,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20171218:
         google_psi_mobile_usability: '95'
         server: Microsoft-IIS/8.0
+      20171219:
+        google_psi_mobile_usability: '96'
     drug:
       approval: 20010705
       company: United Therapeutics
@@ -8640,6 +8670,8 @@ Viral Infection - Human Immunodeficiency Virus Infection; HIV:
         google_psi_desktop: '73'
       20171218:
         google_psi_desktop: '72'
+      20171219:
+        google_psi_desktop: '73'
     drug:
       approval: 20071012
       company: Merck
@@ -8958,6 +8990,8 @@ Viral Infection - Human Immunodeficiency Virus Infection; HIV:
         google_psi_mobile_usability: '98'
       20171218:
         google_psi_mobile_usability: '99'
+      20171219:
+        google_psi_mobile_usability: '98'
     drug:
       approval: 20040802
       company: Gilead
