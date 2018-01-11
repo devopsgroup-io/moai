@@ -423,6 +423,9 @@ Cancer - Brain Tumor:
         google_psi_mobile: '56'
       20180110:
         google_psi_mobile: '55'
+      20180111:
+        google_psi_desktop: '66'
+        google_psi_mobile_usability: '99'
     drug:
       approval: 20090330
       company: Novartis
@@ -1278,6 +1281,8 @@ Cancer - Ovarian Cancer:
       20180110:
         moz_links: '17'
         moz_rank: '4.9'
+      20180111:
+        google_psi_desktop: '84'
     drug:
       approval: 19951117
       company: Janssen
@@ -1683,6 +1688,8 @@ Cancer - Ovarian Cancer:
       20180110:
         google_psi_desktop: '73'
         google_psi_mobile: '57'
+      20180111:
+        google_psi_desktop: '74'
     drug:
       approval: 19951208
       company: Cumberland Pharmaceuticals
@@ -1985,6 +1992,8 @@ Cancer - Ovarian Cancer:
         moz_rank: '4.7'
       20180110:
         google_psi_mobile: '54'
+      20180111:
+        google_psi_desktop: '77'
     drug:
       approval: 20141219
       company: AstraZeneca
@@ -2572,6 +2581,8 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
       20180109:
         google_psi_desktop: '84'
         moz_links: '341'
+      20180111:
+        google_psi_mobile: '67'
     drug:
       approval: 20030812
       company: AstraZeneca
@@ -2971,6 +2982,9 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
         moz_links: '759'
       20180110:
         google_psi_desktop: '78'
+      20180111:
+        google_psi_desktop: '74'
+        google_psi_mobile: '49'
     drug:
       approval: 20150827
       company: Amgen
@@ -3081,6 +3095,8 @@ Central Nervous System Disorders - Alzheimer's Disease:
         moz_links: '115'
       20180110:
         google_psi_mobile: '56'
+      20180111:
+        google_psi_mobile: '57'
     drug:
       approval: 20000421
       company: Novartis
@@ -3344,6 +3360,8 @@ Central Nervous System Disorders - Epilepsy:
         moz_rank: '4.9'
       20180110:
         google_psi_mobile: '39'
+      20180111:
+        google_psi_mobile: '38'
     drug:
       approval: 19830310
       company: AbbVie
@@ -3469,6 +3487,10 @@ Central Nervous System Disorders - Epilepsy - Lennox-Gastaut Syndrome; LGS:
         google_psi_desktop: '70'
         google_psi_mobile: '55'
         google_psi_mobile_usability: '95'
+      20180111:
+        google_psi_desktop: '69'
+        google_psi_mobile: '54'
+        google_psi_mobile_usability: '85'
     drug:
       approval: 20121019
       company: Eisai
@@ -6577,6 +6599,8 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         moz_links: '62'
       20180110:
         google_psi_desktop: '78'
+      20180111:
+        google_psi_desktop: '79'
     drug:
       approval: 20110228
       company: AstraZeneca
@@ -6874,6 +6898,8 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         moz_links: '1040'
       20180110:
         google_psi_mobile: '54'
+      20180111:
+        google_psi_desktop: '76'
     drug:
       approval: 20060721
       company: AstraZeneca
@@ -7874,6 +7900,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_desktop: '67'
       20180107:
         google_psi_desktop: '49'
+      20180111:
+        google_psi_desktop: '67'
     drug:
       approval: 20131018
       company: Actelion
@@ -8956,6 +8984,9 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_desktop: '50'
         google_psi_mobile: '45'
         google_psi_mobile_usability: '86'
+      20180111:
+        google_psi_mobile: '31'
+        google_psi_mobile_usability: '88'
     drug:
       approval: 20151221
       company: Actelion
@@ -9497,6 +9528,9 @@ Viral Infection - Human Immunodeficiency Virus Infection; HIV:
       20180109:
         moz_links: '390'
         moz_rank: '5.6'
+      20180111:
+        asn: AS34922 NetNames Operations Limited
+        server: Microsoft-IIS/8.5
     drug:
       approval: 20060712
       company: Bristol-Myers Squibb
@@ -9804,6 +9838,8 @@ Viral Infection - Human Immunodeficiency Virus Infection; HIV:
         moz_rank: '3.9'
       20180110:
         google_psi_desktop: '72'
+      20180111:
+        google_psi_desktop: '73'
     drug:
       approval: 20071012
       company: Merck
