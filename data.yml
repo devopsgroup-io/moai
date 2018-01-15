@@ -431,6 +431,9 @@ Cancer - Brain Tumor:
         google_psi_mobile_usability: '98'
       20180114:
         google_psi_desktop: '66'
+      20180115:
+        google_psi_desktop: '65'
+        google_psi_mobile: '56'
     drug:
       approval: 20090330
       company: Novartis
@@ -1710,6 +1713,8 @@ Cancer - Ovarian Cancer:
         google_psi_mobile: '56'
       20180114:
         google_psi_mobile: '57'
+      20180115:
+        google_psi_mobile: '59'
     drug:
       approval: 19951208
       company: Cumberland Pharmaceuticals
@@ -2617,6 +2622,8 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
         google_psi_desktop: '86'
       20180114:
         google_psi_desktop: '85'
+      20180115:
+        google_psi_desktop: '84'
     drug:
       approval: 20030812
       company: AstraZeneca
@@ -3352,6 +3359,8 @@ Central Nervous System Disorders - Alzheimer's Disease:
         google_psi_mobile: '50'
       20180114:
         google_psi_mobile: '51'
+      20180115:
+        google_psi_mobile: '50'
     drug:
       approval: 20141223
       company: Allergan
@@ -5861,6 +5870,10 @@ Metabolic Disorders - Obesity:
         https: 'False'
         moz_links: '4'
         moz_rank: '0'
+      20180115:
+        https: 'True'
+        moz_links: '758'
+        moz_rank: '5.5'
     drug:
       approval: 20120627
       company: Eisai
@@ -6411,6 +6424,8 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         moz_links: '15'
       20180114:
         google_psi_mobile: '42'
+      20180115:
+        google_psi_mobile: '43'
     drug:
       approval: 20160425
       company: AstraZeneca
@@ -7724,6 +7739,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         moz_links: '95'
       20180114:
         google_psi_mobile: '65'
+      20180115:
+        google_psi_mobile: '64'
     drug:
       approval: 20131008
       company: Bayer
@@ -9082,6 +9099,10 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_mobile: '31'
         google_psi_mobile_usability: '88'
         server: Microsoft-IIS/8.5
+      20180115:
+        google_psi_desktop: '48'
+        google_psi_mobile: '33'
+        google_psi_mobile_usability: '86'
     drug:
       approval: 20151221
       company: Actelion
