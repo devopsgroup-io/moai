@@ -1757,6 +1757,8 @@ Cancer - Ovarian Cancer:
       20180122:
         google_psi_desktop: '72'
         google_psi_mobile: '57'
+      20180125:
+        google_psi_mobile: '59'
     drug:
       approval: 19951208
       company: Cumberland Pharmaceuticals
@@ -2074,6 +2076,8 @@ Cancer - Ovarian Cancer:
         google_psi_desktop: '79'
       20180122:
         google_psi_desktop: '78'
+      20180125:
+        google_psi_desktop: '79'
     drug:
       approval: 20141219
       company: AstraZeneca
@@ -2308,6 +2312,8 @@ Cancer - Ovarian Cancer:
       20180122:
         google_psi_desktop: '57'
         google_psi_mobile: '59'
+      20180125:
+        google_psi_desktop: '56'
     drug:
       approval: 20170327
       company: Tesaro
@@ -3473,6 +3479,8 @@ Central Nervous System Disorders - Alzheimer's Disease:
         google_psi_mobile: '58'
       20180121:
         google_psi_mobile: '60'
+      20180125:
+        google_psi_mobile: '58'
     drug:
       approval: 20141223
       company: Allergan
@@ -3529,6 +3537,8 @@ Central Nervous System Disorders - Epilepsy:
         google_psi_mobile: '39'
       20180121:
         google_psi_mobile: '38'
+      20180125:
+        google_psi_mobile: '39'
     drug:
       approval: 19830310
       company: AbbVie
@@ -5294,6 +5304,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         google_psi_mobile: '65'
       20180124:
         google_psi_desktop: '81'
+      20180125:
+        google_psi_mobile: '66'
     drug:
       approval: 20170522
       company: Sanofi and Regeneron
@@ -5649,6 +5661,9 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
       20180124:
         google_psi_desktop: '63'
         google_psi_mobile: '48'
+      20180125:
+        google_psi_desktop: '62'
+        google_psi_mobile: '49'
     drug:
       approval: 20051223
       company: Bristol-Myers Squibb
@@ -5885,6 +5900,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         google_psi_mobile: '63'
       20180124:
         google_psi_mobile: '64'
+      20180125:
+        google_psi_mobile: '63'
     drug:
       approval: 20100430
       company: Horizon Pharma
@@ -6599,6 +6616,8 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         google_psi_mobile: '43'
       20180124:
         google_psi_mobile: '42'
+      20180125:
+        google_psi_mobile: '43'
     drug:
       approval: 20160425
       company: AstraZeneca
@@ -6871,6 +6890,8 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         google_psi_desktop: '79'
       20180124:
         google_psi_desktop: '78'
+      20180125:
+        google_psi_desktop: '79'
     drug:
       approval: 20110228
       company: AstraZeneca
@@ -7685,6 +7706,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20180124:
         google_psi_desktop: '74'
         server: Microsoft-IIS/8.5
+      20180125:
+        google_psi_desktop: '73'
     drug:
       approval: 20041229
       company: Actelion
@@ -8345,6 +8368,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         moz_links: '13'
       20180121:
         google_psi_desktop: '61'
+      20180125:
+        google_psi_desktop: '62'
     drug:
       approval: 20131220
       company: United Therapeutics
@@ -8519,6 +8544,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20180124:
         google_psi_desktop: '83'
         server: Microsoft-IIS/10.0
+      20180125:
+        google_psi_mobile: '70'
     drug:
       approval: 20010705
       company: United Therapeutics
@@ -9369,6 +9396,9 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_mobile: '31'
         google_psi_mobile_usability: '88'
         server: Microsoft-HTTPAPI/2.0
+      20180125:
+        google_psi_mobile: '33'
+        server: Microsoft-IIS/8.5
     drug:
       approval: 20151221
       company: Actelion
@@ -9696,6 +9726,9 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         server: Microsoft-IIS/8.5
       20180122:
         server: Microsoft-HTTPAPI/2.0
+      20180125:
+        google_psi_desktop: '78'
+        server: Microsoft-IIS/8.5
     drug:
       approval: 20080627
       company: Actelion
