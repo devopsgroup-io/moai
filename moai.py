@@ -18,6 +18,9 @@ import hmac
 import pygeoip
 import re
 import requests
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 import sys
 import time
 from urllib import quote
@@ -123,6 +126,18 @@ if '--skip-changes' not in sys.argv[1:]:
                                 data[indication][website]['dates'].update( { todays_date : { 'code' : str(code_match[0]) } } )
                     else:
                         print('* NO MATCH (please confirm correct regex)')
+                        # send an email notification
+                        me = "charles@moai.com"
+                        you = "seth.reeser@devopsgroup.io"
+                        msg = MIMEMultipart('alternative')
+                        msg['Subject'] = "Link"
+                        msg['From'] = me
+                        msg['To'] = you
+                        msg.attach(MIMEText('The RegEx for ' + str(website) + ' appears to have changed from the currently set ' + str(data[indication][website]['regex']) + ', please confirm.'))
+                        s = smtplib.SMTP("smtp.sendgrid.net")
+                        s.login("dev@calciumusa.com", "McHn36hcyGWiMvHK")
+                        s.sendmail(me, you, msg.as_string())
+                        s.quit()
 
                     ###############
                     # HTTP SERVER #

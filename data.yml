@@ -663,6 +663,7 @@ Cancer - Colorectal Cancer:
       20170830:
         google_psi_mobile: '60'
       20170831:
+        code: 08/2017
         google_psi_desktop: '71'
         google_psi_mobile: '59'
         google_psi_mobile_usability: '97'
@@ -5272,6 +5273,7 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         google_psi_desktop: '81'
         google_psi_mobile: '66'
       20171231:
+        code: SAUS.SARI.17.04.1653
         google_psi_desktop: '78'
         google_psi_mobile: '63'
       20180101:
@@ -5325,7 +5327,7 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
       approval: 20170522
       company: Sanofi and Regeneron
       generic: sarilumab
-    regex: '[A-Z]A-Z]A-Z]A-Z]\.A-Z]A-Z]A-Z]A-Z]\.[0-9][0-9]\.[0-9][0-9]\.[0-9][0-9][0-9][0-9]'
+    regex: '[A-Z][A-Z][A-Z][A-Z]\.[A-Z][A-Z][A-Z][A-Z]\.[0-9][0-9]\.[0-9][0-9]\.[0-9][0-9][0-9][0-9]'
   orencia.bmscustomerconnect.com:
     dates:
       20170526:
@@ -6566,6 +6568,7 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         google_psi_desktop: '55'
         google_psi_mobile: '43'
       20171111:
+        code: US-10149
         server: astrazeneca.com
       20171116:
         google_psi_mobile: '42'
@@ -6639,7 +6642,7 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
       approval: 20160425
       company: AstraZeneca
       generic: formoterol / glycopyrrolate
-    regex: '[0-9][0-9][0-9][0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
+    regex: '[A-Z][A-Z]-[0-9][0-9][0-9][0-9]'
   daliresp.com:
     dates:
       20170607:
@@ -6945,6 +6948,8 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         google_psi_mobile: '55'
       20170628:
         google_psi_mobile: '54'
+      20170630:
+        code: US-8914
       20170709:
         google_psi_mobile: '55'
       20170710:
@@ -7235,7 +7240,7 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
       approval: 20060721
       company: AstraZeneca
       generic: budesonide / formoterol
-    regex: '[0-9][0-9][0-9][0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
+    regex: '[A-Z][A-Z]-[0-9][0-9][0-9][0-9]'
   startwithanoro.com:
     dates:
       20170607:
@@ -7774,6 +7779,7 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20170815:
         moz_links: '43'
       20170825:
+        code: US/ADC/0099
         google_psi_desktop: '68'
       20170909:
         google_psi_desktop: '66'
@@ -7800,7 +7806,7 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       approval: 20090522
       company: United Therapeutics
       generic: tadalafil systemic
-    regex: '[A-Z][A-Z]/[A-Z][A-Z][A-Z]/[A-Z][A-Z][A-Z][0-9][0-9]/[0-9][0-9][0-9]'
+    regex: '[A-Z][A-Z]/[A-Z][A-Z][A-Z]/[0-9][0-9][0-9][0-9]'
   adempas-us.com:
     dates:
       20170721:
