@@ -442,6 +442,8 @@ Cancer - Brain Tumor:
         google_psi_mobile_usability: '99'
       20180126:
         google_psi_desktop: '66'
+      20180127:
+        google_psi_desktop: '65'
     drug:
       approval: 20090330
       company: Novartis
@@ -873,6 +875,8 @@ Cancer - Colorectal Cancer:
         google_psi_desktop: '78'
       20180124:
         google_psi_desktop: '79'
+      20180127:
+        code: 01/2018
     drug:
       approval: 20120927
       company: Bayer
@@ -1104,6 +1108,8 @@ Cancer - Colorectal Cancer:
         google_psi_desktop: '60'
       20180122:
         google_psi_desktop: '61'
+      20180127:
+        google_psi_desktop: '60'
     drug:
       approval: 20120803
       company: Sanofi
@@ -1326,6 +1332,8 @@ Cancer - Ovarian Cancer:
         google_psi_desktop: '85'
       20180122:
         google_psi_desktop: '83'
+      20180127:
+        google_psi_desktop: '84'
     drug:
       approval: 19951117
       company: Janssen
@@ -1764,6 +1772,9 @@ Cancer - Ovarian Cancer:
         google_psi_mobile: '59'
       20180126:
         google_psi_mobile: '57'
+      20180127:
+        google_psi_desktop: '71'
+        google_psi_mobile: '59'
     drug:
       approval: 19951208
       company: Cumberland Pharmaceuticals
@@ -2702,6 +2713,8 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
         google_psi_desktop: '84'
       20180122:
         google_psi_desktop: '85'
+      20180127:
+        google_psi_desktop: '84'
     drug:
       approval: 20030812
       company: AstraZeneca
@@ -3488,6 +3501,8 @@ Central Nervous System Disorders - Alzheimer's Disease:
         google_psi_mobile: '58'
       20180126:
         google_psi_desktop: '66'
+      20180127:
+        google_psi_desktop: '65'
     drug:
       approval: 20141223
       company: Allergan
@@ -4568,6 +4583,9 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
       20180126:
         google_psi_desktop: '68'
         google_psi_mobile: '50'
+      20180127:
+        google_psi_desktop: '69'
+        google_psi_mobile: '51'
     drug:
       approval: 19981102
       company: Amgen
@@ -5323,6 +5341,9 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         google_psi_mobile: '66'
       20180126:
         google_psi_mobile: '65'
+      20180127:
+        google_psi_desktop: '79'
+        google_psi_mobile: '66'
     drug:
       approval: 20170522
       company: Sanofi and Regeneron
@@ -6443,6 +6464,8 @@ Metabolic Disorders - Obesity:
         google_psi_mobile: '61'
       20180126:
         google_psi_mobile: '59'
+      20180127:
+        google_psi_mobile: '57'
     drug:
       approval: 20120717
       company: Vivus
@@ -6638,6 +6661,8 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         google_psi_mobile: '42'
       20180125:
         google_psi_mobile: '43'
+      20180127:
+        code: DA-1088
     drug:
       approval: 20160425
       company: AstraZeneca
@@ -6914,6 +6939,9 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         google_psi_desktop: '79'
       20180126:
         google_psi_desktop: '78'
+      20180127:
+        google_psi_desktop: '79'
+        google_psi_mobile: '55'
     drug:
       approval: 20110228
       company: AstraZeneca
@@ -7236,6 +7264,9 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         google_psi_desktop: '75'
       20180126:
         google_psi_desktop: '76'
+      20180127:
+        code: DA-1088
+        google_psi_desktop: '75'
     drug:
       approval: 20060721
       company: AstraZeneca
@@ -7738,6 +7769,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_desktop: '73'
       20180126:
         google_psi_desktop: '74'
+      20180127:
+        server: Microsoft-HTTPAPI/2.0
     drug:
       approval: 20041229
       company: Actelion
@@ -8281,6 +8314,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_desktop: '49'
       20180122:
         google_psi_desktop: '67'
+      20180127:
+        google_psi_desktop: '49'
     drug:
       approval: 20131018
       company: Actelion
@@ -8406,6 +8441,10 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20180126:
         google_psi_desktop: '61'
         google_psi_mobile: '54'
+      20180127:
+        asn: AS19551 Incapsula Inc
+        google_psi_desktop: '63'
+        google_psi_mobile: '53'
     drug:
       approval: 20131220
       company: United Therapeutics
@@ -8584,6 +8623,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_mobile: '70'
       20180126:
         google_psi_mobile: '71'
+      20180127:
+        server: Microsoft-HTTPAPI/2.0
     drug:
       approval: 20010705
       company: United Therapeutics
@@ -8960,6 +9001,11 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         moz_links: '0'
         moz_rank: '0'
         server: Apache
+      20180127:
+        asn: AS19551 Incapsula Inc
+        google_psi_desktop: '66'
+        moz_links: '1'
+        server: Microsoft-HTTPAPI/2.0
     drug:
       approval: 20090730
       company: United Therapeutics
@@ -9772,6 +9818,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         server: Microsoft-IIS/8.5
       20180126:
         server: Microsoft-HTTPAPI/2.0
+      20180127:
+        server: Microsoft-IIS/8.5
     drug:
       approval: 20080627
       company: Actelion
@@ -10021,6 +10069,8 @@ Viral Infection - Human Immunodeficiency Virus Infection; HIV:
         google_psi_mobile: '51'
       20180126:
         google_psi_desktop: '75'
+      20180127:
+        google_psi_mobile: '64'
     drug:
       approval: 20060712
       company: Bristol-Myers Squibb
@@ -10445,6 +10495,9 @@ Viral Infection - Human Immunodeficiency Virus Infection; HIV:
         google_psi_mobile: '50'
       20180109:
         moz_links: '12'
+      20180127:
+        google_psi_mobile: '54'
+        google_psi_mobile_usability: '98'
     drug:
       approval: 19960301
       company: AbbVie
