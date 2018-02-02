@@ -3694,6 +3694,8 @@ Central Nervous System Disorders - Epilepsy:
         google_psi_mobile: '59'
       20171212:
         moz_links: '0'
+      20171231:
+        code: USPR-KP-1214-00002
       20180103:
         google_psi_desktop: '78'
         google_psi_mobile: '66'
@@ -3704,7 +3706,7 @@ Central Nervous System Disorders - Epilepsy:
       approval: 19991130
       company: UCB
       generic: levetiracetam systemic
-    regex: '[A-Z][A-Z][A-Z]-[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9][0-9]'
+    regex: '[A-Z][A-Z][A-Z][A-Z]-[A-Z][A-Z]-[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9][0-9]'
   oxtellarxr.com:
     dates:
       20171109:
