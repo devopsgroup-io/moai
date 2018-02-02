@@ -10283,6 +10283,7 @@ Viral Infection - Human Immunodeficiency Virus Infection; HIV:
         moz_rank: '5.6'
       20180111:
         asn: AS34922 NetNames Operations Limited
+        code: ATRC0135
         server: Microsoft-IIS/8.5
       20180112:
         google_psi_mobile: '53'
@@ -10315,9 +10316,9 @@ Viral Infection - Human Immunodeficiency Virus Infection; HIV:
         google_psi_mobile: '52'
     drug:
       approval: 20060712
-      company: Bristol-Myers Squibb
+      company: Gilead
       generic: favirenz / emtricitabine / tenofovir systemic
-    regex: '[0-9][0-9][0-9][A-Z][A-Z][0-9][0-9][0-9][0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]'
+    regex: '[A-Z][A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9]'
   isentress.com:
     dates:
       20170706:
