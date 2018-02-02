@@ -6073,6 +6073,40 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
       company: Horizon Pharma
       generic: esomeprazole / naproxen systemic
     regex: '[0-9][0-9][0-9][0-9][A-Z][A-Z][A-Z][0-9][0-9]'
+Infection - Skin and Structure Infection:
+  cubicin.com:
+    dates:
+      20180202:
+        code: AINF-1159022-0008
+        server: Apache/2.2.22 (Ubuntu)
+        asn: AS14618 Amazon.com, Inc.
+        https: 'False'
+        google_psi_mobile: '64'
+        google_psi_mobile_usability: '99'
+        google_psi_desktop: '81'
+        moz_links: '85'
+        moz_rank: '4.8'
+    drug:
+      approval: 20030912
+      company: Merck
+      generic: daptomycin
+    regex: '[A-Z][A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]'
+  teflaro.com:
+    dates:
+      20180202:
+        asn: AS16509 Amazon.com, Inc.
+        code: TEF104119
+        google_psi_desktop: '58'
+        google_psi_mobile: '49'
+        google_psi_mobile_usability: '96'
+        https: 'False'
+        moz_links: '158'
+        moz_rank: '4.8'
+    drug:
+      approval: 20101029
+      company: Allergan
+      generic: ceftaroline
+    regex: '[A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9][0-9][0-9]'
 Metabolic Disorders - Obesity:
   belviq.com:
     dates:
