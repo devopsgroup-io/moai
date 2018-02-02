@@ -9185,6 +9185,7 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20171231:
         server: Microsoft-IIS/10.0
       20180101:
+        code: US/TYV/0238
         moz_links: '85'
         server: Microsoft-HTTPAPI/2.0
       20180102:
@@ -9216,7 +9217,7 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       approval: 20090730
       company: United Therapeutics
       generic: treprostinil systemic
-    regex: '[A-Z][A-Z]/[A-Z][A-Z][A-Z]/[A-Z][A-Z][A-Z][0-9][0-9]/[0-9][0-9][0-9]'
+    regex: '[A-Z][A-Z]/[A-Z][A-Z][A-Z]/[0-9][0-9][0-9][0-9]'
   uptravi.com:
     dates:
       20170522:
