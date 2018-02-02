@@ -126,6 +126,20 @@ if '--skip-changes' not in sys.argv[1:]:
                                 data[indication][website]['dates'].update( { todays_date : { 'code' : str(code_match[0]) } } )
                     else:
                         print('* NO MATCH (please confirm correct regex)')
+                        data[indication][website]['dates'][todays_date].update( { 'code' : 'not found' } )
+                        # send an email notification
+                        me = "charles@moai.com"
+                        you = "seth.reeser@devopsgroup.io"
+                        msg = MIMEMultipart('alternative')
+                        msg['Subject'] = 'Moai: ' + str(website) + ' RegEx not found and needs updated.'
+                        msg['From'] = me
+                        msg['To'] = you
+                        msg.attach(MIMEText('The RegEx for ' + str(website) + ' appears to have changed from the currently set ' + str(data[indication][website]['regex']) + ', please confirm.'))
+                        s = smtplib.SMTP("localhost")
+                        #s.login("user", "password")
+                        s.sendmail(me, you, msg.as_string())
+                        s.quit()
+
 
 
                     ###############
