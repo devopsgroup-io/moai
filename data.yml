@@ -2712,6 +2712,7 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
       20171231:
         google_psi_desktop: '85'
       20180101:
+        code: US-8859
         google_psi_desktop: '60'
       20180102:
         google_psi_desktop: '85'
@@ -2762,7 +2763,7 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
       approval: 20030812
       company: AstraZeneca
       generic: rosuvastatin systemic
-    regex: '[0-9][0-9][0-9][0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
+    regex: '[A-Z][A-Z]-[0-9][0-9][0-9][0-9]'
   lipitor.com:
     dates:
       20170530:
