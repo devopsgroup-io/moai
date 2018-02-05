@@ -126,7 +126,10 @@ if '--skip-changes' not in sys.argv[1:]:
                                 data[indication][website]['dates'].update( { todays_date : { 'code' : str(code_match[0]) } } )
                     else:
                         print('* NO MATCH (please confirm correct regex)')
-                        data[indication][website]['dates'][todays_date].update( { 'code' : 'not found' } )
+                        if todays_date in data[indication][website]['dates']:
+                            data[indication][website]['dates'][todays_date].update( { 'code' : 'not found' } )
+                        else:
+                            data[indication][website]['dates'].update( { todays_date : { 'code' : 'not found' } } )
                         # send an email notification
                         me = "charles@moai.com"
                         you = "seth.reeser@devopsgroup.io"
