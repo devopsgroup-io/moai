@@ -5060,11 +5060,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         google_psi_desktop: '71'
         google_psi_mobile: '49'
       20180205:
-        code: not found
         moz_links: '818'
         moz_rank: '5.5'
-      20180206:
-        code: not found
     drug:
       approval: 20021231
       company: AbbVie
@@ -9241,6 +9238,7 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20171125:
         google_psi_desktop: '82'
       20171128:
+        code: TRA-00417
         google_psi_desktop: '70'
       20171212:
         moz_rank: '3.9'
@@ -9269,10 +9267,6 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20180109:
         moz_links: '0'
         moz_rank: '0'
-      20180205:
-        code: not found
-      20180206:
-        code: not found
     drug:
       approval: 20011120
       company: Actelion
