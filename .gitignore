@@ -1,4 +1,5 @@
 .vagrant**
+geckodriver.log
 provision/GeoIPASNum*
 secrets/id_rsa.pub
 secrets/id_rsa

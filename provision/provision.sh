@@ -3,6 +3,10 @@ echo -e "\n> configuring package repositories"
 sudo yum install -y epel-release
 # update packages
 sudo yum update -y
+# install base packages
+sudo yum install -y gtk3
+sudo yum install -y bzip2
+sudo yum install -y wget
 
 
 echo -e "\n> configuring time"
@@ -166,11 +170,29 @@ sudo python -m pip install requests
 sudo python -m pip install requests --upgrade
 sudo python -m pip install requests[security]
 sudo python -m pip install requests[security] --upgrade
+sudo python -m pip install selenium
+sudo python -m pip install selenium --upgrade
+sudo python -m pip install xvfbwrapper
+sudo python -m pip install xvfbwrapper --upgrade
 # fixes SSL3_GET_SERVER_CERTIFICATE
 # per https://stackoverflow.com/questions/34646942/ssl3-get-server-certificate-certificate-verify-failed-on-python-when-requesting#answers-header
 # per https://github.com/certifi/python-certifi/issues/26#issuecomment-138336586
 sudo python -m pip uninstall -y certifi
 sudo python -m pip install certifi==2015.04.28
+# install firefox
+cd /usr/local
+wget http://ftp.mozilla.org/pub/firefox/releases/58.0/linux-x86_64/en-US/firefox-58.0.tar.bz2
+tar --extract --verbose --bzip2 --file firefox-58.0.tar.bz2
+sudo ln -s /usr/local/firefox/firefox /usr/bin/firefox
+# install geckodriver
+cd /usr/local
+wget https://github.com/mozilla/geckodriver/releases/download/v0.19.1/geckodriver-v0.19.1-linux64.tar.gz
+tar --extract --verbose --file geckodriver-v0.19.1-linux64.tar.gz
+sudo ln -s /usr/local/geckodriver /usr/local/bin/geckodriver
+# install x11
+sudo yum install -y xorg-x11-server-Xvfb
+Xvfb -ac :99 -screen 0 1280x1024x16 &
+export DISPLAY=:99
 
 
 echo -e "\n> configuring yum-cron"

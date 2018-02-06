@@ -80,22 +80,36 @@ if '--skip-changes' not in sys.argv[1:]:
             # what website?
             print('\n' + website + '\n------------------------------').upper()
 
-            ###########
-            # 80 HTTP #
-            ###########
-            ###########
-            ###########
+            ##########
+            # OUTPUT #
+            ##########
+            ##########
+            ##########
 
-            print('[HTTP]')
+            print('[[OUTPUT]]')
             trys = 0
             while True:
                 try:
 
                     # make the request
                     url = 'http://' + website
-                    headers = {'user-agent': 'Moai'}
-                    request_80 = requests.get(url, headers=headers, timeout=5)
-                    html_content = request_80.text
+                    from selenium import webdriver
+                    from selenium.webdriver import FirefoxOptions
+                    opts = FirefoxOptions()
+                    opts.add_argument("--headless")
+                    browser = webdriver.Firefox(firefox_options=opts)
+                    browser.get(url)
+                    time.sleep(2)
+                    # handle certain application frameworks
+                    angular = browser.execute_script("return (window.angular !== undefined) && (angular.element(document).injector() !== undefined) && (angular.element(document).injector().get('$http').pendingRequests.length === 0)")
+                    if angular:
+                        print "[DETECTED ANGULAR]"
+                        browser.set_script_timeout(10)
+                        browser.execute_async_script("""
+                            callback = arguments[arguments.length - 1];
+                            window.angular.element('html').injector().get('$browser').notifyWhenNoOutstandingRequests(callback);""")
+                    html_content = browser.page_source
+                    browser.quit()
 
                     ############
                     # FDA CODE #
@@ -139,11 +153,38 @@ if '--skip-changes' not in sys.argv[1:]:
                         msg['To'] = you
                         msg.attach(MIMEText('The RegEx for ' + str(website) + ' appears to have changed from the currently set ' + str(data[indication][website]['regex']) + ', please confirm.'))
                         s = smtplib.SMTP("localhost")
-                        #s.login("user", "password")
                         s.sendmail(me, you, msg.as_string())
                         s.quit()
 
 
+                    break
+
+                # catch any exceptions
+                except requests.exceptions.RequestException as e:
+                    print('Exception: ' + str(e))
+                finally:
+                    trys = trys + 1
+                    time.sleep(3)
+                    if trys > 2:
+                        print('Tried making the request ' + str(trys) + ' times, skipping...')
+                        break
+
+
+            ###########
+            # 80 HTTP #
+            ###########
+            ###########
+            ###########
+
+            print('[[HTTP]]')
+            trys = 0
+            while True:
+                try:
+
+                    # make the request
+                    url = 'http://' + website
+                    headers = {'user-agent': 'Moai'}
+                    request_80 = requests.get(url, headers=headers, timeout=5)
 
                     ###############
                     # HTTP SERVER #
@@ -225,7 +266,7 @@ if '--skip-changes' not in sys.argv[1:]:
             #############
             #############
 
-            print('[HTTPS]')
+            print('[[HTTPS]]')
             trys = 0
             https = False
             while True:
@@ -279,7 +320,7 @@ if '--skip-changes' not in sys.argv[1:]:
             #####################################
             #####################################
 
-            print('[GOOGLE PAGESPEED INSIGHTS MOBILE]')
+            print('[[GOOGLE PAGESPEED INSIGHTS MOBILE]]')
             trys = 0
             google_psi_mobile = ''
             google_psi_mobile_usability = ''
@@ -365,7 +406,7 @@ if '--skip-changes' not in sys.argv[1:]:
             #####################################
             #####################################
 
-            print('[GOOGLE PAGESPEED INSIGHTS DESKTOP]')
+            print('[[GOOGLE PAGESPEED INSIGHTS DESKTOP]]')
             trys = 0
             google_psi_desktop = ''
             while True:
@@ -428,7 +469,7 @@ if '--skip-changes' not in sys.argv[1:]:
             #######
             #######
 
-            print('[MOZ]')
+            print('[[MOZ]]')
             trys = 0
             moz_links = ''
             moz_rank = ''
@@ -518,7 +559,7 @@ if '--skip-changes' not in sys.argv[1:]:
                     break
 
             # handle the match
-            print('[MOZ RANK]')
+            print('[[MOZ RANK]]')
             print('OLD [' + str(moz_rank_most_recent_date) + '][' + str(moz_rank_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(moz_rank) + ']')
             if str(moz_rank_most_recent) == str(moz_rank):
                 print('* NO CHANGE')
