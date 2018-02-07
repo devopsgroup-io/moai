@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export PATH=$PATH:/usr/local/bin;
+
 cd /moai && /bin/git pull
 cd /moai && /bin/python moai.py
 cd /moai && /bin/git add --all :/
