@@ -30,11 +30,9 @@ Cancer - Brain Tumor:
       20170611:
         server: ECAcc (phl/9D70)
       20170612:
-        server: ECAcc (phl/9D70)
         asn: AS30811 EPiServer AB
         google_psi_desktop: '67'
       20170613:
-        server: ECAcc (phl/9D70)
         google_psi_desktop: '65'
         google_psi_mobile: '55'
         google_psi_mobile_usability: '99'
