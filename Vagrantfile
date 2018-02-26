@@ -33,7 +33,7 @@ Vagrant.configure("2") do |config|
       provider.token = "#{@secrets["digital_ocean_token"]}"
       provider.image = "centos-7-x64"
       provider.region = "nyc3"
-      provider.size = "512mb"
+      provider.size = "s-1vcpu-1gb"
       provider.ipv6 = true
       provider.private_networking = true
       provider.backups_enabled = false
