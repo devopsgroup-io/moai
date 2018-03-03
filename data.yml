@@ -1405,6 +1405,8 @@ Cancer - Ovarian Cancer:
         google_psi_desktop: '83'
       20180302:
         google_psi_desktop: '84'
+      20180303:
+        google_psi_desktop: '83'
     drug:
       approval: 19951117
       company: Janssen
@@ -1900,6 +1902,9 @@ Cancer - Ovarian Cancer:
       20180302:
         google_psi_desktop: '71'
         google_psi_mobile: '57'
+      20180303:
+        google_psi_desktop: '72'
+        google_psi_mobile: '58'
     drug:
       approval: 19951208
       company: Cumberland Pharmaceuticals
@@ -2496,6 +2501,9 @@ Cancer - Ovarian Cancer:
         google_psi_mobile: '57'
       20180302:
         google_psi_desktop: '56'
+      20180303:
+        google_psi_desktop: '57'
+        google_psi_mobile: '59'
     drug:
       approval: 20170327
       company: Tesaro
@@ -3385,6 +3393,9 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
       20180302:
         google_psi_desktop: '78'
         google_psi_mobile: '48'
+      20180303:
+        google_psi_desktop: '74'
+        google_psi_mobile: '49'
     drug:
       approval: 20150827
       company: Amgen
@@ -5001,6 +5012,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         google_psi_desktop: '70'
       20180302:
         google_psi_mobile: '52'
+      20180303:
+        google_psi_desktop: '71'
     drug:
       approval: 19981102
       company: Amgen
@@ -7928,6 +7941,8 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
       20180222:
         google_psi_desktop: '75'
         google_psi_mobile: '54'
+      20180303:
+        google_psi_mobile: '53'
     drug:
       approval: 20060721
       company: AstraZeneca
@@ -8460,6 +8475,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20180301:
         google_psi_desktop: '71'
         server: Microsoft-IIS/8.5
+      20180303:
+        google_psi_desktop: '74'
     drug:
       approval: 20041229
       company: Actelion
@@ -8568,6 +8585,9 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_mobile_usability: '65'
       20180302:
         google_psi_desktop: '68'
+      20180303:
+        google_psi_desktop: '70'
+        google_psi_mobile_usability: '66'
     drug:
       approval: 20090522
       company: United Therapeutics
@@ -9107,6 +9127,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_mobile: '43'
       20180301:
         google_psi_mobile: '40'
+      20180303:
+        google_psi_desktop: '49'
     drug:
       approval: 20131018
       company: Actelion
@@ -9277,6 +9299,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_desktop: '62'
       20180302:
         google_psi_desktop: '61'
+      20180303:
+        google_psi_desktop: '63'
     drug:
       approval: 20131220
       company: United Therapeutics
@@ -9488,6 +9512,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         server: Microsoft-HTTPAPI/2.0
       20180301:
         server: Microsoft-IIS/10.0
+      20180303:
+        google_psi_mobile: '70'
     drug:
       approval: 20010705
       company: United Therapeutics
@@ -9934,6 +9960,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         server: Apache
       20180302:
         google_psi_desktop: '65'
+      20180303:
+        google_psi_desktop: '66'
     drug:
       approval: 20090730
       company: United Therapeutics
@@ -10477,6 +10505,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_desktop: '48'
         google_psi_mobile: '33'
         google_psi_mobile_usability: '86'
+      20180303:
+        google_psi_desktop: '38'
     drug:
       approval: 20151221
       company: Actelion
@@ -10846,6 +10876,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20180302:
         google_psi_mobile: '62'
         server: Microsoft-HTTPAPI/2.0
+      20180303:
+        server: Microsoft-IIS/8.5
     drug:
       approval: 20080627
       company: Actelion
@@ -11141,6 +11173,8 @@ Viral Infection - Human Immunodeficiency Virus Infection; HIV:
         google_psi_desktop: '74'
       20180302:
         google_psi_desktop: '75'
+      20180303:
+        google_psi_desktop: '74'
     drug:
       approval: 20060712
       company: Gilead
@@ -11481,6 +11515,9 @@ Viral Infection - Human Immunodeficiency Virus Infection; HIV:
         google_psi_mobile: '56'
       20180302:
         google_psi_desktop: '73'
+      20180303:
+        google_psi_desktop: '74'
+        google_psi_mobile: '57'
     drug:
       approval: 20071012
       company: Merck
