@@ -464,6 +464,8 @@ Cancer - Brain Tumor:
         google_psi_mobile: '55'
       20180403:
         google_psi_mobile: '54'
+      20180408:
+        google_psi_desktop: '64'
     drug:
       approval: 20090330
       company: Novartis
@@ -2001,6 +2003,9 @@ Cancer - Ovarian Cancer:
       20180407:
         google_psi_desktop: '70'
         google_psi_mobile: '57'
+      20180408:
+        google_psi_desktop: '71'
+        google_psi_mobile: '59'
     drug:
       approval: 19951208
       company: Cumberland Pharmaceuticals
@@ -2352,6 +2357,8 @@ Cancer - Ovarian Cancer:
         google_psi_mobile: '56'
       20180407:
         google_psi_mobile: '55'
+      20180408:
+        google_psi_desktop: '78'
     drug:
       approval: 20141219
       company: AstraZeneca
@@ -3132,6 +3139,8 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
         google_psi_desktop: '84'
       20180407:
         google_psi_desktop: '85'
+      20180408:
+        google_psi_mobile: '67'
     drug:
       approval: 20030812
       company: AstraZeneca
@@ -4106,6 +4115,8 @@ Central Nervous System Disorders - Alzheimer's Disease:
         google_psi_mobile: '59'
       20180406:
         google_psi_mobile: '57'
+      20180408:
+        google_psi_mobile: '59'
     drug:
       approval: 20141223
       company: Allergan
@@ -4475,6 +4486,8 @@ Central Nervous System Disorders - Epilepsy - Lennox-Gastaut Syndrome; LGS:
       20180406:
         code: not found
       20180407:
+        code: not found
+      20180408:
         code: not found
     drug:
       approval: 20121019
@@ -6956,6 +6969,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         google_psi_mobile: '63'
       20180407:
         google_psi_mobile: '64'
+      20180408:
+        google_psi_mobile: '63'
     drug:
       approval: 20100430
       company: Horizon Pharma
@@ -8566,6 +8581,8 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         google_psi_mobile: '53'
       20180407:
         google_psi_desktop: '75'
+      20180408:
+        google_psi_mobile: '54'
     drug:
       approval: 20060721
       company: AstraZeneca
@@ -9296,6 +9313,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_mobile_usability: '66'
       20180407:
         google_psi_mobile: '58'
+      20180408:
+        google_psi_desktop: '73'
     drug:
       approval: 20090522
       company: United Therapeutics
@@ -9547,6 +9566,9 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20180407:
         google_psi_desktop: '75'
         google_psi_mobile: '56'
+      20180408:
+        google_psi_desktop: '78'
+        google_psi_mobile: '55'
     drug:
       approval: 20131008
       company: Bayer
@@ -10108,6 +10130,9 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20180406:
         google_psi_desktop: '62'
         google_psi_mobile: '53'
+      20180408:
+        google_psi_desktop: '63'
+        google_psi_mobile: '54'
     drug:
       approval: 20131220
       company: United Therapeutics
@@ -10846,6 +10871,9 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         server: Apache
       20180407:
         google_psi_mobile: '54'
+      20180408:
+        google_psi_mobile: '53'
+        server: Microsoft-HTTPAPI/2.0
     drug:
       approval: 20090730
       company: United Therapeutics
@@ -11456,6 +11484,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         server: Microsoft-IIS/8.5
       20180407:
         google_psi_desktop: '38'
+      20180408:
+        server: Microsoft-HTTPAPI/2.0
     drug:
       approval: 20151221
       company: Actelion
@@ -12178,6 +12208,8 @@ Viral Infection - Human Immunodeficiency Virus Infection; HIV:
         google_psi_mobile: '48'
       20180407:
         google_psi_mobile: '50'
+      20180408:
+        google_psi_desktop: '76'
     drug:
       approval: 20060712
       company: Gilead
@@ -12546,6 +12578,8 @@ Viral Infection - Human Immunodeficiency Virus Infection; HIV:
         google_psi_desktop: '73'
       20180407:
         google_psi_mobile: '76'
+      20180408:
+        google_psi_mobile: '56'
     drug:
       approval: 20071012
       company: Merck
