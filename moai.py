@@ -100,6 +100,7 @@ if '--skip-changes' not in sys.argv[1:]:
                     browser = webdriver.Firefox(firefox_options=opts)
                     browser.get(url)
                     time.sleep(2)
+
                     # handle certain application frameworks
                     angular = browser.execute_script("return (window.angular !== undefined) && (angular.element(document).injector() !== undefined) && (angular.element(document).injector().get('$http').pendingRequests.length === 0)")
                     if angular:
@@ -108,6 +109,12 @@ if '--skip-changes' not in sys.argv[1:]:
                         browser.execute_async_script("""
                             callback = arguments[arguments.length - 1];
                             window.angular.element('html').injector().get('$browser').notifyWhenNoOutstandingRequests(callback);""")
+
+                    # detect third-party integrations
+                    dmd_aim_tag = browser.execute_script("return (window.AIM !== undefined)")
+                    if dmd_aim_tag:
+                        print "[DETECTED DMD AIM TAG]"
+
                     html_content = browser.page_source
                     browser.quit()
 
@@ -128,8 +135,8 @@ if '--skip-changes' not in sys.argv[1:]:
                     code_match = re.findall(data[indication][website]['regex'], re.sub('<[^<]+?>', '', html_content));
 
                     # handle the match
+                    print('[CODE]\nOLD [' + str(code_most_recent_date) + '][' + str(code_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(code_match) + ']')
                     if len(code_match) > 0:
-                        print('[CODE]\nOLD [' + str(code_most_recent_date) + '][' + str(code_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(code_match[0]) + ']')
                         if str(code_most_recent) == str(code_match[0]):
                             print('* NO CHANGE')
                         else:
@@ -155,6 +162,30 @@ if '--skip-changes' not in sys.argv[1:]:
                         s = smtplib.SMTP("localhost")
                         s.sendmail(me, you, msg.as_string())
                         s.quit()
+
+                    ###############
+                    # DMD AIM TAG #
+                    ###############
+
+                    # try and find the most recent dmd aim tag
+                    dmd_aim_tag_most_recent =''
+                    dmd_aim_tag_most_recent_date = ''
+                    for date in reversed(data[indication][website]['dates']):
+                        if data[indication][website]['dates'][date].has_key('dmd_aim_tag'):
+                            dmd_aim_tag_most_recent = data[indication][website]['dates'][date]['dmd_aim_tag']
+                            dmd_aim_tag_most_recent_date = date
+                            break
+
+                    # handle the match
+                    print('[DMD AIM TAG]\nOLD [' + str(dmd_aim_tag_most_recent_date) + '][' + str(dmd_aim_tag_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(dmd_aim_tag) + ']')
+                    if str(dmd_aim_tag_most_recent) == str(dmd_aim_tag):
+                        print('* NO CHANGE')
+                    else:
+                        print('* CHANGE')
+                        if todays_date in data[indication][website]['dates']:
+                            data[indication][website]['dates'][todays_date].update( { 'dmd_aim_tag' : str(dmd_aim_tag) } )
+                        else:
+                            data[indication][website]['dates'].update( { todays_date : { 'dmd_aim_tag' : str(dmd_aim_tag) } } )
 
 
                     break
@@ -601,6 +632,7 @@ for indication in data:
     content += '<td><sub>Drug \ generic \ company \ FDA approval</sub></td>'
     content += '<td><sub>Regulatory code<br/><img src="https://placehold.it/30x5/cc4c02?text=+"></sub></td>'
     content += '<td><sub>HTTPS<br/><img src="https://placehold.it/30x5/fe9929?text=+"></sub></td>'
+    content += '<td><sub>:man:<br/><img src="https://placehold.it/30x5/0000ff?text=+"></sub></td>'
     content += '<td>:trophy:<br/><img src="https://placehold.it/30x5/FFDF00?text=+"></td>'
     content += '<td>:link:<br/><img src="https://placehold.it/30x5/C0C0C0?text=+"></td>'
     content += '<td>:iphone:<br/><img src="https://placehold.it/30x5/014636?text=+"></td>'
@@ -631,6 +663,11 @@ for indication in data:
         for date in data[indication][website]['dates']:
             if 'https' in data[indication][website]['dates'][date]:
                 plt.axvline(x=datetime.datetime.strptime(str(date), '%Y%m%d'), color='#fe9929')
+
+        # plot dmd_aim_tag
+        for date in data[indication][website]['dates']:
+            if 'dmd_aim_tag' in data[indication][website]['dates'][date]:
+                plt.axvline(x=datetime.datetime.strptime(str(date), '%Y%m%d'), color='#0000ff')
 
         # plot server
         for date in data[indication][website]['dates']:
@@ -720,6 +757,17 @@ for indication in data:
                     https = ':x:'
                 break
 
+        # get the most recent dmd_aim_tag
+        dmd_aim_tag = ''
+        for date in reversed(data[indication][website]['dates']):
+            if 'dmd_aim_tag' in data[indication][website]['dates'][date]:
+                dmd_aim_tag = data[indication][website]['dates'][date]['dmd_aim_tag']
+                if dmd_aim_tag == 'True':
+                    dmd_aim_tag = ':white_check_mark:'
+                else:
+                    dmd_aim_tag = ':x:'
+                break
+
         # get the most recent server
         server = ''
         for date in reversed(data[indication][website]['dates']):
@@ -773,6 +821,7 @@ for indication in data:
         content += '<td><sub><a href="http://{0}" target="_blank">{0}</a></sub> <br/> <sub>{1}</sub> <br/> <sub>{2}</sub> <br/> <sub>{3}</sub></td>'.format( website , data[indication][website]['drug']['generic'] , data[indication][website]['drug']['company'] , approval )
         content += '<td><sub>{0}</sub><br/><img src="data/{1}.jpg" width="200"/></td>'.format( code , website.replace("/","-") )
         content += '<td><sub><a href="https://www.ssllabs.com/ssltest/analyze.html?d={0}" target="_blank">{1}</a></sub></td>'.format( website , https )
+        content += '<td><sub>{0}</sub></td>'.format( dmd_aim_tag )
         content += '<td><sub>{0}</sub></td>'.format( moz_rank )
         content += '<td><sub>{0}</sub></td>'.format( moz_links )
         content += '<td><sub><a href="https://developers.google.com/speed/pagespeed/insights/?url={0}&tab=mobile" target="_blank">{1}</a></sub></td>'.format( website , google_psi_mobile )
@@ -804,6 +853,7 @@ Additionally, the following the metrics are captured:
 
 * **Regulatory code**: Gain insight into how often a website is updated
 * **HTTPS**: Sadly, many website infrastructures do not provide HTTPS which [provides no data security](https://www.chromium.org/Home/chromium-security/marking-http-as-non-secure) to its visitors
+* :man: DMD Audience Identity Manager (AIM) identifies healthcare professionals
 * :trophy: [MozRank](https://moz.com/learn/seo/mozrank) quantifies link popularity and is Moz’s version of Google’s classic PageRank algorithm
 * :link: Moz total number of links (juice-passing or not, internal or external) of the final redirected url (http://drug.com > https://www.drug.com)
 * :iphone: Google PageSpeed Insights mobile speed score
