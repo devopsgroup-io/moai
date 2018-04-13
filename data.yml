@@ -4532,24 +4532,12 @@ Central Nervous System Disorders - Epilepsy - Lennox-Gastaut Syndrome; LGS:
         moz_links: '94'
         moz_rank: '5.0'
       20180406:
-        code: not found
-      20180407:
-        code: not found
-      20180408:
-        code: not found
-      20180410:
-        code: not found
-      20180411:
-        code: not found
-      20180412:
-        code: not found
-      20180413:
-        code: not found
+        code: CLB-B-100181
     drug:
       approval: 20121019
       company: Lundbeck
       generic: clobazam systemic
-    regex: '[A-Z][A-Z][A-Z]-[A-Z]-[0-9][0-9][0-9][0-9][0-9]\([0-9]\)'
+    regex: '[A-Z][A-Z][A-Z]-[A-Z]-[0-9][0-9][0-9][0-9][0-9]?(\([0-9]\))'
 Central Nervous System Disorders - Parkinson's Disease:
   azilect.com:
     dates:
