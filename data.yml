@@ -2049,6 +2049,9 @@ Cancer - Ovarian Cancer:
         google_psi_mobile: '59'
       20180416:
         google_psi_mobile: '57'
+      20180417:
+        google_psi_desktop: '71'
+        google_psi_mobile: '58'
     drug:
       approval: 19951208
       company: Cumberland Pharmaceuticals
@@ -2761,6 +2764,9 @@ Cancer - Ovarian Cancer:
         google_psi_desktop: '44'
       20180416:
         google_psi_mobile: '45'
+      20180417:
+        google_psi_desktop: '43'
+        google_psi_mobile: '42'
     drug:
       approval: 20170327
       company: Tesaro
@@ -3765,6 +3771,8 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
         google_psi_desktop: '70'
       20180416:
         google_psi_desktop: '73'
+      20180417:
+        google_psi_desktop: '70'
     drug:
       approval: 20150827
       company: Amgen
@@ -6430,6 +6438,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
       20180416:
         google_psi_desktop: '28'
         google_psi_mobile: '25'
+      20180417:
+        google_psi_desktop: '27'
     drug:
       approval: 20170522
       company: Sanofi and Regeneron
@@ -9377,6 +9387,9 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_desktop: '75'
       20180416:
         google_psi_desktop: '72'
+      20180417:
+        google_psi_desktop: '74'
+        google_psi_mobile: '59'
     drug:
       approval: 20041229
       company: Actelion
@@ -9545,6 +9558,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20180416:
         google_psi_desktop: '68'
         google_psi_mobile: '57'
+      20180417:
+        google_psi_desktop: '73'
     drug:
       approval: 20090522
       company: United Therapeutics
@@ -9805,6 +9820,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         dmd_aim_tag: 'True'
       20180416:
         google_psi_desktop: '77'
+      20180417:
+        google_psi_desktop: '78'
     drug:
       approval: 20131008
       company: Bayer
@@ -10167,6 +10184,9 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         dmd_aim_tag: 'False'
       20180416:
         google_psi_mobile: '42'
+      20180417:
+        google_psi_desktop: '67'
+        google_psi_mobile: '40'
     drug:
       approval: 20131018
       company: Actelion
@@ -10397,6 +10417,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_mobile: '53'
       20180416:
         google_psi_mobile: '54'
+      20180417:
+        google_psi_desktop: '63'
     drug:
       approval: 20131220
       company: United Therapeutics
@@ -10648,6 +10670,9 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         server: Microsoft-IIS/10.0
       20180416:
         google_psi_desktop: '82'
+      20180417:
+        google_psi_desktop: '83'
+        google_psi_mobile: '70'
     drug:
       approval: 20010705
       company: United Therapeutics
@@ -11175,6 +11200,9 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20180416:
         google_psi_desktop: '65'
         google_psi_mobile: '52'
+      20180417:
+        google_psi_desktop: '66'
+        google_psi_mobile: '54'
     drug:
       approval: 20090730
       company: United Therapeutics
@@ -11804,6 +11832,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_mobile: '31'
         google_psi_mobile_usability: '88'
         server: Microsoft-HTTPAPI/2.0
+      20180417:
+        server: Microsoft-IIS/8.5
     drug:
       approval: 20151221
       company: Actelion
@@ -12932,6 +12962,9 @@ Viral Infection - Human Immunodeficiency Virus Infection; HIV:
         google_psi_desktop: '75'
       20180416:
         google_psi_desktop: '76'
+      20180417:
+        google_psi_desktop: '78'
+        google_psi_mobile: '59'
     drug:
       approval: 20071012
       company: Merck
