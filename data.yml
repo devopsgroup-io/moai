@@ -2767,6 +2767,8 @@ Cancer - Ovarian Cancer:
       20180417:
         google_psi_desktop: '43'
         google_psi_mobile: '42'
+      20180418:
+        google_psi_mobile: '44'
     drug:
       approval: 20170327
       company: Tesaro
@@ -4228,6 +4230,9 @@ Central Nervous System Disorders - Alzheimer's Disease:
         google_psi_desktop: '64'
       20180416:
         google_psi_desktop: '65'
+      20180418:
+        google_psi_desktop: '64'
+        google_psi_mobile: '59'
     drug:
       approval: 20141223
       company: Allergan
@@ -4336,6 +4341,8 @@ Central Nervous System Disorders - Epilepsy:
         google_psi_mobile: '39'
       20180416:
         google_psi_mobile: '38'
+      20180418:
+        google_psi_mobile: '55'
     drug:
       approval: 19830310
       company: AbbVie
@@ -5584,6 +5591,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         dmd_aim_tag: 'False'
       20180415:
         google_psi_mobile: '52'
+      20180418:
+        google_psi_mobile: '51'
     drug:
       approval: 19981102
       company: Amgen
@@ -6859,6 +6868,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         google_psi_desktop: '62'
       20180416:
         google_psi_desktop: '63'
+      20180418:
+        google_psi_desktop: '62'
     drug:
       approval: 20051223
       company: Bristol-Myers Squibb
@@ -7460,6 +7471,9 @@ Metabolic Disorders - Obesity:
         google_psi_mobile: '62'
       20180414:
         dmd_aim_tag: 'False'
+      20180418:
+        google_psi_desktop: '83'
+        google_psi_mobile: '65'
     drug:
       approval: 20140910
       company: Orexigen
@@ -8394,6 +8408,8 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         google_psi_mobile_usability: '83'
       20180414:
         dmd_aim_tag: 'False'
+      20180418:
+        google_psi_desktop: '58'
     drug:
       approval: 20110228
       company: AstraZeneca
@@ -9390,6 +9406,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20180417:
         google_psi_desktop: '74'
         google_psi_mobile: '59'
+      20180418:
+        google_psi_desktop: '71'
     drug:
       approval: 20041229
       company: Actelion
@@ -9560,6 +9578,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_mobile: '57'
       20180417:
         google_psi_desktop: '73'
+      20180418:
+        google_psi_desktop: '68'
     drug:
       approval: 20090522
       company: United Therapeutics
@@ -10187,6 +10207,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20180417:
         google_psi_desktop: '67'
         google_psi_mobile: '40'
+      20180418:
+        google_psi_desktop: '49'
     drug:
       approval: 20131018
       company: Actelion
@@ -10419,6 +10441,9 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_mobile: '54'
       20180417:
         google_psi_desktop: '63'
+      20180418:
+        google_psi_desktop: '62'
+        google_psi_mobile: '53'
     drug:
       approval: 20131220
       company: United Therapeutics
@@ -10673,6 +10698,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20180417:
         google_psi_desktop: '83'
         google_psi_mobile: '70'
+      20180418:
+        google_psi_mobile: '71'
     drug:
       approval: 20010705
       company: United Therapeutics
@@ -11203,6 +11230,10 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20180417:
         google_psi_desktop: '66'
         google_psi_mobile: '54'
+      20180418:
+        google_psi_desktop: '64'
+        google_psi_mobile: '53'
+        server: Microsoft-HTTPAPI/2.0
     drug:
       approval: 20090730
       company: United Therapeutics
@@ -11834,6 +11865,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         server: Microsoft-HTTPAPI/2.0
       20180417:
         server: Microsoft-IIS/8.5
+      20180418:
+        server: Microsoft-HTTPAPI/2.0
     drug:
       approval: 20151221
       company: Actelion
@@ -12580,6 +12613,9 @@ Viral Infection - Human Immunodeficiency Virus Infection; HIV:
         google_psi_mobile: '50'
       20180416:
         google_psi_desktop: '74'
+      20180418:
+        google_psi_desktop: '76'
+        google_psi_mobile: '63'
     drug:
       approval: 20060712
       company: Gilead
