@@ -7378,14 +7378,14 @@ Infection - Skin and Structure Infection:
       20180414:
         dmd_aim_tag: 'False'
       20180502:
-        code: not found
+        code: TEF50891
         moz_links: '165'
         moz_rank: '4.9'
     drug:
       approval: 20101029
       company: Allergan
       generic: ceftaroline
-    regex: '[A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9][0-9][0-9]'
+    regex: '[A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9][0-9]'
 Metabolic Disorders - Obesity:
   belviq.com:
     dates:
