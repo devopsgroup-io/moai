@@ -193,6 +193,8 @@ if '--skip-changes' not in sys.argv[1:]:
                 # catch any exceptions
                 except requests.exceptions.RequestException as e:
                     print('Exception: ' + str(e))
+                except selenium.common.exceptions.UnexpectedAlertPresentException as e:
+                    print('Exception: ' + str(e))
                 finally:
                     trys = trys + 1
                     time.sleep(3)

@@ -4872,11 +4872,13 @@ Central Nervous System Disorders - Epilepsy - Lennox-Gastaut Syndrome; LGS:
         moz_links: '581'
       20180509:
         moz_links: '583'
+      20180517:
+        code: BANZ-US2011
     drug:
       approval: 20121019
       company: Eisai
       generic: rufinamide systemic
-    regex: '[A-Z][A-Z][A-Z][A-Z]-[A-Z][A-Z][0-9][0-9][0-9][0-9]\([0-9]\)'
+    regex: '[A-Z][A-Z][A-Z][A-Z]-[A-Z][A-Z][0-9][0-9][0-9][0-9]'
   felbatol.com:
     dates:
       20171109:
