@@ -11759,7 +11759,7 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         moz_links: '340'
       20180517:
         asn: AS14618 Amazon.com, Inc.
-        code: not found
+        code: PP-REV-USA-0132
         google_psi_desktop: '47'
         google_psi_mobile: '41'
         google_psi_mobile_usability: '99'
@@ -11769,7 +11769,7 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       approval: 20050603
       company: Pfizer
       generic: sildenafil systemic
-    regex: '[A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9][0-9][0-9]'
+    regex: '[A-Z][A-Z]-[A-Z][A-Z][A-Z]-[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9]'
   tracleer.com:
     dates:
       20170523:
