@@ -1698,7 +1698,7 @@ Cancer - Gastric Cancer:
       generic: ramucirumab systemic
     regex: '[A-Z][A-Z]-[A-Z]\s[A-Z][A-Z][A-Z]\s[A-Z][A-Z][A-Z]\s[0-9][0-9][A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9]'
 Cancer - Ovarian Cancer:
-  www.doxil.com/ovarian-cancer:
+  doxil.com/progressed-or-recurrent-ovarian-cancer/:
     dates:
       20170706:
         code: 030068-150417
@@ -1786,7 +1786,7 @@ Cancer - Ovarian Cancer:
         moz_rank: '2.5'
       20180622:
         asn: AS16509 Amazon.com, Inc.
-        code: not found
+        code: cp-51196v1
         google_psi_desktop: '100'
         google_psi_mobile: '100'
         google_psi_mobile_usability: '71'
@@ -1795,7 +1795,7 @@ Cancer - Ovarian Cancer:
       approval: 19951117
       company: Janssen
       generic: doxorubicin liposomal systemic
-    regex: '[0-9][0-9][0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9][0-9][0-9]'
+    regex: '[a-z][a-z]\-[0-9][0-9][0-9][0-9][0-9][a-z][0-9]'
   ethyol.com/usa:
     dates:
       20170706:
