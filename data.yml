@@ -6841,13 +6841,11 @@ Central Nervous System Disorders - Parkinson's Disease:
         moz_links: '1146'
         server: Sucuri/Cloudproxy
       20180706:
-        code: not found
         google_psi_desktop: '95'
         google_psi_mobile: '85'
         google_psi_mobile_usability: '77'
         moz_links: '1151'
       20180707:
-        code: PP-RYT-US-0066
         google_psi_desktop: '74'
         google_psi_mobile: '67'
         google_psi_mobile_usability: '100'
@@ -9843,7 +9841,7 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         google_psi_mobile: '63'
         moz_links: '58'
       20180716:
-        code: not found
+        code: P-VMV-00085
         google_psi_desktop: '73'
         google_psi_mobile: '66'
         google_psi_mobile_usability: '99'
@@ -9855,7 +9853,7 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
       approval: 20100430
       company: Horizon Pharma
       generic: esomeprazole / naproxen systemic
-    regex: '[0-9][0-9][0-9][0-9][A-Z][A-Z][A-Z][0-9][0-9]'
+    regex: '[A-Z]-[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9]'
 Infection - Skin and Structure Infection:
   cubicin.com:
     dates:
