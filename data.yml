@@ -18846,13 +18846,13 @@ Viral Infection - Human Immunodeficiency Virus Infection; HIV:
         google_psi_mobile: '50'
         moz_links: '45'
       20180724:
-        code: not found
+        code: cp-62594
         moz_links: '47'
     drug:
       approval: 20150129
       company: Janssen
       generic: darunavir systemic
-    regex: '[0-9][0-9][0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9][0-9][0-9]'
+    regex: '[a-z][a-z]-[0-9][0-9][0-9][0-9][0-9]'
   start.truvada.com:
     dates:
       20170706:
