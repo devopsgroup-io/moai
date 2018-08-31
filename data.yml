@@ -651,6 +651,8 @@ Cancer - Brain Tumor:
         google_psi_mobile: '54'
       20180830:
         google_psi_mobile: '55'
+      20180831:
+        google_psi_desktop: '67'
     drug:
       approval: 20090330
       company: Novartis
@@ -877,6 +879,8 @@ Cancer - Colorectal Cancer:
         moz_links: '1082'
       20180830:
         moz_links: '1081'
+      20180831:
+        moz_links: '1082'
     drug:
       approval: 20040212
       company: Lilly
@@ -1322,6 +1326,8 @@ Cancer - Colorectal Cancer:
         google_psi_desktop: '78'
       20180830:
         google_psi_desktop: '79'
+      20180831:
+        google_psi_desktop: '78'
     drug:
       approval: 20120927
       company: Bayer
@@ -2001,6 +2007,8 @@ Cancer - Gastric Cancer:
         moz_links: '462'
       20180828:
         moz_links: '460'
+      20180831:
+        moz_links: '456'
     drug:
       approval: 20140421
       company: Lilly
@@ -2851,6 +2859,9 @@ Cancer - Ovarian Cancer:
         google_psi_desktop: '71'
       20180830:
         google_psi_desktop: '69'
+      20180831:
+        google_psi_desktop: '71'
+        google_psi_mobile: '59'
     drug:
       approval: 19951208
       company: Cumberland Pharmaceuticals
@@ -3350,6 +3361,9 @@ Cancer - Ovarian Cancer:
         moz_links: '472'
       20180830:
         moz_links: '473'
+      20180831:
+        google_psi_desktop: '86'
+        moz_links: '476'
     drug:
       approval: 20141219
       company: AstraZeneca
@@ -3951,6 +3965,9 @@ Cancer - Ovarian Cancer:
         moz_links: '78'
       20180830:
         moz_links: '77'
+      20180831:
+        google_psi_desktop: '49'
+        google_psi_mobile: '39'
     drug:
       approval: 20170327
       company: Tesaro
@@ -4616,6 +4633,10 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
         google_psi_desktop: '84'
         google_psi_mobile: '66'
         moz_links: '24360'
+      20180831:
+        google_psi_desktop: '85'
+        google_psi_mobile: '67'
+        moz_links: '24506'
     drug:
       approval: 20030812
       company: AstraZeneca
@@ -4866,6 +4887,8 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
         moz_links: '4451'
       20180830:
         moz_links: '4462'
+      20180831:
+        moz_links: '4465'
     drug:
       approval: 19961217
       company: Pfizer
@@ -5108,6 +5131,8 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
         moz_links: '392'
       20180830:
         moz_links: '389'
+      20180831:
+        moz_links: '388'
     drug:
       approval: 20090803
       company: Kowa
@@ -5638,6 +5663,9 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
       20180830:
         google_psi_desktop: '76'
         moz_links: '27'
+      20180831:
+        google_psi_desktop: '75'
+        google_psi_mobile: '71'
     drug:
       approval: 20150827
       company: Amgen
@@ -6486,6 +6514,9 @@ Central Nervous System Disorders - Alzheimer's Disease:
       20180830:
         google_psi_mobile: '59'
         moz_links: '569'
+      20180831:
+        google_psi_mobile: '57'
+        moz_links: '568'
     drug:
       approval: 20141223
       company: Allergan
@@ -6722,6 +6753,8 @@ Central Nervous System Disorders - Epilepsy:
         moz_links: '154'
       20180829:
         google_psi_mobile: '37'
+      20180831:
+        google_psi_mobile: '40'
     drug:
       approval: 19830310
       company: AbbVie
@@ -6826,6 +6859,8 @@ Central Nervous System Disorders - Epilepsy:
         moz_links: '247'
       20180830:
         moz_links: '242'
+      20180831:
+        moz_links: '241'
     drug:
       approval: 19560301
       company: Pfizer
@@ -7144,6 +7179,8 @@ Central Nervous System Disorders - Epilepsy - Lennox-Gastaut Syndrome; LGS:
         moz_links: '763'
       20180830:
         moz_links: '784'
+      20180831:
+        moz_links: '790'
     drug:
       approval: 20121019
       company: Eisai
@@ -7329,6 +7366,9 @@ Central Nervous System Disorders - Epilepsy - Lennox-Gastaut Syndrome; LGS:
       20180830:
         google_psi_mobile: '68'
         moz_links: '305'
+      20180831:
+        moz_links: '300'
+        moz_rank: '3'
     drug:
       approval: 20121019
       company: Lundbeck
@@ -7612,6 +7652,9 @@ Central Nervous System Disorders - Parkinson's Disease:
       20180830:
         code: not found
         moz_links: '180'
+      20180831:
+        code: not found
+        moz_links: '209'
     drug:
       approval: 20060516
       company: Boehringer Ingelheim
@@ -7853,6 +7896,8 @@ Central Nervous System Disorders - Parkinson's Disease:
         moz_links: '1083'
       20180830:
         moz_links: '1082'
+      20180831:
+        moz_links: '1081'
     drug:
       approval: 20150701
       company: Impax
@@ -8538,6 +8583,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         moz_links: '4907'
       20180830:
         moz_links: '4903'
+      20180831:
+        moz_links: '4911'
     drug:
       approval: 19981231
       company: Pfizer
@@ -8995,6 +9042,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         moz_links: '4483'
       20180830:
         moz_links: '4487'
+      20180831:
+        moz_links: '4485'
     drug:
       approval: 19981102
       company: Amgen
@@ -9414,6 +9463,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         moz_links: '5318'
       20180830:
         moz_links: '5324'
+      20180831:
+        moz_links: '5326'
     drug:
       approval: 20021231
       company: AbbVie
@@ -10109,6 +10160,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         google_psi_desktop: '27'
       20180830:
         google_psi_desktop: '26'
+      20180831:
+        google_psi_desktop: '27'
     drug:
       approval: 20170522
       company: Sanofi and Regeneron
@@ -10708,6 +10761,9 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         google_psi_mobile_usability: '99'
         moz_links: '2798'
         moz_rank: '4.5'
+      20180831:
+        google_psi_mobile: '44'
+        moz_links: '2797'
     drug:
       approval: 20051223
       company: Bristol-Myers Squibb
@@ -11329,6 +11385,9 @@ Infection - Skin and Structure Infection:
         moz_links: '383'
       20180830:
         moz_links: '387'
+      20180831:
+        google_psi_mobile: '60'
+        moz_links: '388'
     drug:
       approval: 20030912
       company: Merck
@@ -11728,6 +11787,8 @@ Metabolic Disorders - Obesity:
         moz_links: '1617'
       20180830:
         moz_links: '1616'
+      20180831:
+        moz_links: '1618'
     drug:
       approval: 20120627
       company: Eisai
@@ -12020,6 +12081,9 @@ Metabolic Disorders - Obesity:
         google_psi_desktop: '83'
         google_psi_mobile: '62'
         moz_links: '522'
+      20180831:
+        google_psi_desktop: '77'
+        google_psi_mobile: '60'
     drug:
       approval: 20140910
       company: Orexigen
@@ -12205,6 +12269,8 @@ Metabolic Disorders - Obesity:
       20180828:
         moz_links: '527'
         moz_rank: '3.7'
+      20180831:
+        moz_links: '529'
     drug:
       approval: 20141223
       company: Novo Nordisk
@@ -14028,6 +14094,9 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
       20180830:
         google_psi_desktop: '74'
         moz_links: '4956'
+      20180831:
+        google_psi_mobile: '54'
+        moz_links: '4857'
     drug:
       approval: 20060721
       company: AstraZeneca
@@ -14178,6 +14247,8 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         moz_rank: '1.8'
       20180828:
         moz_links: '44'
+      20180831:
+        moz_links: '45'
     drug:
       approval: 20131218
       company: GSK
@@ -14903,6 +14974,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         server: Microsoft-HTTPAPI/2.0
       20180830:
         server: Microsoft-IIS/8.5
+      20180831:
+        google_psi_desktop: '75'
     drug:
       approval: 20041229
       company: Actelion
@@ -15538,6 +15611,9 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_mobile: '55'
       20180828:
         moz_links: '130'
+      20180831:
+        google_psi_mobile: '56'
+        moz_links: '129'
     drug:
       approval: 20131008
       company: Bayer
@@ -16415,6 +16491,9 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_desktop: '62'
       20180830:
         google_psi_desktop: '63'
+      20180831:
+        google_psi_mobile: '54'
+        server: Microsoft-HTTPAPI/2.0
     drug:
       approval: 20131220
       company: United Therapeutics
@@ -16804,6 +16883,9 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         moz_links: '444'
       20180830:
         moz_links: '446'
+      20180831:
+        moz_links: '447'
+        server: Microsoft-HTTPAPI/2.0
     drug:
       approval: 20010705
       company: United Therapeutics
@@ -17022,6 +17104,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         server: cloudflare
       20180829:
         moz_links: '379'
+      20180831:
+        moz_links: '381'
     drug:
       approval: 20050603
       company: Pfizer
@@ -17653,6 +17737,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         moz_links: '133'
       20180830:
         moz_links: '135'
+      20180831:
+        moz_links: '134'
     drug:
       approval: 20090730
       company: United Therapeutics
@@ -18540,6 +18626,9 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20180830:
         google_psi_desktop: '33'
         server: Microsoft-HTTPAPI/2.0
+      20180831:
+        google_psi_mobile_usability: '86'
+        moz_links: '94'
     drug:
       approval: 20151221
       company: Actelion
@@ -19083,6 +19172,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20180829:
         google_psi_mobile: '62'
         server: Microsoft-IIS/8.5
+      20180831:
+        server: Microsoft-HTTPAPI/2.0
     drug:
       approval: 20080627
       company: Actelion
@@ -20396,6 +20487,8 @@ Viral Infection - Human Immunodeficiency Virus Infection; HIV:
         moz_links: '94'
       20180829:
         moz_links: '95'
+      20180831:
+        moz_links: '94'
     drug:
       approval: 19960301
       company: AbbVie
@@ -20851,6 +20944,8 @@ Viral Infection - Human Immunodeficiency Virus Infection; HIV:
         moz_links: '4002'
       20180829:
         moz_links: '4009'
+      20180831:
+        moz_links: '4013'
     drug:
       approval: 20040802
       company: Gilead
