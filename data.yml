@@ -10789,7 +10789,7 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
       company: Sanofi and Regeneron
       generic: sarilumab
     regex: '[A-Z][A-Z][A-Z][A-Z]\.[A-Z][A-Z][A-Z][A-Z]\.[0-9][0-9]\.[0-9][0-9]\.[0-9][0-9][0-9][0-9]'
-  orencia.bmscustomerconnect.com:
+  orencia.com:
     dates:
       20170526:
         code: 427US1701271
