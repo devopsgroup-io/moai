@@ -190,10 +190,8 @@ if '--skip-changes' not in sys.argv[1:]:
 
                     break
 
-                # catch any exceptions
-                except requests.exceptions.RequestException as e:
-                    print('Exception: ' + str(e))
-                except selenium.common.exceptions.UnexpectedAlertPresentException as e:
+                # catch exceptions
+                except Exception as e:
                     print('Exception: ' + str(e))
                 finally:
                     trys = trys + 1
@@ -282,7 +280,7 @@ if '--skip-changes' not in sys.argv[1:]:
 
                     break
 
-                # catch any exceptions
+                # catch exceptions
                 except requests.exceptions.RequestException as e:
                     print('Exception: ' + str(e))
                 finally:
@@ -312,7 +310,7 @@ if '--skip-changes' not in sys.argv[1:]:
                     https = True
                     break
 
-                # catch any exceptions
+                # catch exceptions
                 except requests.exceptions.RequestException as e:
                     print('Exception: ' + str(e))
                 finally:
@@ -370,7 +368,7 @@ if '--skip-changes' not in sys.argv[1:]:
                         google_psi_mobile_usability = response['ruleGroups']['USABILITY']['score']
                     break
 
-                # catch any exceptions
+                # catch exceptions
                 except requests.exceptions.RequestException as e:
                     print('Exception: ' + str(e))
                 finally:
@@ -459,7 +457,7 @@ if '--skip-changes' not in sys.argv[1:]:
                         f.close()
                     break
 
-                # catch any exceptions
+                # catch exceptions
                 except requests.exceptions.RequestException as e:
                     print('Exception: ' + str(e))
                 finally:
@@ -541,7 +539,7 @@ if '--skip-changes' not in sys.argv[1:]:
                         raise requests.exceptions.RequestException(request.text)
                     break
 
-                # catch any exceptions
+                # catch exceptions
                 except requests.exceptions.RequestException as e:
                     print('Exception: ' + str(e))
                 finally:
