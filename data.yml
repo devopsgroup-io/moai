@@ -15115,20 +15115,19 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         google_psi_mobile: '45'
         moz_links: '299'
       20181112:
-        code: not found
+        code: US-19965
         google_psi_desktop: '76'
         google_psi_mobile: '61'
         google_psi_mobile_usability: '97'
         moz_links: '305'
       20181113:
-        code: not found
         google_psi_mobile: '64'
         moz_links: '304'
     drug:
       approval: 20110228
       company: AstraZeneca
       generic: roflumilast systemic
-    regex: '[0-9][0-9][0-9][0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
+    regex: '[A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9]'
   mysymbicort.com:
     dates:
       20170607:
