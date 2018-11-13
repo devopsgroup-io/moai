@@ -7449,18 +7449,16 @@ Central Nervous System Disorders - Epilepsy:
       20181102:
         moz_links: '301'
       20181112:
-        code: not found
+        code: US-DPKT-180098
         google_psi_desktop: '57'
         google_psi_mobile: '50'
         google_psi_mobile_usability: '99'
         moz_links: '298'
-      20181113:
-        code: not found
     drug:
       approval: 19830310
       company: AbbVie
       generic: divalproex sodium systemic
-    regex: '[0-9][0-9][0-9][0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9][0-9][0-9][0-9]'
+    regex: '[A-Z][A-Z]-[A-Z][A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9][0-9]'
   dilantin.com:
     dates:
       20171109:
