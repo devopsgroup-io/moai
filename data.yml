@@ -735,6 +735,8 @@ Cancer - Brain Tumor:
       20181129:
         google_psi_mobile: '55'
         server: ECAcc (nya/7976)
+      20181130:
+        google_psi_desktop: '64'
     drug:
       approval: 20090330
       company: Novartis
@@ -3251,6 +3253,8 @@ Cancer - Ovarian Cancer:
         google_psi_mobile: '55'
       20181129:
         google_psi_mobile: '58'
+      20181130:
+        google_psi_mobile: '54'
     drug:
       approval: 19951208
       company: Cumberland Pharmaceuticals
@@ -5297,6 +5301,8 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
       20181128:
         google_psi_desktop: '84'
         moz_links: '26193'
+      20181130:
+        google_psi_desktop: '85'
     drug:
       approval: 20030812
       company: AstraZeneca
@@ -5595,6 +5601,8 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
         moz_links: '6105'
       20181127:
         moz_links: '6275'
+      20181130:
+        moz_links: '6317'
     drug:
       approval: 19961217
       company: Pfizer
@@ -8100,6 +8108,8 @@ Central Nervous System Disorders - Epilepsy:
         moz_links: '742'
       20181129:
         google_psi_desktop: '84'
+      20181130:
+        google_psi_desktop: '86'
     drug:
       approval: 19991130
       company: UCB
@@ -9070,6 +9080,8 @@ Central Nervous System Disorders - Parkinson's Disease:
       20181128:
         code: not found
       20181129:
+        code: not found
+      20181130:
         code: not found
     drug:
       approval: 20060516
@@ -10696,6 +10708,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
       20181129:
         code: not found
         moz_links: '6928'
+      20181130:
+        code: not found
     drug:
       approval: 19981102
       company: Amgen
@@ -11940,6 +11954,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
       20181129:
         google_psi_desktop: '26'
         google_psi_mobile: '23'
+      20181130:
+        google_psi_mobile: '24'
     drug:
       approval: 20170522
       company: Sanofi and Regeneron
@@ -13409,6 +13425,8 @@ Infection - Skin and Structure Infection:
       20181129:
         google_psi_desktop: '76'
         google_psi_mobile: '59'
+      20181130:
+        google_psi_mobile: '60'
     drug:
       approval: 20030912
       company: Merck
@@ -14286,6 +14304,8 @@ Metabolic Disorders - Obesity:
       20181128:
         google_psi_desktop: '82'
         google_psi_mobile: '65'
+      20181130:
+        google_psi_mobile: '64'
     drug:
       approval: 20140910
       company: Orexigen
@@ -15386,6 +15406,8 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         moz_links: '111'
       20181127:
         moz_links: '109'
+      20181130:
+        google_psi_desktop: '70'
     drug:
       approval: 20160425
       company: AstraZeneca
@@ -15909,6 +15931,8 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         google_psi_mobile: '64'
       20181129:
         google_psi_desktop: '78'
+      20181130:
+        google_psi_desktop: '77'
     drug:
       approval: 20110228
       company: AstraZeneca
@@ -16602,6 +16626,8 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         moz_links: '6267'
       20181129:
         google_psi_desktop: '77'
+      20181130:
+        google_psi_desktop: '76'
     drug:
       approval: 20060721
       company: AstraZeneca
@@ -18459,6 +18485,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         moz_links: '442'
       20181127:
         moz_links: '441'
+      20181130:
+        google_psi_desktop: '78'
     drug:
       approval: 20070615
       company: Gilead
