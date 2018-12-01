@@ -736,7 +736,7 @@ Cancer - Brain Tumor:
         google_psi_mobile: '55'
         server: ECAcc (nya/7976)
       20181130:
-        google_psi_desktop: '66'
+        google_psi_desktop: '64'
     drug:
       approval: 20090330
       company: Novartis
@@ -4547,8 +4547,9 @@ Cancer - Ovarian Cancer:
         google_psi_mobile: '53'
         moz_links: '94'
       20181130:
-        google_psi_desktop: '73'
+        google_psi_desktop: '72'
         moz_links: '95'
+        google_psi_mobile: '54'
     drug:
       approval: 20170327
       company: Tesaro
@@ -8133,6 +8134,7 @@ Central Nervous System Disorders - Epilepsy:
       20181130:
         google_psi_desktop: '86'
         moz_links: '741'
+        google_psi_mobile: '65'
     drug:
       approval: 19991130
       company: UCB
@@ -9413,6 +9415,7 @@ Central Nervous System Disorders - Parkinson's Disease:
         google_psi_mobile: '58'
       20181130:
         moz_links: '1156'
+        google_psi_mobile: '59'
     drug:
       approval: 20150701
       company: Impax
@@ -13467,8 +13470,8 @@ Infection - Skin and Structure Infection:
         google_psi_desktop: '76'
         google_psi_mobile: '59'
       20181130:
-        google_psi_mobile: '62'
-        google_psi_desktop: '77'
+        google_psi_mobile: '60'
+        google_psi_desktop: '76'
         moz_links: '439'
     drug:
       approval: 20030912
@@ -14352,7 +14355,8 @@ Metabolic Disorders - Obesity:
         google_psi_desktop: '82'
         google_psi_mobile: '65'
       20181130:
-        google_psi_mobile: '65'
+        google_psi_mobile: '64'
+        moz_links: '3653'
     drug:
       approval: 20140910
       company: Orexigen
@@ -17681,6 +17685,7 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_desktop: '84'
       20181130:
         moz_links: '663'
+        google_psi_desktop: '85'
     drug:
       approval: 20041229
       company: Actelion
@@ -20414,6 +20419,9 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         moz_links: '18'
       20181113:
         moz_links: '17'
+      20181130:
+        google_psi_desktop: '70'
+        google_psi_mobile: '62'
     drug:
       approval: 20011120
       company: Actelion
