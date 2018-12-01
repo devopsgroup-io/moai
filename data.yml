@@ -5322,6 +5322,8 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
       20181130:
         google_psi_desktop: '85'
         moz_links: '26212'
+      20181201:
+        google_psi_mobile: '68'
     drug:
       approval: 20030812
       company: AstraZeneca
@@ -8143,6 +8145,8 @@ Central Nervous System Disorders - Epilepsy:
         google_psi_desktop: '86'
         moz_links: '741'
         google_psi_mobile: '65'
+      20181201:
+        google_psi_mobile: '69'
     drug:
       approval: 19991130
       company: UCB
@@ -12012,6 +12016,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
       20181130:
         google_psi_mobile: '24'
         moz_links: '341'
+      20181201:
+        google_psi_mobile: '23'
     drug:
       approval: 20170522
       company: Sanofi and Regeneron
@@ -13488,8 +13494,8 @@ Infection - Skin and Structure Infection:
         google_psi_desktop: '76'
         moz_links: '439'
       20181201:
-        google_psi_desktop: '75'
-        google_psi_mobile: '59'
+        google_psi_desktop: '78'
+        google_psi_mobile: '61'
     drug:
       approval: 20030912
       company: Merck
@@ -15481,7 +15487,8 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
       20181130:
         google_psi_desktop: '71'
       20181201:
-        google_psi_desktop: '70'
+        google_psi_desktop: '71'
+        google_psi_mobile: '41'
     drug:
       approval: 20160425
       company: AstraZeneca
@@ -16704,6 +16711,8 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
       20181130:
         google_psi_desktop: '76'
         moz_links: '6359'
+      20181201:
+        google_psi_desktop: '77'
     drug:
       approval: 20060721
       company: AstraZeneca
@@ -17706,7 +17715,7 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         moz_links: '663'
         google_psi_desktop: '85'
       20181201:
-        google_psi_desktop: '83'
+        google_psi_desktop: '85'
     drug:
       approval: 20041229
       company: Actelion
@@ -19474,7 +19483,7 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20181130:
         server: Apache
       20181201:
-        google_psi_desktop: '63'
+        google_psi_desktop: '62'
         google_psi_mobile: '54'
         server: Microsoft-HTTPAPI/2.0
     drug:
@@ -19951,6 +19960,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         server: Microsoft-HTTPAPI/2.0
       20181130:
         google_psi_desktop: '84'
+      20181201:
+        google_psi_mobile: '71'
     drug:
       approval: 20010705
       company: United Therapeutics
@@ -21904,6 +21915,9 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_mobile: '29'
         google_psi_mobile_usability: '86'
         google_psi_desktop: '45'
+      20181201:
+        google_psi_desktop: '33'
+        google_psi_mobile_usability: '88'
     drug:
       approval: 20151221
       company: Actelion
