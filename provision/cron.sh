@@ -8,4 +8,4 @@ cd /moai && /bin/git add --all :/
 cd /moai && /bin/git commit --message="moaiBOT"
 cd /moai && /bin/git push origin master
 
-reboot
+/sbin/shutdown --reboot 03:05
