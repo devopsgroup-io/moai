@@ -758,6 +758,8 @@ Cancer - Brain Tumor:
       20181209:
         google_psi_desktop: '63'
         google_psi_mobile: '53'
+      20181210:
+        google_psi_desktop: '65'
     drug:
       approval: 20090330
       company: Novartis
@@ -1998,6 +2000,9 @@ Cancer - Colorectal Cancer:
         google_psi_desktop: '61'
       20181209:
         google_psi_desktop: '60'
+      20181210:
+        google_psi_desktop: '61'
+        google_psi_mobile: '53'
     drug:
       approval: 20120803
       company: Sanofi
@@ -4626,6 +4631,9 @@ Cancer - Ovarian Cancer:
         moz_links: '96'
       20181209:
         google_psi_mobile: '54'
+      20181210:
+        google_psi_desktop: '70'
+        google_psi_mobile: '52'
     drug:
       approval: 20170327
       company: Tesaro
@@ -6035,6 +6043,8 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
         google_psi_desktop: '86'
       20181209:
         google_psi_mobile: '64'
+      20181210:
+        google_psi_mobile: '65'
     drug:
       approval: 20090803
       company: Kowa
@@ -7663,6 +7673,8 @@ Central Nervous System Disorders - Alzheimer's Disease:
         moz_links: '610'
       20181209:
         google_psi_mobile: '59'
+      20181210:
+        google_psi_mobile: '57'
     drug:
       approval: 20141223
       company: Allergan
@@ -8640,6 +8652,8 @@ Central Nervous System Disorders - Epilepsy - Lennox-Gastaut Syndrome; LGS:
         moz_links: '4951'
       20181209:
         google_psi_desktop: '71'
+      20181210:
+        google_psi_desktop: '70'
     drug:
       approval: 20121019
       company: Eisai
@@ -9339,6 +9353,8 @@ Central Nervous System Disorders - Parkinson's Disease:
       20181208:
         code: not found
       20181209:
+        code: not found
+      20181210:
         code: not found
     drug:
       approval: 20060516
@@ -11012,6 +11028,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         code: not found
         moz_links: '6986'
       20181209:
+        code: not found
+      20181210:
         code: not found
     drug:
       approval: 19981102
@@ -12995,6 +13013,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
       20181209:
         google_psi_desktop: '71'
         google_psi_mobile: '53'
+      20181210:
+        google_psi_desktop: '72'
     drug:
       approval: 20051223
       company: Bristol-Myers Squibb
@@ -13514,6 +13534,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         google_psi_mobile: '66'
       20181209:
         google_psi_mobile: '67'
+      20181210:
+        google_psi_mobile: '66'
     drug:
       approval: 20100430
       company: Horizon Pharma
@@ -13806,6 +13828,8 @@ Infection - Skin and Structure Infection:
         moz_links: '443'
       20181209:
         google_psi_desktop: '76'
+      20181210:
+        google_psi_mobile: '59'
     drug:
       approval: 20030912
       company: Merck
@@ -14729,6 +14753,8 @@ Metabolic Disorders - Obesity:
         moz_links: '3670'
       20181208:
         moz_links: '3673'
+      20181210:
+        google_psi_desktop: '84'
     drug:
       approval: 20140910
       company: Orexigen
@@ -15857,6 +15883,8 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         google_psi_desktop: '68'
       20181209:
         google_psi_desktop: '70'
+      20181210:
+        google_psi_desktop: '68'
     drug:
       approval: 20160425
       company: AstraZeneca
@@ -20683,6 +20711,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_mobile: '37'
       20181203:
         moz_links: '424'
+      20181210:
+        google_psi_mobile: '34'
     drug:
       approval: 20050603
       company: Pfizer
@@ -22384,6 +22414,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20181209:
         google_psi_mobile: '28'
         google_psi_mobile_usability: '88'
+      20181210:
+        google_psi_mobile: '29'
     drug:
       approval: 20151221
       company: Actelion
