@@ -831,7 +831,7 @@ for indication in data:
         content += '<td><sub>{0}</sub></td>'.format( asn )
         content += '</tr>'
         content += '\n<tr>'
-        content += '<td colspan="10"><img src="data/{0}.png"/></td>'.format( website.replace("/","-") )
+        content += '<td colspan="11"><img src="data/{0}.png"/></td>'.format( website.replace("/","-") )
         content += '</tr>'
 
 content += '\n</table>'
