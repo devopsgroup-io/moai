@@ -626,7 +626,7 @@ for indication in data:
     print('\n' + indication + '\n==============================').upper()
 
     content += '\n<tr>'
-    content += '<td colspan="10"><strong>' + str(indication) + '</strong></td>'
+    content += '<td colspan="11"><strong>' + str(indication) + '</strong></td>'
     content += '</tr>'
     content += '\n<tr>'
     content += '<td><sub>Drug \ generic \ company \ FDA approval</sub></td>'

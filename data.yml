@@ -16900,6 +16900,77 @@ Metabolic Disorders - Obesity:
       company: Vivus
       generic: phentermine / topiramate systemic
     regex: '[0-9][0-9][0-9][0-9][0-9][0-9]\.[0-9][0-9]'
+Psychiatric Disorders - Depression - Major Depressive Disorder; MDD:
+  abilify.com:
+    dates:
+      20190226:
+        asn: AS14618 Amazon.com, Inc.
+        google_psi_desktop: '81'
+        google_psi_mobile: '69'
+        google_psi_mobile_usability: '99'
+        https: 'True'
+        moz_links: '5656'
+        moz_rank: '4.9'
+        server: nginx
+        code: 03US18EBC0023
+        dmd_aim_tag: 'False'
+    drug:
+      approval: 20021115
+      company: Otsuka
+      generic: aripiprazole systemic
+    regex: '[0-9][0-9][A-Z][A-Z][0-9][0-9][A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9]'
+  fetzima.com:
+    dates:
+      20190226:
+        code: FTZ72370
+        dmd_aim_tag: 'False'
+        asn: AS16509 Amazon.com, Inc.
+        https: 'False'
+        google_psi_mobile: '58'
+        google_psi_mobile_usability: '100'
+        google_psi_desktop: '71'
+        moz_links: '543'
+        moz_rank: '3.5'
+    drug:
+      approval: 20130725
+      company: Allergan
+      generic: levomilnacipran systemic
+    regex: '[A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9][0-9]'
+  rexulti.com:
+    dates:
+      20190226:
+        asn: AS14618 Amazon.com, Inc.
+        google_psi_desktop: '85'
+        google_psi_mobile: '59'
+        google_psi_mobile_usability: '99'
+        https: 'True'
+        moz_links: '235'
+        moz_rank: '2.9'
+        server: nginx
+        code: 11US16EBC0080
+        dmd_aim_tag: 'False'
+    drug:
+      approval: 20150710
+      company: Otsuka
+      generic: brexpiprazole systemic
+    regex: '[0-9][0-9][A-Z][A-Z][0-9][0-9][A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9]'
+  trintellix.com:
+    dates:
+      20190226:
+        code: not found
+        server: Microsoft-IIS/8.5
+        asn: AS14618 Amazon.com, Inc.
+        https: 'True'
+        google_psi_mobile: '48'
+        google_psi_mobile_usability: '97'
+        google_psi_desktop: '58'
+        moz_links: '550'
+        moz_rank: '3'
+    drug:
+      approval: 20130930
+      company: Takeda
+      generic: vortioxetine systemic
+    regex: '[0-9][0-9][A-Z][A-Z][0-9][0-9][A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9]'
 Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
   bevespi.com:
     dates:
