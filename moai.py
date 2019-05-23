@@ -237,7 +237,7 @@ if '--skip-changes' not in sys.argv[1:]:
                         server_match = ''
 
                     # handle the match
-                    print('[SERVER]\nOLD [' + str(server_most_recent_date) + '][' + str(server_most_recent) + ']\nNEW [' + str(todays_date) + '][' + server_match + ']')
+                    print('[SERVER]\nOLD [' + str(server_most_recent_date) + '][' + str(server_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(server_match) + ']')
                     if str(server_most_recent) == server_match:
                         print('* NO CHANGE')
                     else:
@@ -265,7 +265,7 @@ if '--skip-changes' not in sys.argv[1:]:
                     asn_match = geoip.asn_by_name(domain)
 
                     # handle the match
-                    print('[ASN]\nOLD [' + str(asn_most_recent_date) + '][' + str(asn_most_recent) + ']\nNEW [' + str(todays_date) + '][' + asn_match + ']')
+                    print('[ASN]\nOLD [' + str(asn_most_recent_date) + '][' + str(asn_most_recent) + ']\nNEW [' + str(todays_date) + '][' + str(asn_match) + ']')
                     if str(asn_most_recent) == asn_match:
                         print('* NO CHANGE')
                     elif str(asn_match) == '':
@@ -444,7 +444,7 @@ if '--skip-changes' not in sys.argv[1:]:
                 try:
 
                     # make the request
-                    url = 'https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=http://' + website + '&strategy=desktop&screenshot=true'
+                    url = 'https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=http://' + str(website) + '&strategy=desktop&screenshot=true'
                     headers = {'user-agent': 'Moai'}
                     request = requests.get(url, headers=headers, timeout=30)
                     response = request.json()
@@ -524,7 +524,7 @@ if '--skip-changes' not in sys.argv[1:]:
                     # columns links = 2048 and mozRank = 16384
                     columns = 2048 + 16384
                     # make the request
-                    url = 'http://lsapi.seomoz.com/linkscape/url-metrics/' + domain + '?Cols=' + str(columns) + '&AccessID=' + access_key + '&Expires=' + str(expires) + '&Signature=' + signature
+                    url = 'http://lsapi.seomoz.com/linkscape/url-metrics/' + str(domain) + '?Cols=' + str(columns) + '&AccessID=' + str(access_key) + '&Expires=' + str(expires) + '&Signature=' + str(signature)
                     headers = {'user-agent': 'Moai'}
                     request = requests.get(url, headers=headers, timeout=30)
                     response = request.json()
