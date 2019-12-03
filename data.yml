@@ -5423,9 +5423,9 @@ Cancer - Ovarian Cancer:
         moz_rank: '3.0'
     drug:
       approval: 20170327
-      company: Tesaro
+      company: GSK
       generic: niraparib systemic
-    regex: '[A-Z][A-Z]-[A-Z][A-Z][A-Z]-[A-Z][A-Z]-[0-9][0-9][0-9][0-9]'
+    regex: '[A-Z][A-Z]-[A-Z][A-Z]-[A-Z][A-Z]-[0-9][0-9][0-9][0-9]'
 Cardiovascular Conditions and Disorders - High Cholesterol:
   crestor.com:
     dates:
