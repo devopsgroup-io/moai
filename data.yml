@@ -2722,7 +2722,7 @@ Cancer - Gastric Cancer:
       generic: ramucirumab systemic
     regex: '[A-Z][A-Z]-[A-Z][A-Z]-[A-Z][A-Z]-[0-9][0-9][0-9][0-9]'
 Cancer - Ovarian Cancer:
-  doxil.com/progressed-or-recurrent-ovarian-cancer/:
+  doxil.com:
     dates:
       20170706:
         code: 030068-150417
