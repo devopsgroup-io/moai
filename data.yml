@@ -21287,7 +21287,7 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
       approval: 20131218
       company: GSK
       generic: umeclidinium / vilanterol
-    regex: '[A-Z][A-Z]-[A-Z][A-Z]-[A-Z][A-Z][A-Z]-[A-Z][A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9][0-9]'
+    regex: '[A-Z][A-Z][A-Z][A-Z][A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9][0-9]'
 Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
   4ventavis.com:
     dates:
