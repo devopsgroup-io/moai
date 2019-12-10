@@ -21527,6 +21527,78 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
       company: GSK
       generic: umeclidinium / vilanterol
     regex: '[A-Z][A-Z][A-Z][A-Z][A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9][0-9][0-9]'
+Respiratory Tract Disease - Pleuropulmonary Infection - Pneumonia; CABP:
+  avycaz.com:
+    dates:
+      20191210:
+        code: AVY109174-v4
+        dmd_aim_tag: 'False'
+        asn: AS16509 Amazon.com, Inc.
+        https: 'False'
+        google_psi_mobile: '61'
+        google_psi_mobile_usability: '97'
+        google_psi_desktop: '74'
+        moz_links: '843'
+        moz_rank: '3.7'
+    drug:
+      approval: 20150225
+      company: Allergan
+      generic: avibactam and ceftazidime
+    regex: '[A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9][0-9][0-9]-[a-z][0-9]'
+  baxdela.com:
+    dates:
+      20191210:
+        code: PP-BAX-US-0399
+        dmd_aim_tag: 'False'
+        server: Apache
+        asn: AS26347 New Dream Network, LLC
+        https: 'True'
+        google_psi_mobile: '38'
+        google_psi_mobile_usability: '92'
+        google_psi_desktop: '42'
+        moz_links: '98'
+        moz_rank: '2'
+    drug:
+      approval: 20170619
+      company: Melinta
+      generic: delafloxacin
+    regex: '[A-Z][A-Z]-[A-Z][A-Z][A-Z]-[A-Z][A-Z]-[0-9][0-9][0-9][0-9]'
+  nuzyra.com:
+    dates:
+      20191210:
+        code: US-NUA-0167 06/19
+        dmd_aim_tag: 'False'
+        server: Apache
+        asn: AS27357 Rackspace Ltd.
+        https: 'True'
+        google_psi_mobile: '39'
+        google_psi_mobile_usability: '91'
+        google_psi_desktop: '54'
+        moz_links: '333'
+        moz_rank: '1.7'
+    drug:
+      approval: 20181002
+      company: Paratek
+      generic: omadacycline
+    regex: '[A-Z][A-Z]-[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9] [0-9][0-9]/[0-9][0-9]'
+  xenleta.com:
+    dates:
+      20191210:
+        code: PM-US-LEF-0077
+        dmd_aim_tag: 'False'
+        server: Apache
+        asn: AS8075 Microsoft Corporation
+        https: 'True'
+        google_psi_mobile: '50'
+        google_psi_mobile_usability: '99'
+        google_psi_desktop: '74'
+        moz_links: '15'
+        moz_rank: '1'
+    drug:
+      approval: 20190819
+      company: Nabriva
+      generic: lefamulin
+    regex: '[A-Z][A-Z]-[A-Z][A-Z]-[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9]'
 Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
   4ventavis.com:
     dates:
