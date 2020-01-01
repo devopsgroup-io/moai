@@ -939,6 +939,8 @@ Cancer - Brain Tumor:
         google_psi_desktop: '66'
       20191230:
         google_psi_desktop: '65'
+      20200101:
+        google_psi_desktop: '66'
     drug:
       approval: 20090330
       company: Novartis
@@ -2985,6 +2987,8 @@ Cancer - Ovarian Cancer:
         code: not found
       20191231:
         code: not found
+      20200101:
+        code: not found
     drug:
       approval: 19951117
       company: Janssen
@@ -4053,6 +4057,8 @@ Cancer - Ovarian Cancer:
       20191231:
         google_psi_desktop: '67'
         google_psi_mobile: '51'
+      20200101:
+        google_psi_mobile: '54'
     drug:
       approval: 19951208
       company: Cumberland Pharmaceuticals
@@ -4753,6 +4759,10 @@ Cancer - Ovarian Cancer:
         google_psi_mobile: '55'
         google_psi_mobile_usability: '99'
         moz_links: '514'
+      20200101:
+        asn: None
+        google_psi_desktop: '69'
+        google_psi_mobile: '56'
     drug:
       approval: 20141219
       company: AstraZeneca
@@ -5692,6 +5702,9 @@ Cancer - Ovarian Cancer:
       20191231:
         google_psi_desktop: '40'
         moz_links: '654'
+      20200101:
+        google_psi_desktop: '38'
+        google_psi_mobile: '49'
     drug:
       approval: 20170327
       company: GSK
@@ -7500,6 +7513,8 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
       20191231:
         asn: None
         moz_links: '605'
+      20200101:
+        asn: None
     drug:
       approval: 20090803
       company: Kowa
@@ -9524,6 +9539,8 @@ Central Nervous System Disorders - Alzheimer's Disease:
       20191231:
         google_psi_desktop: '66'
         moz_links: '1601'
+      20200101:
+        google_psi_desktop: '65'
     drug:
       approval: 20141223
       company: Allergan
@@ -10130,6 +10147,8 @@ Central Nervous System Disorders - Epilepsy:
       20191231:
         google_psi_mobile: '34'
         moz_links: '306'
+      20200101:
+        google_psi_mobile: '35'
     drug:
       approval: 19560301
       company: Pfizer
@@ -10553,6 +10572,8 @@ Central Nervous System Disorders - Epilepsy:
       20191231:
         google_psi_desktop: '59'
         moz_links: '58'
+      20200101:
+        google_psi_desktop: '60'
     drug:
       approval: 20121019
       company: Supernus
@@ -10926,6 +10947,8 @@ Central Nervous System Disorders - Epilepsy - Lennox-Gastaut Syndrome; LGS:
       20191231:
         google_psi_desktop: '87'
         google_psi_mobile: '85'
+      20200101:
+        google_psi_desktop: '81'
     drug:
       approval: 20121019
       company: Eisai
@@ -12056,6 +12079,8 @@ Central Nervous System Disorders - Parkinson's Disease:
       20191231:
         code: not found
         moz_links: '926'
+      20200101:
+        code: not found
     drug:
       approval: 20060516
       company: Boehringer Ingelheim
@@ -14216,6 +14241,10 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
       20191231:
         asn: AS16509 Amazon.com, Inc.
         code: not found
+      20200101:
+        asn: None
+        code: not found
+        moz_links: '7683'
     drug:
       approval: 19981102
       company: Amgen
@@ -16704,6 +16733,9 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
       20191231:
         asn: None
         code: not found
+      20200101:
+        asn: None
+        code: not found
     drug:
       approval: 19980824
       company: Janssen
@@ -17174,6 +17206,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         moz_links: '69'
       20191231:
         google_psi_desktop: '73'
+      20200101:
+        google_psi_desktop: '72'
     drug:
       approval: 20100430
       company: Horizon Pharma
@@ -17656,6 +17690,9 @@ Infection - Skin and Structure Infection:
         google_psi_desktop: '76'
         google_psi_mobile: '59'
         moz_links: '328'
+      20200101:
+        google_psi_desktop: '75'
+        google_psi_mobile: '58'
     drug:
       approval: 20030912
       company: Merck
@@ -18314,6 +18351,9 @@ Metabolic Disorders - Obesity:
         google_psi_desktop: '73'
         google_psi_mobile: '60'
         moz_links: '2180'
+      20200101:
+        google_psi_desktop: '78'
+        google_psi_mobile: '51'
     drug:
       approval: 20120627
       company: Eisai
@@ -19211,6 +19251,9 @@ Metabolic Disorders - Obesity:
         google_psi_desktop: '72'
       20191231:
         google_psi_desktop: '71'
+      20200101:
+        google_psi_desktop: '72'
+        moz_links: '823'
     drug:
       approval: 20141223
       company: Novo Nordisk
@@ -20152,6 +20195,8 @@ Psychiatric Disorders - Depression - Major Depressive Disorder; MDD:
       20191231:
         code: not found
         google_psi_desktop: '71'
+      20200101:
+        code: not found
     drug:
       approval: 20130930
       company: Takeda
@@ -21291,6 +21336,8 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
       20191231:
         google_psi_desktop: '70'
         moz_links: '352'
+      20200101:
+        google_psi_desktop: '71'
     drug:
       approval: 20110228
       company: AstraZeneca
@@ -22159,6 +22206,9 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         asn: None
       20191231:
         asn: None
+      20200101:
+        asn: None
+        moz_links: '7837'
     drug:
       approval: 20060721
       company: AstraZeneca
@@ -22480,6 +22530,8 @@ Respiratory Tract Disease - Pleuropulmonary Infection - Pneumonia; CABP:
         moz_links: '828'
       20191229:
         moz_links: '823'
+      20200101:
+        moz_links: '824'
     drug:
       approval: 20150225
       company: Allergan
@@ -23560,6 +23612,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         asn: None
       20191231:
         asn: None
+      20200101:
+        asn: None
     drug:
       approval: 20041229
       company: Actelion
@@ -23921,6 +23975,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         moz_links: '147'
       20191229:
         moz_links: '148'
+      20200101:
+        google_psi_mobile: '61'
     drug:
       approval: 20090522
       company: United Therapeutics
@@ -24696,6 +24752,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         code: not found
       20191231:
         code: not found
+      20200101:
+        code: not found
     drug:
       approval: 20070615
       company: Gilead
@@ -25224,6 +25282,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20191231:
         asn: None
         moz_links: '349'
+      20200101:
+        asn: None
     drug:
       approval: 20131018
       company: Actelion
@@ -25860,6 +25920,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20191231:
         google_psi_desktop: '63'
         moz_links: '185'
+      20200101:
+        google_psi_desktop: '62'
     drug:
       approval: 20131220
       company: United Therapeutics
@@ -26502,6 +26564,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20191231:
         google_psi_desktop: '85'
         moz_links: '527'
+      20200101:
+        google_psi_desktop: '84'
     drug:
       approval: 20010705
       company: United Therapeutics
@@ -26871,6 +26935,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20191231:
         google_psi_mobile: '37'
         moz_links: '440'
+      20200101:
+        google_psi_mobile: '36'
     drug:
       approval: 20050603
       company: Pfizer
@@ -27166,6 +27232,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20191231:
         asn: None
         moz_links: '196'
+      20200101:
+        asn: None
     drug:
       approval: 20011120
       company: Actelion
@@ -27731,6 +27799,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         moz_links: '271'
       20191230:
         google_psi_mobile: '39'
+      20200101:
+        google_psi_desktop: '59'
     drug:
       approval: 20090730
       company: United Therapeutics
@@ -28929,6 +28999,9 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20191231:
         asn: None
         code: not found
+      20200101:
+        asn: None
+        code: not found
     drug:
       approval: 20151221
       company: Actelion
@@ -29646,6 +29719,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20191231:
         asn: None
         moz_links: '191'
+      20200101:
+        asn: None
     drug:
       approval: 20080627
       company: Actelion
@@ -31267,6 +31342,9 @@ Viral Infection - Human Immunodeficiency Virus Infection; HIV:
         moz_links: '73'
       20191229:
         moz_links: '76'
+      20200101:
+        moz_links: '78'
+        moz_rank: '3'
     drug:
       approval: 19960301
       company: AbbVie
