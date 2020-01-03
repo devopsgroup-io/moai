@@ -29147,7 +29147,7 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       approval: 20151221
       company: Actelion
       generic: selexipag systemic
-    regex: '[A-Z][A-Z][A-Z]-[0-9][0-9][0-9][0-9][0-9]'
+    regex: '[a-z][a-z]-[0-9][0-9][0-9][0-9][0-9][0-9]v[0-9]'
   veletri.com:
     dates:
       20170523:
