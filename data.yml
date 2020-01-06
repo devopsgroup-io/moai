@@ -953,6 +953,8 @@ Cancer - Brain Tumor:
         google_psi_mobile: '57'
       20200105:
         google_psi_desktop: '66'
+      20200106:
+        google_psi_desktop: '65'
     drug:
       approval: 20090330
       company: Novartis
@@ -1327,6 +1329,9 @@ Cancer - Colorectal Cancer:
         asn: None
       20200105:
         asn: AS14618 Amazon.com, Inc.
+      20200106:
+        asn: None
+        moz_links: '1675'
     drug:
       approval: 20040212
       company: Lilly
@@ -2856,6 +2861,9 @@ Cancer - Gastric Cancer:
         asn: None
       20200105:
         asn: None
+      20200106:
+        asn: AS14618 Amazon.com, Inc.
+        moz_links: '229'
     drug:
       approval: 20140421
       company: Lilly
@@ -3031,6 +3039,8 @@ Cancer - Ovarian Cancer:
       20200104:
         code: not found
       20200105:
+        code: not found
+      20200106:
         code: not found
     drug:
       approval: 19951117
@@ -4113,6 +4123,8 @@ Cancer - Ovarian Cancer:
       20200105:
         google_psi_desktop: '71'
         google_psi_mobile: '54'
+      20200106:
+        google_psi_desktop: '69'
     drug:
       approval: 19951208
       company: Cumberland Pharmaceuticals
@@ -4827,6 +4839,10 @@ Cancer - Ovarian Cancer:
       20200105:
         asn: None
         google_psi_desktop: '70'
+      20200106:
+        asn: None
+        google_psi_desktop: '69'
+        moz_links: '512'
     drug:
       approval: 20141219
       company: AstraZeneca
@@ -5782,6 +5798,10 @@ Cancer - Ovarian Cancer:
         google_psi_desktop: '41'
       20200105:
         google_psi_mobile: '49'
+      20200106:
+        google_psi_desktop: '42'
+        google_psi_mobile: '50'
+        moz_links: '692'
     drug:
       approval: 20170327
       company: GSK
@@ -6733,6 +6753,8 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
       20200105:
         google_psi_desktop: '75'
         google_psi_mobile: '62'
+      20200106:
+        moz_links: '27657'
     drug:
       approval: 20030812
       company: AstraZeneca
@@ -7133,6 +7155,8 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
         google_psi_mobile: '32'
       20200105:
         google_psi_mobile: '33'
+      20200106:
+        moz_links: '7234'
     drug:
       approval: 19961217
       company: Pfizer
@@ -7621,6 +7645,9 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
         asn: None
       20200105:
         asn: None
+      20200106:
+        asn: None
+        moz_links: '612'
     drug:
       approval: 20090803
       company: Kowa
@@ -8327,6 +8354,9 @@ Cardiovascular Conditions and Disorders - High Cholesterol:
         moz_links: '1932'
       20200103:
         moz_links: '1941'
+      20200106:
+        code: 06/01
+        moz_links: '1939'
     drug:
       approval: 20150827
       company: Amgen
@@ -8676,6 +8706,8 @@ Central Nervous System Disorders - Alzheimer's Disease:
         moz_links: '2269'
       20200103:
         moz_links: '2277'
+      20200106:
+        moz_links: '2284'
     drug:
       approval: 20000421
       company: Novartis
@@ -8983,6 +9015,8 @@ Central Nervous System Disorders - Alzheimer's Disease:
         moz_links: '1971'
       20200103:
         moz_links: '1965'
+      20200106:
+        moz_links: '1959'
     drug:
       approval: 20100621
       company: Allergan
@@ -9669,6 +9703,8 @@ Central Nervous System Disorders - Alzheimer's Disease:
       20200105:
         google_psi_desktop: '65'
         google_psi_mobile: '58'
+      20200106:
+        moz_links: '1847'
     drug:
       approval: 20141223
       company: Allergan
@@ -10014,6 +10050,8 @@ Central Nervous System Disorders - Epilepsy:
         moz_links: '167'
       20200103:
         moz_links: '166'
+      20200106:
+        moz_links: '167'
     drug:
       approval: 19830310
       company: AbbVie
@@ -10724,6 +10762,8 @@ Central Nervous System Disorders - Epilepsy:
         google_psi_desktop: '60'
       20200105:
         google_psi_desktop: '59'
+      20200106:
+        google_psi_desktop: '60'
     drug:
       approval: 20121019
       company: Supernus
@@ -11111,6 +11151,8 @@ Central Nervous System Disorders - Epilepsy - Lennox-Gastaut Syndrome; LGS:
       20200105:
         google_psi_desktop: '81'
         google_psi_mobile: '85'
+      20200106:
+        moz_links: '1322'
     drug:
       approval: 20121019
       company: Eisai
@@ -11280,6 +11322,8 @@ Central Nervous System Disorders - Epilepsy - Lennox-Gastaut Syndrome; LGS:
         moz_links: '1319'
       20200103:
         moz_links: '1320'
+      20200106:
+        moz_links: '1322'
     drug:
       approval: 19930729
       company: Meda
@@ -11556,6 +11600,8 @@ Central Nervous System Disorders - Epilepsy - Lennox-Gastaut Syndrome; LGS:
         moz_links: '267'
       20200102:
         moz_links: '266'
+      20200106:
+        moz_links: '270'
     drug:
       approval: 20121019
       company: Lundbeck
@@ -11804,6 +11850,8 @@ Central Nervous System Disorders - Parkinson's Disease:
         moz_links: '314'
       20200103:
         moz_links: '319'
+      20200106:
+        moz_links: '320'
     drug:
       approval: 20060516
       company: Teva
@@ -12262,6 +12310,8 @@ Central Nervous System Disorders - Parkinson's Disease:
         moz_links: '929'
       20200105:
         code: not found
+      20200106:
+        code: not found
     drug:
       approval: 20060516
       company: Boehringer Ingelheim
@@ -12658,6 +12708,8 @@ Central Nervous System Disorders - Parkinson's Disease:
         moz_links: '130'
       20200103:
         moz_links: '131'
+      20200106:
+        moz_links: '132'
     drug:
       approval: 20150701
       company: Impax
@@ -13128,6 +13180,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         moz_links: '130'
       20200103:
         moz_links: '131'
+      20200106:
+        moz_links: '132'
     drug:
       approval: 19980910
       company: Sanofi
@@ -13678,6 +13732,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         moz_links: '8357'
       20200103:
         moz_links: '8414'
+      20200106:
+        moz_links: '8479'
     drug:
       approval: 19981231
       company: Pfizer
@@ -14451,6 +14507,9 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
       20200105:
         asn: AS16509 Amazon.com, Inc.
         code: not found
+      20200106:
+        code: not found
+        moz_links: '7829'
     drug:
       approval: 19981102
       company: Amgen
@@ -15037,6 +15096,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         moz_links: '7961'
       20200103:
         moz_links: '8022'
+      20200106:
+        moz_links: '8092'
     drug:
       approval: 20021231
       company: AbbVie
@@ -15924,6 +15985,10 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
       20200105:
         google_psi_desktop: '69'
         google_psi_mobile: '55'
+      20200106:
+        google_psi_desktop: '72'
+        google_psi_mobile: '56'
+        moz_links: '321'
     drug:
       approval: 20170522
       company: Sanofi and Regeneron
@@ -16767,6 +16832,9 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         google_psi_desktop: '72'
       20200105:
         google_psi_desktop: '75'
+      20200106:
+        google_psi_mobile: '58'
+        moz_links: '4397'
     drug:
       approval: 20051223
       company: Bristol-Myers Squibb
@@ -16979,6 +17047,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         asn: None
         code: cp-53017v1
       20200105:
+        asn: None
+      20200106:
         asn: None
     drug:
       approval: 19980824
@@ -17457,6 +17527,8 @@ Connective Tissue Disorders - Rheumatoid Arthritis; RA:
         moz_links: '70'
       20200104:
         google_psi_desktop: '72'
+      20200106:
+        moz_links: '71'
     drug:
       approval: 20100430
       company: Horizon Pharma
@@ -17953,6 +18025,9 @@ Infection - Skin and Structure Infection:
       20200104:
         google_psi_desktop: '76'
         google_psi_mobile: '59'
+      20200106:
+        google_psi_desktop: '75'
+        moz_links: '357'
     drug:
       approval: 20030912
       company: Merck
@@ -18167,6 +18242,8 @@ Infection - Skin and Structure Infection:
         moz_links: '593'
       20200103:
         moz_links: '595'
+      20200106:
+        moz_links: '596'
     drug:
       approval: 20101029
       company: Allergan
@@ -18627,6 +18704,8 @@ Metabolic Disorders - Obesity:
         moz_links: '2231'
       20200104:
         google_psi_desktop: '78'
+      20200106:
+        moz_links: '2243'
     drug:
       approval: 20120627
       company: Eisai
@@ -19183,6 +19262,8 @@ Metabolic Disorders - Obesity:
       20200103:
         google_psi_desktop: '73'
         moz_links: '3518'
+      20200106:
+        moz_links: '3474'
     drug:
       approval: 20140910
       company: Orexigen
@@ -19541,6 +19622,8 @@ Metabolic Disorders - Obesity:
         google_psi_desktop: '71'
       20200105:
         google_psi_desktop: '72'
+      20200106:
+        moz_links: '852'
     drug:
       approval: 20141223
       company: Novo Nordisk
@@ -20113,6 +20196,8 @@ Metabolic Disorders - Obesity:
         moz_links: '5375'
       20200104:
         moz_links: '5470'
+      20200106:
+        moz_links: '5544'
     drug:
       approval: 20120717
       company: Vivus
@@ -20191,6 +20276,8 @@ Psychiatric Disorders - Depression - Major Depressive Disorder; MDD:
         moz_links: '5890'
       20200105:
         google_psi_mobile: '68'
+      20200106:
+        moz_links: '5896'
     drug:
       approval: 20021115
       company: Otsuka
@@ -20259,6 +20346,8 @@ Psychiatric Disorders - Depression - Major Depressive Disorder; MDD:
         moz_links: '589'
       20200103:
         moz_links: '591'
+      20200106:
+        moz_links: '593'
     drug:
       approval: 20130725
       company: Allergan
@@ -20338,6 +20427,8 @@ Psychiatric Disorders - Depression - Major Depressive Disorder; MDD:
         moz_links: '288'
       20200103:
         moz_links: '289'
+      20200106:
+        moz_links: '294'
     drug:
       approval: 20150710
       company: Otsuka
@@ -20511,6 +20602,9 @@ Psychiatric Disorders - Depression - Major Depressive Disorder; MDD:
       20200105:
         code: not found
         google_psi_mobile: '53'
+      20200106:
+        code: not found
+        google_psi_mobile: '43'
     drug:
       approval: 20130930
       company: Takeda
@@ -21011,6 +21105,8 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         google_psi_desktop: '65'
       20200105:
         google_psi_desktop: '64'
+      20200106:
+        google_psi_desktop: '65'
     drug:
       approval: 20160425
       company: AstraZeneca
@@ -21665,6 +21761,8 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         moz_links: '363'
       20200104:
         google_psi_desktop: '70'
+      20200106:
+        moz_links: '369'
     drug:
       approval: 20110228
       company: AstraZeneca
@@ -22546,6 +22644,9 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         asn: None
       20200105:
         asn: None
+      20200106:
+        asn: None
+        moz_links: '7908'
     drug:
       approval: 20060721
       company: AstraZeneca
@@ -22845,6 +22946,8 @@ Respiratory Tract Disease - Chronic Obstructive Pulmonary Disease; COPD:
         moz_links: '654'
       20200103:
         moz_links: '663'
+      20200106:
+        moz_links: '674'
     drug:
       approval: 20131218
       company: GSK
@@ -22875,6 +22978,8 @@ Respiratory Tract Disease - Pleuropulmonary Infection - Pneumonia; CABP:
         moz_links: '824'
       20200103:
         moz_links: '822'
+      20200106:
+        moz_links: '823'
     drug:
       approval: 20150225
       company: Allergan
@@ -22906,6 +23011,8 @@ Respiratory Tract Disease - Pleuropulmonary Infection - Pneumonia; CABP:
         moz_links: '85'
       20200103:
         moz_links: '84'
+      20200106:
+        moz_links: '83'
     drug:
       approval: 20170619
       company: Melinta
@@ -23973,6 +24080,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20200104:
         asn: None
       20200105:
+        asn: None
+      20200106:
         asn: None
     drug:
       approval: 20041229
@@ -25135,6 +25244,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         code: not found
       20200105:
         code: not found
+      20200106:
+        code: not found
     drug:
       approval: 20070615
       company: Gilead
@@ -25676,6 +25787,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20200105:
         asn: None
         moz_links: '495'
+      20200106:
+        asn: None
     drug:
       approval: 20131018
       company: Actelion
@@ -27355,6 +27468,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20200105:
         google_psi_mobile: '36'
         moz_links: '435'
+      20200106:
+        google_psi_mobile: '34'
     drug:
       approval: 20050603
       company: Pfizer
@@ -27663,6 +27778,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
       20200105:
         asn: None
         moz_links: '345'
+      20200106:
+        asn: None
     drug:
       approval: 20011120
       company: Actelion
@@ -28239,6 +28356,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_mobile: '38'
       20200105:
         google_psi_mobile: '39'
+      20200106:
+        google_psi_mobile: '38'
     drug:
       approval: 20090730
       company: United Therapeutics
@@ -29455,6 +29574,8 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         google_psi_mobile_usability: '89'
       20200105:
         asn: None
+      20200106:
+        asn: None
     drug:
       approval: 20151221
       company: Actelion
@@ -30184,6 +30305,9 @@ Respiratory Tract Disease - Pulmonary Arterial Hypertension; PAH:
         asn: None
       20200105:
         asn: None
+      20200106:
+        asn: None
+        moz_links: '343'
     drug:
       approval: 20080627
       company: Actelion
